@@ -1,0 +1,259 @@
+<html>
+
+<head>
+<link rel="stylesheet" href="main.css" type="text/css">
+<title>Atom expressions</title>
+<meta name="description" content="rastop is a molecular visualization software to view the 3-dimensional structure of macromolecules">
+<meta name="keywords" content="rastop, rasmol, macromolecule, structure, 3-dimensional, pdb, protein, dna, rna, model, crystal,molecule">
+</head>
+
+<body marginwidth="0" marginheight="0" leftmargin="0" bottommargin="0" topmargin="0" bgcolor="#FFFFFF" text="#000000">
+
+<!--webbot bot="Include" u-include="header.htm" tag="BODY" startspan -->
+
+<p><!----></p>
+<table border="0" cellpadding="2" width="100%">
+  <tr>
+    <td valign="top" bgcolor="#FFFFFF"><font color="#333333"><span class="ari8">RasTop
+      Manual</span></font></td>
+    <td valign="top" bgcolor="#FFFFFF" colspan="5" width="100%">
+      <p align="right"><span class="ari8"><a href="http://sourceforge.net/projects/rastop/">Home</a> | <a href="operations.htm">All
+      Commands</a> | <a href="notice.htm">Notice</a></span></td>
+  </tr>
+  <tr>
+    <td valign="top" bgcolor="#CCCCFF" align="center" background="images/doubleline.jpg"><a name="top"></a><img src="images/sigle.gif" alt="sigle.gif (4112 bytes)" width="71" height="65"></td>
+    <td colspan="5" bgcolor="#000000"><!----><img src="images/bannerrms2.gif" alt="bannerrms2.gif (19906 bytes)" align="left" border="0" width="543" height="65"></td>
+  </tr>
+  <tr>
+    <td valign="top" bgcolor="#336699">
+      <p align="center"><a href="index.htm" class="sitebar"><font color="#FFFFFF">Home</font></a></td>
+    <td valign="bottom" align="center" bgcolor="#336699"><a href="manual.htm" class="sitebar"><font color="#FFFFFF">About
+      help</font></a></td>
+    <td valign="bottom" align="center" bgcolor="#336699"><a href="copyright.htm" class="sitebar"><font color="#FFFFFF">Copyrights</font></a></td>
+    <td valign="bottom" align="center" bgcolor="#336699"><a href="notice.htm" class="sitebar"><font color="#FFFFFF">License</font></a></td>
+    <td valign="bottom" align="center" bgcolor="#336699"><a href="rastopop.htm" class="sitebar"><font color="#FFFFFF">Installing
+      &amp; using RasTop</font></a></td>
+    <td valign="bottom" align="center" bgcolor="#336699"><a href="library.htm" class="sitebar"><font color="#FFFFFF">Library</font></a></td>
+  </tr>
+  <tr>
+    <td valign="top" bgcolor="#FFFFFF"><img src="images/dotnul.gif" width="134" height="1" alt="dotnul.gif (807 bytes)" align="bottom"></td>
+    <td valign="top" bgcolor="#FFFFFF" colspan="5" width="100%"><img src="images/dotnul.gif" width="460" height="2" align="bottom" border="0"></td>
+  </tr>
+</table>
+
+<!--webbot bot="Include" endspan i-checksum="50747" -->
+
+<!---->
+
+
+<table border="0" cellpadding="0" cellspacing="0" width="700">
+  <tr>
+    <td valign="top" bgcolor="#EEEEEE" width="140"><img src="images/dotnul.gif" width="140" height="10" align="bottom" border="0"></td>
+    <td valign="top" width="2"><img src="images/dotnul.gif" width="1" height="10" align="bottom" border="0"></td>
+    <td valign="top" width="10"><img src="images/dotnul.gif" width="10" height="10" align="bottom" border="0"></td>
+    <td width="100%"><img src="images/dotnul.gif" width="549" height="10" alt="dotnul.gif (43 bytes)" align="bottom" border="0"></td>
+  </tr>
+  <tr>
+    <td valign="top" bgcolor="#EEEEEE" width="140"><!---->
+      <div align="center">
+        <center>
+        <table border="0" cellpadding="5" cellspacing="0" width="100%">
+          <tr>
+            <td width="10" bgcolor="#333399"><!----> </td>
+            <td width="100%" bgcolor="#CCCCFF"><span class="ari8"><strong>Commands:</strong></span></td>
+          </tr>
+          <tr>
+            <td width="100%" colspan="2"><img src="images/arrow1.gif" alt="arrow1.gif (162 bytes)" width="10" height="8"><span class="ari8"><a href="rastopop.htm">Using
+              RasTop</a><br>
+              <img src="images/arrow1.gif" alt="arrow1.gif (162 bytes)" width="10" height="8"><a href="menu.htm">Menu</a><br>
+              <img src="images/arrow1.gif" alt="arrow1.gif (162 bytes)" width="10" height="8"><a href="operations.htm">Summary</a><br>
+              <img src="images/arrow1.gif" alt="arrow1.gif (162 bytes)" width="10" height="8"><a href="commandref.htm">Reference</a><br>
+              <img src="images/arrow1.gif" alt="arrow1.gif (162 bytes)" width="10" height="8"><a href="internal.htm">Internal
+              Parameters</a><br>
+              <img src="images/arrow1.gif" alt="arrow1.gif (162 bytes)" width="10" height="8"><em>Atom
+              Expression</em><br>
+              <img src="images/arrow1.gif" alt="arrow1.gif (162 bytes)" width="10" height="8"><a href="colour.htm">Colour
+              Schemes</a><br>
+              <img src="images/arrow1.gif" alt="arrow1.gif (162 bytes)" width="10" height="8"><a href="atomsets.htm">Atom
+              Sets</a><br>
+              <img src="images/arrow1.gif" alt="arrow1.gif (162 bytes)" width="10" height="8"><a href="rastopworld.htm">RasTop
+              World</a></span></td>
+          </tr>
+          <tr>
+            <td width="100%" bgcolor="#CCCCFF" colspan="2"><span class="ari8"><strong>Content:</strong></span></td>
+          </tr>
+          <tr>
+            <td width="100%" colspan="2"><span class="ari8"><a href="#primitiveexpressions">Primitive
+              expressions</a><br>
+              <a href="#comparisonoperators">Comparison operators</a><br>
+              <a href="#withinexpressions">Within expressions</a><br>
+              <a href="#exampleexpressions">Example expressions</a></span></td>
+          </tr>
+        </table>
+        </center>
+      </div>
+      <p>&nbsp;</p>
+      <p>&nbsp;</td>
+    <td valign="top" width="2"><img src="images/dotnul.gif" width="1" height="10" align="bottom" border="0"></td>
+    <td valign="top"></td>
+    <td>
+      <p align="center"><span style="font-size: 14pt"><strong>Atom Expressions</strong></span></p>
+      <p>RasMol atom expressions uniquely identify an arbitrary group of atoms
+      within a molecule. Atom expressions are composed of either primitive
+      expressions, predefined sets, comparison operators, '<tt><b>within</b></tt>'
+      expressions, or logical (boolean) combinations of the above expression
+      types.</p>
+      <p>The logical operators allow complex queries to be constructed out of
+      simpler ones using the standard boolean connectives '<tt><b>and</b></tt>',
+      '<tt><b>or</b></tt>' and '<tt><b>not</b></tt>'. These may be abbreviated
+      by the symbols &quot;<tt>&amp;</tt>&quot;, &quot;<tt>|</tt>&quot; and
+      &quot;<tt>!</tt>&quot;, respectively. Parentheses (brackets) may be used
+      to alter the precedence of the operators. For convenience, a comma may
+      also be used for boolean disjunction.</p>
+      <p>The atom expression is evaluated for each atom, hence '<tt><b>protein
+      and backbone</b></tt>' selects protein backbone atoms, not the protein and
+      [nucleic] acid backbone atoms!</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="primitiveexpressions">Primitive
+      Expressions</a></h3>
+      <p>RasMol primitive expressions are the fundamental building blocks of
+      atom expressions. There are two types of primitive expression. The first
+      type is used to identify a given residue number or range of residue
+      numbers. A single residue is identified by its number (position in the
+      sequence), and a range is specified by lower and upper bounds separated by
+      a hyphen character. For example '<tt><b>select 5,6,7,8</b></tt>' is also '<tt><b>select
+      5-8</b></tt>'. Note that this selects the given residue numbers in all
+      macromolecule chains.</p>
+      <p>The second type of primitive expression specifies a sequence of fields
+      that must match for a given atom. The first part specifies a residue (or
+      group of residues) and an optional second part specifies the atoms within
+      those residues. The first part consists of a residue name, optionally
+      followed by a residue number and/or chain identifier.</p>
+      <p>A residue name typically consists of up to three alphabetic characters,
+      which are case insensitive. Hence the primitive expressions '<tt><b>SER</b></tt>'
+      and '<tt><b>ser</b></tt>' are equivalent, identifying all serine residues.
+      Residue names that contain non-alphabetic characters, such as sulphate
+      groups, may be delimited using square brackets, <i>i.e.</i> '<tt><b>[SO4]</b></tt>'.</p>
+      <p>The residue number is intended to be the residue's position in the
+      macromolecule sequence, but negative sequence numbers, gaps in numbering,
+      or even reverse numbering are permitted in the PDB format. Care must be
+      taken when specifying both residue name and number. If the group at the
+      specified position isn't the specified residue then no atoms are selected.</p>
+      <p>The chain identifier is typically a single case-insensitive alphabetic
+      or numeric character. Numeric chain identifiers must be distinguished or
+      separated from residue numbers by a colon character. For example, &quot;<tt><b>SER70:A</b></tt>&quot;
+      for the alphabetic chain identifier, &quot;A&quot;, or &quot;<tt><b>SER70:1</b></tt>&quot;
+      for the numeric chain identifier, &quot;1&quot;.</p>
+      <p>A second colon is used to specify an alternate conformer or an NMR
+      model. For example the expression &quot;<tt><strong>CYS32:A:25.SG</strong></tt>&quot;
+      denotes the gamma sulfur of residue cysteine 32 in chain A of model 25.</p>
+      <p>The second part consists of a period character followed by an atom
+      name. An atom name may be up to four alphabetic or numeric characters. An
+      optional semicolon or a slash followed by a conformation identifier or a
+      model number may also be appended to the atom name.</p>
+      <p>An asterisk may be used as a wild card for a whole field and a question
+      mark as a single character wildcard. The wildcard &quot;<tt><strong>*</strong></tt>&quot;
+      may be dropped in residue identifier, e.g. &quot;<tt><strong>:A</strong></tt>&quot;
+      for chain A, &quot;<tt><strong>:A:4</strong></tt>&quot; for chain A of
+      model 4, or &quot;<tt><strong>::4</strong></tt>&quot; for all atoms in all
+      chains of NMR model 4.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="comparisonoperators">Comparison
+      Operators</h3>
+      </a>
+      <p>Parts of a molecule may also be distinguished using equality,
+      inequality and ordering operators on their properties. The format of such
+      comparison expression is a property name, followed by a comparison
+      operator and then an integer value.</p>
+      <p>The atom properties that may be used in RasMol are '<tt><b>atomno</b></tt>'
+      for the atom serial number, '<tt><b>elemno</b></tt>' for the atom's atomic
+      number (element), '<tt><b>resno</b></tt>' for the residue number, '<tt><b>radius</b></tt>'
+      for the spacefill radius in RasMol units (or zero if not represented as a
+      sphere) and '<tt><b>temperature</b></tt>' for the PDB isotropic
+      temperature value.</p>
+      <p>The equality operator is denoted either &quot;<tt><b>=</b></tt>&quot;
+      or &quot;<tt><b>==</b></tt>&quot;. The inequality operator as either
+      &quot;<tt><b>&lt;&gt;</b></tt>&quot;, &quot;<tt><b>!=</b></tt>&quot; or
+      &quot;<tt><b>/=</b></tt>&quot;. The ordering operators are &quot;<tt><b>&lt;</b></tt>&quot;
+      for less than, &quot;<tt><b>&lt;=</b></tt>&quot; for less than or equal
+      to, &quot;<tt><b>&gt;</b></tt>&quot; for greater than, and &quot;<tt><b>&gt;=</b></tt>&quot;
+      for greater than or equal to.</p>
+      <pre>
+<small>Examples:    resno &lt; 23
+             temperature &gt;= 900
+             atomno == 487</small>
+</pre>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="withinexpressions">Within
+      Expressions</h3>
+      </a>
+      <p>A RasMol '<tt><b>within</b></tt>' expression allows atoms to be
+      selected on their proximity to another set of atoms. A '<tt><b>within</b></tt>'
+      expression takes two parameters separated by a comma and surrounded by
+      parentheses. The first argument is an integer value called the
+      &quot;cut-off&quot; distance of the within expression and the second
+      argument is any valid atom expression. The cut-off distance is expressed
+      in either integer RasMol units or Ångstroms containing a decimal point.
+      An atom is selected if it is within the cut-off distance of any of the
+      atoms defined by the second argument. This allows complex expressions to
+      be constructed containing nested '<tt><b>within</b></tt>' expressions.</p>
+      <p>For example, the command '<tt><b>select within(3.2,backbone)</b></tt>'
+      selects any atom within a 3.2 Ångstrom radius of any atom in a protein or
+      nucleic acid backbone. '<tt><b>Within</b></tt>' expressions are
+      particularly useful for selecting the atoms around an active site.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="exampleexpressions">Example
+      Expressions</a></h3>
+      <p>The following table gives some useful examples of RasMol atom
+      expressions.</p>
+      <pre><small>
+    </small><b>Expression</b>     <b>Interpretation</b>
+
+    *               All atoms
+    cys             Atoms in cysteines
+    hoh             Atoms in heterogeneous water molecules
+    as?             Atoms in either asparagine or aspartic acid
+    *120            Atoms at residue 120 of all chains
+    *p              Atoms in chain P
+    *.n?            Nitrogen atoms
+    cys.sg          Sulphur atoms in cysteine residues
+    ser70.c?        Carbon atoms in serine-70
+    hem*p.fe        Iron atoms in the Heme groups of chain P
+    *.*;A           All atoms in alternate conformation A
+    */4             All atoms in model 4<big>
+</big></pre>
+      <blockquote>
+        <pre><strong>Examples using combination of basic expressions</strong><big> </big></pre>
+      </blockquote>
+      <pre>     backbone and not helix
+     within( 8.0, ser70 )
+     not (hydrogen or hetero)
+     not *.FE and hetero
+     8, 12, 16, 20-28
+     arg, his, lys<big>
+</big></pre>
+      <!--webbot bot="Include" u-include="signature.htm" tag="BODY" startspan -->
+<P><IMG SRC="images/dotnul.gif" NAME="Graphic1" ALIGN=BOTTOM WIDTH=2 HEIGHT=5 BORDER=0></P>
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0>
+	<TR>
+		<TD WIDTH=100% BGCOLOR="#c29654">
+			<P><IMG SRC="images/dotnul.gif" NAME="Graphic2" ALT="dotnul.gif (43 bytes)" ALIGN=BOTTOM WIDTH=2 HEIGHT=2 BORDER=0></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><FONT SIZE=1><STRONG>RasTop Help Site</STRONG> - <A HREF="index.htm">home</A>
+			| <A HREF="notice.htm">notice</A> | <A HREF="copyright.htm">copyright</A></P>
+		</TD>
+	</TR>
+</TABLE>
+<P><BR><BR>
+</P>
+<!--webbot bot="Include" endspan i-checksum="12835" -->
+</td>
+  </tr>
+</table>
+
+</body>
+
+</html>

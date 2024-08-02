@@ -1,0 +1,60 @@
+#RasTop v1.1beta
+#template for protein
+
+background [0,0,0]
+set backfade off
+
+reset worlddepth
+set ambient 30
+set specular on
+set specpower 20
+set shadepower 50
+set shadow off
+stereo off
+
+reset
+slab off
+zoom 100
+
+set bonds off
+set axes off
+set boundingbox off
+set unitcell off
+
+select all
+
+ssbonds off
+hbonds off
+wireframe off
+ribbons off
+dots off
+backbone off
+labels off
+monitors off
+
+colour bonds none
+colour ribbons none
+colour backbone none
+colour hbonds none
+colour ssbonds none
+colour white
+
+select protein and mainchain
+set bondmode or
+select not selected
+select selected and protein
+wireframe 80
+color bonds [255, 255, 153]
+
+set bondmode and
+select not selected
+select selected and protein
+wireframe off
+cartoons on
+color atoms structure
+
+select not protein
+wireframe on
+color CPK
+
+select all

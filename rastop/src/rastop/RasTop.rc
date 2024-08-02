@@ -1,0 +1,1925 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif\r\n"
+    "#include ""res\\RasTop.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#include ""afxprint.rc""       // printing/print preview resources\r\n"
+    "#endif\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\RasTop.ico"
+IDR_RASVIEW             ICON    DISCARDABLE     "res\\rasframe.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP  MOVEABLE PURE   "res\\Toolbar.bmp"
+IDB_INFOPOINTEROFF      BITMAP  DISCARDABLE     "res\\infopointeroff.bmp"
+IDB_INFOPOINTERON       BITMAP  DISCARDABLE     "res\\infopointeron.bmp"
+IDB_LIGHT_OFF           BITMAP  DISCARDABLE     "res\\rasmoloff.bmp"
+IDB_LIGHT_ON            BITMAP  DISCARDABLE     "res\\rasmolon.bmp"
+IDB_COMMAND_CLOSED      BITMAP  DISCARDABLE     "res\\close_down.bmp"
+IDB_COMMAND_CLOSEU      BITMAP  DISCARDABLE     "res\\close_up.bmp"
+IDR_TOOLBAR_EXPRESSION  BITMAP  DISCARDABLE     "res\\toolbar_.bmp"
+IDR_SELECTIONBAR        BITMAP  DISCARDABLE     "res\\cedit.bmp"
+IDB_LIGHT_SCRIPT        BITMAP  DISCARDABLE     "res\\rasmol_o.bmp"
+IDB_LIGHT_PAUSE         BITMAP  DISCARDABLE     "res\\light_sc.bmp"
+IDB_LIGHT_STOP          BITMAP  DISCARDABLE     "res\\bmp00001.bmp"
+IDB_RASTOP              BITMAP  DISCARDABLE     "res\\bitmap1.bmp"
+IDR_SCRIPTBAR           BITMAP  DISCARDABLE     "res\\bmp00002.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR DISCARDABLE  16, 15
+BEGIN
+    BUTTON      ID_FILE_NEW
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    BUTTON      ID_FILE_PRINT
+    BUTTON      ID_HELP_RASMOL
+    BUTTON      ID_WINDOW_TILE
+    BUTTON      ID_MOLECULE_FILE
+    SEPARATOR
+    BUTTON      ID_DISPLAY_SPHERE
+    BUTTON      ID_DISPLAY_STAR
+    BUTTON      ID_DISPLAY_WIREFRAME_ONLY
+    BUTTON      ID_DISPLAY_BALLANDSTICK
+    BUTTON      ID_DISPLAY_STICKS
+    BUTTON      ID_DISPLAY_NOTHING
+    SEPARATOR
+    BUTTON      ID_RIBBONS_ON
+    BUTTON      ID_DOTSON
+    SEPARATOR
+    BUTTON      ID_PICK_ATOM
+    BUTTON      ID_PICK_GROUP
+    BUTTON      ID_PICK_CHAIN
+    BUTTON      ID_PICK_MOLSET
+    BUTTON      ID_PICK_CENTRE
+    BUTTON      ID_PICK_BOND
+    BUTTON      ID_PICK_ROTBOND
+    BUTTON      ID_PICK_MONITOR
+    BUTTON      ID_PICK_LABEL
+    BUTTON      ID_PICK_DISTANCE
+    BUTTON      ID_PICK_ANGLE
+    BUTTON      ID_PICK_TORSION
+    BUTTON      ID_PICK_LIGHT
+END
+
+IDR_TOOLBAR_EXPRESSION TOOLBAR DISCARDABLE  16, 15
+BEGIN
+    BUTTON      ID_EXP_NEW
+    BUTTON      ID_EXP_ADD
+    BUTTON      ID_EXP_REMOVE
+    BUTTON      ID_EXP_EXTRACT
+    BUTTON      ID_EXP_EXCLUDE
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM "&New...\tCtrl+N",             ID_FILE_NEW
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM "&Print...\tCtrl+P",           ID_FILE_PRINT
+        MENUITEM "Print Pre&view",              ID_FILE_PRINT_PREVIEW
+        MENUITEM SEPARATOR
+        MENUITEM "&Pre&ferences...",            ID_FILE_PREFERENCES
+        MENUITEM "&Load Preferences...",        ID_SET_PREFERENCES
+        MENUITEM SEPARATOR
+        MENUITEM "",                            ID_FILE_MRU_FILE1
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Main Toolbar",               ID_VIEW_TOOLBAR
+        MENUITEM "&Selection Toolbar",          ID_VIEW_SELECTBAR
+        MENUITEM "&Color Picker",               ID_VIEW_COLORBAR
+        MENUITEM "Command &Line",               ID_VIEW_COMMANDLINE
+        MENUITEM "Status &Bar",                 ID_VIEW_STATUS_BAR
+        MENUITEM SEPARATOR
+        MENUITEM "&Full screen\tCtrl+F",        ID_VIEW_MENU
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Help RasTop...",             ID_HELP_RASMOL
+        MENUITEM SEPARATOR
+        MENUITEM "&About RasTop...",            IDD_ABOUTRASTOP
+    END
+END
+
+IDR_RASTYPE MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM "A&dd...",                     ID_FILE_ADD
+        MENUITEM "C&lose",                      ID_FILE_CLOSE
+        MENUITEM SEPARATOR
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "S&ave As...",                 ID_FILE_SAVE_AS
+        MENUITEM "Sa&ve Molecule As...",        ID_FILE_MOLECULE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "&Load &Molecular file...\tCtrl+L", 
+                                                ID_FILE_LOAD_MOLECULARFILE
+        MENUITEM "Load &Rasmol Script...",      ID_FILE_LOAD_RASMOLSCRIPT
+        MENUITEM SEPARATOR
+        POPUP "&Export ..."
+        BEGIN
+            MENUITEM "&Image...",                   ID_SAVE_IMAGE
+            MENUITEM "&Molecular file...",          ID_SAVE_MOLECULARFILE
+            MENUITEM "&Script, data...",            ID_SAVE_SCRIPT
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "&Print...\tCtrl+P",           ID_FILE_PRINT
+        MENUITEM "Pr&int Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "&Pre&ferences...",            ID_FILE_PREFERENCES
+        MENUITEM SEPARATOR
+        MENUITEM "",                            ID_FILE_MRU_FILE1
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        POPUP "&Copy"
+        BEGIN
+            MENUITEM "&Image\tCtrl+I",              ID_COPY_IMAGE
+            MENUITEM "&Selection\tCtrl+C",          ID_COPY_SELECTION
+            MENUITEM "&Position\tCtrl+X",           ID_COPY_POSITION
+        END
+        MENUITEM "&Paste\tCtrl+V",              ID_PASTE
+        MENUITEM SEPARATOR
+        POPUP "&Select..."
+        BEGIN
+            MENUITEM "&All\tCtrl+A",                ID_SELECT_ALL
+            MENUITEM "&Inverse\tCtrl+Q",            ID_SELECT_INVERSE
+            MENUITEM "&Previous\tCtrl+Z",           ID_SELECT_PREVIOUS
+            MENUITEM "E&xpression...\tCtrl+E",      ID_SELECT_EXPRESSION
+            MENUITEM "&Within...",                  ID_SELECT_WITHIN
+            MENUITEM SEPARATOR
+            MENUITEM "&Show\tCtrl+W",               ID_SELECT_SHOW
+            MENUITEM SEPARATOR
+            POPUP "&Mode"
+            BEGIN
+                MENUITEM "&Internal bonds",             ID_SELECT_BONDMODE
+                MENUITEM "H&ydrogens",                  ID_SELECT_HYDROGENS
+                MENUITEM "&Heteroatoms",                ID_SELECT_HETE_ATOMS
+                MENUITEM "&Models",                     ID_SELECT_MODEL
+            END
+        END
+        MENUITEM "&Define...\tCtrl+D",          ID_SELECT_DEFINE
+        MENUITEM "&Restrict\tCtrl+R",           ID_RESTRICT
+        MENUITEM "Co&mmand...\tCtrl+M",         ID_EDIT_RASMOL_COMMAND
+    END
+    POPUP "&Molecule"
+    BEGIN
+        MENUITEM "&Delete Molecule",            ID_MOLECULE_DELETE
+        MENUITEM SEPARATOR
+        POPUP "&Information"
+        BEGIN
+            MENUITEM "&Molecule",                   ID_MOLECULE_INFO
+            MENUITEM "&World",                      ID_WORLD_INFO
+            MENUITEM "&Atom selection",             ID_SHOW_SELECT_ATM
+            MENUITEM "&Group selection",            ID_SHOW_SELECT_GRP
+            MENUITEM "&Chain selection",            ID_SHOW_SELECT_CHN
+            MENUITEM "C&oordinates",                ID_SHOW_SELECT_COOR
+        END
+        MENUITEM "Se&quence",                   ID_MOLECULE_SEQ
+        MENUITEM "Molecular &file",             ID_MOLECULE_FILE
+        MENUITEM "&Symmetry",                   ID_MOLECULE_SYM
+        MENUITEM "&Phi psi angles",             ID_MOLECULE_PHIPSI
+        MENUITEM "R&amachandran",               ID_MOLECULE_RPP
+        MENUITEM SEPARATOR
+        MENUITEM "&Hide or Show",               ID_MOLECULE_SHOW
+        MENUITEM SEPARATOR
+        POPUP "Str&ucture"
+        BEGIN
+            MENUITEM "Calculate &Structure",        ID_MOLECULE_STRUC
+            MENUITEM "&Renumber molecule",          ID_MOLECULE_RENUMBER
+            MENUITEM "&Connect Structure",          ID_MOLECULE_CONNECT
+            MENUITEM "Cis &angle...",               ID_SET_CISANGLE
+            MENUITEM SEPARATOR
+            MENUITEM "Connect &Mode",               ID_SET_CONNECT
+        END
+        MENUITEM SEPARATOR
+        POPUP "&Monitors"
+        BEGIN
+            MENUITEM "&Add/Remove",                 ID_PICK_MONITOR
+            MENUITEM "&Remove all",                 ID_DISTANCE_REMOVE
+            MENUITEM SEPARATOR
+            MENUITEM "&Show values",                ID_DISTANCE_SHOW
+        END
+        MENUITEM SEPARATOR
+        POPUP "&Axes && Boxes"
+        BEGIN
+            MENUITEM "&Unit cell",                  ID_DISPLAY_UNITCELL
+            MENUITEM "&Bound box",                  ID_DISPLAY_BOUNDBOX
+            MENUITEM SEPARATOR
+            MENUITEM "&Axes",                       ID_DISPLAY_AXES
+            MENUITEM "&World Axes",                 ID_DISPLAY_WORLDAXES
+            MENUITEM SEPARATOR
+        END
+        MENUITEM SEPARATOR
+        POPUP "&Centre"
+        BEGIN
+            MENUITEM "&Selection",                  ID_SELECT_CENTRE
+            MENUITEM "&World",                      ID_CENTRE_WORLD
+            MENUITEM "&Origin",                     ID_CENTRE_ORIGIN
+            MENUITEM SEPARATOR
+            MENUITEM "Origin to &Centre",           ID_CENTRE_ORIGINTOCENTRE
+            MENUITEM "Cen&tre to Origin",           ID_CENTRE_CENTRETOORIGIN
+        END
+        MENUITEM SEPARATOR
+        POPUP "&Rotate"
+        BEGIN
+            POPUP "Rotate &X"
+            BEGIN
+                MENUITEM "90 &degrees CW",              ID_STATICROTX90
+                MENUITEM "180 d&egrees",                ID_STATICROTX180
+                MENUITEM "90 de&grees CCW",             ID_STATICROTX270
+            END
+            POPUP "Rotate &Y"
+            BEGIN
+                MENUITEM "90 &degrees CW",              ID_STATICROTY90
+                MENUITEM "180 d&egrees",                ID_STATICROTY180
+                MENUITEM "90 de&grees CCW",             ID_STATICROTY270
+            END
+            POPUP "Rotate &Z"
+            BEGIN
+                MENUITEM "90 &degrees CW",              ID_STATICROTZ90
+                MENUITEM "180 d&egrees",                ID_STATICROTZ180
+                MENUITEM "90 de&grees CCW",             ID_STATICROTZ270
+            END
+        END
+    END
+    POPUP "&Atoms"
+    BEGIN
+        POPUP "&Spacefill"
+        BEGIN
+            MENUITEM "&Display",                    ID_DISPLAY_SPACEFILL
+            MENUITEM "&Remove",                     ID_DISPLAY_SPACEFILL_OFF
+            MENUITEM "Display &only",               ID_DISPLAY_SPACEFILL_FULL
+
+            MENUITEM SEPARATOR
+            MENUITEM "&Sphere",                     ID_SPACEFILL_SPHERE
+            MENUITEM "St&ar",                       ID_SPACEFILL_STAR
+            MENUITEM SEPARATOR
+            MENUITEM "&Fixed Radius...",            ID_SPACEFILL_FIXEDRADIUS
+            MENUITEM "&Van der Waals",              ID_SPACEFILL_VANDERWAALS
+            MENUITEM "&Temperature",                ID_SPACEFILL_TEMPERATURE
+            MENUITEM "&User",                       ID_SPACEFILL_USER
+        END
+        MENUITEM SEPARATOR
+        POPUP "&Labels"
+        BEGIN
+            MENUITEM "&Display",                    ID_LABELS_ON
+            MENUITEM "&Remove",                     ID_LABELS_OFF
+            MENUITEM "&Pick",                       ID_PICK_LABEL
+            MENUITEM SEPARATOR
+            MENUITEM "R&esidues",                   ID_LABELS_DEFAULT
+            MENUITEM SEPARATOR
+            MENUITEM "&Format...",                  ID_LABELS_SETTINGS
+        END
+        MENUITEM SEPARATOR
+        POPUP "&Color"
+        BEGIN
+            MENUITEM "&CPK",                        ID_COLOUR_CPK
+            MENUITEM "Sha&pely",                    ID_COLOUR_SHAPELY
+            MENUITEM "&Structure",                  ID_COLOUR_STRUCTURE
+            MENUITEM "&Group",                      ID_COLOUR_GROUP
+            MENUITEM "&Chain",                      ID_COLOUR_CHAIN
+            MENUITEM "&Temperature",                ID_COLOUR_TEMPERATURE
+            MENUITEM "C&harge",                     ID_COLOUR_CHARGE
+            MENUITEM "&User",                       ID_COLOUR_USER
+            MENUITEM "&Model",                      ID_COLOUR_MODEL
+            MENUITEM "&Alternate",                  ID_COLOUR_ALT
+        END
+    END
+    POPUP "&Bonds"
+    BEGIN
+        POPUP "&Bonds"
+        BEGIN
+            MENUITEM "&Display",                    ID_DISPLAY_WIREFRAME
+            MENUITEM "&Remove",                     ID_DISPLAY_WIREFRAME_OFF
+            MENUITEM "Display &only",               ID_DISPLAY_WIREFRAME_FULL
+
+            MENUITEM "R&eset",                      ID_RESET_BOND
+            MENUITEM SEPARATOR
+            POPUP "&Type"
+            BEGIN
+                MENUITEM "&Wire",                       ID_DISPLAY_WIREFRAME_WIRE
+
+                MENUITEM "&Dash",                       ID_DISPLAY_WIREFRAME_DASH
+
+                MENUITEM "&Cylinder...",                ID_DISPLAY_WIREFRAME_CYLINDER
+
+            END
+            POPUP "&Mode"
+            BEGIN
+                MENUITEM "&None",                       ID_SET_BONDMODE_NONE
+                MENUITEM "Not &bonded",                 ID_SET_BONDMODE_NOBONDED
+
+                MENUITEM "&All",                        ID_SET_BONDMODE_ALL
+            END
+            MENUITEM SEPARATOR
+            MENUITEM "Display &Multiple",           ID_SET_BONDS
+        END
+        MENUITEM SEPARATOR
+        POPUP "&H bonds"
+        BEGIN
+            MENUITEM "&Display",                    ID_DISPLAY_HBONDS_ON
+            MENUITEM "&Remove",                     ID_DISPLAY_HBONDS_OFF
+            MENUITEM SEPARATOR
+            POPUP "&Type"
+            BEGIN
+                MENUITEM "&Dash",                       ID_DISPLAY_HBONDS_DASH
+
+                MENUITEM "&Cylinder...",                ID_DISPLAY_HBONDS_CYLINDER
+
+            END
+            POPUP "&Mode"
+            BEGIN
+                MENUITEM "&Sidechain",                  ID_DISPLAY_HBONDS_SIDECHAIN
+
+                MENUITEM "&Backbone",                   ID_DISPLAY_HBONDS_BACKBONE
+
+            END
+            POPUP "&Color"
+            BEGIN
+                MENUITEM "&Type",                       ID_COLOR_HBONDS_TYPE
+            END
+        END
+        MENUITEM SEPARATOR
+        POPUP "&SS bonds"
+        BEGIN
+            MENUITEM "&Display",                    ID_DISPLAY_SSBONDS_ON
+            MENUITEM "&Remove",                     ID_DISPLAY_SSBONDS_OFF
+            MENUITEM SEPARATOR
+            POPUP "&Type"
+            BEGIN
+                MENUITEM "&Dash",                       ID_DISPLAY_SSBONDS_DASH
+
+                MENUITEM "&Cylinder...",                ID_DISPLAY_SSBONDS_CYLINDER
+
+            END
+            POPUP "&Mode"
+            BEGIN
+                MENUITEM "&Sidechain",                  ID_DISPLAY_SSBONDS_SIDECHAIN
+
+                MENUITEM "&Backbone",                   ID_DISPLAY_SSBONDS_BACKBONE
+
+            END
+        END
+    END
+    POPUP "&Ribbons"
+    BEGIN
+        MENUITEM "&Display",                    ID_RIBBONS_ON
+        MENUITEM "R&emove",                     ID_RIBBONS_OFF
+        MENUITEM "Display &only",               ID_RIBBONS_ONLY
+        MENUITEM SEPARATOR
+        MENUITEM "&Ribbons",                    ID_RIBBONS_RIBBONS
+        MENUITEM "&Strands",                    ID_RIBBONS_STRANDS
+        MENUITEM "&Cartoons",                   ID_RIBBONS_CARTOONS
+        MENUITEM "&Trace",                      ID_RIBBONS_TRACE
+        MENUITEM "&Backbone",                   ID_RIBBONS_BACKBONE
+        MENUITEM SEPARATOR
+        POPUP "Sett&ings"
+        BEGIN
+            MENUITEM "&Beta arrows",                ID_DISPLAY_CARTOONS_ARROW
+
+            MENUITEM "&Dash",                       ID_DISPLAY_BACKBONE_DASH
+            MENUITEM "D&ots",                       ID_DISPLAY_TRACE_DOTS
+            MENUITEM "&Height...",                  ID_SET_CARTOONS_HEIGHT
+            MENUITEM "&Radius...",                  ID_DISPLAY_BACKBONE_CYLINDER
+
+            MENUITEM "Strand &number...",           ID_SET_STRANDS_NUMBER
+            MENUITEM "&Structure",                  ID_DISPLAY_RIBBONS_STRUCTURE
+
+            MENUITEM "&Temperature",                ID_DISPLAY_TRACE_TEMPERATURE
+
+            MENUITEM "W&idth...",                   ID_RIBBONS_SIZE
+            MENUITEM "&Wire",                       ID_DISPLAY_BACKBONE_WIRE
+        END
+    END
+    POPUP "&Surfaces"
+    BEGIN
+        MENUITEM "&Display dots",               ID_DOTSON
+        MENUITEM "&Remove dots",                ID_DOTSOFF
+        MENUITEM SEPARATOR
+        MENUITEM "&Van der Waals",              ID_DOTS_VDWAALS
+        MENUITEM "&Connolly",                   ID_DOTS_CONOLLY
+        MENUITEM SEPARATOR
+        MENUITEM "Dot si&ze...",                ID_SET_DOTS_SIZE
+        MENUITEM "Radius &size...",             ID_DOTS_RADIUS
+        MENUITEM "Dot d&ensity...",             ID_SET_DOTS_DENSITY
+        MENUITEM SEPARATOR
+        MENUITEM "&Potential",                  ID_COLOR_DOTS_POTENTIAL
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "L&ight Source...",            ID_VIEW_LIGHTSOURCE
+        MENUITEM "&Background fade",            ID_COLOR_FADE
+        MENUITEM SEPARATOR
+        MENUITEM "Stere&o",                     ID_VIEW_STEREO
+        MENUITEM "Stereo &Angle...",            ID_SET_STEREO_ANGLE
+        MENUITEM SEPARATOR
+        MENUITEM "Reset &Depth",                ID_DEPTH_RESET
+        MENUITEM "Reset &Slab",                 ID_SLAB_RESET
+        POPUP "S&lab Mode"
+        BEGIN
+            MENUITEM "&Reject",                     ID_SET_SLAB_REJECT
+            MENUITEM "&Half",                       ID_SET_SLAB_HALF
+            MENUITEM "H&ollow",                     ID_SET_SLAB_HOLLOW
+            MENUITEM "So&lid",                      ID_SET_SLAB_SOLID
+            MENUITEM "S&ection",                    ID_SET_SLAB_SECTION
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "&World Depth...",             ID_DEPTH_WORLD
+        POPUP "Depth&Cue Mode"
+        BEGIN
+            MENUITEM "Mode &1",                     ID_DEPTHCUEMODE1
+            MENUITEM "Mode &2",                     ID_DEPTHCUEMODE2
+            MENUITEM "Mode &3",                     ID_DEPTHCUEMODE3
+            MENUITEM "Mode &4",                     ID_DEPTHCUEMODE4
+        END
+    END
+    POPUP "&Window"
+    BEGIN
+        MENUITEM "&Tile\tCtrl+T",               ID_WINDOW_TILE
+        MENUITEM "Tile &Horizontal",            ID_WINDOW_TILE_HORZ
+        MENUITEM "Tile &Vertical",              ID_WINDOW_TILE_VERT
+        MENUITEM "&Cascade",                    ID_WINDOW_CASCADE
+        MENUITEM "&Arrange",                    ID_WINDOW_ARRANGE
+        MENUITEM SEPARATOR
+        MENUITEM "&Main Toolbar",               ID_VIEW_TOOLBAR
+        MENUITEM "Se&lection Toolbar",          ID_VIEW_SELECTBAR
+        MENUITEM "&Scripting Toolbar",          ID_VIEW_SCRIPTBAR
+        MENUITEM "&Color Picker",               ID_VIEW_COLORBAR
+        MENUITEM "Command &Line",               ID_VIEW_COMMANDLINE
+        MENUITEM "Co&mmand Pannel",             ID_COMMANDVIEW
+        MENUITEM "Status &Bar",                 ID_VIEW_STATUS_BAR
+        MENUITEM SEPARATOR
+        MENUITEM "&Full screen\tCtrl+F",        ID_VIEW_MENU
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Help RasTop...",             ID_HELP_RASMOL
+        MENUITEM SEPARATOR
+        MENUITEM "&About RasTop...",            IDD_ABOUTRASTOP
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS PRELOAD MOVEABLE PURE 
+BEGIN
+    "A",            ID_SELECT_ALL,          VIRTKEY, CONTROL, NOINVERT
+    "C",            ID_COPY_SELECTION,      VIRTKEY, CONTROL, NOINVERT
+    "D",            ID_SELECT_DEFINE,       VIRTKEY, CONTROL, NOINVERT
+    "E",            ID_SELECT_EXPRESSION,   VIRTKEY, CONTROL, NOINVERT
+    "F",            ID_VIEW_MENU,           VIRTKEY, CONTROL, NOINVERT
+    "I",            ID_COPY_IMAGE,          VIRTKEY, CONTROL, NOINVERT
+    "L",            ID_FILE_LOAD_MOLECULARFILE, VIRTKEY, CONTROL, NOINVERT
+    "M",            ID_EDIT_RASMOL_COMMAND, VIRTKEY, CONTROL, NOINVERT
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL, NOINVERT
+    "Q",            ID_SELECT_INVERSE,      VIRTKEY, CONTROL, NOINVERT
+    "R",            ID_RESTRICT,            VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL, NOINVERT
+    "T",            ID_WINDOW_TILE,         VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_PASTE,               VIRTKEY, CONTROL, NOINVERT
+    VK_F1,          ID_HELP,                VIRTKEY, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+    "W",            ID_SELECT_SHOW,         VIRTKEY, CONTROL, NOINVERT
+    "X",            ID_COPY_POSITION,       VIRTKEY, CONTROL, NOINVERT
+    "Z",            ID_SELECT_PREVIOUS,     VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DIALOG_SETVALUE DIALOGEX 0, 0, 159, 96
+STYLE DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW | WS_EX_STATICEDGE
+CAPTION "RasTop"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,28,77,43,12
+    PUSHBUTTON      "Cancel",IDCANCEL,84,77,43,12
+    EDITTEXT        IDC_EDIT_VALUE,34,23,85,13,ES_AUTOHSCROLL | WS_GROUP
+    LTEXT           "Static",IDC_TEX_COMMENTS,34,39,111,35
+    ICON            IDR_RASVIEW,-1,4,2,20,20
+    LTEXT           "Static",IDC_TEX_VALUE,34,8,110,14,NOT WS_GROUP
+END
+
+IDD_SAVE_MOLECULARFILE DIALOG DISCARDABLE  0, 0, 200, 73
+STYLE DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Export Molecular File"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_RASVIEW,IDC_STATIC,158,10,20,20
+    DEFPUSHBUTTON   "OK",IDOK,151,51,32,12,WS_GROUP | NOT WS_TABSTOP
+    CONTROL         "Brookhaven Protein Databank (PDB)",IDC_SAVE_PDB,"Button",
+                    BS_AUTORADIOBUTTON | BS_LEFTTEXT | BS_LEFT | WS_GROUP | 
+                    WS_TABSTOP,9,14,131,10
+    CONTROL         "Molecular Design Limited (MDL)",IDC_SAVE_MDL,"Button",
+                    BS_AUTORADIOBUTTON | BS_LEFTTEXT | BS_LEFT | WS_TABSTOP,
+                    9,26,131,10
+    CONTROL         "MSC's XMOL  XYZ (XYZ)",IDC_SAVE_XYZ,"Button",
+                    BS_AUTORADIOBUTTON | BS_LEFTTEXT | BS_LEFT | WS_TABSTOP,
+                    9,38,131,10
+    CONTROL         "Crystallographics Information File (CIF)",IDC_SAVE_CIF,
+                    "Button",BS_AUTORADIOBUTTON | BS_LEFTTEXT | BS_LEFT | 
+                    WS_TABSTOP,9,50,131,10
+    PUSHBUTTON      "Cancel",IDCANCEL,151,35,32,12,NOT WS_TABSTOP
+    GROUPBOX        " Molecular Format  ",IDC_STATIC,5,3,190,64
+END
+
+IDD_SAVE_SCRIPT DIALOG DISCARDABLE  0, 0, 150, 125
+STYLE DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Export Molecular Data"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "RasMol script",IDC_SAVE_SCRIPT,"Button",
+                    BS_AUTORADIOBUTTON | BS_LEFTTEXT | BS_LEFT | WS_GROUP | 
+                    WS_TABSTOP,10,14,77,10
+    CONTROL         "MolScript",IDC_SAVE_MOLSCRIPT,"Button",
+                    BS_AUTORADIOBUTTON | BS_LEFTTEXT | BS_LEFT | WS_TABSTOP,
+                    10,25,77,10
+    CONTROL         "Kinemage file",IDC_SAVE_KINEMAGE,"Button",
+                    BS_AUTORADIOBUTTON | BS_LEFTTEXT | BS_LEFT | WS_TABSTOP,
+                    10,36,77,10
+    CONTROL         "Kinemage (details)",IDC_MAGEDETAIL,"Button",
+                    BS_AUTORADIOBUTTON | BS_LEFTTEXT | WS_TABSTOP,10,47,77,
+                    10
+    CONTROL         "POVRay",IDC_SAVE_POVRAY,"Button",BS_AUTORADIOBUTTON | 
+                    BS_LEFTTEXT | BS_LEFT | WS_TABSTOP,10,58,77,10
+    CONTROL         "VMRL",IDC_SAVE_VMRL,"Button",BS_AUTORADIOBUTTON | 
+                    BS_LEFTTEXT | BS_LEFT | WS_TABSTOP,10,69,77,10
+    CONTROL         "PhiPsi",IDC_SAVE_PHIPSI,"Button",BS_AUTORADIOBUTTON | 
+                    BS_LEFTTEXT | BS_LEFT | WS_TABSTOP,10,80,77,10
+    CONTROL         "Ramachandran file",IDC_SAVE_RDF,"Button",
+                    BS_AUTORADIOBUTTON | BS_LEFTTEXT | BS_LEFT | WS_TABSTOP,
+                    10,91,77,10
+    CONTROL         "Ramachandran plot",IDC_SAVE_RPP,"Button",
+                    BS_AUTORADIOBUTTON | BS_LEFTTEXT | BS_LEFT | WS_TABSTOP,
+                    10,102,77,10
+    PUSHBUTTON      "Cancel",IDCANCEL,100,61,32,14,NOT WS_TABSTOP
+    DEFPUSHBUTTON   "OK",IDOK,100,81,32,14,WS_GROUP | NOT WS_TABSTOP
+    ICON            IDR_RASVIEW,IDC_STATIC,107,26,20,20
+    GROUPBOX        "Format  ",IDC_STATIC,6,3,137,117
+END
+
+IDD_SAVE_IMAGE DIALOG DISCARDABLE  0, 0, 227, 150
+STYLE DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Export Image"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Microsoft Bitmap (BMP)",IDC_IMAGE_BMP,"Button",
+                    BS_AUTORADIOBUTTON | BS_LEFTTEXT | WS_GROUP | WS_TABSTOP,
+                    20,16,105,10
+    CONTROL         "CompuServe GIF",IDC_IMAGE_GIF,"Button",
+                    BS_AUTORADIOBUTTON | BS_LEFTTEXT | WS_TABSTOP,20,26,105,
+                    10
+    CONTROL         "Encapsulated PostScript",IDC_IMAGE_EPSF,"Button",
+                    BS_AUTORADIOBUTTON | BS_LEFTTEXT | WS_TABSTOP,20,36,105,
+                    10
+    CONTROL         "Monochrome PostScript",IDC_IMAGE_MONOPS,"Button",
+                    BS_AUTORADIOBUTTON | BS_LEFTTEXT | WS_TABSTOP,20,46,105,
+                    10
+    CONTROL         "Vector PostScript",IDC_IMAGE_VECTPS,"Button",
+                    BS_AUTORADIOBUTTON | BS_LEFTTEXT | WS_TABSTOP,20,56,105,
+                    10
+    CONTROL         "Portable Pixmap (Raw)",IDC_IMAGE_PPM,"Button",
+                    BS_AUTORADIOBUTTON | BS_LEFTTEXT | WS_TABSTOP,20,76,105,
+                    10
+    CONTROL         "Portable Pixmap (ASCII)",IDC_IMAGE_PPM2,"Button",
+                    BS_AUTORADIOBUTTON | BS_LEFTTEXT | WS_TABSTOP,20,86,105,
+                    10
+    CONTROL         "Apple Macintosh PICT",IDC_IMAGE_PICT,"Button",
+                    BS_AUTORADIOBUTTON | BS_LEFTTEXT | WS_TABSTOP,20,96,105,
+                    10
+    CONTROL         "Silicon Graphics RGB (IRIS)",IDC_IMAGE_IRIS,"Button",
+                    BS_AUTORADIOBUTTON | BS_LEFTTEXT | WS_TABSTOP,20,106,105,
+                    10
+    CONTROL         "RLE Sun Rasterfile",IDC_IMAGE_SUNRLE,"Button",
+                    BS_AUTORADIOBUTTON | BS_LEFTTEXT | WS_TABSTOP,20,116,105,
+                    10
+    CONTROL         "Sun Rasterfile",IDC_IMAGE_SUN,"Button",
+                    BS_AUTORADIOBUTTON | BS_LEFTTEXT | WS_TABSTOP,20,126,105,
+                    10
+    EDITTEXT        IDC_IMAGE_SIZEX,156,53,40,12,ES_AUTOHSCROLL | ES_NUMBER | 
+                    WS_GROUP
+    EDITTEXT        IDC_IMAGE_SIZEY,156,75,40,12,ES_AUTOHSCROLL | ES_NUMBER | 
+                    WS_GROUP
+    CONTROL         "Cartoon outlines",IDC_IMAGE_ENABLEVECTPS,"Button",
+                    BS_AUTOCHECKBOX | BS_LEFTTEXT | WS_GROUP | WS_TABSTOP,20,
+                    64,105,10
+    PUSHBUTTON      "Cancel",IDCANCEL,159,101,32,14,NOT WS_TABSTOP
+    DEFPUSHBUTTON   "OK",IDOK,159,122,32,14,WS_GROUP | NOT WS_TABSTOP
+    ICON            IDR_RASVIEW,IDC_STATIC,163,13,20,20
+    GROUPBOX        " Image File Format ",IDC_STATIC,8,3,210,139
+    LTEXT           "x",IDC_STATIC,146,54,8,8
+    LTEXT           "y",IDC_STATIC,146,76,8,8
+    GROUPBOX        "Image size (Pixels)",IDC_STATIC,140,39,70,54
+    LTEXT           "x",IDC_STATIC,175,66,8,8
+END
+
+IDD_MOLECULAR_FILE DIALOGEX 0, 0, 394, 201
+STYLE DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CLIENTEDGE
+CAPTION "Molecular File"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    ICON            IDR_RASVIEW,IDC_STATIC,3,0,20,20
+    DEFPUSHBUTTON   "Close",IDOK,354,3,29,12,WS_GROUP
+    EDITTEXT        IDC_MOLECULE_NAME,54,3,67,12,ES_AUTOHSCROLL
+    COMBOBOX        IDC_MOLECULE_FORMAT,154,3,48,94,CBS_DROPDOWNLIST | 
+                    WS_TABSTOP,WS_EX_CLIENTEDGE
+    LTEXT           "Name:",IDC_STATIC,28,4,22,11
+    LTEXT           "Format:",IDC_STATIC,127,4,24,11
+    PUSHBUTTON      "Save",ID_SAVE,307,3,29,12,NOT WS_TABSTOP
+    PUSHBUTTON      "Export",ID_EXPORT,211,3,29,12,NOT WS_TABSTOP
+    PUSHBUTTON      "Process",ID_PROCESS,258,3,29,12,WS_DISABLED | NOT 
+                    WS_TABSTOP
+END
+
+IDD_PREFERENCES DIALOG DISCARDABLE  0, 0, 270, 183
+STYLE DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Preferences"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_RASVIEW,IDC_STATIC,60,159,20,20
+    DEFPUSHBUTTON   "OK",IDOK,183,159,32,14,WS_GROUP
+    GROUPBOX        "",IDC_STATIC,10,9,84,22
+    EDITTEXT        IDC_ZOOMEDIT,74,16,12,12,ES_AUTOHSCROLL
+    LTEXT           "Clipboard factor",IDC_STATIC,17,18,51,8
+    PUSHBUTTON      "Cancel",IDCANCEL,132,159,32,14,NOT WS_TABSTOP
+    GROUPBOX        "Settings",IDC_STATIC,4,0,263,105
+    GROUPBOX        " Sequence Output ",IDC_STATIC,99,9,84,34,WS_GROUP
+    CONTROL         "One letter code",ID_MOLECULE_SEQ_TRUE,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,105,19,73,10
+    CONTROL         "Three letter code",ID_MOLECULE_SEQ_FALSE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,105,30,73,10
+    GROUPBOX        "Help source",IDC_STATIC,11,75,249,24
+    EDITTEXT        IDC_EDIT_HELPSOURCE,15,84,200,12,ES_AUTOHSCROLL | 
+                    WS_GROUP
+    PUSHBUTTON      "Browse",IDC_BROWSE,219,84,36,12
+    GROUPBOX        "Default Representation",IDC_STATIC,11,48,249,24
+    EDITTEXT        IDC_EDIT_DEFAULTREPRES,15,57,200,12,ES_AUTOHSCROLL | 
+                    WS_GROUP
+    PUSHBUTTON      "Browse",IDC_BROWSE_DEFAULTREPRES,219,57,36,12
+    GROUPBOX        "Coordinate System",IDC_STATIC,190,9,70,39,WS_GROUP
+    CONTROL         "Molecule",ID_COORD_MOL,"Button",BS_AUTOCHECKBOX | 
+                    WS_GROUP | WS_TABSTOP,197,18,56,10
+    CONTROL         "World",ID_COORD_WORLD,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,197,27,56,10
+    CONTROL         "Abs.",ID_COORD_ABS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,197,36,26,10
+    CONTROL         "Screen",ID_COORD_SCREEN,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,224,36,32,10
+    GROUPBOX        "Command Line",IDC_STATIC_CMNDLINE,4,107,263,46
+    COMBOBOX        IDC_PREFS_CMDCOL,47,119,65,71,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWFIXED | CBS_HASSTRINGS | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Text color",IDC_STATIC,10,120,38,11
+    LTEXT           "Background color",IDC_STATIC,127,120,57,8
+    COMBOBOX        IDC_PREFS_CMDCOLBKG,191,119,65,71,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWFIXED | CBS_HASSTRINGS | WS_VSCROLL | 
+                    WS_TABSTOP
+END
+
+IDD_ABOUTRASTOP DIALOG DISCARDABLE  0, 0, 199, 231
+STYLE DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About RasTop"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_RASVIEW,IDC_STATIC,6,1,21,20
+    LTEXT           "Molecular Graphics Visualization Tool",IDC_STATIC,35,5,
+                    118,8,SS_NOPREFIX
+    LTEXT           "Version 2.6, August 1995, Version 2.6.4, December 1998",
+                    IDC_STATIC,14,53,167,8
+    DEFPUSHBUTTON   "OK",IDOK,77,216,44,12,WS_GROUP
+    LTEXT           "Copyright (C) 1993-1999 R.Sayle",IDC_STATIC,14,61,96,8
+    LTEXT           "",IDD_HARDWARE,35,15,134,8
+    LTEXT           "Copyright (C) Philippe Valadon 2000-2007",IDC_STATIC,14,
+                    148,131,8
+    LTEXT           "Version 2.6x1, May 1998  Mods by Arne Mueller",
+                    IDC_STATIC,14,73,156,10,SS_NOPREFIX
+    LTEXT           "Based on RasMol 2.6 by Roger Sayle",IDC_STATIC,14,41,
+                    142,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) Arne Mueller 1998",IDC_STATIC,14,82,94,8,
+                    SS_NOPREFIX
+    LTEXT           "Series 2.7 Versions by Herbert J. Bernstein",IDC_STATIC,
+                    14,122,167,8,SS_NOPREFIX
+    LTEXT           "RasTop, all versions, by Philippe Valadon",IDC_STATIC,
+                    14,140,156,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) Herbert J. Bernstein 1998-2000",
+                    IDC_STATIC,14,130,170,8,SS_NOPREFIX
+    GROUPBOX        "",IDC_STATIC,4,24,191,185
+    LTEXT           "Version 2.5-ucb and 2.6-ucb, November 1995 and 1996",
+                    IDC_STATIC,14,93,185,12,SS_NOPREFIX
+    LTEXT           "Copyright (C) Gary Grossman & Marco Molinaro 1995-1996",
+                    IDC_STATIC,14,110,174,8,SS_NOPREFIX
+    LTEXT           "by Gary Grossman & Marco Molinaro",IDC_STATIC,14,102,
+                    156,8,SS_NOPREFIX
+    LTEXT           " Authors:\nHerbert J. Bernstein, Christian Duqué, Gary Grossman, Marco Molinaro, Arne Mueller, Naoum Salamé, Roger Sayle, Philippe Valadon",
+                    IDC_STATIC,15,162,170,38
+END
+
+IDD_LABEL_SETTINGS DIALOGEX 0, 0, 137, 95
+STYLE DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW | WS_EX_STATICEDGE
+CAPTION "Label Formatting"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,35,76,36,12
+    PUSHBUTTON      "Cancel",IDCANCEL,84,76,36,12
+    ICON            IDR_RASVIEW,IDC_STATIC,6,72,20,20
+    EDITTEXT        IDC_LABEL_FORMAT,5,5,125,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_LABEL_FONTSIZE,41,36,17,13,ES_AUTOHSCROLL
+    LTEXT           "Font size",IDC_STATIC,7,38,28,8
+    LTEXT           "Stroke",IDC_STATIC,7,54,21,8
+    EDITTEXT        IDC_LABEL_STROKE,41,52,17,13,ES_AUTOHSCROLL
+    GROUPBOX        "Spacing",IDC_STATIC,68,33,62,32
+    CONTROL         "Fixed",IDC_LABEL_FS,"Button",BS_AUTORADIOBUTTON | 
+                    BS_LEFTTEXT | WS_GROUP,72,43,53,8
+    CONTROL         "Proportional",IDC_LABEL_PS,"Button",BS_AUTORADIOBUTTON | 
+                    BS_LEFTTEXT,72,53,53,8
+    LTEXT           "Enter no text to enable default labels",IDC_STATIC,5,19,
+                    125,8
+END
+
+IDD_SELECT_EXPRESSION DIALOGEX 0, 0, 188, 65
+STYLE DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW | WS_EX_STATICEDGE
+CAPTION "Atom Selection"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Cancel",IDCANCEL,102,49,28,12
+    EDITTEXT        IDC_EXPRESSION,4,31,180,13,ES_AUTOHSCROLL
+    LTEXT           "Enter an atom expression",-1,4,20,137,8
+    DEFPUSHBUTTON   "OK",IDOK,61,49,28,12,WS_GROUP
+END
+
+IDD_DIALOG_COMMAND DIALOGEX 0, 0, 197, 101
+STYLE DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW | WS_EX_STATICEDGE
+CAPTION "RasMol command editor"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,39,87,48,12
+    PUSHBUTTON      "Cancel",IDCANCEL,102,87,50,12
+    EDITTEXT        IDC_EDIT_VALUE,5,30,186,54,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_WANTRETURN | WS_VSCROLL | WS_GROUP
+    ICON            IDR_RASVIEW,-1,4,2,20,20
+    LTEXT           "Enter a RasMol command or a script",IDC_TEX_VALUE,32,8,
+                    136,14,NOT WS_GROUP
+END
+
+IDD_DIALOG_SHOW DIALOGEX 0, 0, 339, 200
+STYLE DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CLIENTEDGE
+CAPTION "Molecular data"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,257,178,36,12,NOT WS_VISIBLE
+    ICON            IDR_RASVIEW,IDC_STATIC,3,0,20,20
+    PUSHBUTTON      "OK",IDOK2,305,3,32,12,WS_GROUP
+    PUSHBUTTON      "Save",ID_SAVE,264,3,32,12,NOT WS_TABSTOP
+    LTEXT           "RasMol Molecular Graphics Visualization Tools",
+                    IDC_STATIC,31,4,161,11
+END
+
+IDD_DIALOG_COLORTOOL DIALOGEX 0, 0, 65, 63
+STYLE WS_CHILD | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Color"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    COMBOBOX        IDC_ITEMCOLOR,0,0,65,67,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_DIALOG_NEWSET DIALOG DISCARDABLE  0, 0, 166, 68
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "RasTop"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,93,47,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,23,47,50,14
+    LTEXT           "Warning:  The set name you are using\nis already defined.  Do you want to continue?",
+                    IDC_STATIC,24,16,135,27
+END
+
+IDD_DIALOG_LIGHTSOURCE DIALOGEX 0, 0, 115, 75
+STYLE DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW | WS_EX_STATICEDGE
+CAPTION "Ligth Source"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Default",ID_LIGHT_DEFAULT,9,59,27,11
+    ICON            IDR_RASVIEW,IDC_STATIC,83,28,20,20
+    CONTROL         "Spin1",IDC_LIGHTX,"msctls_updown32",UDS_ALIGNLEFT | 
+                    UDS_ARROWKEYS | UDS_HORZ | WS_GROUP | WS_TABSTOP,22,19,
+                    24,7
+    CONTROL         "Spin1",IDC_LIGHTY,"msctls_updown32",UDS_ALIGNLEFT | 
+                    UDS_ARROWKEYS | UDS_HORZ | WS_GROUP | WS_TABSTOP,22,31,
+                    24,7
+    CONTROL         "Spin1",IDC_LIGHTZ,"msctls_updown32",UDS_ALIGNLEFT | 
+                    UDS_ARROWKEYS | UDS_HORZ | WS_GROUP | WS_TABSTOP,22,43,
+                    24,7
+    PUSHBUTTON      "Ok",IDOK,79,59,27,11
+    LTEXT           "x",IDC_STATIC,11,18,8,8
+    LTEXT           "y",IDC_STATIC,11,30,8,8
+    LTEXT           "z",IDC_STATIC,11,42,8,8
+    EDITTEXT        IDC_LIGHTXBUDDY,55,18,18,12,ES_RIGHT | NOT WS_TABSTOP,
+                    WS_EX_RIGHT
+    EDITTEXT        IDC_LIGHTYBUDDY,55,30,18,12,ES_RIGHT | NOT WS_TABSTOP,
+                    WS_EX_RIGHT
+    EDITTEXT        IDC_LIGHTZBUDDY,55,42,18,12,ES_RIGHT | NOT WS_TABSTOP,
+                    WS_EX_RIGHT
+    PUSHBUTTON      "Apply",ID_APPLY_NOW,44,59,27,11
+    LTEXT           "Light Source Rotation",IDC_STATIC,9,7,93,8,NOT WS_GROUP
+END
+
+IDD_COMMANDVIEW_BIG DIALOGEX 0, 0, 870, 43
+STYLE WS_CHILD
+FONT 6, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "x",IDC_STATIC,4,14,8,10
+    LTEXT           "y",IDC_STATIC,4,22,8,10
+    LTEXT           "z",IDC_STATIC,4,32,8,10
+    EDITTEXT        IDC_INFOLINE,209,21,307,20,ES_MULTILINE | ES_NOHIDESEL | 
+                    ES_READONLY | NOT WS_BORDER | WS_VSCROLL | WS_GROUP | 
+                    NOT WS_TABSTOP,WS_EX_LEFTSCROLLBAR | WS_EX_STATICEDGE
+    CONTROL         130,IDC_INFOPOINTER,"Static",SS_BITMAP | 
+                    SS_REALSIZEIMAGE,203,32,4,7
+    LTEXT           "Light",IDC_STATIC_LIGHT,353,1,22,8
+    CONTROL         "Rotate",IDC_RADIO_ROTATE,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,60,1,41,13
+    CONTROL         "Translate-Zoom",IDC_RADIO_TRANSLATE,"Button",
+                    BS_AUTORADIOBUTTON,107,1,78,13
+    CONTROL         "Slider1",IDC_SLID_LIGHT,"msctls_trackbar32",
+                    TBS_AUTOTICKS | WS_TABSTOP,372,1,127,9
+    CONTROL         "Spin",IDC_BUTTON_SPIN,"Button",BS_AUTORADIOBUTTON | 
+                    BS_PUSHLIKE | WS_GROUP | WS_TABSTOP,197,1,30,9,
+                    WS_EX_STATICEDGE
+    CONTROL         "Reset",IDC_BUTTON_RESET,"Button",BS_AUTORADIOBUTTON | 
+                    BS_PUSHLIKE | WS_GROUP,229,1,30,9,WS_EX_STATICEDGE
+    CONTROL         152,IDC_RASMOL_STATUS,"Static",SS_BITMAP,503,2,11,11,
+                    WS_EX_NOPARENTNOTIFY
+    LTEXT           "Specular",IDC_STATIC_SPECULAR,353,12,34,8
+    CONTROL         "TheBitmap",IDC_BUTTON_CLOSE_COMMAND,"Button",
+                    BS_OWNERDRAW | BS_BITMAP,1,2,10,9
+    SCROLLBAR       IDC_ROTATEY,12,24,187,8
+    SCROLLBAR       IDC_ROTATEZ,12,33,187,8
+    SCROLLBAR       IDC_ROTATEX,12,15,187,8
+    CONTROL         "Spin1",IDC_SPIN_SPECULAR,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNLEFT | UDS_ARROWKEYS | 
+                    UDS_HORZ | UDS_NOTHOUSANDS | WS_GROUP | WS_TABSTOP,386,
+                    12,28,8,WS_EX_STATICEDGE
+    LTEXT           "Shade",IDC_STATIC_SHADE,440,12,25,8
+    CONTROL         "Spin1",IDC_SPIN_SHADE,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNLEFT | UDS_ARROWKEYS | UDS_HORZ | 
+                    UDS_NOTHOUSANDS | WS_GROUP | WS_TABSTOP,465,12,28,8,
+                    WS_EX_STATICEDGE
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDFRAME | SS_CENTERIMAGE,
+                    518,1,342,40
+    CONTROL         "Spin1",IDC_SPIN_DEPTH,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNLEFT | UDS_ARROWKEYS | UDS_HORZ | 
+                    UDS_NOTHOUSANDS | WS_GROUP | WS_TABSTOP,291,11,28,8,
+                    WS_EX_STATICEDGE
+    CONTROL         "Spin1",IDC_SPIN_SLAB,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNLEFT | UDS_ARROWKEYS | UDS_HORZ | 
+                    UDS_NOTHOUSANDS | WS_GROUP | WS_TABSTOP,291,2,28,8,
+                    WS_EX_STATICEDGE
+    CONTROL         "World",IDC_BUTTON_WORLD,"Button",BS_AUTORADIOBUTTON | 
+                    BS_PUSHLIKE | WS_GROUP | WS_TABSTOP,19,2,30,11
+    CONTROL         "Depth",IDC_BUTTON_DEPTHCUE,"Button",BS_AUTORADIOBUTTON | 
+                    BS_PUSHLIKE | WS_GROUP,229,10,30,9,WS_EX_STATICEDGE
+    CONTROL         "Slab",IDC_BUTTON_SLAB,"Button",BS_AUTORADIOBUTTON | 
+                    BS_PUSHLIKE | WS_GROUP,261,1,30,9,WS_EX_STATICEDGE
+    CONTROL         "BClip",IDC_BUTTON_DEPTH,"Button",BS_AUTORADIOBUTTON | 
+                    BS_PUSHLIKE | WS_GROUP,261,10,30,9,WS_EX_STATICEDGE
+    EDITTEXT        IDC_BUDDY_SPEC,416,12,18,8,ES_READONLY
+    EDITTEXT        IDC_BUDDY_SHADE,496,12,18,8,ES_READONLY
+    EDITTEXT        IDC_BUDDY_DEPTH,321,11,26,9,ES_READONLY
+    EDITTEXT        IDC_BUDDY_SLAB,321,2,26,8,ES_READONLY
+END
+
+IDD_COMMANDVIEW DIALOGEX 0, 0, 720, 38
+STYLE WS_CHILD
+FONT 6, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "x",IDC_STATIC,4,11,8,8
+    LTEXT           "y",IDC_STATIC,4,19,8,8
+    LTEXT           "z",IDC_STATIC,4,28,8,8
+    EDITTEXT        IDC_INFOLINE,154,19,243,17,ES_MULTILINE | ES_NOHIDESEL | 
+                    ES_READONLY | NOT WS_BORDER | WS_VSCROLL | WS_GROUP | 
+                    NOT WS_TABSTOP,WS_EX_LEFTSCROLLBAR | WS_EX_STATICEDGE
+    CONTROL         130,IDC_INFOPOINTER,"Static",SS_BITMAP | 
+                    SS_REALSIZEIMAGE,149,28,4,7
+    LTEXT           "Light",IDC_STATIC_LIGHT,276,1,15,8
+    CONTROL         "Rotate",IDC_RADIO_ROTATE,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,47,2,32,10
+    CONTROL         "Translate-Zoom",IDC_RADIO_TRANSLATE,"Button",
+                    BS_AUTORADIOBUTTON,82,2,58,10
+    CONTROL         "Slider1",IDC_SLID_LIGHT,"msctls_trackbar32",
+                    TBS_AUTOTICKS | WS_TABSTOP,294,2,92,7
+    CONTROL         "Spin",IDC_BUTTON_SPIN,"Button",BS_AUTORADIOBUTTON | 
+                    BS_PUSHLIKE | WS_GROUP | WS_TABSTOP,141,1,27,8,
+                    WS_EX_STATICEDGE
+    CONTROL         "Reset",IDC_BUTTON_RESET,"Button",BS_AUTORADIOBUTTON | 
+                    BS_PUSHLIKE | WS_GROUP,168,1,27,8,WS_EX_STATICEDGE
+    LTEXT           "Spec",IDC_STATIC_SPECULAR,276,10,19,8
+    CONTROL         152,IDC_RASMOL_STATUS,"Static",SS_BITMAP,386,2,11,11,
+                    WS_EX_NOPARENTNOTIFY
+    CONTROL         "TheBitmap",IDC_BUTTON_CLOSE_COMMAND,"Button",
+                    BS_OWNERDRAW | BS_BITMAP,0,2,9,9
+    LTEXT           "Shade",IDC_STATIC_SHADE,336,10,20,8
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDFRAME | SS_CENTERIMAGE,
+                    400,2,307,31
+    CONTROL         "Spin1",IDC_SPIN_DEPTH,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNLEFT | UDS_ARROWKEYS | UDS_HORZ | 
+                    UDS_NOTHOUSANDS | WS_GROUP | WS_TABSTOP,223,11,23,6
+    CONTROL         "Spin1",IDC_SPIN_SLAB,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNLEFT | UDS_ARROWKEYS | UDS_HORZ | 
+                    UDS_NOTHOUSANDS | WS_GROUP | WS_TABSTOP,223,2,23,6
+    CONTROL         "World",IDC_BUTTON_WORLD,"Button",BS_AUTORADIOBUTTON | 
+                    BS_PUSHLIKE | WS_GROUP | WS_TABSTOP,13,2,27,9,
+                    WS_EX_STATICEDGE
+    CONTROL         "Spin1",IDC_SPIN_SPECULAR,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNLEFT | UDS_ARROWKEYS | 
+                    UDS_HORZ | UDS_NOTHOUSANDS | WS_GROUP | WS_TABSTOP,294,
+                    11,23,6
+    CONTROL         "Spin1",IDC_SPIN_SHADE,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNLEFT | UDS_ARROWKEYS | UDS_HORZ | 
+                    UDS_NOTHOUSANDS | WS_GROUP | WS_TABSTOP,357,11,23,6
+    EDITTEXT        IDC_BUDDY_SHADE,381,11,16,7,ES_AUTOHSCROLL | ES_READONLY
+    SCROLLBAR       IDC_ROTATEY,12,22,135,6
+    EDITTEXT        IDC_BUDDY_SPEC,318,11,16,7,ES_READONLY
+    SCROLLBAR       IDC_ROTATEX,12,14,135,6
+    SCROLLBAR       IDC_ROTATEZ,12,30,135,6
+    EDITTEXT        IDC_BUDDY_DEPTH,247,10,27,8,ES_READONLY
+    EDITTEXT        IDC_BUDDY_SLAB,247,1,27,8,ES_READONLY
+    CONTROL         "Depth",IDC_BUTTON_DEPTHCUE,"Button",BS_AUTORADIOBUTTON | 
+                    BS_PUSHLIKE | WS_GROUP,168,10,27,8,WS_EX_STATICEDGE
+    CONTROL         "Slab",IDC_BUTTON_SLAB,"Button",BS_AUTORADIOBUTTON | 
+                    BS_PUSHLIKE | WS_GROUP,195,1,27,8,WS_EX_STATICEDGE
+    CONTROL         "BClip",IDC_BUTTON_DEPTH,"Button",BS_AUTORADIOBUTTON | 
+                    BS_PUSHLIKE | WS_GROUP,195,10,27,8,WS_EX_STATICEDGE
+END
+
+IDD_LOADPREFS DIALOG DISCARDABLE  0, 0, 270, 51
+STYLE DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Load Preferences"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_RASVIEW,IDC_STATIC,16,24,20,20
+    DEFPUSHBUTTON   "OK",IDOK,226,28,32,14,WS_GROUP
+    PUSHBUTTON      "Cancel",IDCANCEL,179,28,32,14,NOT WS_TABSTOP
+    GROUPBOX        "",IDC_STATIC,4,0,263,47
+    EDITTEXT        IDC_EDIT_LOADPREFS,15,10,200,12,ES_AUTOHSCROLL | 
+                    WS_GROUP
+    PUSHBUTTON      "Browse",IDC_BROWSE_LOADPREFS,223,10,36,12
+    LTEXT           "Enter path and file name\nfor new preferences file",
+                    IDC_STATIC,46,26,113,17
+END
+
+IDD_DIALOG_CMDWND DIALOG DISCARDABLE  0, 0, 460, 206
+STYLE WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_CAPTION | WS_SYSMENU | 
+    WS_THICKFRAME
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_CMDWNDTEXT,7,7,446,192,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER | 
+                    WS_VSCROLL
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 2,0,0,0
+ PRODUCTVERSION 2,1,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "RasMol RSM File\0"
+            VALUE "FileVersion", "2, 0, 0, 0\0"
+            VALUE "InternalName", "RasTop\0"
+            VALUE "LegalCopyright", "Copyright (C) Philippe Valadon 2000- 2007\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "RasTop.EXE\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "RasTop Application\0"
+            VALUE "ProductVersion", "2, 2, 0, 0\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_DIALOG_SETVALUE, DIALOG
+    BEGIN
+        LEFTMARGIN, 5
+        RIGHTMARGIN, 147
+        TOPMARGIN, 4
+        BOTTOMMARGIN, 89
+    END
+
+    IDD_SAVE_SCRIPT, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 122
+    END
+
+    IDD_SAVE_IMAGE, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 147
+    END
+
+    IDD_PREFERENCES, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 179
+    END
+
+    IDD_ABOUTRASTOP, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 228
+    END
+
+    IDD_LABEL_SETTINGS, DIALOG
+    BEGIN
+        LEFTMARGIN, 5
+        RIGHTMARGIN, 130
+        RIGHTMARGIN, 130
+        TOPMARGIN, 4
+        BOTTOMMARGIN, 88
+    END
+
+    IDD_SELECT_EXPRESSION, DIALOG
+    BEGIN
+        LEFTMARGIN, 2
+        RIGHTMARGIN, 186
+        TOPMARGIN, 4
+    END
+
+    IDD_DIALOG_COMMAND, DIALOG
+    BEGIN
+        LEFTMARGIN, 5
+        RIGHTMARGIN, 191
+        TOPMARGIN, 4
+        BOTTOMMARGIN, 99
+    END
+
+    IDD_DIALOG_NEWSET, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 159
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 61
+    END
+
+    IDD_DIALOG_LIGHTSOURCE, DIALOG
+    BEGIN
+        LEFTMARGIN, 5
+        RIGHTMARGIN, 110
+        TOPMARGIN, 4
+        BOTTOMMARGIN, 70
+    END
+
+    IDD_COMMANDVIEW, DIALOG
+    BEGIN
+        RIGHTMARGIN, 713
+    END
+
+    IDD_LOADPREFS, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 47
+    END
+
+    IDD_DIALOG_CMDWND, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 453
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 199
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_RASCURSOR           CURSOR  DISCARDABLE     "res\\raswin.cur"
+IDC_PICKINGCURSOR       CURSOR  DISCARDABLE     "res\\picking.cur"
+IDC_PICKINGPLUS         CURSOR  DISCARDABLE     "res\\pickingp.cur"
+IDC_PICKINGMINUS        CURSOR  DISCARDABLE     "res\\pickingm.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_MOLECULAR_FILE DLGINIT
+BEGIN
+    IDC_MOLECULE_FORMAT, 0x403, 4, 0
+0x4450, 0x0042, 
+    IDC_MOLECULE_FORMAT, 0x403, 4, 0
+0x444d, 0x004c, 
+    IDC_MOLECULE_FORMAT, 0x403, 4, 0
+0x4943, 0x0046, 
+    IDC_MOLECULE_FORMAT, 0x403, 4, 0
+0x5958, 0x005a, 
+    IDC_MOLECULE_FORMAT, 0x403, 8, 0
+0x6c41, 0x6863, 0x6d65, 0x0079, 
+    IDC_MOLECULE_FORMAT, 0x403, 6, 0
+0x4f4d, 0x4150, 0x0043, 
+    IDC_MOLECULE_FORMAT, 0x403, 6, 0
+0x4843, 0x5241, 0x004d, 
+    IDC_MOLECULE_FORMAT, 0x403, 5, 0
+0x6f4d, 0x326c, "\000" 
+    IDC_MOLECULE_FORMAT, 0x403, 8, 0
+0x4e4d, 0x2052, 0x4450, 0x0042, 
+    IDC_MOLECULE_FORMAT, 0x403, 7, 0
+0x6942, 0x736f, 0x6d79, "\000" 
+    IDC_MOLECULE_FORMAT, 0x403, 9, 0
+0x614d, 0x7263, 0x4d6f, 0x646f, "\000" 
+    IDC_MOLECULE_FORMAT, 0x403, 6, 0
+0x4853, 0x4c45, 0x0058, 
+    IDC_MOLECULE_FORMAT, 0x403, 5, 0
+0x4446, 0x5441, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDR_MAINFRAME           " RasTop"
+    IDD_ABOUTRASTOP         "Information about RasTop"
+    IDR_RASTYPE             "\nUntitled\nRasTop\nRSM Scripts (*.rsm)\n.rsm\nRasTop.Document\nRSM Scripts"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "RasTop"
+    AFX_IDS_IDLEMESSAGE     "For Help, press F1"
+    AFX_IDS_HELPMODEMESSAGE "Select an object on which to get Help"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_NEW             "Open a new document\nNew"
+    ID_FILE_OPEN            "Open an existing document\nOpen"
+    ID_FILE_CLOSE           "Close the document\nClose"
+    ID_FILE_SAVE            "Save the active document\nSave"
+    ID_FILE_SAVE_AS         "Save the active document with a new name\nSave As"
+    ID_FILE_PAGE_SETUP      "Change the printing options\nPage Setup"
+    ID_FILE_PRINT_SETUP     "Change the printer and printing options\nPrint Setup"
+    ID_FILE_PRINT           "Print the active image\nPrint"
+    ID_FILE_PRINT_PREVIEW   "Display full pages\nPrint Preview"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+    ID_HELP_INDEX           "Opens Help\nHelp Topics"
+    ID_HELP_FINDER          "List Help topics\nHelp Topics"
+    ID_HELP_USING           "Display instructions about how to use help\nHelp"
+    ID_CONTEXT_HELP         "Display help for clicked on buttons, menus and windows\nHelp"
+    ID_HELP                 "Display help for current task or command\nHelp"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+    ID_FILE_MRU_FILE5       "Open this document"
+    ID_FILE_MRU_FILE6       "Open this document"
+    ID_FILE_MRU_FILE7       "Open this document"
+    ID_FILE_MRU_FILE8       "Open this document"
+    ID_FILE_MRU_FILE9       "Open this document"
+    ID_FILE_MRU_FILE10      "Open this document"
+    ID_FILE_MRU_FILE11      "Open this document"
+    ID_FILE_MRU_FILE12      "Open this document"
+    ID_FILE_MRU_FILE13      "Open this document"
+    ID_FILE_MRU_FILE14      "Open this document"
+    ID_FILE_MRU_FILE15      "Open this document"
+    ID_FILE_MRU_FILE16      "Open this document"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_WINDOW_NEW           "Open another window for the active document\nNew Window"
+    ID_WINDOW_ARRANGE       "Arrange icons at the bottom of the window\nArrange Icons"
+    ID_WINDOW_CASCADE       "Arrange windows so they overlap\nCascade Windows"
+    ID_WINDOW_TILE_HORZ     "Arrange windows as non-overlapping horizontal tiles\nTile Windows"
+    ID_WINDOW_TILE_VERT     "Arrange windows as non-overlapping vertical tiles\nTile Windows"
+    ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection\nErase"
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_SELECT_MODEL         "Select ion apply to all models\nModels"
+    ID_COPY_IMAGE           "Copy the image and put it on the Clipboard\nCopy"
+    ID_SLAB_AUTODEPTHCUE    "Move depth drawing with slab\nAutoDepth"
+    ID_DOTS_SIZE            "Set dot size\nDot size"
+    ID_VIEW_LIGHTSOURCE     "Adjust light source\nAdjust Light"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the main toolbar\n"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\n"
+    ID_VIEW_SELECTBAR       "Show or hide the selection toolbar\n"
+    ID_VIEW_SCRIPTBAR       "Show or hide the scripting toolbar\n"
+    ID_VIEW_COLORBAR        "Show or hide the color picker\nColor Picker"
+    ID_VIEW_COMMANDLINE     "Show or hide the command line\nToggle Command Line"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+    AFX_IDS_MDICHILD        "Activate this window"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "Close print preview mode\nCancel Preview"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_OPEN_AS         "Open an existing molecular file\nLoad"
+    ID_FILE_CLOSEDISPLAY    "Closean existing molecular file\nClose"
+    ID_LOADSCRIPT           "Load an existing molecular script\nLoad Script"
+    ID_SAVESCRIPT           "Save Rasmol script\nSave Script"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_MOLECULEINFO         "Information on current molecule\nMolecule Information"
+    ID_DOTS                 "Van der Waal's dot surface \nDot Surface"
+    ID_DOTSON               "Display Van der Waals dot surface\nDisplay Dots"
+    ID_DOTSOFF              "Remove Van der Waals dot surface\nRemove dots"
+    ID_LABELS_ON            "Dispay labels\nDisplay labels"
+    ID_LABELS_OFF           "Remove labels\nRemove labels"
+    ID_LABELS_DEFAULT       "Add a label to each selected residue\nLabel residues"
+    ID_SELECT_ALL           "Select all atoms\nSelect All"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_STATICROTX270        "Rotate on X axis 90 degrees counterclockwise\nRotate X 90 ccw"
+    ID_STATICROTX180        "Rotate on X axis 180 degrees\nRotate X 180"
+    ID_STATICROTX90         "Rotate on X axis 90 degrees clockwise\nRotate X 90 cw"
+    ID_STATICROTZ90         "Rotate on Z axis 90 degrees clockwise\nRotate Z 90 cw"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_STATICROTZ180        "Rotate on Z axis 180 degrees\nRotate Z 180"
+    ID_STATICROTZ270        "Rotate on Z axis 90 degrees counterclockwise\nRotate Z 90 ccw"
+    ID_STATICROTY90         "Rotate on Y axis 90 degrees clockwise\nRotate Y 90 cw"
+    ID_STATICROTY180        "Rotate on Y axis 180 degrees\nRotate Y 180"
+    ID_STATICROTY270        "Rotate on Y axis 90 degrees counterclockwise\nRotate Y 90 ccw"
+    ID_IMAGE_BMP            "Export picture bitmap format\nExport bitmap"
+    ID_IMAGE_GIF            "Export picture GIF format\nExport GIF"
+    ID_IMAGE_EPSF           "Export picture EPSF format\nExport EPSF"
+    ID_IMAGE_PPM            "Export picture PPM format\nExport PPM"
+    ID_IMAGE_RAST           "Export picture RAST format\nExport RAST"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_MOLECULE_PDB         "Save molecule in PDB format\nSave as PDB"
+    ID_MOLECULE_ALCHEMY     "Save molecule in Alchemy format\nSave as Alchemy"
+    ID_SCRIPT_RASMOL        "Save Rasmol script\nSave script"
+    ID_SCRIPT_KINEMAGE      "Save kinemage script\nSave as Kinemage"
+    ID_SCRIPT_MOLSCRIPT     "Save molscript script\nSave as molscript"
+    ID_SCRIPTLOAD_RASMOL    "Load Rasmol script\nLoad script"
+    ID_DISPLAY_WIREFRAME    "Display bonds\nDisplay bonds"
+    ID_DISPLAY_BACKBONE     "Display backbone\nBackbone on"
+    ID_DISPLAY_STICKS       "Enable sticks representation\nDisplay Sticks"
+    ID_DISPLAY_SPACEFILL    "Display spacefill\nSpacefill"
+    ID_DISPLAY_BALLANDSTICK "Enable ball and stick representation\nDisplay Ball && Stick"
+    ID_DISPLAY_RIBBONS      "Display ribbons\nDisplay Ribbons"
+    ID_DISPLAY_STRANDS      "Display strands \nDisplay Strands"
+    ID_DISPLAY_CARTOONS     "Display cartoons\nDisplay Cartoons"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_STEREO          "Enable or disable stereo view\nstereo"
+    ID_VIEW_SPECULAR        "Display or hide specular highlights\nSpecular"
+    ID_VIEW_SHADOWS         "Enable or disable Raytracing on spheres\nShadows"
+    ID_VIEW_SLABMODE        "Slab on/off\nSlab"
+    ID_SELECT_HYDROGENS     "Include hydrogens\nHydrogens"
+    ID_SELECT_HETE_ATOMS    "Include heteroatoms\nHetero atoms"
+    ID_HELP_RASMOL          "Access to RasTop Help\nHelp RasTop"
+    ID_COLOUR_CPK           "Apply CPK Colour scheme\nCPK"
+    ID_COLOUR_SHAPELY       "Apply Shapely Colour scheme\nColor Shapely"
+    ID_COLOUR_STRUCTURE     "Apply Structure Colour scheme\nColor Structure"
+    ID_COLOUR_GROUP         "Apply GroupColour scheme\nColor Group"
+    ID_COLOUR_CHAIN         "Apply Chain Colour scheme\nColor Chain"
+    ID_COLOUR_TEMPERATURE   "Apply temperature colour scheme\nColor Temperature"
+    ID_COLOUR_USER          "Apply User PDB Colour scheme\nColor Structure"
+    ID_COLOUR_MONO          "Apply Mono Colour scheme\nColor Mono"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_SET_SLAB_REJECT      "Set Reject Slab Mode\nReject"
+    ID_SET_SLAB_HALF        "Set Half Slab Mode\nReject"
+    ID_SET_SLAB_HOLLOW      "Set Hollow Slab Mode\nHollow"
+    ID_SET_SLAB_SOLID       "Set Solid Slab Mode\nSolid"
+    ID_SET_SLAB_SECTION     "Set Section Slab Mode\nSection"
+    IDD_MOLECULEISEQ        "Show Molecule Sequence\nSequence"
+    IDD_MOLECULESYM         "Show Molecule Symetry\nSymetry"
+    ID_MOLECULE_SEQ         "Display the molecule sequence\nMolecule sequence"
+    ID_MOLECULE_SYM         "Display the molecule symetry\nMolecule symetry"
+    ID_MOLECULE_STRUC       "Calculate the structure using DSSP algorithm\nStructure"
+    ID_DISPLAY_AXES         "Display Axes\nDisplay axes"
+    ID_COLOR_MOLECULE       "Color molecule structure\nColor molecule"
+    ID_COLOR_BACKGROUND     "Color background\nColor background"
+    ID_COLOUR_CHARGE        "Apply charge colour scheme\nColor Charge"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_COLOR_ATOM           "Color atoms\nColor atoms"
+    ID_COLOR_BONDS          "Color bonds\nColor bonds"
+    ID_COLOR_RIBBONS        "Color Ribbons\nColor Ribbons"
+    ID_COLOR_LABELS         "Color all labels\nColor all labels"
+    ID_COLOR_DOTS           "Color dots\nColor dots"
+    ID_COLOR_HBONDS         "Color hbonds\nColor hbonds"
+    ID_COLOR_SSBONDS        "Color SSbonds\nColor SSbonds"
+    ID_SELECT_SHOW          "Show the selected part of the molecule\nShow Selection"
+    ID_DISPLAY_RIBBONS_OFF  "Disable ribbon display \nRibbons off"
+    ID_COLOR_RIBBONS_NONE   "Color ribbons none\nColor ribbons none"
+    ID_SET_RIBBONS_SIZE     "Set ribbon size\nRibbon size"
+    ID_EDIT_RASMOL_COMMAND  "Enter a RasMol command\nRasmol command"
+    ID_DISPLAY_RIBBONS_FULL "Display ribbons only\nRibbons only"
+    ID_DISPLAY_STRANDS_FULL "Display strands only\nStrands only"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_DISPLAY_STRANDS_OFF  "Disable strands display\nStrands display off"
+    ID_SET_STRANDS_SIZE     "Set strands size\nStrans size"
+    ID_COLOR_STRANDS        "Colors all strands\nColor Starnds"
+    ID_COLOR_STRANDS1       "Color central strands\nColor central strands"
+    ID_COLOR_STRANDS2       "Color outerstrand\nColor outer strands"
+    ID_SET_STRANDS_NUMBER   "Set strand number\nStrand number"
+    ID_COLOR_STRANDS_NONE   "Color strands none\nStrand none"
+    ID_COLOR_RIBBONS1       "Color Ribbons 1\nColor central ribbons 1"
+    ID_COLOR_RIBBONS2       "Color Ribbons 2\nColor central ribbons 2"
+    ID_DISPLAY_WIREFRAME_FULL "Display only bonds\nBonds only"
+    ID_DISPLAY_WIREFRAME_OFF "Remove bonds\nRemove bonds"
+    ID_SET_WIREFRAME_SIZE   "Set Cylinder size\nCylinder size"
+    ID_COLOR_BONDS_NONE     "Disable bond color\nDisable  bond color"
+    ID_SET_DOTS_DENSITY     "Set  dot density\nDot density"
+    ID_COLOR_DOTS_POTENTIAL "Color dots according to potential\nColor dots potential"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_COLOR_DOTS_NONE      "Remove dot color\nRemove color"
+    ID_DOTS_VDWAALS         "Enable Van der Waals dot surface representation\nVDW on"
+    ID_DOTS_CONOLLY         "Enable Conolly dot surface representaton\nConolly"
+    ID_DOTS_RADIUS          "Set dot surface or probe sphere radius size\nRadius size"
+    ID_DISPLAY_WIREFRAME_TYPE "Set Bond to wire\nWire Bonds"
+    ID_DISPLAY_WIREFRAME_DASH 
+                            "Display bonds as dashed line\nDisplay dashed bonds"
+    ID_DISPLAY_WIREFRAME_WIRE "Display bonds as wire\nDisplay wire bonds"
+    ID_DISPLAY_WIREFRAME_CYLINDER 
+                            "Display bonds as cylinder and ask for radius\nDisplay cylinder bonds"
+    ID_DISPLAY_BACKBONE_OFF "Disable backbone\nBackbone off"
+    ID_DISPLAY_BACKBONE_FULL "Display only backbone\nDisplay backbone only"
+    ID_DISPLAY_BACKBONE_WIRE "Display backbone as wire\nDisplay wire Backbone"
+    ID_DISPLAY_BACKBONE_DASH 
+                            "Display backbone with dashes\nDisplay dash Backbone"
+    ID_DISPLAY_BACKBONE_CYLINDER 
+                            "Display backbone as cylinder and set radius\nCylinder Backbone"
+    ID_SET_BACKBONE_SIZE    "Set cylinder size\nCylinder size"
+    ID_COLOR_BACKBONE       "Color backbone\nColor backbone"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_COLOR_BACKBONE_NONE  "Color backbone none\nColor backbone none"
+    ID_DISPLAY_SPACEFILL_OFF "Disable spacefill\nDisable spacefill"
+    ID_DISPLAY_SPACEFILL_FULL "Display only spacefill\nDisplay spacefill only"
+    ID_SPACEFILL_FIXEDRADIUS 
+                            "Set spacefill with fixed radius size\nRadius size"
+    ID_SPACEFILL_VANDERWAALS 
+                            "Set spacefill with Van der Waals radius\nVan der Waal Spacefill"
+    ID_SPACEFILL_TEMPERATURE 
+                            "Set spacefill to temperature\nTemperature Spacefill"
+    ID_SPACEFILL_USER       "Apply user spacefill\nUser Spacefill"
+    ID_COLOR_FADE           "Fadind with background color\nBackground fade"
+    ID_COLOR_SSBONDS_NONE   "Disable SSbond color\nDisable SSbond color"
+    ID_DISPLAY_SSBONDS_WIRE "Set SSBond to wire\nWire SSBonds"
+    ID_DISPLAY_SSBONDS_DASH "Display SS bonds as dashed line\nDash SS bonds"
+    ID_DISPLAY_SSBONDS_CYLINDER 
+                            "Display SS bonds as cylinder and ask for radius\nCylinder SS bonds"
+    ID_DISPLAY_HBONDS_WIRE  "Set HBond to wire\nWire HBonds"
+    ID_DISPLAY_HBONDS_DASH  "Display H bonds as dashed line\nDash H bonds"
+    ID_DISPLAY_HBONDS_CYLINDER 
+                            "Display H bonds as cylinder and ask for radius\nCylinder H bonds"
+    ID_DISPLAY_HBONDS_ON    "Display H bonds\nDisplay H bonds "
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_SELECT_RANGE         "Select a range\nSelect range"
+    ID_SELECT_DOTS          "Select atoms with dot envelop\nSelect dots"
+    ID_DISTANCE_REMOVE      "Remove all monitors\nRemove monitors"
+    ID_DISTANCE_SHOW        "Show distance values\nShow values"
+    ID_MONITOR_COLOUR       "Color monitors\nColor monitors"
+    ID_MONITOR_COLOUR_NONE  "Remove monitor color\nRemove color"
+    ID_COLOR_LABELS_NONE    "Remove label color\nRemove label color"
+    ID_SET_BONDS            "Display multiple bonds\nDisplay multiple bonds"
+    ID_DISPLAY_SSBONDS_ON   "Display SS bonds\nDisplay SS bonds "
+    ID_COMMANDVIEW          "Show or hide the command pannel\nToggle Command Pannel"
+    ID_SELECT_EXPRESSION    "Select an atom expression\nSelect atom expression"
+    ID_SELECT_WITHIN        "Select within selection\nSelect within"
+    ID_EXP_NEW              "New selection"
+    ID_EXP_ADD              "Add to current selection"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_DISPLAY_SSBONDS_OFF  "Remove SS bonds\nRemove SS bonds "
+    ID_DISPLAY_HBONDS_OFF   "Remove H bonds\nRemove H bonds "
+    ID_COLOR_HBONDS_NONE    "Disable Hbond color\nDisable Hbond color"
+    ID_DISPLAY_WIREFRAME_ONLY 
+                            "Enable wireframe representation\nDisplay Wireframe"
+    ID_DISPLAY_HBONDS_SIDECHAIN 
+                            "Display H bonds on sidechain\nSidechain H bonds"
+    ID_DISPLAY_HBONDS_BACKBONE "Display H bonds on backbone\nBackbone H bonds"
+    ID_DISPLAY_SSBONDS_SIDECHAIN 
+                            "Display SS bonds on sidechain\nSidechain SS bonds"
+    ID_DISPLAY_SSBONDS_BACKBONE 
+                            "Display SS bonds on backbone\nBackbone SS bonds"
+    ID_RIBBONS_ON           "Display ribbons\nDisplay Ribbons"
+    ID_RIBBONS_OFF          "Disable ribbon display \nRibbons off"
+    ID_RIBBONS_ONLY         "Display ribbons only\nRibbons only"
+    ID_RIBBONS_RIBBONS      "Enable ribbon representation\nRibbons"
+    ID_RIBBONS_STRANDS      "Enable strand representation \nStrands"
+    ID_RIBBONS_TRACE        "Enable trace representation\nTrace"
+    ID_RIBBONS_CARTOONS     "Enable cartoon representation\nCartoons"
+    ID_RIBBONS_BACKBONE     "Enable backbone representation\nBackbone"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_RIBBONS_SIZE         "Set ribbon size\nRibbon size"
+    ID_RIBBONS_COLOR_NONE   "Remove ribbon color\nRemove color"
+    ID_RIBBONS_COLOR_INSIDE "Color central strands\nCentral strands"
+    ID_RIBBONS_COLOR        "Color Ribbons\nColor Ribbons"
+    ID_RIBBONS_COLOR_OUTSIDE "Color outerstrand\nOuter strand"
+    ID_RIBBONS_STRUCTURE    "Display ribbons according to structure\n Ribbons structure"
+    ID_DISPLAY_TRACE_DOTS   "Display trace with dots\nDot trace"
+    ID_DISPLAY_TRACE_TEMPERATURE 
+                            "Display trace according to temperature\nTemperature trace"
+    ID_SET_CARTOONS_HEIGTH  "Set cartoon heigth\nCartoon heigth"
+    ID_SET_CARTOONS_HEIGHT  "Set cartoon height\nCartoon height"
+    ID_DISPLAY_RIBBONS_STRUCTURE 
+                            "Display ribbons according to structure\n Ribbons structure"
+    ID_DISPLAY_CARTOONS_ARROW 
+                            "Display cartoons with beta arrows\nCartoon beta arrows"
+    ID_MOLECULE_INFO        "Display molecule information\nMolecule information"
+    ID_SELECT_PREVIOUS      "Previous selection\nPrevious Selection"
+    ID_LABELS_SETTINGS      "Format labels\nLabel formatting"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_MOLECULE_CONNECT     "Calculate the connectivity\nCalculate Connectivity"
+    ID_MOLECULE_RENUMBER    "Renumber the molecule\nRenumber molecule"
+    ID_DISPLAY_BOUNDBOX     "Display the bound box\nBound box"
+    ID_DISPLAY_UNITCELL     "Display the unit cell\nUnit cell"
+    ID_SELECT_BONDMODE      "Select bonds between selected atoms\nSelect internal bonds"
+    ID_COLOR_HBONDS_TYPE    "Color Hbonds according to type\nHbond type"
+    ID_SELECT_INVERSE       "Select complementary atoms from current selection\nSelect Inverse"
+    ID_SAVE_MOLECULARFILE   "Save a molecular file\nSave molecular file"
+    ID_SAVE_SCRIPT          "Save data\nSave data"
+    ID_SAVE_IMAGE           "Save an image file\nSave image file"
+    ID_FILE_LOAD_RASMOLSCRIPT "Load a Rasmol script\nLoad a Rasmol script"
+    ID_SET_CONNECT          "Automatic bond creation\nAutomatic bond creation"
+    ID_FILE_LOAD_MOLECULARFILE "Load a molecular file\nLoad Molecular data"
+    ID_FILE_RASTOP          "Open an existing document\nOpen"
+    ID_MOLECULE_FILE        "Edit the molecular file\nMolecular file"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_PREFERENCES     "Preference settings\nPreference settings"
+    ID_PICK_ATOM            "Select atoms\nSelect Atoms"
+    ID_PICK_GROUP           "Select residues\nSelect Residues"
+    ID_PICK_CHAIN           "Select chains\nSelect Chains"
+    ID_PICK_CENTRE          "Select a centre\nSelect Centre"
+    ID_PICK_LABEL           "Add or remove labels\nLabels"
+    ID_PICK_DISTANCE        "Measure distances\nMeasure Distances"
+    ID_PICK_MONITOR         "Add or remove monitors\nMonitors"
+    ID_PICK_ANGLE           "Measure angles\nMeasure Angles"
+    ID_PICK_TORSION         "Measure torsions\nMeasure Torsions"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EXP_REMOVE           "Remove from current selection"
+    ID_EXP_EXCLUDE          "Exclude the current selection"
+    ID_EXP_EXTRACT          "Extract from current selection"
+    ID_RESTRICT             "Restrict the current selection\nRestrict"
+    ID_SELECTION_NEW        "Select a new set of atoms\nNew"
+    ID_SELECTION_ADD        "Add to current selection\nAdd"
+    ID_SELECTION_REMOVE     "Remove from current selection\nRemove"
+    ID_SELECTION_EXTRACT    "Select atoms in the current selection\nExtract"
+    ID_SELECTION_EXCLUDE    "Select a new set excluded of current selection\nExclude"
+    ID_COPY_SELECTION       "Copy the current selection to the clipboard\nSelection Copy"
+    ID_PASTE                "Execute RasMol command stored in the clipboard if any\nPaste"
+    ID_WINDOW_TILE          "Arrange windows as non-overlapping tiles\nTile Windows"
+    ID_SPACEFILL_SPHERE     "Set spacefill to sphere representation\nSphere"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_SPACEFILL_STAR       "Set spacefill to star representation\nStar"
+    ID_PICK_COORD           "Display atom coordinates\nCoordinates"
+    ID_COLOUR_MODEL         "Apply NMR model colour scheme\nModel"
+    ID_COLOUR_ALT           "Apply alternate colour scheme\nAlternate"
+    ID_SET_CISANGLE         "Set the cutoff value for cis angle\nCis angle"
+    ID_VIEW_MENU            "Show or hide all bars and menus\nToggle all"
+    ID_SET_BONDMODE_NONE    "Set bondmode to none\nNone"
+    ID_SET_BONDMODE_NOBONDED "Set bondmode to not bonded\nNot bonded"
+    ID_SET_BONDMODE_ALL     "Set bondmode to all\nAll"
+    ID_SHOW_SELECT_CHN      "Edit the selected chains of the molecule\n Edit chains"
+    ID_SHOW_SELECT_GRP      "Edit the selected groups of the molecule\n Edit groups"
+    ID_SHOW_SELECT_ATM      "Edit the selected atoms of the molecule\n Edit atoms"
+    ID_MOLECULE_PHIPSI      "Display the Phipsi plot\nPhipsi"
+    ID_MOLECULE_RPP         "Display the Ramachandran plot\nRamachandran"
+    ID_SHOW_SELECT_COOR     "Edit the coordinates of the selected atoms\n Edit coordinates"
+    ID_COPY_POSITION        "Copy the position of the molecule to the clipboard\nCopy position"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDC_ROTATEX             "Rotate or translate the molecule on the X-axis"
+    IDC_ROTATEY             "Rotate or translate the molecule on theY-axis"
+    IDC_ROTATEZ             "Rotate  on the Z-axis or zoom the molecule"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDC_RADIO_ROTATE        "Set scrolling mode to rotation"
+    IDC_RADIO_TRANSLATE     "Set scrolling mode to translation or zooming"
+    IDC_SLID_LIGHT          "Adjust ambient lighting"
+    IDC_BUTTON_SPIN         "Start or stop automatic mode - set the speed on scrollbars"
+    IDC_SLID_SLAB           "Adjust Z-axis value of the slab"
+    IDC_BUTTON_RESET        "Reset the molecule (centre, translation, and automode)"
+    IDC_SPIN_SPECULAR       "Adjust specpower (shiny aspect of molecular surface)"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDC_INFOLINE            "Right-click the mouse to select and to copy text"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDD_DIALOG_LIGHTSOURCE  "Change Light Source\nLight Source"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_DISPLAY_STAR         "Enable start representation\nDisplay Stars"
+    ID_DISPLAY_SPHERE       "Enable sphere VDW representation\nDisplay Sphere VDW"
+    ID_DISPLAY_NOTHING      "Remove all representations\nRemove rendering"
+    ID_SELECT_CENTRE        "Centre molecule on selection\nCentre"
+    ID_PICK_ROTBOND         "Rotate selected bond\nRotate Bond"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_PICK_MOLSET          "Select molecule\nSelect Molecules"
+    ID_PICK_LIGHT           "Change light direction\nLight"
+    ID_PICK_BOND            "Select && create bonds\nSelect or Modify Bonds"
+    ID_DISPLAY_WORLDAXES    "Display World Axes\nDisplay World Axes"
+    ID_SET_STEREO_ANGLE     "Set the stereo angle between the left and the right view\nStereo Angle"
+    ID_MOLECULE_HIDEORSHOW  "Hide or show the currently selected molecule\nHide or Show"
+    ID_MOLECULE_SHOW        "Hide or Show the selected molecule\nHide or Show"
+    ID_CENTRE_WORLD         "Centre World in the Window\nWorld"
+    ID_CENTRE_ORIGIN        "Centre to World Origin \nOrigin "
+    ID_CENTRE_ORIGINTOCENTRE 
+                            "Translate World Origin to Rotation Centre\nOrigin to centre"
+    ID_SLAB                 "Activate or Deactivate the Slab\nSlab"
+    ID_SLAB_RESET           "Reset Slab\nReset Slab"
+    ID_DEPTH                "Activate or desactivate depth clipping\nDepth"
+    ID_DEPTH_RESET          "Reset Depth (back-clipping)\nReset Depth"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_INDICATOR_ATOM_NAME  " Atom"
+    ID_INDICATOR_NULL       "no text"
+    ID_INDICATOR_GROUP      "number"
+    ID_INDICATOR_GROUP_NAME " Res"
+    ID_INDICATOR_CHAIN      "number"
+    ID_INDICATOR_CHAIN_NAME "  Molecule"
+    ID_INDICATOR_XCOOR      "x"
+    ID_INDICATOR_YCOOR      "y"
+    ID_INDICATOR_ZCOOR      "z"
+    ID_INDICATOR_COOR_NAME  "Coor"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_INDICATOR_ATOM       "number"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_MOLECULE_AS     "Save the selected molecule with a new name\nSave Molecule As"
+    ID_FILE_ADD             "Add an RSM file\nAdd"
+    ID_MOLECULE_DELETE      "Delete the selected molecule\nDelete Molecule"
+    ID_RESET_BOND           "Reset all bonds\nReset bonds"
+    ID_COORD_CHANGE         "Change system coordinates\nChange Coordinates"
+    ID_WORLD_INFO           "Display world information\nWorld information"
+    ID_SET_PREFERENCES      "Load new preference file\nLoad Preferences"
+    ID_DEPTHCUEMODE1        "Set depthcue to rendering mode 1\nDepthcue mode 1"
+    ID_DEPTHCUEMODE2        "Set depthcue to rendering mode 2\nDepthcue mode 2"
+    ID_DEPTHCUEMODE3        "Set depthcue to rendering mode 3\nDepthcue mode 3"
+    ID_DEPTHCUEMODE4        "Set depthcue to rendering mode 4\nDepthcue mode 4"
+    ID_DEPTH_WORLD          "Set World Depth\nWorld Depth"
+    ID_CENTRE_CENTRETOORIGIN 
+                            "Translate Rotation Centre to World Origin\nCentre to Origin"
+    ID_COMMANDLINE_ECHO     "Echo RasTop Interface to Command Line\nEcho RasTop Internal Commands"
+    ID_REPRESENTATION       "Default Script Representation at file opening\nUse Default Representation"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_LOCAL_CMDWND        "RasMol Command Line"
+    IDS_LOCAL_COLWND        "Color"
+    IDS_LOCAL_MAINWND       "Main"
+    IDS_LOCAL_SELWND        "Selection"
+    IDS_LOCAL_SCRWND        "Scripting"
+    IDS_LOCAL_CLIP          "Delete large clipboard data?"
+    IDS_LOCAL_CHAIN         " Chain: "
+    IDS_LOCAL_MODEL         " Model: %d"
+    IDS_LOCAL_COMOL         "Molecular"
+    IDS_LOCAL_COWRLD        "World"
+    IDS_LOCAL_COSCREEN      "Screen"
+    IDS_LOCAL_COABS         "Absolute"
+    IDS_LOCAL_OFF           "Off"
+    IDS_LOCAL_DEF1          "Enter an identifier"
+    IDS_LOCAL_DEF2          "\nto specify the current set\nof selected atoms"
+    IDS_LOCAL_DEL           "OK to delete molecule?"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_LOCAL_WITH1         "Enter selection radius"
+    IDS_LOCAL_WITH2         "in RasMol Units\n1 Angstrom equal 250 R.U."
+    IDS_LOCAL_NUM1          "Enter numbering for the first residue"
+    IDS_LOCAL_NUM2          "Negative values are allowed"
+    IDS_LOCAL_CIS1          "Enter new cis angle"
+    IDS_LOCAL_CIS2          "Value between 0 and 180 degrees"
+    IDS_LOCAL_RAD1          "Enter spacefill radius"
+    IDS_LOCAL_RAD2          "Number between 0 and 750 R.U.\nEnter 0 for Van der Waals representation.\n1 Angstrom equal 250 R.U."
+    IDS_LOCAL_WIRE1         "Enter bond radius"
+    IDS_LOCAL_WIRE2         "Number between 0 and 250 R.U.\n1 Angstrom equal 250 R.U."
+    IDS_LOCAL_HB1           "Enter H-bond radius"
+    IDS_LOCAL_HB2           "Number between 0 and 250 R.U.\nEnter 0 for dash representation.\n1 Angstrom equal 250 R.U."
+    IDS_LOCAL_SSB1          "Enter SS-bond radius"
+    IDS_LOCAL_SSB2          "Number between 0 and 250 R.U.\nEnter 0 for dash representation.\n1 Angstrom equal 250 R.U."
+    IDS_LOCAL_RIBB1         "Enter ribbon size"
+    IDS_LOCAL_RIBB2         "Enter strand size"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_LOCAL_RIBB3         "Enter cartoon size"
+    IDS_LOCAL_RIBB4         "Number between 0 and 1000 R.U.\nEnter 0 for structure representation.\n1 Angstrom equal 250 R.U."
+    IDS_LOCAL_CYL1          "Enter cylinder radius"
+    IDS_LOCAL_CYL2          "Number between 0 and 250 R.U.\nEnter 0 for wire representation\n1 Angstrom equal 250 R.U."
+    IDS_LOCAL_CYL3          "Number between 1 and 250 R.U.\n1 Angstrom equal 250 R.U."
+    IDS_LOCAL_STRAND1       "Enter number of strands"
+    IDS_LOCAL_STRAND2       "Possiblities are \n1, 2, 3, 4, 5, or 9 strands"
+    IDS_LOCAL_CAR1          "Enter cartoon height"
+    IDS_LOCAL_CAR2          "Number between 1 and 500 R.U. \n1 Angstrom equal 250 R.U."
+    IDS_LOCAL_DOT1          "Enter dot size"
+    IDS_LOCAL_DOT2          "Number between 1 and 20"
+    IDS_LOCAL_DD1           "Enter dot density"
+    IDS_LOCAL_DD2           "Number between 1 and 1000"
+    IDS_LOCAL_DRAD1         "Enter radius or 'solvent probe' size"
+    IDS_LOCAL_DRAD2         "Number between 0 and 750 R.U..\nEnter zero to generate a true\nVan der Waals representation.\n1 Angstrom equal 250 R.U."""
+    IDS_LOCAL_STEREO1       "Enter new stereo angle"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_LOCAL_STEREO2       "Angle between -180 and 180 degrees"
+    IDS_LOCAL_DWORLD1       "Enter new world depth"
+    IDS_LOCAL_DWORLD2       "Value between 1500 and 250,000 R.U.\n1 Angstrom equal 250 R.U."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif
+#include "res\RasTop.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#include "afxprint.rc"       // printing/print preview resources
+#endif
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

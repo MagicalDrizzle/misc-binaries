@@ -1,0 +1,326 @@
+<html>
+
+<head>
+<title></title>
+</head>
+
+<body>
+
+<p>ChangeLog 2</p>
+
+<p><a href="../changelograstop.htm">Back</a></p>
+
+<p>[15/12/93]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; molecule.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Corrected a bug in the helix determination
+algorithm that<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; resulted in helices sometimes being one residue
+shorter than <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Kabsch and Sander's DSSP output. Thanks to
+Shane Sturrock.<br>
+<br>
+[15/12/93]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; x11win.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Modified the way that FetchEvent waits for the
+next XEvent<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; to allow interactive use on VMS systems and
+UNIXs without<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TERMIOS or select(2) functions.<br>
+<br>
+[14/12/93]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; command.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Made several changes to ensure that the latest
+extensions to<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RasMol compile on VMS systems without
+warnings/errors.<br>
+<br>
+[13/12/93]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; x11win.c raswin.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ignore mouse movements close to initial
+starting position.<br>
+<br>
+[13/12/93]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; outfile.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Corrected bug in &quot;write script&quot; that
+caused magnifications <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; such as &quot;zoom 140&quot; to be written as
+reductions, &quot;zoom 40&quot;.<br>
+<br>
+[10/12/93]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; x11win.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Changed the (default) menu fonts from 12pt to
+14pt and fixed<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a serious `sprintf' bug, to avoid the program
+crashing on <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; machines without the required fonts, such as
+NCD X-terminals.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Very special thanks to Norm Yamane for the bug
+fixes.<br>
+<br>
+[10/12/93]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; rasmol.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Removed the &quot;static&quot; declaration
+qualifier from HandleEvents <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; in both the function prototype and main
+definition to avoid <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a feature of the new IRIX compiler that only
+resolves forward <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; references in the same file at link time!<br>
+<br>
+[02/12/93]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; tokens.h command.c molecule.c abstree.c
+abstree.h<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Added the predefined set
+&quot;water&quot;/&quot;waters&quot; that contains<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; all the heterogenous water molecules;
+&quot;H0H&quot;,&quot;WAT&quot; and &quot;H20&quot;.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Also allow PDB residue TRY as a synonym for
+TRY, CPR as a<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; synonym for PRO and also CSH, CYH and CSM for
+CYS.<br>
+<br>
+[01/12/93]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; molecule.h<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Removed &quot;extern&quot; definitions of
+[Min,Max][Main,Heta]Atom from<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; molecule.h that caused the VMS linker to
+generate unresolved <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; symbol errors/warnings! Thanks to Carl David.<br>
+<br>
+[29/11/93]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; rasmol.h<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Check to prevent redefinition of &quot;PI&quot;
+if its defined in <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;math.h&gt;, to avoid Linux errors. Thanks
+to Robert Herzog.<br>
+<br>
+[25/11/93]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; outfile.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Corrected bug in RasMol &quot;write
+script&quot; command that caused<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; some problems of the axes had been rotated by
+more than 90<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; degrees (caused by asin). Also fixed RasWin
+&quot;write script&quot;.<br>
+<br>
+[25/11/93]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; command.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fixed bug in RasWin that caused molecules to
+translate and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rotate differently to the UNIX version due to
+INVERT.<br>
+<br>
+[24/11/93]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; outfile.c outfile.h command.c tokens.h<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Prototype implementation of a RasMol
+&quot;write molscript&quot; command<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; to generate MolScript script files of the
+current image. It<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; currently only outputs the molecule's secondary
+structure to<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; generate a ribbon diagram.<br>
+<br>
+[24/11/93]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; molecule.c molecule.h command.c
+command.h<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Modified RasMol to internally keep track of the
+currently<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; loaded molecule's original filename.<br>
+<br>
+[23/11/93]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; outfile.c outfile.h command.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Added the RasMol &quot;write script&quot;
+command to generate a RasMol<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; script file containing current parameter values
+and viewing<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; transformation.<br>
+<br>
+[23/11/93]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; molecule.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Convert Alchemy atom names to upper case, and
+use the file<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; line number as the atoms serial number to avoid
+problems.<br>
+<br>
+[23/11/93]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; transfor.c transfor.h command.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Uncovered RasMol bug that caused RasMol to not
+execute<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rotations in the order they appear in a script
+file and <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; applied all X, Y and Z rotations once the file
+was loaded.<br>
+<br>
+[23/11/93]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; raswin.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Modify DDEExecuteCommand() to redraw the screen
+after each<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DDE Execute command list. This solves the bug
+caused by moving<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; the redraw processing to handle the scroll bars
+properly.<br>
+<br>
+[22/11/93]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; command.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Added the RasMol &quot;background&quot; command
+which is synonymous<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; with the command &quot;set background&quot; for
+compatability.<br>
+<br>
+[22/11/93]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; raswin.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Modified RasWin to only accept mouse movement
+transformations<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; only after RasWin detects the preceeding mouse
+button press.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; This avoids spurious translations after using
+dialog boxes.<br>
+<br>
+[22/11/93]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; command.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Corrected `logic' problem in RasMol that caused
+the program to<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; exit sucessfully if a menu option is selected
+while loading<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a molecule. Menu options are now ignored during
+loading.<br>
+<br>
+[22/11/93]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; render.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Corrected bug in IdentifyAtom() that sometimes
+caused RasMol<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; to crash when picking &quot;Ball &amp;
+Stick&quot; representations by not<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; determining the Chain and Group of the selected
+bond's atom.<br>
+<br>
+[19/11/93]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; raswin.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fixed bug in RefreshScreen handling that only
+redrew image<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if DispatchMessage() was called from the main
+loop. The screen<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; is now checked for refresh after each Windows
+message causing<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; the molecule to rotate whilst scrolling. Added
+the UNIX mouse<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; movement/key combinations to
+translate/rotate/zoom and slab<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; the molecule. Picking follows the same rules as
+RasMol.<br>
+<br>
+[19/11/93]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; mswin31.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Corrected bug in UpdateScrollBars() moved the
+button in the<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; opposite direction to UNIX. Changed
+TranferImage() to force<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; the screen to be redrawn immediately.<br>
+<br>
+[18/11/93]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; x11win.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Added mouse control of rotation, translation,
+zooming and <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; slabbing by moving mouse while pressing down a
+mouse button<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; and optionally holding either the [shift] or
+[control] keys.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Picking is by pressing/releasing mouse in the
+same position.<br>
+<br>
+[17/11/93]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; command.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Added &quot;reset&quot; command to initialise
+all the dial values to<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; their default values. Modified the new filename
+parsing to<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; avoid &quot;save xyz.pdb&quot; generating the
+file &quot;.pdb&quot; and issuing<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; an error message. File types must be followed
+by whitespace.<br>
+<br>
+[17/11/93]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; transfor.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Corrected bug in ColourBackAttrib that resulted
+in the RasMol<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;colour backbone&quot; command colouring
+everything. Thanks to<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Shane Sturrock.<br>
+<br>
+[15/11/93]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; x11win.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Handle ICCM &quot;WM_DELETE_WINDOW&quot;
+request from window manager.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Added fatal XIO error handling and `gracefull'
+shutdown.<br>
+<br>
+[08/11/93]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; command.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Filenames no longer need to be delimited with
+either quote<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; or apostrophe characters in the RasMol load,
+script, write<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; and save commands. Filenames beginning with a
+tilde are now <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `globbed' on UNIX systems. Space characters are
+ignored at<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; the start of filenames. Try compression file
+extensions and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; environment search paths when loading a file.<br>
+<br>
+[05/11/93]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; command.c transfor.c transfor.h<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Permit magnification over 200% based upon the
+size of the<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; molecule. Zoom only reports an error if the
+maximum &quot;image&quot;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; size of a sphere (about 120 pixels radius) is
+exceeded. This<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; leads to interesting behaviour when enlarging
+the screen at<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; maximum magnification ... objects stay the same
+size!<br>
+<br>
+[05/11/93]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; command.c molecule.c molecule.h<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Added the ability to read in compressed file
+formats. <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Currently supported compression formats are
+UNIX `compress' <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (&quot;.Z&quot;) and GNU gzip (&quot;.gz&quot;
+and &quot;.z&quot;) compression formats.<br>
+<br>
+[05/11/93]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; abstree.h<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Increased the default VDW radius for unknown
+atoms to 1.44A.<br>
+<br>
+[01/11/93]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; command.c command.h rasmol.c raswin.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Disable slabbing and shadows after a RasMol
+&quot;zap&quot; command.<br>
+<br>
+[01/11/93]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; molecule.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Remove the use of EndOfData in molecule.c that
+was creating<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; problems for the RasMol zap command on certain
+PDB files.<br>
+<br>
+[22/10/93]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; molecule.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Modified FetchRecord to use either line feed
+'\n' or carriage<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return '\r' as line terminator to support Mac
+format files.<br>
+<br>
+[22/10/93]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; rasmol.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Placed HandleEvents function prototype inside
+#ifdef __STD__<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; after changing it to take a paramter. Thanks to
+Joseph Warden.<br>
+<br>
+[20/10/93]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; rasmol.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Include &lt;sys/termio.h&gt; instead of
+&lt;termio.h&gt;, to allow the<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; program to be compiled under 386BSD. Thanks to
+Robert Miller.<br>
+<br>
+[17/10/93]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; rasmol.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Include &lt;sys/select.h&gt; if _AIX is defined
+for IBM RS/6000s<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; under AIX 3.2. Thanks to John Harvey.<br>
+<br>
+[15/10/93]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; rasmol.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Added #include &lt;sys/select.h&gt; to
+rasmol.c, when _SEQUENT_ is<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; defined to allow struct fd_set to be properly
+defined.<br>
+<br>
+[15/10/93]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; rasmol.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Solved problem that LexState is not defined
+when TERMIOS is<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; undefined, and never initialised. Thanks to
+John Harvey.<br>
+<br>
+[15/10/93]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; !Announced the public release of RasMol
+and RasWin <br>
+&nbsp;&nbsp;&nbsp; versio 2.2, available by anonymous FTP from ftp.dcs.ed.ac.uk<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [129.215.160.5] in the directory /pub/rasmol.
+The announcement<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; was made in both bionet.software,
+bionet.announce, sci.bio,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sci.chem, comp.graphics.visualisation
+newsgroups.<br>
+<br>
+[13/10/93]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; !RasMol/RasWin version 2.2 presentation
+given at <br>
+&nbsp;&nbsp;&nbsp; Glaxo Group Research, Greenford, Middlesex.<br>
+</p>
+</body>
+</html>

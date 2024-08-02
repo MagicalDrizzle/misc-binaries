@@ -1,0 +1,462 @@
+<html>
+
+<head>
+<title></title>
+</head>
+
+<body>
+
+<p>ChangeLog 6</p>
+
+<p><a href="../changelograstop.htm">Back</a></p>
+
+<p>[05/05/95]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; render.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Corrected 16bit precision problem with cartoons
+on PCs and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Macintoshes. These caused rounding errors in
+`ribbons'.<br>
+<br>
+[02/05/95]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; INSTALL<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Added additional build info for RasMac on the
+PowerPC using<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Metrowerks C++ v1.2. This requires additional
+files to v1.1.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Special thanks to Graham Palmer.<br>
+<br>
+[03/04/95]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; pixutils.c pixutils.h render.c command.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Added the ability to display dashed
+&quot;strands&quot; ribbons.<br>
+<br>
+[03/04/95]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; render.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Modified the handling of the first and last
+residue in<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a chain to only extend to the alpha carbon
+except when<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; the last residue is an arrow head.<br>
+<br>
+[27/03/95]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; render.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fixed bug in cartoon representation when final
+residue in a<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; chain is a beta-sheet. Improved
+&quot;CalculateInten&quot; performance.<br>
+<br>
+[27/03/95]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; rasmol.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Made several changes to rasmol.c to allow
+RasMol to compile<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; with DEC C (on AXP and VAX) without
+/standard=vaxc. Special<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; thanks to Martin Zinser.<br>
+<br>
+[26/03/95]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; render.c render.h pixutils.c pixutils.h
+command.c <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; tokens.h<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Added the new representation
+&quot;cartoon&quot; which represents a<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; protein as a Richardson-style cartoon. The
+width of the<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cartoon is given as a parameter, the depth of
+the ribbon <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; and use of arrow heads may be changed using
+&quot;set cartoon&quot;.<br>
+<br>
+[25/03/95]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; render.c command.c transfor.c molecule.h<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Changed the semantics of the &quot;trace&quot;
+command and added a<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; new representation, &quot;trace&quot; which
+displays a cylindrical<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; spline representation of &quot;backbone&quot;.<br>
+<br>
+[22/03/95]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; render.c render.h command.c tokens.h
+transfor.c <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; script.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Added the &quot;Monitor&quot; representation to
+RasMol as an dashed <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; line between two atoms, optionally labelled by
+the distance<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; between the atoms (the default).<br>
+<br>
+[16/03/95]&nbsp;&nbsp;&nbsp; Makefile<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Added comments about use of +O4 optimisation
+using HPUX 9.05<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; on the native PA-RISC compiler. Thanks to
+Richard Mathar.<br>
+<br>
+[13/03/95]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; outfile.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Implemented dashed lines in RasMol's vector
+PostScript output.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; This now includes the ability output of hbonds
+and ssbonds.<br>
+<br>
+[13/03/95]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; script.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fixed bug when generating RasMol scripts caused
+by overlapping<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; datum type masks. This caused errors with
+dashed vectors.<br>
+<br>
+[12/03/95]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; x11win.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fixed a problem using scroll bar arrows to spin
+a molecule<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; with three-button emulation on XFree (Linux and
+NetBSD).<br>
+<br>
+[07/03/95]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; render.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Improved performance of &quot;isqrt&quot;
+routine, the most frequently<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; called function when rendering ribbons.<br>
+<br>
+[06/03/95]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; render.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Implemented the routine
+&quot;InitialiseTables&quot; to avoid using<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;isqrt&quot;. This drastically reduces the
+start-up time.<br>
+<br>
+[06/03/95]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; render.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Improved rendering of double &amp; triple
+bonds.<br>
+<br>
+[03/03/95]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; command.c render.c render.h pixutils.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Added the ability to display double and triple
+bonds as<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; two and three lines using the &quot;set bonds
+true&quot; command.<br>
+<br>
+[03/03/95]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; command.c tokens.h render.c transfor.c
+script.c <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rasmol.c <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Added the ability to display bonds and
+backbones as dashed <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lines using either the &quot;dashes&quot;
+command or the &quot;dashes&quot;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; parameter to the &quot;wireframe&quot; and
+&quot;backbone&quot; commands.<br>
+<br>
+[03/03/95]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; command.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Modified 'FetchFile' to display explicitly
+specified <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; hydrogen bonds by default.<br>
+<br>
+[03/03/95]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; pixutils.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Improved quality of dashed lines.<br>
+<br>
+[02/03/95]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; render.c molecule.c transfor.c
+transfor.h<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ported RasMol to compile under Borland's Turbo
+C/C++. This<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; required rewrite of ClearBuffers to avoid
+&quot;_fmemset&quot; bug.<br>
+<br>
+[02/03/95]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; outfile.c outfile.h command.c tokens.h
+x11win.c <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rasmol.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Added support for Silicon Graphics' IRIS RGB
+format image<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; files for both 8 and 32bit versions,
+&quot;write iris &lt;filename&gt;&quot;.<br>
+<br>
+[01/03/95]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; outfile.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tidied up many of the image file output
+routines.<br>
+<br>
+[28/02/95]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; molecule.h abstree.c abstree.h<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Improved handling of RNA bases and conversion
+of non-standard<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; nucleotide atom names. Thanks to Hans Hoppe.<br>
+<br>
+[17/02/95]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; molecule.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Finally implemented internal to cartesian
+co-ordinate<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; conversion for MOPAC internal input files. Very
+special<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; thanks to Klaus-Peter Gulden.<br>
+<br>
+[16/02/95]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; molecule.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Added detection of MOPAC file types, and added
+support<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for MOPAC cartesian co-ordinate input files.<br>
+<br>
+[15/02/95]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; molecule.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Added support for reading MOPAC output files
+including <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; charge information (provided the job doesn't
+use the<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;NOXYZ&quot; keyword as an option).<br>
+<br>
+[14/02/95]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; render.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Added &quot;X&quot;, &quot;Y&quot; and
+&quot;Z&quot; axes labels to the &quot;set axes on&quot;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; command.<br>
+<br>
+[13/02/95]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; render.c render.h command.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Implemented the &quot;set picking centre&quot;
+command to allow the<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; centre of rotation to be selected by clicking
+on an atom.<br>
+<br>
+[10/02/95]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; render.c render.h pixutils.c pixutils.h
+command.c tokens.h<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Started adding more support for RasMol stereo
+viewing.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Stereo is enabled by either &quot;stereo
+on&quot; or &quot;set stereo on&quot;.<br>
+<br>
+[10/02/95]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; pixutils.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Improved performance of function DisplayString
+avoiding<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; clipping and reduced intensity of atom labels.<br>
+<br>
+[09/02/95]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; abstree.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Implemented function 'CalcTorsion' for
+&quot;set picking torsion&quot;.<br>
+<br>
+[06/02/95]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; render.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Increased the maximum sphere rendering radius
+within RasMol.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; This is the first step to producing
+high-resolution output.<br>
+<br>
+[02/02/95]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; abstree.c abstree.h command.c tokens.h<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Added support for selecting individual models
+in &quot;nmrpdb&quot; <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; files, either use &quot;model=25&quot; property
+or expression &quot;::25&quot;.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RasMol also now allows chains to be specified
+&quot;:a&quot; and &quot;:1&quot;.<br>
+<br>
+[01/02/95]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; outfile.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Modified the vector Postscript output routines
+to saturate <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sphere colouring following &quot;set ambient
+100&quot;.<br>
+<br>
+[23/01/95]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; abstree.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Added the &quot;%m&quot; label format specifier
+for amino acid codes.<br>
+<br>
+[20/01/95]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; render.c render.h rasmol.c x11win.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Added the menu option &quot;Labels&quot; to
+RasMol for easy labelling.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Improved internal label handling.<br>
+<br>
+[20/01/95]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; abstree.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Made functions CalcAngle and CalcDistance more
+robust.<br>
+<br>
+[18/01/95]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; transfor.c transfor.h command.c
+command.h<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Modified the RasMol &quot;restrict&quot;
+command to disable the display<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; of backbone, ribbons and strand
+representations. Labels??<br>
+<br>
+[18/01/95]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; script.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Corrected bug in Kinemage format output that
+occurred when<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; bonds were displayed in some chains but not in
+others. Also<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fixed potential problems with backbone DNA
+hydrogen bonds <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; in Kinemage files. Thanks to Piotr Zimniak.<br>
+<br>
+[18/01/95]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; command.c render.c x11win.c rasmac.c
+raswin.c abstree.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Added the options &quot;distance&quot;,
+&quot;angle&quot; and &quot;torsion&quot; to<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; the RasMol &quot;set picking&quot; command to
+inspect geometry.<br>
+<br>
+[17/01/95]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; command.c tokens.h render.c render.h<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Added the RasMol command &quot;set
+picking&quot; with options &quot;none&quot;,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;ident&quot; (default) and
+&quot;label&quot;. The final option toggles the<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; display of atom labels on the picked atom.<br>
+<br>
+[13/01/95]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; command.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Added the &quot;set write&quot; command to
+allow &quot;write&quot; and &quot;save&quot;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; commands to work from the command line.<br>
+<br>
+[13/01/95]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; command.c tokens.h x11win.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Added &quot;refresh&quot; command to update
+screen from script file.<br>
+<br>
+[12/01/95]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; render.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Modified DrawRibbon to use divisons rather than
+right shifts.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; This corrects problems on Convex. Thanks to
+Andy Quick.<br>
+<br>
+[06/01/95]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; molecule.h molecule.c abstree.c render.c
+transfor.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Modified the &quot;Atom&quot; structure
+definition to contain atomic<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; number, this allowed correct determination of
+Brookhaven<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NAD and CoenzymeA elements by changing
+GetElemNumber().<br>
+<br>
+[16/12/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; raswin.c raswin.rc raswin.idm rasmac.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Modified the menu ogranisation of RasWin to
+include an Edit<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; menu containing &quot;Select All&quot; and a
+&quot;Print SetUp...&quot; option.<br>
+<br>
+[16/12/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; molecule.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Corrected bug reading CHARMm format files that
+sometimes<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; placed different residues in separate chains.
+Thanks to<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Stefan Fischer.<br>
+<br>
+[15/12/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; script.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fixed bug in WriteMolScriptFile that
+occasionally resulted<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; in all residues additionally being displayed as
+coil.<br>
+<br>
+[13/12/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; molecule.c molecule.h command.c rasmol.c
+raswin.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Added the &quot;nmrpdb&quot; file format to
+allow all NMR conformations<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; to be loaded into RasMol into different
+`models'.<br>
+<br>
+[08/12/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; command.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Corrected a bug in command.c that resulted in
+an error if<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a label string wasn't placed between string
+terminators.<br>
+<br>
+[08/12/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; rasmol.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Corrected bug in RasMol performance profiling
+routines.<br>
+<br>
+[08/12/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; x11win.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Improved support for monochrome X. The improved
+performance<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; algorithm now performs bidirectional error
+diffusion and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; correctly handles Black/White bit variations
+(e.g NEC &amp; SUN).<br>
+<br>
+[30/11/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; molecule.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Modified LoadAlchemyMolecule and ConnectAtoms
+to enable<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; hydrogen bonding to be specified in Alchemy
+format files.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fixed bug with bond types. Thanks to Chris
+Wilson.<br>
+<br>
+[30/11/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; outfile.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Changed the creator and file type of PostScript
+files on<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; the Mac to 'vgrd' and 'TEXT' respectively. This
+enables <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; printing by Apple's PostScript utility. Thanks
+to Tom Jovin.<br>
+<br>
+[29/11/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; x11win.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Added support for Monochrome only X Windows
+displays by<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; dithering 8bit images before calling XPutImage.
+The current<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; error term diffusion algorithm may have to be
+improved for <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; wireframes and dot surfaces. Thanks to
+Cheuk-san Edward Wang.<br>
+<br>
+[28/11/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; molecule.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Made several changes to RasMol to account for
+unconventional<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; atom naming in PDB files, such as strange
+hydrogens 'HD', <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'HG' and 'HH' and cysteine sulphurs ' SB1'.
+Thanks to Bruce<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Livett.<br>
+<br>
+[28/11/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; rasmol.doc<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Added &quot;primitives&quot; to the keyword
+list in the on-line help<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; documentation to solve xref `bug'. Thanks to
+Steve Brenner.<br>
+<br>
+[21/11/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; molecule.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Changed the handling of PDB residue synonyms to
+make name<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; comparison more efficient. Added synonyms for
+standard<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; nucleic acids. Thanks to Hans Hoppe.<br>
+<br>
+[21/11/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; rasmol.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Corrected problem with the static forward
+declaration<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; of HandleEvents that caused problems on IRIX
+4.0 compilers.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Thanks to Noham Weinberg.<br>
+<br>
+[16/11/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; rasmol.c command.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Implemented the &quot;Save As...&quot; option
+on the File Menu in<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; the UNIX version of RasMol. Thanks to Henry
+Rzepa.<br>
+<br>
+[11/11/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; molecule.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Added the ability to read in connectivity
+records from<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; columns 32 and 37 of PDB's CONECT records.
+These are used<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; by some programs for heavy elements instead of
+hbonds!<br>
+<br>
+[10/11/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; abstree.h<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Corrected errors in the covalent radii of
+several of the<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; heavy elements in the periodic table.<br>
+<br>
+[08/11/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; molecule.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Corrected a bug in FindSybylResNo that resulted
+in the wrong<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; atom types being found in Mol2 files. Thanks to
+Jim Bentley.<br>
+<br>
+[08/11/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; rasmol.h outfile.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Corrected problem with undefined _fstricmp in
+raswin.c and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; funtion WriteIRISFile under Windows NT. Thanks
+to Pedro Mendes.<br>
+<br>
+[08/11/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; descrip.mms<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Corrected several typos. Thanks to Ulrich
+Schmitt.<br>
+<br>
+[08/11/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; render.c script.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fixed bug in RasMol that resulted in a division
+by zero<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; when &quot;set unitcell on&quot;, but the PDB
+file contains no<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; crystal unit cell information. Thanks to Arne
+Eofsson.<br>
+<br>
+[01/11/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; pixutils.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Corrected bug in routines SolidRibbon and
+StrandRibbon<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; that didn't specify __far pointers to Knots
+despite the<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; defintion in pixutils.h. Announced RasWin
+version 2.5.1!<br>
+<br>
+[28/10/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; !Announced the public release of RasMol,
+RasMac <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; and RasWin version 2.5, available by anonymous
+FTP from <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ftp.dcs.ed.ac.uk [129.215.160.5] in the
+directory <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /pub/rasmol. The announcement was made in
+bionet.software, <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; bionet.announce, sci.bio, sci.chem, <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; comp.graphics.visualisation,
+bionet.xtallography<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; and sci.techniques.xtallography newsgroups.<br>
+</p>
+</body>
+</html>

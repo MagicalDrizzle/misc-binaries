@@ -1,0 +1,247 @@
+This log contains all changes made to RasMol source independently of RasTop
+since rastop version 1.0
+
+[21/09/99]	PV	command.c
+		Changed output for one-letter-code sequence in series of 50 
+		characters with a space each subgroup of 10.
+
+[21/09/99]	PV	command.c (ExecuteCommand())
+		Added command "trace dots <value>" allowing trace dots
+		representations of varied radii.
+
+[21/09/99]	PV	command.c / render.h / render.c / transfor.h .c
+		Added four new picking modes:
+		- select an atom: PickAtome
+		- select a group: PickGroup
+		- select a chain: PickChain
+		- modify bonding/add multiple bonds: PickBond
+
+		Allowed picking parameter shift = -1 when Ctrl key is down to deselect
+		an atom (a group, a chain) from the current selection.
+
+[21/09/99]	PV	cmndline.c (ProcessCharacter())
+		Added <Esc> character to interupt script pausing.
+
+[21/09/99]	PV	pixutils.c
+		Set ARCSIZE  to 32768 under MSWIN, allowing drawing cylinders with
+		radii up to 250 RasMol Units.  Current implementation gives a maximum
+		of 75 RU at maximum zooming.  Mac implementation should be verified.
+
+[21/09/99]	PV	script.c
+		Completed scripting for "trace dots <value>", backfade, shadow, and stereo.
+
+[21/09/99]	PV
+		Compiling problems with RasMol 2.7.1 files (VisualC++ 5.0)
+		- declared InterruptPauseCommand() and ResumePauseCommand() in command.h
+		- declared TestDisulphideBridge() in molecule.h
+		- explicited all conversions long to short in infile.c	/*casting*/
+		- excluded all unreferenced variables in infile.c /*unreferenced*/
+		- included graphics.h in molecule.c
+		- fixed casting in drawstar() and clipstar() in pixutils.c
+		- declared DefineShade() in transfor header
+		- fixed casting and referencing in script.c
+		- declared LoadDotsFile() in repres header
+		- declared SetFontStroke() in pixutil header
+		- missing WritePOVRay3File() declaration in script header (?)
+		- declared cif_free_handle() in cif header (?)
+		- missing declaration of cif_parse in cif.h (?)
+
+[22/09/99]	PV repres.c
+		Fixed bug in DisplayRibbon() that produced cartoon like structure in 
+		ribbons covering only parts of chains or mixing ribbon types.
+
+[22/09/99]	PV abstree.h .c
+		Fisrt step for saving atomsets & identifiers in RasMol scripts (SetSize 
+		to 100 and SymEntry and SymbolTable in header).
+
+[22/09/99]	PV repres.h command.c
+		Improved label picking mode (LabelFormat to store the current label string,
+		the command "label {<string>}" is disabled in picking mode but save
+		the format).
+
+[24/09/99]	PV cmndline.c
+		Correlated mouse binding to global variable MouseMode;
+		Removed EnableMenus(state==1) in ResetCommandLine(); 
+		Fixed mouse binding with INVERT on y values;
+		Fixed bug on capture status on mouse-up;
+		Added MM_PREV to mouse binding for deselection;
+		Fixed INVERT on y value for mouseup!
+
+[28/09/99]	PV transfor.c
+		Fixed bug (?) with stars, making them mutually exclusive with spheres.
+		Adjusted bondmode in EnableWireframe().
+
+[29/09/99]	PV molecule.c
+		Fixed bug in FindCisBonds() (no zeroing of last group cisbondflag);
+		Added ability to convert triple bond to single (CreateBondOrder())
+
+[01/10/99]	PV command.c
+		Fixed initialization SeqFormat and CalcBondsFlag (ExecuteConnectCommand);
+		Fixed bug in coloring strands (missing strandtok).
+
+[07/10/99]	PV command.c abstree.c script.c render.c 
+		Changed coordinates and phipsi output, modified output for showcommand;
+		Adjusted threshold in DisplaySelected.
+
+[07/10/99]	PV cif.c
+		Fixed memory allocation bug (VisualC++?) in cif_make_handle;
+
+[07/14/99]	PV abstree.c transfor.c
+		Added shortcuts for direct evaluations of atomsets (BuildAtomSet(), 
+		SelectZoneExpr()); gain up to 15 seconds of computer time on very 
+		large molecules. 
+
+		Added variable ModelInclude to select either in one model or in all models;
+
+[17/10/99]	PV command.c
+		Modified CommandError output (shortened file name).
+
+[19/10/99]	PV
+		Release RasTop1.1
+
+-----------------------------------------------------------------------------------
+
+[20/10/99]	PV script.c
+		Added temporary output on command line when null file in WriteScriptFile,
+		which edits a rasmol header file.
+
+[22/10/99]	PV command.c transform.c .h
+		Added function ReadAtomSelection() which escapes the parser under
+		the form:
+		"select (< or >) x1[-x2],...,xi[-x(i+1)](> or <)"
+		where '<' starts or continues an atom selection, '>' continues or stops 
+		the current selection, - indicates a bloc of consecutive atoms, and xi 
+		are atomnos.
+		Required DisplaySelectCount() to be global.
+
+[27/10/99]	PV command.c script.c .h graphics.h
+		Added function WriteAtomSelection() and WriteScriptPosition();
+		Added commands "clipboard selected", "clipboard position" "clipboard
+		image" and "clipboard paste" and corresponding functions:
+		ClipboardImage( )
+		ClipboardPosition( )
+		ClipboardSelection( )
+		ClipboardPaste( )
+
+[29/10/99]	PV command.c script.c .h graphics.h
+		Added function WriteScriptAtomSets() to write atom sets to the script.
+
+[02/11/99]	PV repres.h transfor.h
+		Added variables DotR,DotG,DotB,DotDensity, and UseDotColPot for 
+		saving dot characteristics.
+
+[09/11/99]	PV command.h/.c
+		Added MoleculeFileName variable and SaveRsmMolecule() function;
+		Modified save command to address "save <filename>" to SaveRsmMolecule().
+
+[09/11/99]	PV rasmol.h command.c
+		Added ProcessDoc and SaveDoc functions which allows add-ons to react to
+		newly loaded molecules, zapping, and saving of molecular data.
+	
+[22/11/99]	PV molecule.c script.c
+		Modified CreateNewBond() to prevent pdb files without atom description;
+		Adjusted ProcessFile() and FetchFile() to allow attribution 
+		of DataFileFormat when no Database is created.
+		Modified output of WriteScriptHBonds();
+
+[12/08/99]	PV command.c
+		ResumePauseCommand( ), added '\r' to terminate curline (bug? resulted in 
+		non opening of subscripts when LF/CR in the script file).
+
+[12/08/99]	PV rasmol.h command.c
+		Added function RefreshView() in rasmol.h to replace RefreshScreen() in
+		command.c to allow refreshscreeen from inside RasMol.
+		
+[12/09/99]	PV command.c
+		Added Beginwait/endwait in ProcessFile().
+		
+[12/10/99]	PV command.c token.c
+		Added CopyTok for "copy" command equivalent to "clipboard" and shorcut 
+		for "paste" command.
+		Added SELECTION as an homonymous keyword to SELECTED
+
+--------------------------------------------------------------------------------
+
+Started version 1.3. The following modifications are attemps to improve rasmol
+drawing.  The code probably needs some improvment.
+
+[12/14/99] PV transform.c and others
+		Added function CentreTransform() to either move the origin in the molecule
+		or move the molecule to the origin (origin = True ).  Added variables
+		Cenx,y,z, which mesure distance centre-origin. Changed DrawTwinVector to 
+		ClipTwinVector in DisplayWireFrame() (render.c).
+
+[12/14/99] PV 
+		Added variables ShiftS and UseAutoDepthCue that adjust DepthCue 
+		with slabbing. 
+
+[12/17/99] PV render.c
+		Added centre correction in DisplayBoxes().
+
+[12/18/99] PV
+		Added code for backclipping based on ZOffset.  New variable UseDepthPlane
+		and DialValue[8].
+
+[12/20/99] PV script.c
+		Added more precision to rotate, translate, zoom, and slab commands in 
+		WriteScriptFile() and WriteScriptPosition().  This is important 
+		for passing cliboard content and saving centre.  Fixed centre scripting.
+
+[01/03/00] PV transfor.c
+		Fixed bug (and modified) function Power() to handle Specpower.
+
+[01/14/00] PV molecule.c
+		Set Info.filename as alternative title.
+
+[01/16/00] PV transfor.h/.c token.h/.c script.c
+		Added ShadePower in DefineColourMap(), which brings some interesting
+		shade variations. Added ShadePowerTok and command "set shade x" with
+		x between -20 to 20.
+
+[01/16/00] PV cmndline.c PerformMouseFunc()
+		Corrected MM_CLIP to access clipping with the mouse;
+		Added MM_DEPT to access backclipping (depth) with the mouse.
+
+[01/16/00] PV
+		Completed 32-bits version.  Code a bit messy, especially for 
+		clipboard and background operations.  Will probably not compile on
+		other compilers.  bmp file saving not done in 32 bits.
+
+		Added code for command "set dot <value>" which adjusts the size
+		of the dots in a rather rough way.
+
+[01/17/00] PV script.c
+		Corrected bug in WriteScriptAtoms().
+
+[01/17/00] PV render.c 
+		Solved problem in regenerating background in 32 bits in ReSizeScreen().
+
+[01/17/00] PV command.c ExecutePauseCommand()
+		Added a RFRefresh for refreshing RasTop screen.
+
+[01/28/00] PV render.c ResetRender()
+		(Bug?) Finally found old problem with shadows in RasTop.  Missing 
+		a ResetVoxelData() on zapping. This is a potential source of problems 
+		when successively opening scripts containing shadows in Rasmol.
+
+[01/30/00] PV command.c 
+		Added command "select view" and corresponding code, which allows to 
+		select part of a molecule based on screen display.
+
+[01/31/00] PV command.c
+		Added code for selecting atom areas with mouse:
+		- change PickAtom() function name in PickAtoms();
+		- change PicAtome identifier in PickAtom;
+		- added function SelectArea() and DisplayArea();
+		- added code for command "select view";
+
+[02/02/00] PV pixutil.c render.c
+		Added function ClipDashLine();
+		Changed display of cells with dashed lines in DisplayBoxes().
+
+
+[08/27/00]	PV
+		Release RasTop1.3
+
+
+		

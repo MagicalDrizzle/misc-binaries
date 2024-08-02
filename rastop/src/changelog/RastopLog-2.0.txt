@@ -1,0 +1,251 @@
+
+This log contains changes made from rastop 1.3 to rastop 2.0. Numerous
+changes were adapted from rasmol 2.7.2 and 2.7.2.1 from Herbert Bernstein.
+
+
+[12/01] PV, all files.
+	- Added DepthCue.
+    - Doubled colour shades (HICOLOR).
+	- "Prepared" rotation, translation, and zoom commands.
+	- Added commands "scale", "colour world axe", "reset worlddepth", 
+	  "show worlddepth", "colour dots none", "position world".
+	- repres.c: Added code to the Richards-Connolly surface.
+	- Changed managment of dot color.
+
+[10/01] PV
+	- Added command position.
+	- Added help html command.
+
+[09/01] PV
+	- pixutil.c: Corrected bug in CommonVectStep.
+
+[08/01] PV
+	- transfor.c, script.c: Normalized Range for calculating translation
+	  offsets. This changes classical translation scripting (see rastop help).
+	- command.c: Added with corrections the "set stereo" command modification 
+	  from rasmol 2.7.2.1 by H. Bernstein - see other stereotok as well.
+	- render.c: Inverted left and right image - the last and correct image is
+	  now the left one. Adjusted IdentifyAtom function for picking in stereo.
+	- FindDisulphideBridges(): Corrected bug on slist.
+	- molecule.c/.h: Added function ReclaimAllBonds.
+	- transfor.c/.h: Added function PrepareBondRotate.
+	- command.c: Corrected bug on INVERT in rotate bond command.
+	- vector.c: Corrected SubstractAtom.
+	- Replace BondsSelected by RotBondsList.
+	- vector.c: Added function ZeroMatrix.
+	- All: Added triple coordinate system.
+	- All: Improved way to calculate centre rotation.
+	- Command.c: Modified ExecuteShowCommand.
+	- abstree.c: Modified DescribeObj.
+	- Corrected inversion in RotYMatrix.
+	- render.c: Corrected Y axis labelling.
+	- command.c: Added DescribeWorld function.
+
+[07/01] PV
+	- All project: Fixed Filemodified variable.
+	- Put ShadePower scripting values like in RasMol 2.7.2.1 [H. Bernstein].
+	- command.c: Added ExecuteResetCommand() function.
+	- render.c (DrawFrame) Corrected SlabInten.
+	- (mostly) command.c: Wrote saving and opening of rsm files.
+	- multiple.c: Added with changes function ReRadius() from rasmol 2.7.2.1.
+	- transfor.c: Modified InitialTransform to adjust zoom factor upon loading.
+	- render.c: Modifid ResizeScreen function.
+	- transfer.c: Modified DrawWorld() to prevent conflict with maxzoom during
+	  cliboard manipulations.
+	- script.c: Added macro IsZero(x).
+	- All: variable RefreshState: Found deep conflict between refreshing, saving,
+	  and fast drawing. Modifications may not be ok in 8-bit mode (ColourMap).
+
+	- Added corrections from rasmol 2.7.2.1 by Herbert Bernstein; 
+	- molecule.c: SimpleAtomType(), ComplexSimpleAtomType(): Corrected bug with
+	  ElemnDesc.
+
+[14/04/01]      HJB     script.c
+                Correct error in writing scripts with partial use of spacefill.
+                Thanks to Steven Vik <svik@mail.smu.edu> for reporting the problem.
+		
+[02/04/01]      HJB     abstree.c, abstree.h
+                Increase space for atom names from 4 to 12 characters.
+
+[02/04/01]      HJB     infile.c
+                Increase limit on atom names for CIF from 4 to 12 characters.
+
+[02/04/01]      HJB     several
+                Make dial indices symbolic (PV: Not fully done yet!)
+
+
+[21/08/00]      HJB     command.h
+                Add space after "__huge"
+
+[23/02/00]      HJB     infile.c
+                Fix *- for - typo in XYZ and MOL2 input of coordinates
+
+
+[05/01] PV
+
+	- Clipping is not resetted anymore upon "reset" in order to respect 
+	  the world construction when new molecules are loaded. The old way
+	  of bringing clips to the center of the molecule does not seem
+	  logical.
+
+	- Added command "reset ligth", "reset slab", and "reset depth".
+	- Cmndline.c: Added function ProcessWheelDial(). 
+
+	- ResizeScreen: Corrected background redrawing in Displaymode.
+	- DefineColourMap: Darkened DisplayMode Background.
+    - Added variable SRange and fixed stereo mode.
+	- Finished code for slab and back-clipping (all files). Added code
+	  for commands "slab world <number>" and "slab world origin",
+	  and equivalent for depth mode.
+	- Finished code for manipulation of rotation centers; made
+      center visible in display mode; added centre command syntax
+      from rasmol 2.7.2.1. 
+	- Added commands:
+	  "centre world": Translate world origin to centre of screen, world
+	  is translated at the same time;
+	  "centre origin": Bring center to world origin
+	  "centre origin centre": Translate world origin to actual rotation
+	  center; this is a "world" destructive command!
+
+[04/01] PV
+	- Added new panes to status bar.
+	- command.c: errorcount versus rastop 1.3.1, corrected bug in
+	  executecommand.
+	- Corrected ExecuteTitleCommand() and SetTitle() for new titles.
+	- Changed edit menu; put accelerator key to "enter rasmol command".
+	- Modified command panel, added world button.
+	- Modified DisplayMode.
+	- Added commands "molecule hide" and "molecule show" (see
+	  comdline and pickatoms + all molset->visible references).
+	- DisplayRibbons(): Corrected alignement of DNA helix.
+
+[03/01] PV
+
+	- Added fast drawing (variable FastDraw).
+	- Added variable DrawWorldAxes.
+
+[02/01] PV
+
+	- Added variables WAxe[], Zo[], ZRange, and DRange.
+	- transfor.c: Added functions PrepareWorldTransform(), ResetWorldAxes.
+	- vector.c/.h: Added function CopyMatrix3(), IdentityMatrix3().
+
+	- Adjusted ReSizeScreen() code.
+	- Added zoom to comndline.c in rotate all mode; Corrected a few
+	  bugs in ProcessMouseMove().
+	- Introduced molecule offsets MOffset[] to position molecules during
+	  all transformations; X/Y/ZOffset are equivalent integers used 
+	  for calculating rendering.
+	- Changed DialValue for translation to modulo[2] (free translation).
+
+
+[01/01] PV
+
+	- Added code for preferences.
+	- Added code for default script in default representation.
+
+	- rasview.cpp rasdoc.cpp
+	  Corrected Windows 2000 bug.
+
+	- Passed conditions on RegisterAlloc() into the function.
+
+	- Added bond rotation code, renamed wbrotate.c brotate.c (all the
+	  world-rotate code is tranfered into transfor.c).
+	  Added ChangeBondOrder(), removed NewBond, removed RotBond mode, and
+	  added PickRBond picking mode.
+	  Added command "bond <number> <number> single/double/triple/unbound".
+	  Added command "set picking bond rotate" and "set picking rotate bond".
+	  Removed function RemoveBond(); Attempted to correct erroneous hbond
+	  and ssbond in BondRotate() by simply destroying bond lists!
+
+	- Added code for picking lightsource in picking mode.
+	- Added PickLight mode;  
+	- Added F1 help.
+	- Added new icons in toolbar.
+
+	- Adjusted WriteScriptFile();
+	- Modified WriteScriptDots();
+	- Renamed DeleteSurface() DeleteDotSurface();
+	- Renamed CalculateSurface() CalculateDotSurface();
+	- Added function WriteScriptSurface() in script.c;
+	- Corrected bug in WriteScriptAtomSets().
+
+[12/00] PV
+
+	- Removed ProcessDoc() function; added ResetUserBox().
+
+	- rasview.c cmndline.c/.h SetPickMode()
+	  Added code for cursor mode.
+
+	- command.c transfor.c molecule.h (and others)
+	  Added PreviousTok and code for saving previous selection.
+	  Added flag2 for RAtom (flag is full).
+
+	- command.c rasdoc.c/.h rastop.c multiple.c (and others)
+	  Added code for handling rsm files by rasmol;
+	  Added ErrorCount and ErrorFlag to handle wrong scriptfiles.
+
+	- graphic.h SetCanvasTitle() SetTitle() ExecuteTitleCommand() 
+	  SelectMolecule()
+	  Changed title code.
+
+	- All
+	  Removed (rastop) variable MoleculeFileName.
+	  Put "strcpy(Info.filename,DataFileName);" uniquely in ProcessFile()
+	  with correction for "inline" files in DivertoData().
+	
+	- Transfered new 2.7.2 FetchFile function to ProcessFile()
+
+	- Confusion on attribution of DataFileFormat. Only attribution in 
+	  processfile() is conserved.
+
+	- DrawFrameOne() transfor.h
+	  Replaced ApplyTransform() by ApplyTransformOne().
+
+[11/00] PV 
+
+	- multiple.c command.c
+	Transfered ZapDatabase() into multiple.c; changed name to Zapmolecule();
+	created new Zapdatabase() for zapping all molecules. Added command
+	"zap molecule", "zap selected" and "zap all" with "zap" synonymous of 
+	"zap all".
+
+	- WriteVRMLWireframe()
+	Typing bug corrected.
+
+	- transfor.c/.h wbrotate.c/.h
+	Transfered WorldRotate to Transfor.c
+
+	- All
+	Added rasmol 2.7.2 code for multiple molecules
+
+	- IdentifyAtom()
+	Corrected bug with UseDepthPlane
+
+	- transfor.c 
+	Changed carbon cpk color to white when no hydrogen.
+	Changed default cartoonheight.
+
+[10/00] PV	
+	
+	- pixutil.h/c rastop.cpp
+	Changed cylinder code. Added code to draw cylinders with flat cap.
+	Code still needs some fixings.
+
+	- pixutil.h/c repres.c
+	Completed cartoons code.
+
+	- rasview.cpp rasdoc.cpp mainframe.cpp pannel.h/.cpp
+	Reorganized automode.
+
+	- LightX, LightY, LightZ, LightLength, ColConst, DefaultTok,
+	LightsourceTok, HeadlightTok
+	Added multidirectional lightsource.
+
+	- command.c
+	Corrected bug in parsing of shadepower command.
+
+	- render.c repress.c pixutil.c
+	Fixed use of InvertY with LightDot and switched to ORIGINAL lighting.
+
+

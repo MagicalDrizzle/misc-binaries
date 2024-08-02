@@ -1,0 +1,1148 @@
+<html>
+
+<head>
+<link rel="stylesheet" href="main.css" type="text/css">
+<title>RasTop ChangeLog</title>
+</head>
+
+<body marginwidth="0" marginheight="0" leftmargin="0" bottommargin="0" topmargin="0" bgcolor="#FFFFFF" text="#000000">
+
+<!--webbot bot="Include" u-include="header.htm" tag="BODY" startspan -->
+
+<p><!----></p>
+<table border="0" cellpadding="2" width="100%">
+  <tr>
+    <td valign="top" bgcolor="#FFFFFF"><font color="#333333"><span class="ari8">RasTop
+      Manual</span></font></td>
+    <td valign="top" bgcolor="#FFFFFF" colspan="5" width="100%">
+      <p align="right"><span class="ari8"><a href="http://sourceforge.net/projects/rastop/">Home</a> | <a href="operations.htm">All
+      Commands</a> | <a href="notice.htm">Notice</a></span></td>
+  </tr>
+  <tr>
+    <td valign="top" bgcolor="#CCCCFF" align="center" background="images/doubleline.jpg"><a name="top"></a><img src="images/sigle.gif" alt="sigle.gif (4112 bytes)" width="71" height="65"></td>
+    <td colspan="5" bgcolor="#000000"><!----><img src="images/bannerrms2.gif" alt="bannerrms2.gif (19906 bytes)" align="left" border="0" width="543" height="65"></td>
+  </tr>
+  <tr>
+    <td valign="top" bgcolor="#336699">
+      <p align="center"><a href="index.htm" class="sitebar"><font color="#FFFFFF">Home</font></a></td>
+    <td valign="bottom" align="center" bgcolor="#336699"><a href="manual.htm" class="sitebar"><font color="#FFFFFF">About
+      help</font></a></td>
+    <td valign="bottom" align="center" bgcolor="#336699"><a href="copyright.htm" class="sitebar"><font color="#FFFFFF">Copyrights</font></a></td>
+    <td valign="bottom" align="center" bgcolor="#336699"><a href="notice.htm" class="sitebar"><font color="#FFFFFF">License</font></a></td>
+    <td valign="bottom" align="center" bgcolor="#336699"><a href="rastopop.htm" class="sitebar"><font color="#FFFFFF">Installing
+      &amp; using RasTop</font></a></td>
+    <td valign="bottom" align="center" bgcolor="#336699"><a href="library.htm" class="sitebar"><font color="#FFFFFF">Library</font></a></td>
+  </tr>
+  <tr>
+    <td valign="top" bgcolor="#FFFFFF"><img src="images/dotnul.gif" width="134" height="1" alt="dotnul.gif (807 bytes)" align="bottom"></td>
+    <td valign="top" bgcolor="#FFFFFF" colspan="5" width="100%"><img src="images/dotnul.gif" width="460" height="2" align="bottom" border="0"></td>
+  </tr>
+</table>
+
+<!--webbot bot="Include" endspan i-checksum="50747" -->
+
+<p align="center"><span style="font-size: 14pt"><strong>ChangeLog History</strong></span>
+<p align="left">These logs list all changes made to rasmol source since the
+release of version 2.1 on the 18th of June 1993 by Roger Sayle.
+<blockquote>
+  <pre><a href="#rastop20xchangelog">RasTop 2.0x</a>
+<a href="#rastop20changelog">RasTop 2.0</a>
+<a href="#rastop131changelog">RasTop 1.3.1</a>
+<a href="#rastop13changelog">RasTop 1.3</a>
+<a href="#rasmol271changelog">RasMol 2.7.1</a>
+<a href="#rasmol2701changelog">RasMol 2.7.0.1</a>
+<a href="#rasmol270changelog">RasMol 2.7.0</a>
+<a href="ChangeLog/ChangeLog9.html">ChangeLog 9</a>
+<a href="ChangeLog/ChangeLog8.html">ChangeLog 8</a>
+<a href="ChangeLog/ChangeLog7.html">ChangeLog 7</a>
+<a href="ChangeLog/ChangeLog6.html">ChangeLog 6</a>
+<a href="ChangeLog/ChangeLog5.html">ChangeLog 5</a>
+<a href="ChangeLog/ChangeLog4.html">ChangeLog 4</a>
+<a href="ChangeLog/ChangeLog3.html">ChangeLog 3</a>
+<a href="ChangeLog/ChangeLog2.html">ChangeLog 2</a>
+<a href="ChangeLog/ChangeLog1.html">ChangeLog 1</a></pre>
+</blockquote>
+<hr>
+<div align="left">
+  <table border="0" cellpadding="5" cellspacing="0" width="700">
+    <tr>
+      <td width="100%"><!---->
+        <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><a name="rastop20xchangelog">RasTop
+        2.0x ChangeLog</a>&nbsp;</h3>
+        <pre>&nbsp;</pre>
+        <pre><font face="Courier New">
+[05/05] PV
+	- pixutil.c, repres.c: converted calculations for ribbons to double.
+	- multiple.c: Added SideLen and Offset to VarList.
+	- infile.c: UpdateFeature() Corrected bug responsible for incorrect drawing of
+	  ribbons in protein models. Thanks to Shuji Tomoda for reporting the bug.
+	- command.c, transfor.c: Added jmol command spacefill -&lt;value&gt; to specify
+	  radii in percentage of CPK values.
+	- transfor.c: Put 0.60 factor for LastSpecShade calculation.	</font></pre>
+        <pre><font face="Courier New">	PV - HB
+	- Added modifications from rasmol 2.7.2.1.1 by HB. 
+
+[04/04] PV
+	- infile.c:ProcessPDBBond() Hacked to allow multiple bonds through CONECT
+	  record to be drawn, but will work only for consecutive identical CONECT
+	  record. This facility disapeared in the rasmol 2.7 series, thanks
+	  to Malcolm Stephen for reporting the problem.
+	- outfile.c: added routine WriteBMP32File() to save bmp file in 32-bits on
+	  windows platform.
+	- command.c:ProcessFile(): Corrected bug with connectivity of xyz files
+	  (Info.bondcount &lt; (MainAtomCount+HetaAtomCount)-Info.chaincount is wrongly
+	  calculated because chaincount equals MainAtomCount in this case. See
+	  correction. Thanks to Filipe Tiago de Oliveira for reporting the problem.
+	- Added menu option to disable automatic running of default Representation
+	  script file upon file loading.
+
+[03/04] PV
+	- see command.c: attempted to implement the new translate command. The 
+	  possible mixing of absolute and relative units makes it very confusing.
+	  We will not deprecate &lt;position&gt; this time!
+	- transfor.c,repres.c/.h: modified restrict command to include Monitors,
+	  dot surface, SS bonds, and H-bonds.
+         - Modified reset command: the world scenery is zoomed to fit exactly the
+	  screen with commands &quot;reset world&quot; or &quot;reset&quot; with world on; see ResetAxes()
+	  and getWorldRadius90;
+	- got stupid bug in ZapDatabase() that prevented ReRadius() on closing,
+	  sometimes resulting in molecules not opening at the correct size.
+
+[02/04] PV
+         - Modified zooming effect on scrolling bars from command panel;
+	- Added command &lt;set language default&gt;
+
+[01/04] PV
+	- Added loading of preferences file located in lib folder;
+	- Added Scripting bar;
+	- Modified Preferences to save all window states.
+
+
+[10/03] PV
+	- cmndline.c: Modifid MouseMapping MouseRasMol to allow zooming from center
+	  of screen (pseudo world Z-translation) while pressing the two mouse cliks
+	  in RasMol mapping.
+	- tranfor.c: corrected function Round(), thanks to Audric Schiltknecht.
+	- Change rounding to function Rint().
+	- Corrected bug in InitInstance, thanks to Joachim Strub.
+
+
+[01/03] PV
+	- infile.c: Changed coordinate saving in all formats;
+	- script.c: Fixed povray code.
+
+[10/02] PV
+	- command.c: rewrote save command;
+
+[09/02] PV
+	- pixutil.c: [UpdateAcross] corrected bug.
+	- infile.c [SavePDBMolecule]: Changed saved coordinates to current coordinate
+	  system - mod suggested by Andrew Horsfield.
+	- multiple.c: Corrected bug (missing ElemDesc in VarList).
+	- prefer.c: Changed rasmolprefs localisation to C:\Document and Settings\userdir\
+	  \rasmolprefs.
+	- Changed internal value of Shapower.
+	- command.c: corrected bug in rotate command.
+	- Removed all direct calls in rasmol core from rastop gui.
+
+[06/02] PV
+	- render.c [TestAtomProximity]: Corrected bug on ptr - Thanks to Naoum Salem.
+
+[05/02] PV
+	- colorbar.cpp: changed order of background in ItemList. Suggested by
+	  Naoum Salem.
+	- selectbar.h: corrected carbon selection, error reported by Naoum Salem.
+	- molecule.h: corrected of structure _HBonds col from byte to short; thanks
+	  to Naoum Salem.
+	- commande.c: Corrected error on &quot;save molecule&quot; command and error on
+	  fclose, thanks to Naoum Salem.
+	- command.c [ExecuteTitleCommand]: Corrected bug, thanks to Naoum Salem.
+	- rasdoc.cpp [ManageOpening]: Changed opening script according to extension.
+	- rasdoc.cpp [openfromdoc]: Changed file filter.
+	- rasdoc.cpp [savedmodified]: terminated script case.
+
+[03/02] PV
+	- rasdoc.cpp, rasview.cpp, rasgraphics.cpp: improved handling of zoom
+	  factor for printing and copying to clipboard.
+	- selecbar.h/,c: Added current selection to selection toolbar, suggestion
+	  from Naoum Salame.
+	- rasgraphics.cpp: Added a refresh in paste selection routine.	  
+
+[01/02] PV
+	- repres.c: improved connolly surface drawing;
+	- transfor.c: improved potential surface rendering.</font></pre>
+        <h3><font face="Courier New"><br>
+        </font><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><a name="rastop20changelog">RasTop
+        2.0 ChangeLog</a>&nbsp;</h3>
+        <pre><font face="Courier New">This log contains changes made from rastop 1.3.1 to rastop 2.0. Numerous 
+changes were adapted from rasmol 2.7.2 and 2.7.2.1 from Herbert Bernstein.</font><font face="Courier New">&nbsp;</font></pre>
+        <font face="Courier New" size="2">
+        <pre><font face="Courier New">[12/01] PV, all files.
+         - Added DepthCue.
+         - Doubled colour shades (HICOLOR).
+         - &quot;Prepared&quot; rotation, translation, and zoom commands.
+         - Added commands &quot;scale&quot;,&quot;colour axes world&quot;,&quot;reset worlddepth&quot;,
+          &quot;show worlddepth&quot;, &quot;colour dots none&quot;, and &quot;position world&quot;.
+	- repres.c: Added code to the Richards-Connolly surface.
+	- Changed management of dot color.</font></pre>
+        <pre><font face="Courier New">[10/01] PV
+	- Added command position.
+	- Added help html command.</font></pre>
+        <pre><font face="Courier New">[09/01] PV
+	- pixutil.c: Corrected bug in CommonVectStep.
+</font>	<font face="Courier New">- command.c: Corrected zoom command.</font></pre>
+        <pre><font face="Courier New">[08/01] PV
+	- transfor.c,script.c: Normalized Range for calculating translation
+	offsets. This changes classical translation scripting (see rastop
+        	help).
+	- command.c: Added with corrections the &quot;set stereo&quot;
+        	command modification from rasmol 2.7.2.1 by H. Bernstein - 
+	see other stereotok as well.
+	- render.c: Inverted left and right image - the last and correct
+        	image is now the left one. Adjusted IdentifyAtom function for picking in
+        	stereo.
+	- FindDisulphideBridges(): Corrected bug on slist.
+</font>	<font face="Courier New">- molecule.c/.h: Added function ReclaimAllBonds.
+	- transfor.c/.h: Added function PrepareBondRotate.
+	- command.c: Corrected bug on INVERT in rotate bond command.
+	- vector.c: Corrected SubstractAtom.
+	- Replace BondsSelected by RotBondsList.
+	- vector.c: Added function ZeroMatrix.
+</font>	<font face="Courier New">- All: Added triple coordinate system.
+	- All: Improved way to calculate centre rotation.
+	- Command.c: Modified ExecuteShowCommand.
+	- abstree.c: Modified DescribeObj.
+	- Corrected inversion in RotYMatrix.
+	- render.c: Corrected Y axis labeling.
+	- command.c: Added DescribeWorld function.
+</font>	</pre>
+        <pre><font face="Courier New">[07/01] PV
+</font>	<font face="Courier New">- All project: Fixed Filemodified variable.
+</font>	<font face="Courier New">- Put ShadePower scripting values like in RasMol 2.7.2.1 [H. Bernstein].
+</font>	<font face="Courier New">- command.c: Added ExecuteResetCommand() function.
+</font>	<font face="Courier New">- render.c (DrawFrame) Corrected SlabInten.
+</font>	<font face="Courier New">- (mostly) command.c: Wrote saving and opening of rsm files.
+</font>	<font face="Courier New">- multiple.c: Added with changes function ReRadius() from rasmol
+        	2.7.2.1.
+</font>	<font face="Courier New">- transfor.c: Modified InitialTransform to adjust zoom factor upon
+        	loading.
+</font>	<font face="Courier New">- render.c: Modifid ResizeScreen function.
+</font>	<font face="Courier New">- transfer.c: Modified DrawWorld() to prevent conflict with maxzoom
+        	during </font><font face="Courier New">cliboard manipulations.
+</font>	<font face="Courier New">- script.c: Added macro IsZero(x).
+</font>	<font face="Courier New">- All: variable RefreshState: Found deep conflict between refreshing,
+        	saving,and fast drawing. Modifications may not be ok in 8-bit mode
+	(ColourMap).
+</font>	<font face="Courier New">- Added corrections from rasmol 2.7.2.1 by Herbert Bernstein:
+</font>	<font face="Courier New">- molecule.c: SimpleAtomType(), ComplexSimpleAtomType(): Corrected
+        	bug with </font><font face="Courier New">ElemnDesc.</font></pre>
+        <pre><font face="Courier New">[14/04/01] HJB script.c
+</font>	<font face="Courier New">Correct error in writing scripts with partial use of spacefill.
+</font>	<font face="Courier New">Thanks to Steven Vik &lt;svik@mail.smu.edu&gt; for reporting the
+        	problem.</font></pre>
+        <pre><font face="Courier New">[02/04/01] HJB abstree.c, abstree.h
+</font>	<font face="Courier New">Increase space for atom names from 4 to 12 characters.
+</font>	</pre>
+        <pre><font face="Courier New">[02/04/01] HJB infile.c
+</font>	<font face="Courier New">Increase limit on atom names for CIF from 4 to 12 characters.
+</font>	</pre>
+        <pre><font face="Courier New">[02/04/01] HJB several
+</font>	<font face="Courier New">Make dial indices symbolic (PV: Not fully done yet!)</font></pre>
+        <pre><font face="Courier New">[21/08/00] HJB command.h
+</font>	<font face="Courier New">Add space after &quot;__huge&quot;</font></pre>
+        <pre><font face="Courier New">[23/02/00] HJB infile.c
+</font>	<font face="Courier New">Fix *- for - typo in XYZ and MOL2 input of coordinates</font></pre>
+        <pre><font face="Courier New">[05/01] PV
+</font>	<font face="Courier New">- Clipping is not reset anymore upon &quot;reset&quot; in order to
+        	respect the world construction when new molecules are loaded. 
+	The old way of bringing clips to the center of the molecule 
+	does not seem logical.
+</font>	<font face="Courier New">- Added command &quot;reset ligth&quot;, &quot;reset slab&quot;, and &quot;reset depth&quot;.
+</font>	<font face="Courier New">- Added commands &quot;refresh off&quot; and &quot;refresh on&quot;.
+</font>	<font face="Courier New">- Cmndline.c: Added function ProcessWheelDial().
+</font>	<font face="Courier New">- ResizeScreen: Corrected background redrawing in Displaymode.
+</font>	<font face="Courier New">- DefineColourMap: Darkened DisplayMode Background.
+</font>	<font face="Courier New">- Added variable SRange and fixed stereo mode.
+</font>	<font face="Courier New">- Finished code for slab and back-clipping (all files). Added code
+</font>	<font face="Courier New">for commands &quot;slab world &lt;number&gt;&quot; and &quot;slab world origin&quot;,
+</font>	<font face="Courier New">and equivalent for depth mode.
+</font>	<font face="Courier New">- Finished code for manipulation of rotation centers; made
+</font>	<font face="Courier New">center visible in display mode; added centre command syntax
+</font>	<font face="Courier New">from rasmol 2.7.2.1.
+</font>	<font face="Courier New">- Added commands:
+</font>	<font face="Courier New">&quot;centre world&quot;: Translate world origin to centre of screen,
+        	world is translated at the same time;
+</font>	<font face="Courier New">&quot;centre origin&quot;: Bring center to world origin
+</font>	<font face="Courier New">&quot;centre origin centre&quot;: Translate world origin to actual
+        	rotation</font> <font face="Courier New">center; this is a &quot;world&quot; destructive command!</font></pre>
+        <pre><font face="Courier New">[04/01] PV
+</font>	<font face="Courier New">- Added new panes to status bar.
+</font>	<font face="Courier New">- command.c: errorcount versus rastop 1.3.1, corrected bug in
+</font>	<font face="Courier New">executecommand.
+</font>	<font face="Courier New">- Corrected ExecuteTitleCommand() and SetTitle() for new titles.
+</font>	<font face="Courier New">- Changed edit menu; put accelerator key to &quot;enter rasmol
+        	command&quot;.
+</font>	<font face="Courier New">- Modified command panel, added world button.
+</font>	<font face="Courier New">- Modified DisplayMode.
+</font>	<font face="Courier New">- Added commands &quot;molecule hide&quot; and &quot;molecule Sow&quot; (see comdline
+	and pickatoms + all molset-&gt;visible references).
+</font>	<font face="Courier New">- DisplayRibbons(): Corrected alignement of DNA helix.</font></pre>
+        <pre><font face="Courier New">[03/01] PV
+</font>	<font face="Courier New">- Added fast drawing (variable FastDraw).
+</font>	<font face="Courier New">- Added variable DrawWorldAxes.</font></pre>
+        <pre><font face="Courier New">[02/01] PV
+</font>	<font face="Courier New">- Added variables WAxe[], Zo[], ZRange, and DRange.
+</font>	<font face="Courier New">- transfor.c: Added functions PrepareWorldTransform(), ResetWorldAxes.
+</font>	<font face="Courier New">- vector.c/.h: Added function CopyMatrix3(), IdentityMatrix3().
+</font>	<font face="Courier New">- Adjusted ReSizeScreen() code.
+</font>	<font face="Courier New">- Added zoom to comndline.c in rotate all mode; Corrected a few
+</font>	<font face="Courier New">bugs in ProcessMouseMove().
+</font>	<font face="Courier New">- Introduced molecule offsets MOffset[] to position molecules during
+</font>	<font face="Courier New">all transformations; X/Y/ZOffset are equivalent integers used
+</font>	<font face="Courier New">for calculating rendering.
+</font>	<font face="Courier New">- Changed DialValue for translation to modulo[2] (free translation).</font></pre>
+        <pre><font face="Courier New">[01/01] PV
+</font>	<font face="Courier New">- Added code for preferences.
+</font>	<font face="Courier New">- Added code for default script in default representation.
+</font>	<font face="Courier New">- rasview.cpp rasdoc.cpp: </font><font face="Courier New">Corrected Windows 2000 bug.
+</font>	<font face="Courier New">- Passed conditions on RegisterAlloc() into the function.
+</font>	<font face="Courier New">- Added bond rotation code, renamed wbrotate.c brotate.c (all the
+</font>	<font face="Courier New">world-rotate code is tranfered into transfor.c).
+</font>	<font face="Courier New">Added ChangeBondOrder(), removed NewBond, removed RotBond mode, and
+</font>	<font face="Courier New">added PickRBond picking mode.
+</font>	<font face="Courier New">Added command &quot;bond &lt;number&gt; &lt;number&gt;
+        	single/double/triple/unbound&quot;.
+</font>	<font face="Courier New">Added command &quot;set picking bond rotate&quot; and &quot;set
+        	picking rotate bond&quot;.
+</font>	<font face="Courier New">Removed function RemoveBond(); Attempted to correct erroneous hbond
+</font>	<font face="Courier New">and ssbond in BondRotate() by simply destroying bond lists!
+</font>	<font face="Courier New">- Added code for picking lightsource in picking mode.
+</font>	<font face="Courier New">- Added PickLight mode;
+</font>	<font face="Courier New">- Added F1 help.
+</font>	<font face="Courier New">- Added new icons in toolbar.
+</font>	<font face="Courier New">- Adjusted WriteScriptFile();
+</font>	<font face="Courier New">- Modified WriteScriptDots();
+</font>	<font face="Courier New">- Renamed DeleteSurface() DeleteDotSurface();
+</font>	<font face="Courier New">- Renamed CalculateSurface() CalculateDotSurface();
+</font>	<font face="Courier New">- Added function WriteScriptSurface() in script.c;
+</font>	<font face="Courier New">- Corrected bug in WriteScriptAtomSets().</font></pre>
+        <pre><font face="Courier New">[12/00] PV
+</font>	<font face="Courier New">- Removed ProcessDoc() function; added ResetUserBox().
+</font>	<font face="Courier New">- rasview.c cmndline.c/.h SetPickMode()
+</font>	<font face="Courier New">Added code for cursor mode.
+</font>	<font face="Courier New">- command.c transfor.c molecule.h (and others)
+</font>	<font face="Courier New">Added PreviousTok and code for saving previous selection.
+</font>	<font face="Courier New">Added flag2 for RAtom (flag is full).
+</font>	<font face="Courier New">- command.c rasdoc.c/.h rastop.c multiple.c (and others)
+</font>	<font face="Courier New">Added code for handling rsm files by rasmol;
+</font>	<font face="Courier New">Added ErrorCount and ErrorFlag to handle wrong scriptfiles.
+</font>	<font face="Courier New">- graphic.h SetCanvasTitle() SetTitle() ExecuteTitleCommand()
+</font>	<font face="Courier New">SelectMolecule(): changed title code.
+</font>	<font face="Courier New">- All: </font><font face="Courier New">Removed (rastop) variable MoleculeFileName.
+</font>	<font face="Courier New">Put &quot;strcpy(Info.filename,DataFileName);&quot; uniquely in
+        	ProcessFile()with correction for &quot;inline&quot; files in DivertoData().
+	- Transfered new 2.7.2 FetchFile function to ProcessFile()
+</font>	<font face="Courier New">- Confusion on attribution of DataFileFormat. Only attribution in</font><font face="Courier New">
+</font>	<font face="Courier New">processfile() is conserved.
+</font>	<font face="Courier New">- DrawFrameOne() transfor.h: Replaced ApplyTransform() by 
+	ApplyTransformOne().</font></pre>
+        <pre><font face="Courier New">[11/00] PV
+</font>	<font face="Courier New">- multiple.c command.c</font><font face="Courier New">
+</font>	<font face="Courier New">Transfered ZapDatabase() into multiple.c; changed name to Zapmolecule();
+</font>	<font face="Courier New">created new Zapdatabase() for zapping all molecules. Added command
+</font>	<font face="Courier New">&quot;zap molecule&quot;, &quot;zap selected&quot; and &quot;zap all&quot; with &quot;zap&quot; synonymous of
+</font>	<font face="Courier New">&quot;zap all&quot;.
+</font>	<font face="Courier New">- WriteVRMLWireframe(): typing bug corrected.
+</font>	<font face="Courier New">- transfor.c/.h wbrotate.c/.h: </font><font face="Courier New">Transfered WorldRotate to Transfor.c
+</font>	<font face="Courier New">- All: Added rasmol 2.7.2 code for multiple molecules
+</font>	<font face="Courier New">- IdentifyAtom(): Corrected bug with UseDepthPlane
+</font>	<font face="Courier New">- transfor.c: Changed carbon cpk color to white when no hydrogen.
+</font>	<font face="Courier New">Changed default cartoonheight.</font></pre>
+        <pre><font face="Courier New">[10/00] PV
+</font>	<font face="Courier New">- pixutil.h/c rastop.cpp
+</font>	<font face="Courier New">Changed cylinder code. Added code to draw cylinders with flat cap.
+</font>	<font face="Courier New">Code still needs some fixings.
+</font>	<font face="Courier New">- pixutil.h/c repres.c
+</font>	<font face="Courier New">Completed cartoons code.
+</font>	<font face="Courier New">- rasview.cpp rasdoc.cpp mainframe.cpp pannel.h/.cpp
+</font>	<font face="Courier New">Reorganized automode.
+</font>	<font face="Courier New">- LightX, LightY, LightZ, LightLength, ColConst, DefaultTok,</font><font face="Courier New">
+</font>	<font face="Courier New">LightsourceTok, HeadlightTok
+</font>	<font face="Courier New">Added multidirectional lightsource.
+</font>	<font face="Courier New">- command.c
+</font>	<font face="Courier New">Corrected bug in parsing of shadepower command.
+</font>	<font face="Courier New">- render.c repress.c pixutil.c
+</font>	<font face="Courier New">Fixed use of InvertY with LightDot and switched to ORIGINAL lighting.</font></pre>
+        <hr>
+        <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><a name="rastop131changelog">RasTop1.3.1
+        ChangeLog</a>&nbsp;</h3>
+        <pre><font face="Courier New">This log summarizes changes from RasTop version 1.3 to RasTop version 1.3.1</font></pre>
+        <pre><font face="Courier New">[03/01] PV</font></pre>
+        <pre><font face="Courier New">- mainframe: Changed font generation;
+        changed selectbar initialization.
+        - Added profile &quot;Selection&quot; for the select bar.
+        - render.c/IdentifyAtom(): Made atoms behind the depth plane not
+        identified.
+        &nbsp; (thanks to Ian Gibbons for reporting the bug and other
+        suggestions)
+        - command.c: Added ErrorCount, ErrorFlag and MAXERROR.
+        - mainframe: Removed function OnDropFile to allow dropping of pdb files.
+        - rasview/rasdoc: Added macro STOPTIMER and STARTTIMER
+        - pannel.ccp/h: Changed auto by spin. Made variable m_autostatus
+        private.
+        - Changed two icons in the resources.
+        - transfor.c: Changed carbon cpk color to white when no hydrogen.
+        - script.c: Corrected output error in WriteAtomSelection.
+        - command.c: Corrected bug in parsing of shadepower command.
+        - script.c: Added exittok at the end of saved script.
+        - rasview/rasdoc: Corrected bug in drawing and removed unuseful code.
+        - repres.c: Corrected drawing of ribbons at large zoom.
+        - render.c/displayboxes: Corrected bug on axe position when moving
+        center.
+        - transfor.h: Removed duplicated variables
+        - SetPickMode, CentreTranform: Changed RedrawFlag.
+        - Switch Help command to mainframe and activate help on F1</font>&nbsp;</pre>
+        <hr>
+        <h3><a><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><a name="rastop13changelog">RasTop1.3
+        ChangeLog</a></h3>
+        <pre>Consult also <a href="ChangeLog/">RasMol changeLog</a> and <a href="rasmol/ChangeLog.html">RasMol2.7.1 changeLog</a>.</pre>
+        <pre><font face="Courier New">This log contains all changes made to RasMol
+        source independently of RasTop. Initial work was done on version 2.6.4,
+        but was quickly updated to the newer version 2.7.1 by Herbert Beirnstein.</font></pre>
+        <pre><font face="Courier New">[21/09/99] PV command.c
+        Changed output for one-letter-code sequence in series of 50
+        characters with a space each subgroup of 10.</font></pre>
+        <pre><font face="Courier New">[21/09/99] PV command.c (ExecuteCommand())
+        Added command &quot;trace dots &lt;value&gt;&quot; allowing trace dots
+        representations of varied radii.</font></pre>
+        <pre><font face="Courier New">[21/09/99] PV command.c / render.h /
+        render.c / transfor.h .c
+        Added four new picking modes:
+        - select an atom: PickAtome
+        - select a group: PickGroup
+        - select a chain: PickChain
+        - modify bonding/add multiple bonds: PickBond
+        Allowed picking parameter shift = -1 when Ctrl key is down to deselect
+        an atom (a group, a chain) from the current selection.</font></pre>
+        <pre><font face="Courier New">[21/09/99] PV cmndline.c (ProcessCharacter())
+        Added &lt;Esc&gt; character to interupt script pausing.
+
+[21/09/99] PV pixutils.c
+        Set ARCSIZE to 32768 under MSWIN, allowing drawing cylinders with
+        radii up to 250 RasMol Units. Current implementation gives a maximum
+        of 75 RU at maximum zooming. Mac implementation should be verified.</font></pre>
+        <pre><font face="Courier New">[21/09/99] PV script.c
+        Completed scripting for &quot;trace dots &lt;value&gt;&quot;, backfade,
+        shadow,and stereo.</font></pre>
+        <pre><font face="Courier New">[21/09/99] PV
+        Compiling problems with RasMol 2.7.1 files (VisualC++ 5.0)
+        - declared InterruptPauseCommand() and ResumePauseCommand()
+        &nbsp; in command.h
+        - declared TestDisulphideBridge() in molecule.h
+        - explicited all conversions long to short in infile.c /*casting*/
+        - excluded all unreferenced variables in infile.c /*unreferenced*/
+        - included graphics.h in molecule.c
+        - fixed casting in drawstar() and clipstar() in pixutils.c
+        - declared DefineShade() in transfor header
+        - fixed casting and referencing in script.c
+        - declared LoadDotsFile() in repres header
+        - declared SetFontStroke() in pixutil header
+        - missing WritePOVRay3File() declaration in script header
+        - declared cif_free_handle() in cif header
+        - missing declaration of cif_parse in cif.h</font></pre>
+        <pre><font face="Courier New">[22/09/99] PV repres.c
+        Fixed bug in DisplayRibbon() that produced cartoon like structure in
+        ribbons covering only parts of chains or mixing ribbon types.</font></pre>
+        <pre><font face="Courier New">[22/09/99] PV abstree.h .c
+        Fisrt step for saving atomsets &amp; identifiers in RasMol scripts (SetSize
+        to 100 and SymEntry and SymbolTable in header).</font></pre>
+        <pre><font face="Courier New">[22/09/99] PV repres.h command.c
+        Improved label picking mode (LabelFormat to store the current label
+        string,the command &quot;label {&lt;string&gt;}&quot; is disabled in
+        picking mode but save the format).</font></pre>
+        <pre><font face="Courier New">[24/09/99] PV cmndline.c
+        Correlated mouse binding to global variable MouseMode;
+        Removed EnableMenus(state==1) in ResetCommandLine();
+        Fixed mouse binding with INVERT on y values;
+        Fixed bug on capture status on mouse-up;
+        Added MM_PREV to mouse binding for deselection;
+        Fixed INVERT on y value for mouseup!</font></pre>
+        <pre><font face="Courier New">[28/09/99] PV transfor.c
+        Fixed bug (?) with stars, making them mutually exclusive with spheres.
+        Adjusted bondmode in EnableWireframe().</font></pre>
+        <pre><font face="Courier New">[29/09/99] PV molecule.c
+        Fixed bug in FindCisBonds() (no zeroing of last group cisbondflag);
+        Added ability to convert triple bond to single (CreateBondOrder())</font></pre>
+        <pre><font face="Courier New">[01/10/99] PV command.c
+        Fixed initialization SeqFormat and CalcBondsFlag (ExecuteConnectCommand);
+        Fixed bug in coloring strands (missing strandtok).</font></pre>
+        <pre><font face="Courier New">[07/10/99] PV command.c abstree.c script.c render.c
+        Changed coordinates and phipsi output, modified output for showcommand;
+        Adjusted threshold in DisplaySelected.</font></pre>
+        <pre><font face="Courier New">[07/10/99] PV cif.c
+        Fixed memory allocation bug (VisualC++?) in cif_make_handle;</font></pre>
+        <pre><font face="Courier New">[07/14/99] PV abstree.c transfor.c
+        Added shortcuts for direct evaluations of atomsets (BuildAtomSet(),
+        SelectZoneExpr()); gain up to 15 seconds of computer time on very
+        large molecules.
+        Added variable ModelInclude to select either in one model or in all
+        models;</font></pre>
+        <pre><font face="Courier New">[17/10/99] PV command.c
+        Modified CommandError output (shortened file name).</font></pre>
+        <pre><font face="Courier New">[19/10/99] PV
+        Release RasTop1.1</font></pre>
+        <pre><font face="Courier New">-------------------------------------------------------------------------</font></pre>
+        <pre><font face="Courier New">[20/10/99] PV script.c
+        Added temporary output on command line when null file in WriteScriptFile,
+        which edits a rasmol header file.</font></pre>
+        <pre><font face="Courier New">[22/10/99] PV command.c transform.c .h
+        Added function ReadAtomSelection() which escapes the parser under
+        the form:&quot;select (&lt; or &gt;) x1[-x2],...,xi[-x(i+1)](&gt; or &lt;)&quot;
+        where '&lt;' starts or continues an atom selection, '&gt;' continues or stops
+        the current selection, - indicates a bloc of consecutive atoms, and xi
+        are atomnos. Required DisplaySelectCount() to be global.</font></pre>
+        <pre><font face="Courier New">[27/10/99] PV command.c script.c .h graphics.h
+        Added function WriteAtomSelection() and WriteScriptPosition();
+        Added commands &quot;clipboard selected&quot;, &quot;clipboard
+        position&quot; &quot;clipboard
+        image&quot; and &quot;clipboard paste&quot; and corresponding functions:
+        ClipboardImage( )
+        ClipboardPosition( )
+        ClipboardSelection( )
+        ClipboardPaste( )</font></pre>
+        <pre><font face="Courier New">[29/10/99] PV command.c script.c .h graphics.h
+        Added function WriteScriptAtomSets() to write atom sets to the script.</font></pre>
+        <pre><font face="Courier New">[02/11/99] PV repres.h transfor.h
+        Added variables DotR,DotG,DotB,DotDensity, and UseDotColPot for
+        saving dot characteristics.</font></pre>
+        <pre><font face="Courier New">[09/11/99] PV command.h/.c
+        Added MoleculeFileName variable and SaveRsmMolecule() function;
+        Modified save command to address &quot;save &lt;filename&gt;&quot; to
+        SaveRsmMolecule().</font></pre>
+        <pre><font face="Courier New">[09/11/99] PV rasmol.h command.c
+
+        Added ProcessDoc and SaveDoc functions which allows add-ons (like
+        RasTop)to react to newly loaded molecules, zapping, and saving of 
+        molecular data.</font></pre>
+        <pre><font face="Courier New">[22/11/99] PV molecule.c script.c
+        Modified CreateNewBond() to prevent pdb files without atom description;
+        Adjusted ProcessFile() and FetchFile() to allow attribution
+        of DataFileFormat when no Database is created.
+        Modified output of WriteScriptHBonds();</font></pre>
+        <pre><font face="Courier New">[12/08/99] PV command.c
+        ResumePauseCommand( ), added '\r' to terminate curline (bug? resulted in
+        non opening of subscripts when LF/CR in the script file).</font></pre>
+        <pre><font face="Courier New">[12/08/99] PV rasmol.h command.c
+        Added function RefreshView() in rasmol.h to replace RefreshScreen() in
+        command.c to allow refreshscreeen from inside RasMol.</font></pre>
+        <pre><font face="Courier New">[12/09/99] PV command.c
+        Added Beginwait/endwait in ProcessFile().</font></pre>
+        <pre><font face="Courier New">[12/10/99] PV command.c token.c
+        Added CopyTok for &quot;copy&quot; command equivalent to
+        &quot;clipboard&quot; and shorcut for &quot;paste&quot; command.
+        Added SELECTION as an homonymous keyword to SELECTED</font></pre>
+        <pre><font face="Courier New">-------------------------------------------------------------------------</font></pre>
+        <pre><font face="Courier New">Started version 1.3.</font></pre>
+        <pre><font face="Courier New">[12/14/99] PV transform.c and others
+        Added function CentreTransform() to either move the origin in the molecule
+        or move the molecule to the origin (origin = True ). Added variables
+        Cenx,y,z, which mesure distance centre-origin. Changed DrawTwinVector to
+        ClipTwinVector in DisplayWireFrame() (render.c).</font></pre>
+        <pre><font face="Courier New">[12/14/99] PV
+        Added variables ShiftS and UseAutoDepthCue that adjust DepthCue
+        with slabbing.</font></pre>
+        <pre><font face="Courier New">[12/17/99] PV render.c
+        Added centre correction in DisplayBoxes().</font></pre>
+        <pre><font face="Courier New">[12/18/99] PV
+        Added code for backclipping based on ZOffset. New variable UseDepthPlane
+        and DialValue[8].</font></pre>
+        <pre><font face="Courier New">[12/20/99] PV script.c
+        Added more precision to rotate, translate, zoom, and slab commands in
+        WriteScriptFile() and WriteScriptPosition(). This is important
+        for passing cliboard content and saving centre. Fixed centre scripting.</font></pre>
+        <pre><font face="Courier New">[01/03/00] PV transfor.c
+        Fixed bug (and modified) function Power() to handle Specpower.</font></pre>
+        <pre><font face="Courier New">[01/14/00] PV molecule.c
+        Set Info.filename as alternative title.</font></pre>
+        <pre><font face="Courier New">[01/16/00] PV transfor.h/.c token.h/.c script.c
+        Added ShadePower in DefineColourMap(), which brings some interesting
+        shade variations. Added ShadePowerTok and command &quot;set shade x&quot; with
+        x between -20 to 20.</font></pre>
+        <pre><font face="Courier New">[01/16/00] PV cmndline.c PerformMouseFunc()
+        Corrected MM_CLIP to access clipping with the mouse;
+        Added MM_DEPT to access backclipping (depth) with the mouse.</font></pre>
+        <pre><font face="Courier New">[01/16/00] PV
+        Completed 32-bits version. Code a bit messy, especially for
+        clipboard and background operations. Will probably not compile on
+        other compilers. bmp file saving not done in 32 bits.
+        Added code for command &quot;set dot &lt;value&gt;&quot; which adjusts
+        the size of the dots in a rather rough way.</font></pre>
+        <pre><font face="Courier New">[01/17/00] PV script.c
+        Corrected bug in WriteScriptAtoms().</font></pre>
+        <pre><font face="Courier New">[01/17/00] PV render.c
+        Solved problem in regenerating background in 32 bits in ReSizeScreen().</font></pre>
+        <pre><font face="Courier New">[01/17/00] PV command.c ExecutePauseCommand()
+        Added a RFRefresh for refreshing RasTop screen.</font></pre>
+        <pre><font face="Courier New">[01/28/00] PV render.c ResetRender()
+        (Bug?) Finally found old problem with shadows in RasTop. Missing
+        a ResetVoxelData() on zapping. This is a potential source of problems
+        when successively opening scripts containing shadows in RasMol.</font></pre>
+        <pre><font face="Courier New">[01/30/00] PV command.c
+        Added command &quot;select view&quot; and corresponding code, which allows to
+        select a part of a molecule based on screen display.</font></pre>
+        <pre><font face="Courier New">[01/31/00] PV command.c
+        Added code for selecting atom areas with mouse:
+        - changed PickAtom() function name in PickAtoms();
+        - changed PicAtome identifier in PickAtom;
+        - added function SelectArea() and DisplayArea();
+        - added code for command &quot;select view&quot;;</font></pre>
+        <pre><font face="Courier New">[02/02/00] PV pixutil.c render.c
+        Added function ClipDashLine();
+        Changed display of cells with dashed lines in DisplayBoxes().</font></pre>
+        <pre><font face="Courier New">[06/01/00] PV
+        Finish help; Release version 1.3</font></pre>
+        <hr>
+        <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><a name="rasmol271changelog">RasMol
+        2.7.1 ChangeLog</a></h3>
+        <h3>Changes from RasMol 2.7.0.1 to create RasMol 2.7.1:</h3>
+        <pre>
+[15/07/99]	HJB	documentation
+		Add Dunix binaries.  Thanks to David Atkinson
+
+[06/07/99]	HJB	all 
+		Release 2.7.1
+
+[05/07/99]	HJB	documentation
+		Cut-off date for Release 2.7.1 documentation changes.
+
+[22/06/99]	HJB	all source
+		Cut-off date for Release 2.7.1 code changes.
+
+[22/06/99]	HJB	command.c
+		Save fact that a data file was loaded inline.  Add
+		processing for star command, all new options for
+		bondmode [all | none | not bonded ]
+
+[22/06/99]	HJB	infile.c
+		Update DataFileFormat after autorecognition.
+
+[22/06/99]	HJB	molecule.h
+		Add MarkAtoms to hold new bondmode flags.
+
+[22/06/99]	HJB	pixutils.c, render.c
+		Add code for new star command.
+
+[22/06/99]	HJB	script.c
+		Add logic to write star command output.  Report data
+		loaded as CIF or as inline correctly.  Warn users
+		that inline data is not being written out.  Check
+		inversion of Y-axis on POVRAY3.  Thanks to Curt
+		Haltiwanger for suggesting marking non-bonded atoms
+		on wireframe displays.
+
+[22/06/99]	HJB	transfor.c
+		Add code for new star command, new bondmode options.
+
+[18/06/99]	HJB	pixutils.h, pixutils.c
+		Change name of DisplayString to DisplayRasString to
+		avoid a conflict with X libraries.  Add FontWid array
+		to hold character widths (FontSize for FS, FontSize/4
+		+1 + maximum x position for PS).  Add FontStroke logic to
+		write cylinders instead of lines when FontStroke is not
+		zero.
+
+[18/06/99]	HJB	render.c
+		Change name of DisplayString to DisplayRasString to
+		avoid a conflict with X libraries.
+
+[18/06/99]	HJB	repres.c
+		When FonstStroke is non-zero, don't offset character
+		color by (ColourMask&gt;&gt;1), to allow room for color
+		adjustments in cylinder drawing.
+
+[18/06/99]	HJB	script.c
+		Add logic to write PS flag for proportional spacing
+		on set fontsize, and logic to write set fontstroke n.
+
+[18/06/99]	HJB	tokens.c, tokens.h
+		Add tokens for BlueTint (BlueTintTok), Brown (BrownTok),
+		FontStroke (FontStrokeTok), FS (FSTok), Gold (GoldTok),
+		Gray or Grey (GrayTok), GreenTint (GreenTintTok), HotPink
+		(HotPinkTok), Pick as an alternative for Picking 
+		(PickingTok), Pink (PinkTok), PinkTint (PinktintTok),
+		SeaGreen (SeaGreenTok), SkyBlue (SlyBlueTok),
+		YellowTint (YellowTintTok)
+
+[13/06/99]	HJB	command.c
+		Change processing of load inline command to work from
+                the currently opened script, saving the file position.
+                Accept HEADER and DATA_... as commands in a script,
+                processing that line and all subsequent lines as a
+                data file, unless a prior load inline command was already
+                done		
+
+[12/06/99]	HJB	infile.c
+		When processing a PDB file, test for DATA_... until
+                a non-comment, non-blank line is found.  Revert
+                to CIF processing if DATA_... is found.
+
+[11/06/99]	HJB	infile.c
+		In PDB format input extract EXPDTA for Info.technique.  
+		In CIF format input accept _audit_block_code for the 
+		entry ID, _exptl.method, _diffrn_radiation.probe or 
+		_diffrn_radiation_probe for Info.technique.  Preserve 
+		low order bits of coordinates in xtrl, yrtl, ztrl.  On 
+		PDB output, report Info.technique in EXPDTA and reinsert 
+		low-order bits for coordinates.
+
+[10/06/99]	HJB	abstree.c
+		Add code to report coordinates for show selected cordinates  
+
+[10/06/99]	HJB	command.c
+		Recognize new commands, picking coordinates, 
+                show selected cordinates.  Update default title produced
+		by title command.
+
+[10/06/99]	HJB	molecule.h
+		Add new Info fields for date and technique.  Extend
+		identcode to 80 columns.  Add CRD to Selection enum type.
+		Add prototype for ReviseTitle.
+
+[10/06/99]	HJB	render.h, render.c
+		Add code to report coordinates for picking coordinates,
+		define PickCoord symbol.
+
+[10/06/99]	HJB	tokens.h, tokens.c
+		Add code recognize COORD, COORDS, COORDINATE, COORDINATES for 
+		new CoordTok, DATA_... for CIFDataTok, HEADER for HeaderTok 
+
+[09/06/99]	HJB	molecule.c
+		Put PDB entry ID and EXPDTA info into canvas title, report
+		EXPDTA data from Info.technique on reading file.
+
+[06/06/99]	HJB	infile.c
+		Restore the origin on PDB and other outputs.
+
+[06/06/99]	HJB	script.c
+		Change script output to include centering and
+		change various coordinate outputs to restore
+		origins the z-axis orientation.
+
+[06/06/99]	HJB	command.c
+		Add command centre [CenX,CenY,CenZ] to center by offsets
+		from centre of gravity.
+		
+[03/06/99]	HJB	render.c
+		Remove call to TranslateToCentre, hold centering
+		in CenX, CenY and CenZ, decoupled from dials,
+		add RFRotate to ReDrawFlag on centering.  Thanks to
+		Bohdan Schneider for pointing out the problems with
+		centering.
+
+[03/06/99]	HJB	transfor.c
+		Remove TranslateToCentre, remove processing of CenX,
+		CenY and CenZ from dial values, and put it into
+		computation of ptr-&gt;x,y,z
+</pre>
+        <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a>Changes
+        after release of RasMol_2.7.0.1:</h3>
+        <pre>
+[27/04/99]	HJB	README.html, Changelog.html, INSTALL.html, manual
+		Add navigation links at top and bottom of each page.
+		Add links for gzipped versions of raswin.hlp, rasmol.hlp.
+		Thanks to E. Martz and Kjeld Olesen.
+
+[27/04/99]	HJB	INSTALL.html, manual
+		Replace empty copy of INSTALL.html in doc/, correct
+		embedded html in manual.  Thanks to Kurt Giles.</pre>
+        <hr>
+        <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><a name="rasmol2701changelog">RasMol
+        2.7.0.1 ChangeLog</a></h3>
+        <h3>Changes from RasMol_2.7.0 to create RasMol_2.7.0.1:</h3>
+        <pre>[22/04/99]	HJB
+		Announce RasMol 2.7.0.1 on pdb-l@rcsb.org, 
+		rasmol@lists.umass.edu, mmciflist@ndbdev.rutgers.edu
+
+[11/04/99]	HJB	*.c, *.h
+		Update all comment blocks for new version and date
+
+[11/04/99]	HJB	abstree.h
+		Realign Pred... to agree with ...Tok to correct
+		misaligned introduced by HJB (not AM) during merge of 2.6x1
+		into 2.7.0.
+
+[11/04/99]	HJB	tokens.h
+		Fix definition of IsPredTok
+
+[09/04/99]	HJB	molecule,h
+		Make residue identification case-insensitive.</pre>
+        <hr>
+        <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><a name="rasmol270changelog">RasMol
+        2.7.0 ChangeLog</a></h3>
+        <h3>Changes from RasMol_2.6.4, RasMol2.6x1 and RasMol_2.6_CIF.2 to
+        create RasMol_2.7.0:</h3>
+        <pre>
+[30/03/99]	HJB	all
+		Cleanup and release of version 2.7.0
+
+[23/03/99]	HJB	abstree.c
+		Add code to select on alternate conformers.  Increase
+		accuracy of torsion angle calculation.
+
+[23/03/99]	HJB	command.c, command.h
+		Make InitHelpFile generally available, change to 
+		WriteString for reporting CisBondCutOff for use on mac,
+		report models on show selected.
+
+[23/03/99]	HJB	rasmol.c, raswin.c, rasmac.c
+		Add suggestion for help notice to initial text lines.
+
+[23/03/99]	HJB	script.c
+		In order to support mac introduce WriteBuffer and
+		change all fprintf(outFile, ... to WriteBuffer, provide
+		code from fisipl for Ramachandran printer plot.  Handle
+		signs of torsion angles.  Thanks to F. C. Bernstein.
+
+[23/03/99]	HJB	tokens.h, tokens.c
+		Add RamPrintTok, RPP, RDF, etc., hook POVRAY3 to the
+		new POVray code.
+
+[20/03/99]	HJB	*.h, *.c
+		In general, the RasMol_2.6_CIF.2 version was used as a base
+		and upgraded with the RasMol_2.6.4 changes.  The exceptions
+		are below
+
+[20/03/99]	HJB	infile.c
+		Cell parameters are read with the double routine ReadDecValue
+		from 2.6_CIF.2, rather than ReadValue2 from 2.6.4
+</pre>
+        <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a>Changes
+        from RasMol_2.6 to create RasMol_2.6x1:</h3>
+        <pre>
+[15/2/98]	AM	abstree.c, abstree.h
+		Add PredCisBond, DescribeObj, CalcPhiAngle, CalcPsiAngle,
+		CalcOmegaAngle, shift torsion angle calculations 180
+		degrees.
+
+[15/2/98]	AM	command.c
+		Add FindCisBonds, CisBondCutOff, show of selected chains,
+		groups, atoms, show and write of phi-psi angles
+
+[15/2/98]	AM	molecule.h, molecule.c
+		Add CIS bond logic
+
+[15/2/98]	AM	rasmol.h, rasmol.c
+		Add USE_FD_SET_TYPE option
+
+[15/2/98]	AM	script.h, script.c
+		Add WritePhiPsiAngles, code for POV-Ray version 3
+		
+
+[15/2/98]	AM	tokens.h
+		Add CisBondedTok, RamachanTok, CisAngleTok, PhiPsiTok,
+		define PHIPSI, CISANGLE, RAMACHAN, CISBONDED
+</pre>
+        <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a>Changes
+        from RasMol_2.6 to create RasMol_2.6.4:</h3>
+        <pre>
+[8/2/99]	RS	command.c, rasmol.c, scripts.c, rastxt.c, raswin.c
+		rasmac.c
+		Final fixup and release of version 2.6.4
+
+[27/12/98]	RS	*.h, *.c
+		Remove all non-ANSI-C prototypes and ensure use of ( void )
+		for empty argument lists.  Upgrade all procedure delcarations.
+		Convert to use of MSWIN.
+
+[27/12/98]	RS	abstree.c
+		Redo torsion angel calculation.
+		
+
+[27/12/98]	RS	applemac.c
+		Convert to Apple's new routine names
+
+[27/12/98]	RS	cmndline.c, cmndline.h
+		New routine for mouse, keyboard, dials
+
+[27/12/98]	RS	command.c, command.h
+		Move routines for mouse, keyboard, dials to cmndline.c.
+		Redo ParseColour.  Reorganize command parsing
+
+[27/12/98]	RS	infile.c
+		Change references to MMIO to MMIOLIB.  Pass fp and buffer
+		to FetchRecord as argument.  Add ReadValue2, ProcessPDBBond,
+		ProcessPDBUnitCell.  Fix recognition of END. Use
+		InvalidateCmndline and UnusedArgument.  Write MODEL and 
+		ENDMDL records when appropriate
+		
+[27/12/98]	RS	molecule.c
+		Reorganize FindResNo as a character-oriented search tree
+		Add Cache.
+
+[27/12/98]	RS	rasmac.c
+		Convert to Apple's new routine names
+
+[27/12/98]	RS	rastxt.c
+		New text-only main program
+
+[27/12/98]	RS	repres.c
+		Add LabelTermnii
+
+[27/12/98]	RS	tranfor.c
+		Add TranslateToCentre
+
+[27/12/98]	RS	transfor.h
+		Reorganize the logic defining DefaultAmbient, making
+		the default value 0.4 instead of 0.6, except for E&amp;S, which
+		is still .05.
+
+[27/12/98]	RS	tokens.c
+		New routine for character-oriented search tree for tokens.
+		
+[01/08/97]	RS	infile.c
+		Decreased the maximum valid alpha carbon to alpha carbon
+		distance to 4.2 Angstroms from 7.0 Angstroms.  Thanks to
+		Kostas Sfyrakis and Harren Jhoti.
+
+[15/04/97]	RS	molecule.c repres.c
+		Fixed a bizarre feature in the OpenVMS compiler that complained
+		about &quot;a=*b&quot; as &quot;=*&quot; operator is an obsoltete form and may not
+		be portable.  Special thanks to Remington Stone.
+
+[28/11/96]	RS	rasmol.h rasmol.c
+		Several minor fixes to compile RasMol under VMS.  Special
+		thanks to Adam Ralph (and CCP4).
+</pre>
+        <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a>Changes
+        from RasMol_2.6_CIF(Rev 1) to create RasMol_2.6_CIF(Rev 2):</h3>
+        <pre>
+[24/2/99]	HJB	Release of RasMol_2.6_CIF(Rev 2) at
+		http://www/bernstein-plus-sons.com/software/rasmol
+		and announce to mailing lists.
+
+[21/2/99]	HJB	cif.h
+		Add prototypes of cif_make_handle, cif_read_file,
+		cif_make_file, cif_save_character to avoid compiler warnings
+
+[21/2/99]	HJB	cif_ctonum.c
+		Remove unneeded values.h
+
+[21/2/99]	HJB	cif_ctonum.h
+		Correct prototype
+
+[21/2/99]	HJB	infile.c
+		Add cif_ctonum.h, define LoadCIFMolecule prototype,
+		initialize ch, add return  to avoid compiler warnings.
+
+[21/2/99]	HJB	abstree.c, cif.c, cif_ctonum.c, command.c, 
+		infile.c, molecule.c
+		Use string_case.h instead of <strings.h> for IBMPC,
+		VMS and APPLEMAC.
+
+[21/2/99]	HJB	rasmol.h
+		Update version, add some definitions from R. Sayle's
+		2.6.4 in preparation for 2.7.0.
+
+[21/2/99]	HJB	rasmac.c, rasmol.c, raswin.c
+		Update reported date on startup.
+
+[21/2/99]	HJB	render.c
+		Add cif_fract.h to avoid compiler warnings.
+
+[21/2/99]	HJB	string_case.c
+		Replace garbled version, provide string_case.h.
+
+[21/2/99]	HJB	script.c
+		Initialize first, last, radius, to avoid compiler warnings
+
+[21/2/99]	HJB	transfor.c
+		Initialize min and max to avoid compiler warnings.
+
+[10/1/99]	HJB	Release of RasMol_2.6_CIF(Rev 1) at
+		http://www.bernstein-plus-sons.com/software/rasmol
+		and announce to mmCIF mailing list.
+
+[9/1/99]	HJB	cif.c
+		Change toupper calls to ToUpper calls.  
+
+[8/1/99]	HJB	command.c
+		Add argument to CreateMoleculeBonds to force zapping
+		on connect.  
+
+[8/1/99]	HJB	infile.c
+		Log requested bonds which cannot be made in NullBonds
+		and report to users, add RightJustify to right-justify
+		residue names, recognize _atom_site_disorder_group
+		for small molecule alternate conformerse, recognize bonds
+		which don't have either atom names or atom numbers.
+
+[8/1/99]	HJB	molecule.c
+		Add argument to CreateMoleculeBonds to force zapping
+		on connect.  
+
+[8/1/99]	HJB	molecule.h
+		Add argument to CreateMoleculeBonds to force zapping
+		on connect, add NullBonds to log requested bonds which
+		cannot be made.  
+
+[8/1/99]	HJB	mswin31.c
+		Use VERSION to construct window title.
+
+[8/1/99]	HJB	outfile.c
+		Use VERSION to construct Postscript output file header.
+
+[8/1/99]	HJB	rasmac.c
+		Use VERSION to report version on startup.
+
+[8/1/99]	HJB	rasmol.c
+		Use VERSION to report version on startup.
+
+[8/1/99]	HJB	raswin.c
+		Use VERSION to report version on startup.
+
+[8/1/99]	HJB	script.c
+		Use VERSION to construct various output file headers.
+</pre>
+        <pre>[8/1/99]	HJB	x11win.c
+		Use VERSION to construct window title.
+</pre>
+        <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a>Changes
+        from RasMol_2.6 to create RasMol_2.6_CIF:</h3>
+        <pre>
+[22/12/98]	HJB	Preliminary release of RasMol_2.6_CIF at
+		http://www.bernstein-plus-sons.com/software/rasmol
+
+[19/12/98]	HJB	command.c
+		correct handling of internal help files under windows,
+		and allow for unix help files on a mac.
+
+[18/12/98]	HJB	Makefile.in, Imakefile
+		Update for CIF support. 
+
+[09/12/98]	HJB	infile.c
+		Cummulative changes for fractional coordinates,
+		CIF.  
+
+[09/12/98]	HJB	command.c
+		Changes for alt, model labels, colour schemes,
+		CIF.  
+
+[09/12/98]	HJB	molecule.h
+		Cummulative changes for fractional coordinates,
+		new colour schemes, CIF.  
+
+[09/12/98]	HJB	molecule.c
+		Cummulative changes for fractional coordinates,
+		new colour schemes, CIF.  
+[09/12/98]	HJB	x11win.c
+		Update comments, menus and version text.
+
+[09/12/98]	HJB	mswin31.c
+		Update comments, output file commentary.
+
+[09/12/98]	HJB	outfile.c
+		Update comments, output file commentary.
+
+[09/12/98]	HJB	script.c
+		Update comments, output file commentary.
+
+[09/12/98]	HJB	rasmol.c
+		Update comments, output file commentary.
+
+[04/12/98]	HJB	pixutils.c
+		Update comments, code to stripe bonds for alternate
+		conformers.  
+
+[04/12/98]	HJB	pixutils.h
+		Update comments, protytpes to stripe bonds for alternate
+		conformers. 
+
+[04/12/98]	HJB	rasmac.c
+		Update comments, adjust code for current Metrowerks
+		compiler.  
+
+[04/12/98]	HJB	raswin.c
+		Update comments, adjust code for current Metrowerks
+		compiler.  
+
+[04/12/98]	HJB	tokens.h
+		Update comments, tokens for alt, model colours.
+
+[04/12/98]	HJB	transfor.c
+		Update comments, add code for alt, model colours.
+		
+[04/12/98]	HJB	transfor.h
+		Update comments, prototypes for alt, model colours.
+
+[23/11/98]	HJB	abstree.c
+		Add code for %A, %M specifiers, divide u/l case. 
+
+[22/11/98]	HJB	cif_fract.c
+		New routine, derived from cif2pdb by H.J. Bernstein
+		and F. C. Bernstein.  
+
+[22/11/98]	HJB	cif_fract.h.
+		New header for cif_fact.c. 
+
+[22/11/98]	HJB	cif_stx.c
+		New routine, derived from P. Ellis CBFlib parser.
+
+[23/11/98]	HJB	render.c
+		Update comments, add code to stripe bonds for alternate
+		conformers. 
+
+[23/11/98]	HJB	repres.c
+		Update comments, add code to stripe bonds for alternate
+		conformers. 
+
+[09/09/98]	HJB	cif_ctonum.c
+		New routine, derived from ciftbx by S. R. Hall
+		and H. J. Bernstein.  
+
+[09/09/98]	HJB	cif_ctonum.h
+		New header for cif_ctonum.c. 
+
+[18/08/98]	HJB	cif.h
+		New header for cif.c, derived from CBFlib by P. Ellis
+		and H. J. Bernstein. 
+				 
+[18/08/98]	HJB	cif.c
+		New routine derived from CBFlib by P. Ellis and 
+		H. J. Bernstein. 
+				 
+[14/08/98]	HJB	rasmol.c
+		Added hooks for termio for Linux.  These changes
+		are similar to, but not identical to the FreeBSD hooks.
+		See the linux conditionals. -- H. J. Bernstein
+</pre>
+        <!--webbot bot="Include" u-include="signature.htm" tag="BODY" startspan -->
+<P><IMG SRC="images/dotnul.gif" NAME="Graphic1" ALIGN=BOTTOM WIDTH=2 HEIGHT=5 BORDER=0></P>
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0>
+	<TR>
+		<TD WIDTH=100% BGCOLOR="#c29654">
+			<P><IMG SRC="images/dotnul.gif" NAME="Graphic2" ALT="dotnul.gif (43 bytes)" ALIGN=BOTTOM WIDTH=2 HEIGHT=2 BORDER=0></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><FONT SIZE=1><STRONG>RasTop Help Site</STRONG> - <A HREF="index.htm">home</A>
+			| <A HREF="notice.htm">notice</A> | <A HREF="copyright.htm">copyright</A></P>
+		</TD>
+	</TR>
+</TABLE>
+<P><BR><BR>
+</P>
+<!--webbot bot="Include" endspan i-checksum="12835" -->
+
+        <pre>&nbsp;</pre>
+        </font></td>
+    </tr>
+  </table>
+</div>
+<pre>&nbsp;</pre>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+</table>
+
+</body>
+
+</html>

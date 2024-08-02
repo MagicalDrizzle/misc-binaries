@@ -1,0 +1,251 @@
+<html>
+
+<head>
+<title></title>
+</head>
+
+<body>
+
+<p>ChangeLog 8</p>
+
+<p><a href="../changelograstop.htm">Back</a></p>
+
+<p>[24/2/99]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; Release of RasMol_2.6_CIF(Rev 2) at<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+http://www/bernstein-plus-sons.com/software/rasmol<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; and announce to mailing lists.<br>
+<br>
+[21/2/99]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; cif.h<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Add prototypes of cif_make_handle,
+cif_read_file,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cif_make_file, cif_save_character to avoid
+compiler warnings<br>
+<br>
+[21/2/99]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; cif_ctonum.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Remove unneeded values.h<br>
+<br>
+[21/2/99]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; cif_ctonum.h<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Correct prototype<br>
+<br>
+[21/2/99]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; infile.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Add cif_ctonum.h, define LoadCIFMolecule
+prototype,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; initialize ch, add return to avoid compiler
+warnings.<br>
+<br>
+[21/2/99]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; abstree.c, cif.c, cif_ctonum.c,
+command.c, <br>
+&nbsp;&nbsp;&nbsp; infile.c, molecule.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Use string_case.h instead of &lt;strings.h&gt;
+for IBMPC,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; VMS and APPLEMAC.<br>
+<br>
+[21/2/99]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; rasmol.h<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Update version, add some definitions from R.
+Sayle's<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.6.4 in preparation for 2.7.0.<br>
+<br>
+[21/2/99]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; rasmac.c, rasmol.c, raswin.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Update reported date on startup.<br>
+<br>
+[21/2/99]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; render.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Add cif_fract.h to avoid compiler warnings.<br>
+<br>
+[21/2/99]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; string_case.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Replace garbled version, provide string_case.h.<br>
+<br>
+[21/2/99]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; script.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Initialize first, last, radius, to avoid
+compiler warnings<br>
+<br>
+[21/2/99]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; transfor.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Initialize min and max to avoid compiler
+warnings.<br>
+<br>
+[10/1/99]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; Release of RasMol_2.6_CIF(Rev 1) at<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+http://www.bernstein-plus-sons.com/software/rasmol<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; and announce to mmCIF mailing list.<br>
+<br>
+[9/1/99]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; cif.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Change toupper calls to ToUpper calls. <br>
+<br>
+[8/1/99]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; command.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Add argument to CreateMoleculeBonds to force
+zapping<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; on connect. <br>
+<br>
+[8/1/99]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; infile.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Log requested bonds which cannot be made in
+NullBonds<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; and report to users, add RightJustify to
+right-justify<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; residue names, recognize
+_atom_site_disorder_group<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for small molecule alternate conformerse,
+recognize bonds<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; which don't have either atom names or atom
+numbers.<br>
+<br>
+[8/1/99]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; molecule.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Add argument to CreateMoleculeBonds to force
+zapping<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; on connect. <br>
+<br>
+[8/1/99]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; molecule.h<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Add argument to CreateMoleculeBonds to force
+zapping<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; on connect, add NullBonds to log requested
+bonds which<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cannot be made. <br>
+<br>
+[8/1/99]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; mswin31.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Use VERSION to construct window title.<br>
+<br>
+[8/1/99]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; outfile.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Use VERSION to construct Postscript output file
+header.<br>
+<br>
+[8/1/99]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; rasmac.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Use VERSION to report version on startup.<br>
+<br>
+[8/1/99]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; rasmol.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Use VERSION to report version on startup.<br>
+<br>
+[8/1/99]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; raswin.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Use VERSION to report version on startup.<br>
+<br>
+[8/1/99]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; script.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Use VERSION to construct various output file
+headers.<br>
+<br>
+[8/1/99]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; x11win.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Use VERSION to construct window title.<br>
+<br>
+[22/12/98]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; Preliminary release of RasMol_2.6_CIF
+at<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+http://www.bernstein-plus-sons.com/software/rasmol<br>
+<br>
+[19/12/98]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; command.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; correct handling of internal help files under
+windows,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; and allow for unix help files on a mac.<br>
+<br>
+[18/12/98]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; Makefile.in, Imakefile<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Update for CIF support. <br>
+<br>
+[09/12/98]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; infile.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Cummulative changes for fractional coordinates,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CIF. <br>
+<br>
+[09/12/98]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; command.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Changes for alt, model labels, colour schemes,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CIF. <br>
+<br>
+[09/12/98]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; molecule.h<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Cummulative changes for fractional coordinates,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; new colour schemes, CIF. <br>
+<br>
+[09/12/98]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; molecule.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Cummulative changes for fractional coordinates,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; new colour schemes, CIF. <br>
+[09/12/98]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; x11win.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Update comments, menus and version text.<br>
+<br>
+[09/12/98]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; mswin31.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Update comments, output file commentary.<br>
+<br>
+[09/12/98]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; outfile.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Update comments, output file commentary.<br>
+<br>
+[09/12/98]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; script.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Update comments, output file commentary.<br>
+<br>
+[09/12/98]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; rasmol.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Update comments, output file commentary.<br>
+<br>
+[04/12/98]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; pixutils.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Update comments, code to stripe bonds for
+alternate<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; conformers. <br>
+<br>
+[04/12/98]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; pixutils.h<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Update comments, protytpes to stripe bonds for
+alternate<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; conformers. <br>
+<br>
+[04/12/98]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; rasmac.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Update comments, adjust code for current
+Metrowerks<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; compiler. <br>
+<br>
+[04/12/98]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; raswin.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Update comments, adjust code for current
+Metrowerks<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; compiler. <br>
+<br>
+[04/12/98]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; tokens.h<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Update comments, tokens for alt, model colours.<br>
+<br>
+[04/12/98]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; transfor.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Update comments, add code for alt, model
+colours.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+[04/12/98]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; transfor.h<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Update comments, prototypes for alt, model
+colours.<br>
+<br>
+[23/11/98]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; abstree.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Add code for %A, %M specifiers, divide u/l
+case. <br>
+<br>
+[22/11/98]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; cif_fract.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; New routine, derived from cif2pdb by H.J.
+Bernstein<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; and F. C. Bernstein. <br>
+<br>
+[22/11/98]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; cif_fract.h.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; New header for cif_fact.c. <br>
+<br>
+[22/11/98]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; cif_stx.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; New routine, derived from P. Ellis CBFlib
+parser.<br>
+<br>
+[23/11/98]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; render.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Update comments, add code to stripe bonds for
+alternate<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; conformers. <br>
+<br>
+[23/11/98]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; repres.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Update comments, add code to stripe bonds for
+alternate<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; conformers. <br>
+<br>
+[09/09/98]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; cif_ctonum.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; New routine, derived from ciftbx by S. R. Hall<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; and H. J. Bernstein. <br>
+<br>
+[09/09/98]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; cif_ctonum.h<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; New header for cif_ctonum.c. <br>
+<br>
+[18/08/98]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; cif.h<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; New header for cif.c, derived from CBFlib by P.
+Ellis<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; and H. J. Bernstein. <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+[18/08/98]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; cif.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; New routine derived from CBFlib by P. Ellis and
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; H. J. Bernstein. <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+[14/08/98]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; rasmol.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Added hooks for termio for Linux. These changes<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; are similar to, but not identical to the
+FreeBSD hooks.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; See the linux conditionals. <br>
+</p>
+</body>
+</html>

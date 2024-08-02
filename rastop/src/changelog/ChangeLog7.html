@@ -1,0 +1,163 @@
+<html>
+
+<head>
+<title></title>
+</head>
+
+<body>
+
+<p>ChangeLog 7</p>
+
+<p><a href="../changelograstop.htm">Back</a></p>
+
+<p>[10/10/96]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; render.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fixed bug in ReSize screen that incorrectly set
+MaxZoom. This<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; should match the code in InitialTransform().
+Special Thanks<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; to Tim Maffet.<br>
+<br>
+[10/10/96]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; pixutils.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Correct bug testing incorrect OutCode in
+routine ClipLine().<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Special thanks to Tim Maffet.<br>
+<br>
+[07/10/96]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; raswin.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Changed the style and class of the command line
+window to <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; allow it to be minimized in Windows 95. Thanks
+to Ken Davis.<br>
+<br>
+[30/09/96]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; render.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fixed a bug displaying crystallographic unit
+cell. Very<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Special Thanks to Wei Dong
+&lt;wei@chem.gla.ac.uk&gt;<br>
+<br>
+[24/09/96]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; rasmol.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Add support for several command line options
+including<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;-width&quot;, &quot;-height&quot;,
+&quot;-noconnect&quot; and &quot;-port&quot;. Special<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; thanks to Ryan Hung for the WidthxHeight code.<br>
+<br>
+[23/09/96]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; command.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Modified the FetchFile function to trap SIGPIPE
+when calling<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; popen(3) to gunzip or decompress. Thanks to Guy
+Slater.<br>
+<br>
+[17/07/96]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; command.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fixed a bug in RasWin under Windows 95 that
+prevents <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; filenames from containing spaces. Thanks to Bob
+Long.<br>
+<br>
+[16/07/96]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; transfor.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Improved the implementation of ScaleColourMap
+that no<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; longer uses floating point values. This fixes
+problems<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; on IBM PC and improves performance.<br>
+<br>
+[16/07/96]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; command.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Add the &quot;set sequence
+&lt;boolean&gt;&quot; command to RasMol and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; implemented &quot;DescribeSequence&quot; that
+controls whether &quot;show<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sequence&quot; displays three-letter or
+one-letter amino codes.<br>
+<br>
+[16/07/96]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; pixutils.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fixed 16bit overflow problem when display
+polygons in <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RasWin in routines &quot;DrawPolygon&quot; and
+&quot;ClipPolygon&quot;.<br>
+<br>
+[02/07/96]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; x11win.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fixed a bug in RasMol that treated the SGI
+NumLock key as<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; an Alt-modifier. Popping up menus when typing
+into the<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; canvas window. Thanks to Andrew Leach and Ryan
+Smith.<br>
+<br>
+[01/07/96]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; rasmac.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Corrected problems in
+&quot;OpenDialogHook&quot; and &quot;SaveDialogHook&quot;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; that caused several problems including a system
+crash when<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; running Symmantec Directory Assistance II.
+Special Thanks<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; to Kevin E. Gilbert (for the patch) and Henry
+Rzepa (for<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; discovering the problem).<br>
+<br>
+[07/05/96]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; command.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Corrected bug in &quot;ExecuteSetCommand&quot;
+that caused &quot;set backfade&quot;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; to always reset &quot;set transparency&quot; (a
+missing break statement).<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Special Thanks to Tim Maffett.<br>
+<br>
+[09/04/96]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; script.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Modified the generation of script files to fix
+a bug in<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; writing the &quot;colour axes&quot; command to
+include commas. Special<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; to Guy Slater.<br>
+<br>
+[29/03/96]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; script.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Modified the generation of script files to
+avoid writing<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;colour ribbons none&quot; at each
+residue, which is the default.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Thanks to Alan Lewis.<br>
+<br>
+[21/11/95]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; command.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Changed the conditions in FetchFile on when
+RasMol determines<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; bonds itself to the condition &quot;bonds &lt;
+atoms-chains&quot;. This<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; allows multiple connected fragments. Thanks to
+William Hart.<br>
+<br>
+[10/11/95]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; infile.c x11win.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Made several #ifdef VMS changes to allow RasMol
+to compile<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; with VAX C. Thanks to Gail Schuman.<br>
+<br>
+[10/11/95]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; pixutils.h pixutils.c repres.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Changed the field names hx, hy and hz in
+structure Knot to<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; to dx, dy and dz to avoid clash with predefined
+AIX macro hz.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Thanks to Hiroki Morizono.<br>
+<br>
+[09/11/95]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; transfor.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fixed bug in ApplyTransform() that caused
+RasMol to crash if<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; all atoms have the same co-ordinates. Thanks to
+Guy Slater.<br>
+<br>
+[06/11/95]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; script.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fixed bug in RasMol script generation that
+outputs the<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; background colour before the zap command (which
+resets<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; the background colour to black). Thanks to
+Niels Kristian <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Bech Jensen.<br>
+<br>
+[20/10/95]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; infile.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fixed bug in RasMol CHARMm file format reader.
+RasMol now<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; uses the standard PDB residue numbering in
+column 56, rather<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; than the sequential numbering in column 5.
+Thanks to Milan<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Hodoscek<br>
+<br>
+</p>
+</body>
+</html>

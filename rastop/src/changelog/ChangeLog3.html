@@ -1,0 +1,162 @@
+<html>
+
+<head>
+<title></title>
+</head>
+
+<body>
+
+<p>ChangeLog 3</p>
+
+<p><a href="../changelograstop.htm">Back</a></p>
+
+<p>[02/03/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; pixutils.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Improved the efficiency of the RasMol polygon
+rendering.<br>
+<br>
+[02/03/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; command.c tokens.h<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Added the &quot;colour trace&quot; command (and
+the &quot;trace&quot; command)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; to make &quot;trace&quot; synonymous with the
+&quot;backbone&quot; command.<br>
+<br>
+[01/03/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; abstree.c abstree.h command.c tokens.h<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Added the rasmol &quot;define&quot; command to
+allow sets to be<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; defined by the user.<br>
+<br>
+[01/03/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; command.c tokens.h<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Added the RasMol &quot;echo&quot; command.<br>
+<br>
+[28/02/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; outfile.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Improved the implementation of &quot;write
+vectps&quot; to correctly<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; handle wireframe intersections with spheres and
+to draw<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cylinder bonds to produce effective ball &amp;
+stick pictures.<br>
+<br>
+[22/02/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; command.c render.c transfor.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Added nucleic acid ribbon representations. By
+default, a<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; nucleic acid ribbon is 720 RasMol units wide.
+The O5* atom<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; defines the RNA ribbon plane, and the midpoint
+between O5*<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; and O2P defines the DNA ribbon plane.<br>
+<br>
+[21/02/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; command.c tokens.h render.h<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Added RasMol commands &quot;set axes&quot;,
+&quot;set boundbox&quot; and &quot;set<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; unitcell&quot; to display additional objects.<br>
+<br>
+[17/02/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; transfor.c transfor.h<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Added the RasMol command &quot;colour
+structure&quot; to colour proteins<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; by secondary structure type. Removed the
+&quot;user&quot; colour option<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; from the UNIX menu system and replaced with
+&quot;structure&quot;.<br>
+<br>
+[16/02/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; command.c transfor.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Changed the semantics of &quot;ribbons 0&quot;
+and the RasMol &quot;ribbons&quot;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; menu option to display ribbons whose width
+varies by secondary<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; structure type.<br>
+<br>
+[15/02/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; rasmol.c raswin.rc<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Changed the menu item &quot;Save&quot; to
+&quot;Export&quot; which makes more <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sense for generating image files.<br>
+<br>
+[14/02/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; raswin.c x11win.c graphics.h command.c
+tokens.h<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Added the &quot;set mouse&quot; command to
+RasMol to allow the RasMol<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mouse bindings to emulate other packages.
+RasMol currently<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; supports &quot;set mouse insight&quot; and
+&quot;set mouse quanta&quot;.<br>
+<br>
+[13/02/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; rasmol.1 rasmol.hlp rasmol.html
+raswin.hlp<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Completed work on the RasMol
+&quot;on-line&quot; help preparation<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; system. Now the UNIX man pages, Microsoft
+Windows help,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Mosaic HTML and RasMol/RasWin online help is
+prepared from<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; the same source. All these files are now up to
+date.<br>
+<br>
+[10/02/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; command.c tokens.h molecule.c molecule.h<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Added the rasmol &quot;show symmetry&quot;
+command.<br>
+<br>
+[27/01/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; rasmol.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Improved command line editting under VAX VMS.
+Fixed VMS bug<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; that caused the process to &quot;crash&quot;
+after RasMolExit().<br>
+<br>
+[26/01/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; rasmol.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Extended VAX VMS port of RasMol using ASTs to
+allow the<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; asynchronous receipt of characters from
+SYS$INPUT:<br>
+<br>
+[26/01/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; graphics.h command.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Allow the command line state (prompt) to
+enable/disable<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; the menu buttons, this solves a GUI style
+flaw/bug.<br>
+<br>
+[07/01/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; molecule.c transfor.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Corrected potential bugs when detailing with
+upper and lower<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; bounds on Main and Heta residue numbers and
+temperatures.<br>
+<br>
+[07/01/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; x11win.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Made the second and third mouse buttons
+synonymous.<br>
+<br>
+[07/01/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; molecule.c molecule.h command.c tokens.h<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Added the RasMol &quot;renumber&quot; command
+to ensure sequential<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; residue numbering alongs macromolecular chains.<br>
+<br>
+[07/01/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; transfor.c transfor.h command.c tokens.h<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Added the RasMol &quot;centre&quot; command to
+allow rotation of a<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; molecule about the centre of gravity of a given
+set of atoms.<br>
+<br>
+[06/01/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; x11win.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Solved colourmap problem on Silicon Graphics
+machines that<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; caused some colours to be displayed
+incorrectly!<br>
+<br>
+[06/01/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; abstree.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Corrected bug in ParsePrimitiveExpression that
+caused general<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; wildcards (i.e. &quot;*&quot; and
+&quot;*.*&quot;) to be treated incorrectly.<br>
+<br>
+[05/01/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; x11win.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Renamed the variable &quot;shminfo&quot; to
+avoid a name clash when<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; compiling on the DEC Alpha using OSF/1 and
+Ultrix. Thanks<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; to Dan Jacobson.<br>
+<br>
+[04/01/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; !Started visiting research post with the
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Protein Biochemistry group at Glaxo Group
+Research, <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Greenford, Middlesex.<br>
+</p>
+</body>
+</html>

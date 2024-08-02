@@ -1,0 +1,397 @@
+<html>
+
+<head>
+<title></title>
+</head>
+
+<body>
+
+<p>ChangeLog 9</p>
+
+<p><a href="../changelograstop.htm">Back</a></p>
+
+<p>[15/07/99&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; documentation<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Add Dunix binaries. Thanks to David Atkinson<br>
+<br>
+[06/07/99]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; all <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Release 2.7.1<br>
+<br>
+[05/07/99]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; documentation<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Cut-off date for Release 2.7.1 documentation
+changes.<br>
+<br>
+[22/06/99]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; all source<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Cut-off date for Release 2.7.1 code changes.<br>
+<br>
+[22/06/99]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; command.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Save fact that a data file was loaded inline.
+Add<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; processing for star command, all new options
+for<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; bondmode [all | none | not bonded ]<br>
+<br>
+[22/06/99]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; infile.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Update DataFileFormat after autorecognition.<br>
+<br>
+[22/06/99]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; molecule.h<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Add MarkAtoms to hold new bondmode flags.<br>
+<br>
+[22/06/99]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; pixutils.c, render.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Add code for new star command.<br>
+<br>
+[22/06/99]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; script.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Add logic to write star command output. Report
+data<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; loaded as CIF or as inline correctly. Warn
+users<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; that inline data is not being written out.
+Check<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; inversion of Y-axis on POVRAY3. Thanks to Curt<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Haltiwanger for suggesting marking non-bonded
+atoms<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; on wireframe displays.<br>
+<br>
+[22/06/99]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; transfor.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Add code for new star command, new bondmode
+options.<br>
+<br>
+[18/06/99]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; pixutils.h, pixutils.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Change name of DisplayString to
+DisplayRasString to<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; avoid a conflict with X libraries. Add FontWid
+array<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; to hold character widths (FontSize for FS,
+FontSize/4<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; +1 + maximum x position for PS). Add FontStroke
+logic to<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; write cylinders instead of lines when
+FontStroke is not<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; zero.<br>
+<br>
+[18/06/99]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; render.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Change name of DisplayString to
+DisplayRasString to<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; avoid a conflict with X libraries.<br>
+<br>
+[18/06/99]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; repres.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; When FonstStroke is non-zero, don't offset
+character<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; color by (ColourMask&gt;&gt;1), to allow room
+for color<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; adjustments in cylinder drawing.<br>
+<br>
+[18/06/99]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; script.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Add logic to write PS flag for proportional
+spacing<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; on set fontsize, and logic to write set
+fontstroke n.<br>
+<br>
+[18/06/99]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; tokens.c, tokens.h<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Add tokens for BlueTint (BlueTintTok), Brown
+(BrownTok),<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FontStroke (FontStrokeTok), FS (FSTok), Gold
+(GoldTok),<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Gray or Grey (GrayTok), GreenTint
+(GreenTintTok), HotPink<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (HotPinkTok), Pick as an alternative for
+Picking <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (PickingTok), Pink (PinkTok), PinkTint
+(PinktintTok),<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SeaGreen (SeaGreenTok), SkyBlue (SlyBlueTok),<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; YellowTint (YellowTintTok)<br>
+<br>
+[13/06/99]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; command.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Change processing of load inline command to
+work from<br>
+the currently opened script, saving the file position.<br>
+Accept HEADER and DATA_... as commands in a script,<br>
+processing that line and all subsequent lines as a<br>
+data file, unless a prior load inline command was already<br>
+done&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+<br>
+[12/06/99]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; infile.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; When processing a PDB file, test for DATA_...
+until<br>
+a non-comment, non-blank line is found. Revert<br>
+to CIF processing if DATA_... is found.<br>
+<br>
+[11/06/99]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; infile.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; In PDB format input extract EXPDTA for
+Info.technique. <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; In CIF format input accept _audit_block_code
+for the <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; entry ID, _exptl.method,
+_diffrn_radiation.probe or <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; _diffrn_radiation_probe for Info.technique.
+Preserve <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; low order bits of coordinates in xtrl, yrtl,
+ztrl. On <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PDB output, report Info.technique in EXPDTA and
+reinsert <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; low-order bits for coordinates.<br>
+<br>
+[10/06/99]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; abstree.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Add code to report coordinates for show
+selected cordinates <br>
+<br>
+[10/06/99]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; command.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Recognize new commands, picking coordinates, <br>
+show selected cordinates. Update default title produced<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; by title command.<br>
+<br>
+[10/06/99]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; molecule.h<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Add new Info fields for date and technique.
+Extend<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; identcode to 80 columns. Add CRD to Selection
+enum type.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Add prototype for ReviseTitle.<br>
+<br>
+[10/06/99]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; render.h, render.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Add code to report coordinates for picking
+coordinates,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; define PickCoord symbol.<br>
+<br>
+[10/06/99]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; tokens.h, tokens.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Add code recognize COORD, COORDS, COORDINATE,
+COORDINATES for <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; new CoordTok, DATA_... for CIFDataTok, HEADER
+for HeaderTok <br>
+<br>
+[09/06/99]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; molecule.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Put PDB entry ID and EXPDTA info into canvas
+title, report<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; EXPDTA data from Info.technique on reading
+file.<br>
+<br>
+[06/06/99]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; infile.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Restore the origin on PDB and other outputs.<br>
+<br>
+[06/06/99]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; script.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Change script output to include centering and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; change various coordinate outputs to restore<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; origins the z-axis orientation.<br>
+<br>
+[06/06/99]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; command.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Add command centre [CenX,CenY,CenZ] to center
+by offsets<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; from centre of gravity.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+[03/06/99]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; render.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Remove call to TranslateToCentre, hold
+centering<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; in CenX, CenY and CenZ, decoupled from dials,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; add RFRotate to ReDrawFlag on centering. Thanks
+to<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Bohdan Schneider for pointing out the problems
+with<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; centering.<br>
+<br>
+[03/06/99]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; transfor.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Remove TranslateToCentre, remove processing of
+CenX,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CenY and CenZ from dial values, and put it into<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; computation of ptr-&gt;x,y,z<br>
+<br>
+[27/04/99]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; README.html, Changelog.html,
+INSTALL.html, manual<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Add navigation links at top and bottom of each
+page.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Add links for gzipped versions of raswin.hlp,
+rasmol.hlp.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Thanks to E. Martz and Kjeld Olesen.<br>
+<br>
+[27/04/99]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; INSTALL.html, manual<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Replace empty copy of INSTALL.html in doc/,
+correct<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; embedded html in manual. Thanks to Kurt Giles.<br>
+<br>
+[22/04/99]&nbsp;&nbsp;&nbsp; HJB<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Announce RasMol 2.7.0.1 on pdb-l@rcsb.org, <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rasmol@lists.umass.edu,
+mmciflist@ndbdev.rutgers.edu<br>
+<br>
+[11/04/99]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; *.c, *.h<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Update all comment blocks for new version and
+date<br>
+<br>
+[11/04/99]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; abstree.h<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Realign Pred... to agree with ...Tok to correct<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; misaligned introduced by HJB (not AM) during
+merge of 2.6x1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; into 2.7.0.<br>
+<br>
+[11/04/99]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; tokens.h<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fix definition of IsPredTok<br>
+<br>
+[09/04/99]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; molecule,h<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Make residue identification case-insensitive.<br>
+<br>
+[30/03/99]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; all<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Cleanup and release of version 2.7.0<br>
+<br>
+[23/03/99]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; abstree.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Add code to select on alternate conformers.
+Increase<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; accuracy of torsion angle calculation.<br>
+<br>
+[23/03/99]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; command.c, command.h<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Make InitHelpFile generally available, change
+to <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; WriteString for reporting CisBondCutOff for use
+on mac,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; report models on show selected.<br>
+<br>
+[23/03/99]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; rasmol.c, raswin.c, rasmac.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Add suggestion for help notice to initial text
+lines.<br>
+<br>
+[23/03/99]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; script.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; In order to support mac introduce WriteBuffer
+and<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; change all fprintf(outFile, ... to WriteBuffer,
+provide<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; code from fisipl for Ramachandran printer plot.
+Handle<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; signs of torsion angles. Thanks to F. C.
+Bernstein.<br>
+<br>
+[23/03/99]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; tokens.h, tokens.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Add RamPrintTok, RPP, RDF, etc., hook POVRAY3
+to the<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; new POVray code.<br>
+<br>
+[20/03/99]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; *.h, *.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; In general, the RasMol_2.6_CIF.2 version was
+used as a base<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; and upgraded with the RasMol_2.6.4 changes. The
+exceptions<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; are below<br>
+<br>
+[20/03/99]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; command.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Help file read with xfgets from 2.6_CIF.2
+updated to allow <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for \r\n as well as \r and \n line termination,
+rather than <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; system fgets call from 2.6.4<br>
+<br>
+[20/03/99]&nbsp;&nbsp;&nbsp; HJB&nbsp;&nbsp;&nbsp; infile.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Cell parameters are read with the double
+routine ReadDecValue<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; from 2.6_CIF.2, rather than ReadValue2 from
+2.6.4<br>
+<br>
+[15/2/98]&nbsp;&nbsp;&nbsp; AM&nbsp;&nbsp;&nbsp; abstree.c, abstree.h<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Add PredCisBond, DescribeObj, CalcPhiAngle,
+CalcPsiAngle,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CalcOmegaAngle, shift torsion angle
+calculations 180<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; degrees.<br>
+<br>
+[15/2/98]&nbsp;&nbsp;&nbsp; AM&nbsp;&nbsp;&nbsp; command.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Add FindCisBonds, CisBondCutOff, show of
+selected chains,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; groups, atoms, show and write of phi-psi angles<br>
+<br>
+[15/2/98]&nbsp;&nbsp;&nbsp; AM&nbsp;&nbsp;&nbsp; molecule.h, molecule.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Add CIS bond logic<br>
+<br>
+[15/2/98]&nbsp;&nbsp;&nbsp; AM&nbsp;&nbsp;&nbsp; rasmol.h, rasmol.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Add USE_FD_SET_TYPE option<br>
+<br>
+[15/2/98]&nbsp;&nbsp;&nbsp; AM&nbsp;&nbsp;&nbsp; script.h, script.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Add WritePhiPsiAngles, code for POV-Ray version
+3<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+<br>
+[15/2/98]&nbsp;&nbsp;&nbsp; AM&nbsp;&nbsp;&nbsp; tokens.h<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Add CisBondedTok, RamachanTok, CisAngleTok,
+PhiPsiTok,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; define PHIPSI, CISANGLE, RAMACHAN, CISBONDED<br>
+<br>
+[8/2/99]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; command.c, rasmol.c, scripts.c, rastxt.c,
+raswin.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rasmac.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Final fixup and release of version 2.6.4<br>
+<br>
+[27/12/98]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; *.h, *.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Remove all non-ANSI-C prototypes and ensure use
+of ( void )<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for empty argument lists. Upgrade all procedure
+delcarations.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Convert to use of MSWIN.<br>
+<br>
+[27/12/98]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; abstree.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Redo torsion angel calculation.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+<br>
+[27/12/98]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; applemac.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Convert to Apple's new routine names<br>
+<br>
+[27/12/98]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; cmndline.c, cmndline.h<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; New routine for mouse, keyboard, dials<br>
+<br>
+[27/12/98]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; command.c, command.h<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Move routines for mouse, keyboard, dials to
+cmndline.c.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Redo ParseColour. Reorganize command parsing<br>
+<br>
+[27/12/98]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; infile.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Change references to MMIO to MMIOLIB. Pass fp
+and buffer<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; to FetchRecord as argument. Add ReadValue2,
+ProcessPDBBond,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ProcessPDBUnitCell. Fix recognition of END. Use<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; InvalidateCmndline and UnusedArgument. Write
+MODEL and <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ENDMDL records when appropriate<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+[27/12/98]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; molecule.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Reorganize FindResNo as a character-oriented
+search tree<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Add Cache.<br>
+<br>
+[27/12/98]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; rasmac.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Convert to Apple's new routine names<br>
+<br>
+[27/12/98]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; rastxt.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; New text-only main program<br>
+<br>
+[27/12/98]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; repres.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Add LabelTermnii<br>
+<br>
+[27/12/98]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; tranfor.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Add TranslateToCentre<br>
+<br>
+[27/12/98]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; transfor.h<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Reorganize the logic defining DefaultAmbient,
+making<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; the default value 0.4 instead of 0.6, except
+for E&amp;S, which<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; is still .05.<br>
+<br>
+[27/12/98]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; tokens.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; New routine for character-oriented search tree
+for tokens.<br>
+<br>
+[01/08/97]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; infile.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Decreased the maximum valid alpha carbon to
+alpha carbon<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; distance to 4.2 Angstroms from 7.0 Angstroms.
+Thanks to<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Kostas Sfyrakis and Harren Jhoti.<br>
+<br>
+[15/04/97]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; molecule.c repres.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fixed a bizarre feature in the OpenVMS compiler
+that complained<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; about &quot;a=*b&quot; as &quot;=*&quot;
+operator is an obsoltete form and may not<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; be portable. Special thanks to Remington Stone.<br>
+<br>
+[28/11/96]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; rasmol.h rasmol.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Several minor fixes to compile RasMol under
+VMS. Special<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; thanks to Adam Ralph (and CCP4).<br>
+<br>
+</p>
+</body>
+</html>

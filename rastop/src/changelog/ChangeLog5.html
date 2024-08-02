@@ -1,0 +1,442 @@
+<html>
+
+<head>
+<title></title>
+</head>
+
+<body>
+
+<p>ChangeLog 5</p>
+
+<p><a href="../changelograstop.htm">Back</a></p>
+
+<p>[25/10/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; molecule.c molecule.h command.c
+abstree.h<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Once again improved the method rasmol uses to
+determine<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; bonding by maintaining the covalent radius of
+every element.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The &quot;connect &lt;boolean&gt;&quot; command
+has been implemented.<br>
+<br>
+[24/10/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; rasmac.c molecule.c outfile.c script.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Associated a file creator, a file type and an
+icon with all<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; of RasMac's output files; clicking on kinemage
+output starts<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Mage. Fixed compatability problem with
+metrowerks C compiler. <br>
+<br>
+[24/10/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; raswin.c mswin31.c command.c transfor.c
+render.c <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; outfile.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Made several changes to RasMol to allow it to
+compile under<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Microsoft Windows. Added command line options
+to raswin.<br>
+<br>
+[24/10/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; rasmac.c rasmac.rsrc<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Added the ability to detect a file's type
+information when<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; using apple events. Also added handing of
+'mMOL' signature<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; used by MDL's MOL files. This allows Mol files
+and RasMol<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; scripts to be treated sensibly when dragged
+&amp; dropped.<br>
+<br>
+[20/11/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; x11win.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Added an XQueryExtension test to OpenDials to
+avoid problems<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; on servers that don't understand
+XInputExtension. Changed<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MITSHM to use XQueryExtension rather than the
+undocumented<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; XShmQueryExtension call. Fixed MacX popup menu
+problem.<br>
+<br>
+[20/11/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; transfor.c transfor.h command.c tokens.h<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Implemented the RasMol &quot;colour dots
+potential command&quot;.<br>
+<br>
+[19/10/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; rasmac.c rasmac.rsrc<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Implemented File Open, Save and Export Dialog
+boxes.<br>
+<br>
+[18/10/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; x11win.c rasmol.c graphics.h command.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Finished completely rewritting the X User
+Interface to comply<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; with the OSF Motif guidelines.<br>
+<br>
+[14/10/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; abstree.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Added the american spellings of the elements ot
+RasMols'<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; exception table; cesium, aluminum and sulfur.<br>
+<br>
+[13/10/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; applemac.c rasmac.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Implemented RasMac's About and Fatal Error
+Message Dialog<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; boxes. Also implemented &quot;paste&quot; into
+the terminal window.<br>
+<br>
+[12/10/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; x11win.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fixed a bug in RasMol caused by displaying a
+32bit image<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; on a machine with the opposite byte order, e.g.
+AXP &amp; SGI.<br>
+<br>
+[12/10/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; applemac.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fixed bug in ClipboardImage and improved
+printer handling.<br>
+<br>
+[11/10/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; rasmac.c applemac.c rasmac.rsrc<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RasMac now interprets the `core' Apple Events
+and `works'<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; under MacMosaic. At present assumes all files
+are PDB data.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Implemeted &quot;Print&quot;, &quot;Copy&quot;
+and &quot;Page SetUp&quot; menu options.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fixed some portability problems for Metrowerks
+C.<br>
+<br>
+[10/10/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; outfile.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Implemented generation of 32bit PICT files.<br>
+<br>
+[07/10/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; outfile.c outfile.h command.c tokens.h<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Added the ability to generate PICT images on
+all platforms<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; when running the 8bit version of RasMol.<br>
+<br>
+[07/10/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; command.c command.h<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Avoided problems zooming when no molecule is
+loaded. Made<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TokenValue a Long, this corrects bug in over
+zooming.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Forced function prototypes on Macs as well as
+ansi C &amp; PCs<br>
+<br>
+[07/10/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; x11win.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Provided (compromise) better support for
+32/24bit X displays<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; that are not RasMol endian, this displays
+images correctly<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; on the screen but generates incorrect raster
+files!<br>
+<br>
+[06/10/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; script.c command.c command.h<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Added file format to the load statement and
+added UNIX style<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; scripting comment to the generated RasMol
+scripts.<br>
+<br>
+[06/10/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; command.c command.h<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fixed bug in RasMac that caused file names to
+be converted <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; to upper case and truncated at the first space
+[like RasWin].<br>
+<br>
+[06/10/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; Imakefile rasmol.h command.c rasmol.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Improved the RasMol Imakefile. Added much
+better support<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for HP-UX version 9.x. Special thanks to
+Richard Lloyd.<br>
+<br>
+[06/10/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; render.h<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fixed Ribbons bug caused by isqrt on sun386i
+machines!<br>
+<br>
+[28/09/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; applemac.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Implemented dither mode CopyBits transfers when
+displaying<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; on screens with less than 256 colours.<br>
+<br>
+[26/09/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; rasmac.c applemac.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Reorganised mouse movement processing using
+null events similar<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; to the Windows version. Implemented all
+'MouseMode's using the<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; option and command keys. Added 'Edit' Menu to
+main Menu.<br>
+<br>
+[26/09/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; molecule.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Treat 'END' records identically to 'TER'
+records, allowing PDB<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; files to be concatenated. <br>
+<br>
+[23/09/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; rasmol.h<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fixed a problem with the &quot;ToUpper&quot;
+macro on the Evans and <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sutherland ESV caused by non-ansi C compiler
+(like sun386i).<br>
+<br>
+[23/09/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; molecule.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Made several changes to the processing of PDB
+files. TER<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; now forces a split between chains (with
+identical chain idents)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Protein mainchain hydrogen bonding only within
+a single chain.<br>
+<br>
+[23/09/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; x11win.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Extended RasMol's handling of dials boxes to
+allow the use of<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Silicon Graphics' &quot;Absolute&quot; mode
+dials box. This fixes several<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; usability problems. Thanks to Steve Jordan.<br>
+<br>
+[22/09/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; abstree.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Made '#' synonymous to the wildcard '?' in atom
+names.<br>
+<br>
+[22/09/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; script.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; No longer comment out the load command in
+scripts generated <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; by the &quot;write script&quot; command. Thanks
+to Paul Charifson.<br>
+<br>
+[16/09/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; tokens.h transfor.h transfor.c command.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Introduced the colour scheme
+&quot;charge&quot;. This is identical<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; to temperature except high values are blue, low
+are red.<br>
+<br>
+[16/09/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; graphics.h applemac.c transfor.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Corrected bug in 32bit RasMol when using more
+than 256 <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; colours, e.g. &quot;colour group&quot;.
+Implemented 32bit Mac version.<br>
+<br>
+[15/09/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; x11win.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Finally corrected problem with colour map
+flashing on SGI<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Personal Iris Machines caused by Enter &amp;
+Leave Notification.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Deleted unused functions
+&quot;AllocSharedMem&quot; and &quot;FreeSharedMem&quot;.<br>
+<br>
+[15/09/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; rasmac.c applemac.c render.c command.c
+command.h<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ported RasMol to compile on both the Apple
+Machintosh <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; and the PowerPC (native) using the Metrowerks C
+compiler. <br>
+<br>
+[15/09/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; abstree.h abstree.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Revised the Van der Waals radii for all the
+elements in<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; the periodic table. Atomic symbol 'Lw' is same
+as 'Lr'.<br>
+<br>
+[14/09/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; command.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Added the function FetchFloat to allow the user
+to specify<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; real (fixed point) values. All commands taking
+distances in<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RasMol units (including &quot;set radius&quot;
+and &quot;within&quot;) may now <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; also specify real values in Angstroms.
+&quot;Slab&quot;, &quot;zoom&quot;, <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;rotate&quot; and &quot;translate&quot;
+may also take non-integral values.<br>
+<br>
+[14/09/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; molecule.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Extended RasMol's handling of CONECT records
+using the <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'pseudo-convention' that double and triple
+bonds are<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; specified twice and three times respectively.
+Thanks to<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Jeff Blaney and Dave Weinenger.<br>
+<br>
+[14/09/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; command.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Improved the syntax of RasMol atom expressions.
+It is now<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; possible to specify a chain after a residue
+number or range<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; of residue numbers, e.g. select 5-8:a, 4b, 1:1,
+6:*<br>
+<br>
+[14/09/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; script.c script.h<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Modified the algorithm used for outputing bonds
+(including<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; backbone, hbonds and ssbonds) in
+WriteRasMolScript. This<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; significantly reduces size of some resulting
+script files.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Also corrected a bug outputing scripts
+containing ribbons.<br>
+<br>
+[11/09/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; rasmac.c applemac.c RasMac.rsrc<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Completed initial port of RasMol to the Apple
+Machintosh.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; All that remains to be done are the apple
+specific dialog<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; boxes and apple events.<br>
+<br>
+[01/09/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; command.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Corrected a bug in LoadFile that caused the
+file depth to<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; be reset. This resulted in `DisplaySelectCount'
+showing<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; the result of each operation in a RasMol
+script.<br>
+<br>
+[01/09/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; script.c script.h outfile.c outfile.h<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Split the RasMol module &quot;outfile&quot;, to
+produce a new module<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;script&quot; responsible for generating
+script like output<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; files. This avoids the 32K per segment limit on
+the Apple<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Machintosh.<br>
+<br>
+[09/08/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; transfor.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Corrected bug in CPKColourAttrib that assumed
+there were <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; only seven CPK colours. This caused compounds
+containing<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; heavy atoms to be displayed in the wrong
+colour.<br>
+<br>
+[09/08/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; pixutils.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Corrected two bugs that were producing
+incorrectly drawn<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; vectors. The first in ClipVector resulted in
+lines never <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; being partially clipped, the other a bug in
+DrawTwinVector.<br>
+<br>
+[08/08/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; outfile.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Improved quality of MolScript and Kinemage
+output files.<br>
+<br>
+[04/08/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; transfor.c transfor.h render.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Improved implementation of shadowing using the
+fact that<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; the inverse of a general rotation matrix is its
+transpose.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; This should improve the RasMol critical path!<br>
+<br>
+[02/08/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; molecule.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Implemented the function ReadPDBCoord to allow
+RasMol to<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; read in Chem3D format PDB files. Thanks to
+Henry Rzepa.<br>
+<br>
+[02/08/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; command.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Disabled the use of &quot;save&quot; and
+&quot;write&quot; commands in RasMol<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; scripts. This avoids security problems when
+used with the<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; internet. Thanks to Martin Hargreaves and Ian
+Dunkin.<br>
+<br>
+[01/08/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; Makefile<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fixed problem that resulted in getpwnam only
+searching the<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; local /etc/passwd and not NIS. Thanks to Mike
+Hann.<br>
+<br>
+[27/07/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; abstree.h abstree.c command.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Added element name to periodic table to allow
+the use<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; of element names, and their corresponding
+plurals, as <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; predefined set names containg all elements of
+that type.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; For example, &quot;select chlorines&quot; and
+&quot;select zinc&quot;.<br>
+<br>
+[22/07/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; raswin.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Implemented &quot;Drag &amp; Drop&quot;
+functionality in RasWin.<br>
+<br>
+[20/07/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; font.h pixutils.c pixutils.h render.c
+command.c tokens.h<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Implemented prototype atom labelling in RasMol.
+The commands<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;label &lt;string&gt;&quot;, &quot;colour
+label &lt;colour&gt;&quot; and &quot;set fontsize <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;value&gt;&quot; are all implemented. Needs
+more work on label<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; placement, clipping and optimisations.<br>
+<br>
+[14/07/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; rasmol.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Extended cursor key mappings in to handle DEC
+and ANSI control<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sequences for cursor keys in application mode.<br>
+<br>
+[14/07/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; abstree.c abstree.h transfor.c
+transfor.h render.c molecule.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Completed support for entire periodic table of
+elements. This<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; now uses a single structure for VdW radius and
+CPK colours.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The property &quot;elemno&quot; now specifies
+the atom's atomic number.<br>
+<br>
+[11/07/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; tokens.h command.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Made the keyword 'source' synonymous with
+'script', and <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; the keyword 'mainchain' synonymous with the
+predefined <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; set backbone.<br>
+<br>
+[08/07/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; tokens.h command.c molecule.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Introduced the command 'connect' to force
+RasMol to<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; determine the bonding of the current molecule.<br>
+<br>
+[29/06/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; molecule.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Corrected bug in LoadPDBMolecule that resulted
+in CONECT<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; records from Pat Walter's &quot;babel&quot;
+being misinterpreted.<br>
+<br>
+[24/06/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; outfile.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Improved the quality of stick bonds in Vector
+PostScript by <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; shading them by their angle to the viewer.<br>
+<br>
+[23/06/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; outfile.c rasmol.doc<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Corrected problem in WriteScriptFile that
+resulted in <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; syntax errrors in RasMol script files
+describing hydrogen<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (and disuplhide) bonding patterns. Thanks to
+Martti Tolvanen.<br>
+<br>
+[17/06/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; command.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Introduced the file format &quot;RasMol&quot;
+to the write command<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; which is equivalent to the &quot;Script&quot;
+format specifier.<br>
+<br>
+[14/06/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; raswin.c<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Corrected minor bug that caused the About
+dialog box in <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Windows NT not to display the processor type.
+Special<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; thanks to Pedro Mendes.<br>
+<br>
+[13/06/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; rasmol.doc manual.doc manual.ps<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Corrected Dreiding spelling mistake in
+rasmol.doc and fixed<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; problem with manual.ps caused by a bug in the
+PostScript<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; printer driver supplied by Microsoft.<br>
+<br>
+[09/06/94]&nbsp;&nbsp;&nbsp; RS&nbsp;&nbsp;&nbsp; !Announced the public release of RasMol
+and RasWin <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; version 2.4, available by anonymous FTP from
+ftp.dcs.ed.ac.uk<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [129.215.160.5] in the directory /pub/rasmol.
+The announcement<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; was made in bionet.software, bionet.announce,
+sci.bio,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sci.chem, comp.graphics.visualisation,
+bionet.xtallography<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; and sci.techniques.xtallography newsgroups.<br>
+</p>
+</body>
+</html>

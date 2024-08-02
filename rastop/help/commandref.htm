@@ -1,0 +1,1566 @@
+<html>
+
+<head>
+<link rel="stylesheet" href="main.css" type="text/css">
+<title>Reference</title>
+<meta name="description" content="rastop is a molecular visualization software to view the 3-dimensional structure of macromolecules">
+<meta name="keywords" content="rastop, rasmol, macromolecule, structure, 3-dimensional, pdb, protein, dna, rna, model, crystal,molecule">
+</head>
+
+<body marginwidth="0" marginheight="0" leftmargin="0" bottommargin="0" topmargin="0" bgcolor="#FFFFFF" text="#000000">
+
+<!--webbot bot="Include" u-include="header.htm" tag="BODY" startspan -->
+
+<p><!----></p>
+<table border="0" cellpadding="2" width="100%">
+  <tr>
+    <td valign="top" bgcolor="#FFFFFF"><font color="#333333"><span class="ari8">RasTop
+      Manual</span></font></td>
+    <td valign="top" bgcolor="#FFFFFF" colspan="5" width="100%">
+      <p align="right"><span class="ari8"><a href="http://sourceforge.net/projects/rastop/">Home</a> | <a href="operations.htm">All
+      Commands</a> | <a href="notice.htm">Notice</a></span></td>
+  </tr>
+  <tr>
+    <td valign="top" bgcolor="#CCCCFF" align="center" background="images/doubleline.jpg"><a name="top"></a><img src="images/sigle.gif" alt="sigle.gif (4112 bytes)" width="71" height="65"></td>
+    <td colspan="5" bgcolor="#000000"><!----><img src="images/bannerrms2.gif" alt="bannerrms2.gif (19906 bytes)" align="left" border="0" width="543" height="65"></td>
+  </tr>
+  <tr>
+    <td valign="top" bgcolor="#336699">
+      <p align="center"><a href="index.htm" class="sitebar"><font color="#FFFFFF">Home</font></a></td>
+    <td valign="bottom" align="center" bgcolor="#336699"><a href="manual.htm" class="sitebar"><font color="#FFFFFF">About
+      help</font></a></td>
+    <td valign="bottom" align="center" bgcolor="#336699"><a href="copyright.htm" class="sitebar"><font color="#FFFFFF">Copyrights</font></a></td>
+    <td valign="bottom" align="center" bgcolor="#336699"><a href="notice.htm" class="sitebar"><font color="#FFFFFF">License</font></a></td>
+    <td valign="bottom" align="center" bgcolor="#336699"><a href="rastopop.htm" class="sitebar"><font color="#FFFFFF">Installing
+      &amp; using RasTop</font></a></td>
+    <td valign="bottom" align="center" bgcolor="#336699"><a href="library.htm" class="sitebar"><font color="#FFFFFF">Library</font></a></td>
+  </tr>
+  <tr>
+    <td valign="top" bgcolor="#FFFFFF"><img src="images/dotnul.gif" width="134" height="1" alt="dotnul.gif (807 bytes)" align="bottom"></td>
+    <td valign="top" bgcolor="#FFFFFF" colspan="5" width="100%"><img src="images/dotnul.gif" width="460" height="2" align="bottom" border="0"></td>
+  </tr>
+</table>
+
+<!--webbot bot="Include" endspan i-checksum="50747" -->
+
+<!---->
+
+
+<table border="0" cellpadding="0" cellspacing="0" width="700">
+  <tr>
+    <td valign="top" bgcolor="#EEEEEE" width="140"><img src="images/dotnul.gif" width="140" height="10" align="bottom" border="0"></td>
+    <td valign="top" width="2"><img src="images/dotnul.gif" width="1" height="10" align="bottom" border="0"></td>
+    <td valign="top" width="10"><img src="images/dotnul.gif" width="10" height="10" align="bottom" border="0"></td>
+    <td width="100%"><img src="images/dotnul.gif" width="549" height="10" alt="dotnul.gif (43 bytes)" align="bottom" border="0"></td>
+  </tr>
+  <tr>
+    <td valign="top" bgcolor="#EEEEEE" width="140"><!----> 
+      <div align="center">
+        <center>
+        <table border="0" cellpadding="5" cellspacing="0" width="100%">
+          <tr>
+            <td width="10" bgcolor="#333399">&nbsp;</td>
+            <td width="100%" bgcolor="#CCCCFF"><span class="ari8"><strong>Commands:</strong></span></td>
+          </tr>
+          <tr>
+            <td width="100%" colspan="2"><img src="images/arrow1.gif" alt="arrow1.gif (162 bytes)" width="10" height="8"><span class="ari8"><a href="rastopop.htm">Using
+              RasTop</a><br>
+              <img src="images/arrow1.gif" alt="arrow1.gif (162 bytes)" width="10" height="8"><a href="menu.htm">Menu
+              Commands</a><br>
+              <img src="images/arrow1.gif" alt="arrow1.gif (162 bytes)" width="10" height="8"><a href="operations.htm">All
+              Commands</a><br>
+              <img src="images/arrow1.gif" alt="arrow1.gif (162 bytes)" width="10" height="8"><em>Command
+              Ref.<br>
+              </em><img src="images/arrow1.gif" alt="arrow1.gif (162 bytes)" width="10" height="8"><a href="internal.htm">Internal
+              Parameters</a><br>
+              <img src="images/arrow1.gif" alt="arrow1.gif (162 bytes)" width="10" height="8"><a href="atomexpression.htm">Atom
+              Expression</a><br>
+              <img src="images/arrow1.gif" alt="arrow1.gif (162 bytes)" width="10" height="8"><a href="colour.htm">Colour
+              Schemes</a><br>
+              <img src="images/arrow1.gif" alt="arrow1.gif (162 bytes)" width="10" height="8"><a href="atomsets.htm">Atom
+              Sets</a><br>
+              <img src="images/arrow1.gif" alt="arrow1.gif (162 bytes)" width="10" height="8"><a href="rastopworld.htm">RasTop
+              World</a></span></td>
+          </tr>
+          <tr>
+            <td width="100%" bgcolor="#CCCCFF" colspan="2"><span class="ari8"><strong>Command
+              list:</strong></span></td>
+          </tr>
+          <tr>
+            <td width="100%" colspan="2"><!----><a href="#add">Add</a><span class="ari8"><a href="#backbone"><br>
+              Backbone</a><br>
+              <a href="#bond">Background<br>
+              Bond</a><br>
+              <a href="#bond">Cartoon</a><br>
+              <a href="#centre">Centre</a><br>
+              <a href="#clipboard">Clipboard</a><br>
+              <a href="#copy">Copy</a><br>
+              <a href="#colour">Colour</a><br>
+              <a href="#connect">Connect</a><br>
+              <a href="#spacefill">CPK</a><br>
+              <a href="#dash">Dash</a><br>
+              <a href="#define">Define</a><br>
+              <a href="#depth">Depth</a><br>
+              <a href="#dots">Dots</a><br>
+              <a href="#echo">Echo</a><br>
+              <a href="#quit">Exit</a><br>
+              <a href="#hbonds">HBonds</a><br>
+              <a href="#help">Help</a><br>
+              <a href="#label">Label</a><br>
+              <a href="#molecule">Load<br>
+              Molecule</a><br>
+              <a href="#molecule">Monitor</a><br>
+              <a href="#position">Pause</a><br>
+              <a href="#clipboard">Paste</a><br>
+              <a href="#position">Position</a><br>
+              <a href="#print">Print</a><br>
+              <a href="#quit">Quit</a><br>
+              <a href="#refresh">Refresh</a><br>
+              <a href="#renumber">Renumber</a><br>
+              <a href="#reset">Reset</a><br>
+              <a href="#restrict">Restrict</a><br>
+              <a href="#ribbons">Ribbons</a><br>
+              <a href="#rotate">Rotate</a><br>
+              <a href="#scale">Save</a><br>
+              <a href="#scale">Scale</a><br>
+              <a href="#script">Script</a><br>
+              <a href="#select">Select</a><br>
+              <a href="#set">Set</a><br>
+              <a href="#show">Show</a><br>
+              <a href="#slab">Slab</a><br>
+              <a href="#script">Source</a><br>
+              <a href="#spacefill">Spacefill</a><br>
+              <a href="#ssbonds">SSBonds</a><br>
+              <a href="#star">Star</a><br>
+              <a href="#stereo">Stereo</a><br>
+              <a href="#strands">Strands</a><br>
+              <a href="#structure">Structure</a><br>
+              <a href="#backbone">Trace</a><br>
+              <a href="#translate">Translate</a><br>
+              <a href="#unbond">Unbond</a><br>
+              <a href="#unbond">Wireframe</a><br>
+              <a href="#write">Write</a><br>
+              <a href="#zap">Zap</a><br>
+              <a href="#zoom">Zoom</a></span><strong><br>
+              </strong></td>
+          </tr>
+        </table>
+        </center>
+      </div>
+      <p>&nbsp;</p>
+      <p>&nbsp;</td>
+    <td valign="top" width="2"><img src="images/dotnul.gif" width="1" height="10" align="bottom" border="0"></td>
+    <td valign="top"></td>
+    <td>
+      <p align="center"><span style="font-size: 14pt"><strong>Command References</strong></span></p>
+      <p>RasMol allows the execution of interactive commands. Each command must
+      be given on a separate line. Keywords are case insensitive and may be
+      entered in either upper or lower case letters. All white space characters
+      are ignored except to separate keywords and their arguments.</p>
+      <p>In RasTop, commands are either automatically generated by the menu or
+      manually entered in the dialog box opened by click the Edit&gt;Command
+      menu item.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="add">Add</a></h3>
+      <p><i>RasTop Specific:</i></p>
+      <pre>Syntax:  add &lt;filename&gt;
+</pre>
+      <p>The RasTop '<tt><b>add</b></tt>' command loads an RSM script file into
+      the world. Actual world parameters are used to position the molecule
+      instead of those indicated in the script. Other commands listed thereafter
+      are equally deactivated:</p>
+      <pre>	centre
+	set axes world
+	set slab
+	set shadow
+	set specular
+	set specpower
+	set shadepower
+	set ambient
+	set background
+	set light
+	set fontsize
+	set fontstroke
+	set stereo
+	set backfade
+	set depthcue
+	reset
+	zap
+	slab
+	depth
+	zoom
+	rotate world
+	rotate all
+	translate world
+	position world
+	scale
+	stereo
+	background
+	light
+</pre>
+      <p>The '<tt><b>add</b></tt>' command  preserves the rendering and is used to in script saving.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt>B<a name="backbone">ackbone</a></h3>
+      <pre>Syntax:  backbone {&lt;boolean&gt;}
+         backbone &lt;value&gt;
+         backbone dash
+    </pre>
+      <p>The RasMol '<tt><b>backbone</b></tt>' command permits the representation of a polypeptide backbone as a series of bonds
+      connecting the adjacent alpha carbons of each amino acid in a chain. The
+      display of these backbone 'bonds' is turned on and off by the command
+      parameter in the same way as with the '<a href="#unbond"><tt><b>wireframe</b></tt></a>'
+      command. The command '<tt><b>backbone off</b></tt>' turns off the selected
+      'bonds', and '<tt><b>backbone on</b></tt>' or with a number turns them on.
+      The number can be used to specify the cylinder radius of the
+      representation in either Ångstrom or RasMol units. A parameter value of
+      500 (2.0 Ångstroms) or above results in a &quot;Parameter value too
+      large&quot; error. Backbone objects may be coloured using the RasMol '<a href="#colour"><tt><b>colour
+      backbone</b></tt></a>' command.</p>
+      <p>The reserved word backbone is also used as a predefined set (&quot;help
+      sets&quot;) and as a parameter to the '<a href="internal.htm#sethbonds"><tt><b>set
+      hbond</b></tt></a>' and '<a href="internal.htm#setssbonds"><tt><b>set
+      ssbond</b></tt></a>' commands. The RasMol command '<tt><b>trace</b></tt>'
+      renders a smoothed backbone, in contrast to '<tt><b>backbone</b></tt>'
+      which connects alpha carbons with straight lines.</p>
+      <p>The backbone may be displayed with dashed lines by use of the '<tt><b>backbone
+      dash</b></tt>' command.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="background">Background</a></h3>
+      <pre>
+Syntax:  background &lt;colour&gt;
+</pre>
+      <p>The RasMol '<tt><b>background</b></tt>' command is used to set the
+      colour of the &quot;canvas&quot; background. The colour may be given as
+      either a colour name or a comma separated triple of Red, Green and Blue (RGB)
+      components enclosed in square brackets. Typing the command '<a href="#help"><tt><b>help
+      colours</b></tt></a>' will give a list of the predefined colour names
+      recognised by RasMol. When running under X Windows, RasMol also recognises
+      colours in the X server's colour name database.</p>
+      <p>The '<tt><b>background</b></tt>' command is synonymous with the RasMol
+      '<a href="internal.htm#setbackground"><tt><b>set background</b></tt></a>'
+      command.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="bond">Bond</a></h3>
+      <pre>
+Syntax:  bond &lt;number&gt; &lt;number&gt; +
+	bond &lt;number&gt; &lt;number&gt; pick
+	bond rotate {&lt;boolean&gt;}</pre>
+      <pre><i>RasTop Specific (self-explanatory):</i></pre>
+      <pre>Syntax:  bond &lt;number&gt; &lt;number&gt; -
+	bond &lt;number&gt; &lt;number&gt; single
+	bond &lt;number&gt; &lt;number&gt; double
+	bond &lt;number&gt; &lt;number&gt; triple
+	bond &lt;number&gt; &lt;number&gt; unbound
+</pre>
+      <p>The RasMol command 'bond &lt;number&gt; &lt;number&gt; +' adds the
+      designated bond to the drawing, increasing the bond order if the bond
+      already exists. The command 'bond &lt;number&gt; &lt;number&gt; pick'
+      selects the two atoms specified by the atom serial numbers as the two ends
+      of a bond around which the 'rotate bond &lt;angle&gt;' command will be
+      applied. If no bond exists, it is created (RasTop: The bond is not
+      created!).<br>
+      <br>
+      Rotation around a previously picked bond may be specified by the 'rotate
+      bond &lt;angle&gt;' command, or may also be controlled with the mouse,
+      using the 'bond rotate on/off' or the equivalent 'rotate bond on/off'
+      commands.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="cartoon">Cartoon</h3>
+      </a>
+      <pre>
+Syntax:  cartoon {&lt;number&gt;}
+</pre>
+      <p>The RasMol '<tt><b>cartoon</b></tt>' command does a display of a
+      molecule '<a href="#ribbons"><tt><b>ribbons</b></tt></a>' as Richardson (MolScript)
+      style protein '<tt><b>cartoons</b></tt>', implemented as thick (deep)
+      ribbons. The easiest way to obtain a cartoon representation of a protein
+      is to use the '<tt><b>Cartoons</b></tt>' option on the '<tt><b>Display</b></tt>'
+      menu. The '<tt><b>cartoon</b></tt>' command represents the currently
+      selected residues as a deep ribbon with width specified by the command's
+      argument. Using the command without a parameter results in the ribbon's
+      width being taken from the protein's secondary structure, as described in
+      the '<a href="#ribbons"><tt><b>ribbons</b></tt></a>' command. By default,
+      the C-termini of beta-sheets are displayed as arrow heads. This may be
+      enabled and disabled using the '<a href="internal.htm#setcartoon"><tt><b>set
+      cartoons</b></tt></a>' command. The depth of the cartoon may be adjusted
+      using the '<a href="internal.htm#setcartoon"><tt><b>set cartoons
+      &lt;number&gt;</b></tt></a>' command. The '<a href="internal.htm#setcartoon"><tt><b>set
+      cartoons</b></tt></a>' command without any parameters returns these two
+      options to their default values.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="centre">Centre</h3>
+      </a>
+  <pre>
+Syntax: centre {all}
+	centre {&lt;expression&gt;} {translate|center}
+	centre [x,y,z]
+
+<i>RasTop Specific:
+</i>
+	centre world
+	centre molecule
+	centre origin {translate|center}
+</pre>
+      <p>The RasMol '<tt><b>centre</b></tt>' command defines the point about
+      which the '<a href="#rotate"><tt><b>rotate</b></tt></a>' command and the
+      scroll bars rotate the current molecule. With '<tt><b>all</b></tt>'
+      parameter or without a parameter the centre command resets the centre of
+      rotation to the centre of gravity of the molecule. If an atom
+      expression is specified, RasMol rotates the molecule about the centre of
+      gravity of the set of atoms specified by the expression. Hence, if a
+      single atom is specified by the expression, that atom will remain
+      'stationary' during rotations.</p>
+      <p>Type '<a href="#help"><tt><b>help expression</b></tt></a>' on the
+      command line for more information on RasMol atom expressions or consult
+      the document on <a href="atomexpression.htm">atom expressions</a> and the <a href="atomsets.htm">predefined
+      atom sets</a>.</p>
+      <p>Alternatively the centering may be given as a comma separated triple of
+      [CenX, CenY, CenZ] offsets in RasMol units (1/250 of an Angstrom) from the
+      centre of gravity. The triple must be enclosed in square brackets.<br>
+      <br>
+      The optional forms 'centre ... translate' and 'centre ... center' may be
+      used to specify use of a translated centre of rotation (not necessarily in
+      the centre of the canvas) or a centre of rotation which is placed at the
+      centre of the canvas. Starting with RasMol 2.7.2, the default is to center
+      the new axis on the canvas.</p>
+      <p>The RasTop '<tt><b>centre world</b></tt>' command translates the entire
+      world and positions the world origin to the center of the canvas. A
+      translation along the z-axis is performed if necessary.</p>
+      <p>The RasTop '<tt><b>centre molecule</b></tt>' command is a shortcut for
+      the command '<tt><b>centre [0,0,0] translate</b></tt>', which switches the
+      center to the center of gravity of the molecule without translating the
+      molecule itself.</p>
+      <p>The RasTop '<tt><b>centre origin</b></tt>' command transfers the
+      rotation center to the world origin. This special rotation center is
+      active only when the&nbsp; '<tt><b>rotate all</b></tt>' command is 'on'
+      (or the&nbsp; '<tt><b>rotate molecule</b></tt>' is 'off'). Applications
+      include cases where we need to rotate a single molecule from a center
+      outside the bounding box, and rotations of molecular assemblies that have
+      some degrees of symmetry.</p>
+      <p>The RasTop '<tt><b>centre origin centre</b></tt>' command transfers the
+      world origin to the actual rotation center; molecules are not translated.
+      Inversely, the '<tt><b>centre origin translate</b></tt>' command transfers
+      the rotation center to the world origin. One or more molecules are
+      translated, depending on the state on or off of the&nbsp; '<b><tt>rotate
+      molecule' </tt></b>command. These two command are useful to align
+      molecules.</p>
+      <p>When the&nbsp; '<tt><b>rotate all</b></tt>' command is 'on', selection
+      of other molecules does not change the rotation center. On the other hand,
+      the&nbsp; '<tt><b>rotate molecule on</b></tt>' command brings
+      automatically the center in the bounding box of the active molecule, by
+      default at the gravity center and without translation.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="clipboard">Clipboard</h3>
+      </a>
+      <pre>
+Syntax:  clipboard
+</pre>
+      <p>The RasMol '<tt><b>clipboard</b></tt>' command places a copy of the
+      currently displayed image on the local graphics 'clipboard'. Note: this
+      command is not yet supported on UNIX or VMS machines. It is intended to
+      make transferring images between applications easier under Microsoft
+      Windows or on an Apple Macintosh.</p>
+      <p>When using RasMol on a UNIX or VMS system this functionality may be
+      achieved by generating a raster image in a format that can be read by the
+      receiving program using the RasMol '<a href="#write"><tt><b>write</b></tt></a>'
+      command.</p>
+      <p><i>RasTop specific:</i></p>
+      <pre>
+Syntax:  clipboard selected
+         clipboard position
+         clipboard {image}
+         clipboard paste
+</pre>
+      <p>The commands '<tt><strong>clipboard selected</strong></tt>' and '<tt><strong>clipboard
+      position</strong></tt>' generate scripts describing the current selection
+      and the current world position of the molecule.&nbsp;These scripts are
+      copied to the clipboard and are pasted from the clipboard using the
+      command '<tt><strong>clipboard paste</strong></tt>' or more simply '<tt><strong>paste</strong></tt>'.&nbsp;The
+      clipboard format used by RasTop is described in the document <a href="fileformats.htm#clipboardformat">file
+      formats</a>.</p>
+      <p>The command 'clipboard image' is equivalent to the RasMol command
+      'clipboard'. The keyword 'image' is optional.</p>
+      <p>&nbsp;</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="colour">Colour</h3>
+      </a>
+      <pre>
+Syntax:  colour {&lt;object&gt;} &lt;colour&gt;
+         color {&lt;object&gt;} &lt;colour&gt;
+</pre>
+      <p>Colour the atoms (or other objects) of the selected region. The colour
+      may be given as either a colour name or a comma separated triple of Red,
+      Green and Blue (RGB) components enclosed in square brackets. Typing the
+      command '<a href="#help"><tt><b>help colours</b></tt></a>' will give a
+      list of all the predefined colour names recognized by RasMol or consult
+      the document on <a href="colour.htm">colour schemes</a>.</p>
+      <p>Allowed objects are '<tt><b>atoms</b></tt>', '<tt><b>bonds</b></tt>', '<a href="#backbone"><tt><b>backbone</b></tt></a>',
+      '<a href="#ribbons"><tt><b>ribbons</b></tt></a>', '<a href="#label"><tt><b>labels</b></tt></a>',
+      '<a href="#dots"><tt><b>dots</b></tt></a>', '<a href="#hbonds"><tt><b>hbonds</b></tt></a>'
+      and '<a href="#ssbonds"><tt><b>ssbonds</b></tt></a>'. If no object is
+      specified, the default keyword '<tt><b>atom</b></tt>' is assumed. Some <a href="colour.htm">colour
+      schemes</a> are defined for certain object types. The colour scheme '<tt><b>none</b></tt>'
+      can be applied to all objects except atoms and dots, stating that the
+      selected objects have no colour of their own, but use the colour of their
+      associated atoms (<i>i.e.</i> the atoms they connect). '<tt><b>Atom</b></tt>'
+      objects can also be coloured by '<a href="colour.htm#altcolours"><tt><b>alt</b></tt></a>',
+      '<a href="colour.htm#aminocolours"><tt><b>amino</b></tt></a>', '<a href="colour.htm#chaincolours"><tt><b>chain</b></tt></a>',
+      '<a href="colour.htm#chargecolours"><tt><b>charge</b></tt></a>', '<a href="colour.htm#cpkcolours"><tt><b>cpk</b></tt></a>',
+      '<a href="colour.htm#groupcolours"><tt><b>group</b></tt></a>', '<a href="colour.htm#nmrmodelcolours"><tt><b>model</b></tt></a>',
+      '<a href="colour.htm#shapelycolours"><tt><b>shapely</b></tt></a>', '<a href="colour.htm#structurecolours"><tt><b>structure</b></tt></a>',
+      '<a href="colour.htm#temperaturecolours"><tt><b>temperature</b></tt></a>'
+      or '<a href="colour.htm#usercolours"><tt><b>user</b></tt></a>'. Hydrogen
+      bonds can also be coloured by '<a href="colour.htm#hbondtypecolours"><tt><b>type</b></tt></a>'
+      and dot surfaces can also be coloured by '<a href="colour.htm#potentialcolours"><tt><b>electrostatic
+      potential</b></tt></a>'. For more information type '<a href="#chcolours"><tt><b>help
+      colour &lt;colour&gt;</b></tt></a>' or consult the document on <a href="colour.htm">colour
+      schemes</a>.</p>
+      <p><i>RasTop Specific: </i>The world axe colour is accessible by the
+      command '<tt><strong>colour world axes &lt;colour&gt;</strong></tt>'; the
+      command '<tt><strong>colour dots none</strong></tt>' is accepted.&nbsp;</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="copy">Copy</a></h3>
+      <p>RasTop specific command.</p>
+      <pre>
+Syntax:  copy selected
+         copy position
+         copy {image}
+</pre>
+      <p>This command is synonymous to '<strong><a href="#clipboard"><tt>clipboard</tt></a></strong>'.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="connect">Connect</h3>
+      </a>
+      <pre>
+Syntax:  connect {&lt;boolean&gt;}
+</pre>
+      <p>The RasMol '<tt><b>connect</b></tt>' command is used to force RasMol to
+      (re)calculate the connectivity of the current molecule. If the original
+      input file contained connectivity information, this is discarded. The
+      command '<tt><b>connect false</b></tt>' uses a fast heuristic algorithm
+      that is suitable for determining bonding in large bio-molecules such as
+      proteins and nucleic acids. The command &quot;<tt><b>connect true</b></tt>&quot;
+      uses a slower more accurate algorithm based upon covalent radii that is
+      more suitable to small molecules containing inorganic elements or strained
+      rings. If no parameters are given, RasMol determines which algorithm to
+      use based on the number of atoms in the input file. Greater than 255 atoms
+      causes RasMol to use the faster implementation. This is the method used to
+      determine bonding, if necessary, when a molecule is first read in using
+      the '<a href="#load"><tt><b>load</b></tt></a>' command.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="dash">Dash</a></h3>
+      <pre>
+Syntax:  {wireframe} dash {&lt;boolean&gt;}
+         {wireframe} dash &lt;value&gt;
+</pre>
+      <p>The RasMol '<tt><b>dash</b></tt>' command represents each bond within
+      the selected region of the molecule as a dashed depth-cued vector.
+      Behavior of the 'dash' command follows the '<a href="#unbond"><tt><strong>wireframe</strong></tt></a>'
+      command.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="define">Define</h3>
+      </a>
+      <pre>
+Syntax:  define &lt;identifier&gt; &lt;expression&gt;
+</pre>
+      <p>The RasMol '<tt><b>define</b></tt>' command allows the user to
+      associate an arbitrary set of atoms with a unique identifier. This allows
+      the definition of user-defined sets. These sets are declared statically, <i>i.e.</i>
+      once defined the contents of the set do not change, even if the expression
+      defining them depends on the current transformation and representation of
+      the molecule.</p>
+      <p>Type '<a href="#help"><tt><b>help expression</b></tt></a>' on the
+      command line for more information on RasMol atom expressions or consult
+      the document on <a href="atomexpression.htm">atom expressions</a> and the <a href="atomsets.htm">predefined
+      atom sets</a>.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="depth">Depth</a></h3>
+      <pre>
+Syntax:  depth {&lt;boolean&gt;}
+         depth &lt;value&gt;
+</pre>
+      <p>The RasTop '<tt><b>depth</b></tt>' command enables, disables or
+      positions the back-clipping plane of the molecule. The program only draws
+      those portions of the molecule that are closer than the clipping plane.
+      Integer values range from 0 at the very back of the molecule to 100 which
+      is completely in front of the molecule. Intermediate values determine the
+      percentage of the molecule to be drawn.</p>
+      <p>This command interacts with the 'slab &lt;value&gt;' command, which
+      clips to the front of a given z-clipping plane. Combinations of slabmode
+      and backclipping slice the molecule if the slab value if superior to the
+      depth value.</p>
+      <p><i>RasTop Specific:</i></p>
+      <pre>
+Syntax:  depth world origin
+         depth world &lt;value&gt;
+</pre>
+      <p>The '<tt><b>depth world origin</b></tt>' command sends the
+      back-clipping plane at the world origin. The '<b><tt>depth world
+      &lt;value&gt;</tt></b>' command moves the plane of value Angstroms (if
+      value if a floating number) or value RasMol units (if value is an integer)
+      relatively to its current position. Future versions of RasMol may not
+      adopt this convention.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="dots">Dots</h3>
+      </a>
+      <pre>
+Syntax:  dots {&lt;boolean&gt;}
+         dots &lt;value&gt;
+</pre>
+      <p>The RasMol '<tt><b>dots</b></tt>' command is used to generate a van der
+      Waals' dot surface around the currently selected atoms. Dot surfaces
+      display regularly spaced points on a sphere of van der Waals' radius about
+      each selected atom. Dots that would are 'buried' within the van der Waals'
+      radius of any other atom (selected or not) are not displayed. The command
+      '<tt><b>dots on</b></tt>' deletes any existing dot surface and generates a
+      dots surface around the currently selected atom set with a default dot
+      density of 100. The command '<tt><b>dots off</b></tt>' deletes any
+      existing dot surface. The dot density may be specified by providing a
+      numeric parameter between 1 and 1000. This value approximately corresponds
+      to the number of dots on the surface of a medium sized atom.</p>
+      <p>By default, the colour of each point on a dot surface is the colour of
+      its closest atom at the time the surface is generated. The colour of the
+      whole dot surface may be changed using the '<a href="#colour"><tt><b>colour
+      dots</b></tt></a>' command.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="echo">Echo</h3>
+      </a>
+      <pre>
+Syntax:  echo {&lt;string&gt;}
+</pre>
+      <p>The RasMol '<tt><b>echo</b></tt>' command is used to display a message
+      in the RasMol command/terminal window. The string parameter may optionally
+      be delimited in double quote characters. If no parameter is specified, the
+      '<tt><b>echo</b></tt>' command displays a blank line. This command is
+      particularly useful for displaying text from within a RasMol '<a href="#script"><tt><b>script</b></tt></a>'
+      file.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="hbonds">HBonds</h3>
+      </a>
+      <pre>
+Syntax:  hbonds {&lt;boolean&gt;}
+         hbonds &lt;value&gt;
+</pre>
+      <p>The RasMol '<tt><b>hbond</b></tt>' command is used to represent the
+      hydrogen bonding of the protein molecule's backbone. This information is
+      useful in assessing the protein's secondary structure. Hydrogen bonds are
+      represented as either dotted lines or cylinders between the donor and
+      acceptor residues. The first time the '<tt><b>hbond</b></tt>' command is
+      used, the program searches the structure of the molecule to find hydrogen
+      bonded residues and reports the number of bonds to the user. The command '<tt><b>hbonds
+      on</b></tt>' displays the selected 'bonds' as dotted lines, and the '<tt><b>hbonds
+      off</b></tt>' turns off their display. The colour of hbond objects may be
+      changed by the '<a href="#colour"><tt><b>colour hbond</b></tt></a>'
+      command. Initially, each hydrogen bond has the colours of its connected
+      atoms.</p>
+      <p>By default the dotted lines are drawn between the accepting oxygen and
+      the donating nitrogen. By using the '<a href="internal.htm#sethbonds"><tt><b>set
+      hbonds</b></tt></a>' command the alpha carbon positions of the appropriate
+      residues may be used instead. This is especially useful when examining
+      proteins in backbone representation.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="help">Help</h3>
+      </a>
+      <pre>
+Syntax:  help {&lt;topic&gt; {&lt;subtopic&gt;}}
+         ? {&lt;topic&gt; {&lt;subtopic&gt;}}
+</pre>
+      <p>The RasMol '<tt><b>help</b></tt>' command provides on-line help on the
+      given topic.</p>
+      <p><i>RasTop Specific:</i></p>
+      <pre>Syntax:&nbsp; help HTML {&lt;filename | URL&gt;}</pre>
+      <p>The command&nbsp; '<tt><b>help HTML</b></tt>' activates the default
+      browser and points its locator to an HTM-based help file. The '<tt><b>help
+      HTML &lt;filename&gt;</b></tt>' command sets the address of the HTML-based
+      help file. This help could be an HTML document residing either locally on
+      the drive or externally on the world wide web. In this last case, the
+      address must be given as an URL (http://www.etc.).</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="label">Label</h3>
+      </a>
+      <pre>
+Syntax:  label {&lt;string&gt;}
+         label &lt;boolean&gt;
+</pre>
+      <p>The RasMol '<tt><b>label</b></tt>' command allows an arbitrary
+      formatted text string to be associated with each currently selected atom.
+      This string may contain embedded 'expansion specifiers' which display
+      properties of the atom being labelled. An expansion specifier consists of
+      a '%' character followed by a single alphabetic character specifying the
+      property to be displayed (similar to C's printf syntax). An actual '%'
+      character may be displayed by using the expansion specifier '%%'.</p>
+      <p>Atom labelling for the currently selected atoms may be turned off with
+      the command '<tt><b>label off</b></tt>'. By default, if no string is given
+      as a parameter, RasMol uses labels appropriate for the current molecule.
+      RasMol uses the label '%n%r:%c.%a' if the molecule contains more than one
+      chain, '%e%i' if the molecule has only a single residue (a small molecule)
+      and '%n%r.%a' otherwise.</p>
+      <p>The colour of each label may be changed using the '<a href="#colour"><tt><b>colour
+      label</b></tt></a>' command. By default, each label is drawn in the same
+      colour as the atom to which it is attached. The size and spacing of the
+      displayed text may be changed using the '<a href="internal.htm#setfontsize"><tt><b>set
+      fontsize</b></tt></a>' command. The width of the strokes in the displayed
+      text may be changed using the '<a href="internal.htm#setfontstroke"><tt><b>set
+      fontstroke</b></tt></a>' command.</p>
+      <p>The following table lists the current expansion specifiers:</p>
+      <blockquote>
+        <pre>%a      Atom Name
+%b %t   B-factor/Temperature
+%c %s   Chain Identifier
+%e      Element Atomic Symbol
+%i      Atom Serial Number
+%m      Single Letter Amino Acid Code
+%n      Residue Name
+%r      Residue Number
+%M      NMR Model Number (with leading &quot;/&quot;)
+%A      Alternate Conformation Identifier 
+	(with leading &quot;;&quot;)
+</pre>
+      </blockquote>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="load">Load</h3>
+      </a>
+      <pre>
+Syntax:  load {&lt;format&gt;} &lt;filename&gt;
+</pre>
+      <p>Load a molecule coordinate file into RasMol. Valid molecule file
+      formats are '<tt><b>pdb</b></tt>' (Protein Data Bank format), '<tt><b>mdl</b></tt>'
+      (Molecular Design Limited's MOL file format), '<tt><b>alchemy</b></tt>' (Tripos'
+      Alchemy file format), '<tt><b>mol2</b></tt>' (Tripos' Sybyl Mol2 file
+      format), '<tt><b>charmm</b></tt>' (CHARMm file format), '<tt><b>xyz</b></tt>'
+      (MSC's XMol XYZ file format), '<tt><b>mopac</b></tt>' (J. P. Stewart's
+      MOPAC file format) or '<tt><b>cif</b></tt>' (IUCr CIF or mmCIF file
+      format). If no file format is specified, '<tt><b>PDB</b></tt>', '<tt><b>CIF</b></tt>',
+      or '<tt><b>mmCIF</b></tt>' is assumed by default.</p>
+      <p>Unlimited number of molecules may be loaded at a time. To select a
+      molecule for manipulation use the RasMol '<b><tt><a href="#molecule">molecule
+      &lt;n&gt;</a></tt></b>' command. To delete specifically a molecule use the
+      RasMol '<a href="#zap"><tt><b>zap molecule</b></tt></a>' command.</p>
+      <p>The '<tt><b>load</b></tt>' command selects all the atoms in the
+      molecule, centers it on the screen and renders it as a CPK coloured
+      wireframe model. If the molecule contains no bonds (<i>i.e.</i> contains
+      only alpha carbons), it is drawn as an alpha carbon backbone. If the file
+      specifies fewer bonds than atoms, RasMol determines connectivity using the
+      '<a href="#connect"><tt><b>connect</b></tt></a>' command. If a default
+      script is available (see '<tt><b><a href="#script">script default</a></b></tt>'
+      command), it will be ran automatically after loading.</p>
+      <p>The '<tt><b>load inline</b></tt>' command also allows the storing of
+      atom coordinates in scripts to allow better integration with WWW browsers.
+      A load command executed inside a script file may specify the keyword '<tt><b>inline</b></tt>'
+      instead of a conventional filename. This option specifies that the
+      coordinates of the molecule to load are stored in the same file as the
+      currently executing commands.</p>
+      <p>Typically this is used in the command '<tt><b>load pdb inline</b></tt>',
+      which is followed by a number of RasMol commands terminated by the command
+      '<a href="#quit"><tt><b>exit</b></tt></a>'. The '<tt><b>exit</b></tt>'
+      command terminates execution of the current script and returns control to
+      the command line (or the calling script). This means any lines following '<tt><b>exit</b></tt>'
+      are never interpreted by RasMol. These may be used to store atomic
+      coordinates in PDB, CIF or mmCIF file format. One possible use is a
+      standard RasMol script prefix that may be concatenated with an appropriate
+      PDB file on-the-fly.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="molecule">Molecule</a></h3>
+      <pre>
+Syntax:  molecule &lt;number&gt;
+</pre>
+      <p>Select one of up to n previously loaded molecules for active
+      manipulation. While all molecules may be rotated collectively (see the '<a href="#rotate">rotate
+      all</a>' command), only one molecule at a time is active for manipulation
+      by the commands which control the details of rendering.</p>
+      <p><i>RasTop Specific:</i></p>
+      <pre>
+Syntax:&nbsp; molecule hide
+	molecule show</pre>
+      <p>The command '<tt><b>molecule hide</b></tt>' toggles off the display of
+      a molecule. The molecule remains visible in '<a href="internal.htm#setdisplay">display
+      selected mode</a>' as a dashed wireframe. The command '<tt><b>molecule
+      show</b></tt>' toggles back on the display of the molecule</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="monitor">Monitor</h3>
+      </a>
+      <pre>
+Syntax:  monitor &lt;number&gt;  &lt;number&gt;
+         monitor {&lt;boolean&gt;}
+</pre>
+      <p>The RasMol '<tt><b>monitor</b></tt>' command allows the display of
+      distance monitors. A distance monitor is a dashed (dotted) line between an
+      arbitrary pair of atoms, optionally labelled by the distance between them.
+      The RasMol command '<tt><b>monitor &lt;number&gt; &lt;number&gt;</b></tt>'
+      adds such a distance monitor between the two atoms specified by the atom
+      serial numbers given as parameters</p>
+      <p>Distance monitors are turned off with the command '<tt><b>monitors off</b></tt>'.
+      By default, monitors display the distance between its two end points as a
+      label at the centre of the monitor. These distance labels may be turned
+      off with the command '<a href="internal.htm#setmonitor"><tt><b>set
+      monitors off</b></tt></a>', and re-enabled with the command '<a href="internal.htm#setmonitor"><tt><b>set
+      monitors on</b></tt></a>'. Like most other representations, the colour of
+      a monitor is taken from the colour of its end points unless specified by
+      the '<a href="#colour"><tt><b>colour monitors</b></tt></a>' command.</p>
+      <p>Distance monitors may also be added to a molecule interactively with
+      the mouse, using the '<a href="internal.htm#setpicking"><tt><b>set picking
+      monitor</b></tt></a>' command. Clicking on an atom results in its being
+      identified on the rasmol command line. In addition every atom picked
+      increments a modulo counter such that, in monitor mode, every second atom
+      displays the distance between this atom and the previous one. The shift
+      key may be used to form distance monitors between a fixed atom and several
+      consecutive positions. A distance monitor may also be removed (toggled) by
+      selecting the appropriate pair of atom end points a second time.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="pause">Pause</h3>
+      </a>
+      <pre>
+Syntax:  pause
+         wait
+</pre>
+      <p>The RasMol '<tt><b>pause</b></tt>' command is used in script files to
+      stop the script file for local manipulation by a mouse, until any key is
+      pushed to restart the script file. '<tt><b>Wait</b></tt>' is synonymous
+      with '<tt><b>pause</b></tt>'. This command may be executed in RasMol
+      script files to suspend the sequential execution of commands and allow the
+      user to examine the current image. When RasMol executes a '<tt><b>pause</b></tt>'
+      command in a script file, it suspends execution of the rest of the file,
+      refreshes the image on the screen and allows the manipulation of the image
+      using the mouse and scroll bars, or resizing of the graphics window. Once
+      a key is pressed, control returns to the script file at the line following
+      the '<tt><b>pause</b></tt>' command. While a script is suspended the
+      molecule may be rotated, translated, scaled, slabbed and picked as usual,
+      but all menu commands are disabled. The '<tt><b>pause</b></tt>' can
+      probably be used most effectively with '<a href="#echo"><tt><b>echo</b></tt></a>'
+      commands in education pre-scripted demonstrations, where a description of
+      the current image is presented to the user/student. Typically the command
+      before a '<tt><b>pause</b></tt>' should be '<tt><b>echo Press any key to
+      continue</b></tt>'.</p>
+      <p>Execution of a script can be cancelled by pressing Control-D or
+      Control-Z (on VAX/VMS, Control-C) while standing at a pause. The command '<a href="internal.htm#setpicking"><tt><b>set
+      picking none</b></tt></a>' disables picking, which avoids the display of
+      spurious messages whilst a script is suspended at a pause.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="position">Position</a></h3>
+      <pre>
+Syntax:  position {x &lt;number&gt;} {y &lt;number&gt;} {z &lt;number&gt;}
+	position world {x &lt;number&gt;} {y &lt;number&gt;} {z &lt;number&gt;}</pre>
+      <p>The command '<tt><b>position</b></tt>' places molecules relatively to
+      the center of the screen and the world plane. The command '<tt><b>position
+      world</b></tt>' places the world relatively to the center of the screen
+      and the world plane. Displacement values for more than one axis may be
+      indicated in the same command and are counted in RU for integer values or
+      angstrom for floating values.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="print">Print</h3>
+      </a>
+      <pre>
+Syntax:  print
+</pre>
+      <p>The RasMol '<tt><b>print</b></tt>' command sends the currently
+      displayed image to the local default printer using the operating system's
+      native printer driver. Note: this command is not yet supported under UNIX
+      or VMS. It is intended to take advantage of Microsoft Windows and Apple
+      Macintosh printer drivers. For example, this allows images to be printed
+      directly on a dot matrix printer.</p>
+      <p>When using RasMol on a UNIX or VMS system this functionality may be
+      achieved by either generating a PostScript file using the RasMol '<a href="#write"><tt><b>write
+      ps</b></tt></a>' or '<a href="#write"><tt><b>write vectps</b></tt></a>'
+      commands and printing that or generating a raster image file and using a
+      utility to dump that to the local printer.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="quit">Quit</h3>
+      </a>
+      <pre>
+Syntax:  quit
+         exit
+</pre>
+      <p>Exit from the RasMol program. The RasMol commands '<tt><b>exit</b></tt>'
+      and '<tt><b>quit</b></tt>' are synonymous, except within nested scripts.
+      In that case, '<tt><b>exit</b></tt>' terminates only the current level,
+      while '<tt><b>quit</b></tt>' terminates all nested levels of scripts.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="refresh">Refresh</h3>
+      </a>
+      <pre>
+Syntax:  refresh
+</pre>
+      <p>The RasMol '<tt><b>refresh</b></tt>' command redraws the current image.
+      This is useful in scripts to ensure application of a complex list of
+      parameter changes.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="renumber">Renumber</h3>
+      </a>
+      <pre>
+Syntax:  renumber {{-} &lt;value&gt;}
+</pre>
+      <p>The RasMol '<tt><b>renumber</b></tt>' command sequentially numbers the
+      residues in a macromolecular chain. The optional parameter specifies the
+      value of the first residue in the sequence. By default, this value is one.
+      For proteins, each amino acid is numbered consecutively from the N
+      terminus to the C terminus. For nucleic acids, each base is numbered from
+      the 5' terminus to the 3' terminus. All chains in the current database are
+      renumbered and gaps in the original sequence are ignored. The starting
+      value for numbering may be negative.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="reset">Reset</h3>
+      </a>
+      <p><i>RasTop Specific:</i></p>
+      <p>With the development of complex transformations such as bond
+      modifications and multiple molecules, the reset command needed more
+      precise specifications. The following is an attempt to explore various
+      reset possibilities. Their definition and action may change in future
+      versions of RasTop.</p>
+      <pre>
+Syntax: reset
+	reset molecule
+	reset world
+	reset worlddepth
+	slab
+	depth
+	headlight
+	bonds
+	all
+</pre>
+      <p>If only one molecule is loaded and the world is not active, the RasTop
+      '<tt><b>reset</b></tt>' and '<tt><b>reset molecule</b></tt>' commands
+      restore the original viewing transformation and centre of rotation. The
+      scale is set to its default value, '<a href="#zoom"><tt><b>zoom 100</b></tt></a>',
+      the centre of rotation is set to the geometric centre of the currently
+      loaded molecule, '<a href="#centre"><tt><b>centre all</b></tt></a>', this
+      centre is translated to the middle of the screen and the viewpoint set to
+      the default orientation. All world parameters are reset. This command
+      should not be mistaken for the RasMol '<a href="#zap"><tt><b>zap</b></tt></a>'
+      command which deletes the currently stored molecule, returning the program
+      to its initial state.</p>
+      <p>If more than one molecule is loaded, the RasTop '<tt><b>reset molecule</b></tt>'
+      command restores the original parameter of the molecule (rotation,
+      translation and centre).</p>
+      <p>The command&nbsp; '<tt><b>reset world</b></tt>' restores the world
+      parameters (rotation, translation) and sets the scale to its default
+      value.</p>
+      <p>The command&nbsp; '<tt><b>reset worlddepth</b></tt>' restores the
+      worlddepth parameters&nbsp; to its default value.</p>
+      <p>The result of the command&nbsp; '<tt><b>reset</b></tt>' depends on the
+      active state of&nbsp; the world. If the world is active (see&nbsp; '<tt><b><a href="#rotate">rotate
+      all</a></b></tt>'), this command is equivalent to&nbsp; '<tt><b>reset
+      world</b></tt>', thus protecting the world assembly. If the world is not
+      active (see&nbsp; '<tt><b><a href="#rotate">rotate molecule</a></b></tt>'),
+      this command is equivalent to '<tt><b>reset molecule</b></tt>'.</p>
+      <p>The command '<tt><b>reset headlight</b></tt>' restores the default
+      lighting (see '<b><tt><a href="internal.htm#setheadlight">set headlight
+      default</a></tt></b>' command).</p>
+      <p>The command '<tt><b>reset slab</b></tt>' restores internal slab plane
+      parameters and inactivates slabmode if active. The command '<tt><b>reset
+      depth</b></tt>' acts similarly.</p>
+      <p>The command '<tt><b>reset bonds</b></tt>' restores all bond parameters
+      to their initial values, including bond creation, bond deletion, bond
+      rotation, and bond order.</p>
+      <p>The command '<tt><b>reset all</b></tt>' includes the commands&nbsp; '<tt><b>reset
+      world</b></tt>',&nbsp; '<tt><b>reset slab</b></tt>',&nbsp; '<tt><b>reset
+      depth</b></tt>', '<tt><b>reset headlight</b></tt>', and&nbsp; '<tt><b>reset
+      bonds</b></tt>'.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="restrict">Restrict</h3>
+      </a>
+      <pre>
+Syntax:  restrict {&lt;expression&gt;}
+</pre>
+      <p>The RasMol '<tt><b>restrict</b></tt>' command both defines the
+      currently selected region of the molecule and disables the representation
+      of (most of) those parts of the molecule no longer selected. All
+      subsequent RasMol commands that modify a molecule's colour or
+      representation affect only the currently selected region. The parameter of
+      a '<tt><b>restrict</b></tt>' command is a RasMol atom expression that is
+      evaluated for every atom of the current molecule. This command is very
+      similar to the RasMol '<a href="#select"><tt><b>select</b></tt></a>'
+      command, except '<tt><b>restrict</b></tt>' disables the '<a href="#unbond"><tt><b>wireframe</b></tt></a>',
+      '<a href="#spacefill"><tt><b>spacefill</b></tt></a>' and '<a href="#backbone"><tt><b>backbone</b></tt></a>'
+      representations in the non-selected region.</p>
+      <p>Type '<a href="#help"><tt><b>help expression</b></tt></a>' on the
+      command line for more information on RasMol atom expressions or consult
+      the document on <a href="atomexpression.htm">atom expressions</a> and the <a href="atomsets.htm">predefined
+      atom sets</a>.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="ribbons">Ribbons</h3>
+      </a>
+      <pre>
+Syntax:  ribbons {&lt;boolean&gt;}
+         ribbons &lt;value&gt;
+</pre>
+      <p>The RasMol '<tt><b>ribbons</b></tt>' command displays the currently
+      loaded protein or nucleic acid as a smooth solid &quot;ribbon&quot;
+      surface passing along the backbone of the protein. The ribbon is drawn
+      between each amino acid whose alpha carbon is currently selected. The
+      colour of the ribbon is changed by the RasMol '<a href="#colour"><tt><b>colour
+      ribbon</b></tt></a>' command. If the current ribbon colour is '<tt><b>none</b></tt>'
+      (the default), the colour is taken from the alpha carbon at each position
+      along its length.</p>
+      <p>The width of the ribbon at each position is determined by the optional
+      parameter in the usual RasMol units. By default the width of the ribbon is
+      taken from the secondary structure of the protein or a constant value of
+      720 (2.88 Ångstroms) for nucleic acids. The default width of protein
+      alpha helices and beta sheets is 380 (1.52 Ångstroms) and 100 (0.4
+      Ångstroms) for turns and random coil. The secondary structure assignment
+      is either from the PDB file or calculated using the DSSP algorithm as used
+      by the '<a href="#structure"><tt><b>structure</b></tt></a>' command. This
+      command is similar to the RasMol command '<a href="#strands"><tt><b>strands</b></tt></a>'
+      which renders the biomolecular ribbon as parallel depth-cued curves.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="rotate">Rotate</h3>
+      </a>
+      <pre>
+Syntax: rotate &lt;axis&gt; {-} &lt;value&gt;
+	rotate bond {&lt;boolean&gt;}
+	rotate molecule {&lt;boolean&gt;}
+	rotate all {&lt;boolean&gt;}
+</pre>
+      <p>Rotate the molecule about the specified axis. Permitted values for the
+      axis parameter are &quot;<tt><b>x</b></tt>&quot;, &quot;<tt><b>y</b></tt>&quot;
+      and &quot;<tt><b>z</b></tt>&quot;. The integer parameter states the angle
+      in degrees for the structure to be rotated. For the X and Y axes, positive
+      values move the closest point up and right, and negative values move it
+      down and left, respectively. For the Z axis, a positive rotation acts
+      clockwise and a negative angle anti-clockwise.</p>
+      <p>Alternatively, this command may be used to specify which rotations the
+      mouse or dials will control. If 'rotate bond true' is selected, the
+      horizontal scroll bar will control rotation around the axis selected by
+      the 'bond src dst pick' command. If 'rotate all true' is selected, and
+      multiple molecules have been loaded, then all molecules will rotate
+      together. In all other cases, the mouse and dials control the the rotation
+      of the molecule selected by the molecule n' command.</p>
+      <p><i>RasTop Specific:</i></p>
+      <pre>Syntax:&nbsp;rotate &lt;axis&gt; {-} &lt;value&gt;
+	rotate world &lt;axis&gt; {-} &lt;value&gt;
+	rotate bond &lt;value&gt;
+	rotate molecule {&lt;boolean&gt;}
+	rotate all {&lt;boolean&gt;}
+</pre>
+      <p>The&nbsp; '<b><tt>rotate &lt;axis&gt;</tt></b>' command rotates the
+      active molecule. Only one molecule is moved at a time; other loaded
+      molecules and the world origin are not moved. The rotation center is
+      always located in the bounding box of the molecule and changed if
+      necessary. The command is independent of the&nbsp; '<tt><b>rotate all</b></tt>'
+      and&nbsp; '<tt><b>rotate molecule</b></tt>' state ('off' or 'on').</p>
+      <p>The&nbsp; '<b><tt>rotate world &lt;axis&gt;</tt></b>' command rotates
+      the entire world, even when only one molecule is loaded. If not rotation
+      center is specified, the rotation occurs around the world origin.</p>
+      <p>The&nbsp; '<b><tt>rotate bond</tt></b>' command rotates around the bond
+      axis selected by the 'bond src dst pick' command.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="save">Save
+      </a>
+</h3>
+<p>There is no distinction between the '<b><tt>save</tt></b>'
+and the '<b><tt>write</tt></b>' command.</p>
+<pre>
+Syntax:  save {world|molecule} {&lt;filename&gt;}</pre>
+<pre>Syntax:  save  &lt;format&gt; &lt;filename&gt;
+                pdb &lt;filename&gt;
+                mdl &lt;filename&gt;
+                alchemy &lt;filename&gt;
+                xyz &lt;filename&gt;
+
+                iris
+                ppm
+                ras
+                ps
+                epsf
+                monops
+                pict
+
+                vectps
+                script
+                molscript
+                kinemage
+                povray
+                vrml
+
+                phipsi
+                rdf, ramachandrandatafile
+                rpp, ramachandranprinterplot
+</pre>
+      <p><i>Saving&nbsp; <a href="fileformats.htm#rsmfiles">&lt;*.rsm&gt;</a>
+      scripts:&nbsp;</i></p>
+      <p>The '<strong><tt>save &lt;filename&gt;</tt></strong>' command will just
+      do that. If the file has been modified, a simple '<strong><tt>save' </tt></strong> command
+      without
+      specified filename will save the file automatically.&nbsp;By default, all
+      molecules are saved ( '<tt><strong>save world' </strong> </tt>option).</p>
+      <p>Note: Files are modified by virtually all RasMol commands; resizing a
+      screen is an exception.</p>
+<p><i>Saving molecular files:</i></p>
+<p>A format keyword and a filename are required. For example '<strong><tt>save pdb &lt;filename&gt;</tt></strong>'
+save the currently selected set of atoms in a Protein Data Bank (PDB) format
+file. Only selected atoms of the currently selected molecule are saved. Accepted formats are:
+PDB, MDL, Alchemy(tm) and XYZ format.&nbsp;Atom coordinates are saved in the current
+coordinate system. The format Alchemy in molecular coordinates saves also the
+current rotation. If
+the world contains 2 (or more) molecules, two (or more) separate files must be
+generated and joined manually to create a unique molecular file; make sure you
+do not save the files in molecular coordinates.</p>
+<p><i>Saving image files:</i></p>
+<p>A format keyword is required. The following formats are supported:</p>
+<blockquote>
+  <blockquote>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '<tt><b>bmp</b></tt>' (Microsoft
+      bitmap),<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '<tt><b>gif</b></tt>' (Compuserve GIF),&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '<tt><b>iris</b></tt>'
+      (IRIS RGB),&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '<tt><b>ppm</b></tt>' (Portable Pixmap),<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '<tt><b>ras</b></tt>'
+      (Sun rasterfile),&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '<tt><b>ps</b></tt>' and '<tt><b>epsf</b></tt>'
+      (Encapsulated PostScript),&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '<tt><b>monops</b></tt>' (Monochrome
+      Encapsulated PostScript),&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '<tt><b>pict</b></tt>' (Apple PICT),&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '<tt><b>vectps</b></tt>'
+      (Vector Postscript).&nbsp;</p>
+  </blockquote>
+</blockquote>
+<p>As of RasTop 2.1, only the 'bmp' and 'pict' formats are working properly in
+32-bits. To save 'gif' file, please use the 8-bits version.</p>
+<p><i>Saving script files:</i></p>
+<p>See above for&nbsp; <a href="fileformats.htm#rsmfiles">&lt;*.rsm&gt;</a>
+ scripts;&nbsp; The format '<tt><b>script</b></tt>'
+      writes out a file containing the RasMol '<a href="#script"><tt><b>script</b></tt></a>'
+      commands to reproduce the current image. The format '<tt><b>molscript</b></tt>'
+      writes out the commands required to render the current view of the
+      molecule as ribbons in Per Kraulis' Molscript program and the format '<tt><b>kinemage</b></tt>'
+      the commands for David Richardson's program Mage. The following formats
+      are useful for further processing: '<tt><b>povray</b></tt>' (POVRay, version
+3.5 ), '<tt><b>vrml</b></tt>' (VRML file).&nbsp;</p>
+<p>Note: As of RasTop 2.1, only the formats&nbsp; '<a href="#script"><tt><b>script</b></tt></a>'
+and&nbsp; '<tt><b>povray</b></tt>' are working properly (although not every
+details of the scenery are saved in povray). If the molecular
+coordinates system is&nbsp; used to export POVRay scripts, only the active molecule is
+saved (in molecular coordinates), otherwise all objects are saved.</p>
+<p><i>Saving data file:</i></p>
+      <p>
+      Finally, several formats are provided to provide phi-psi data for listing
+      or for '<tt><b>phipsi</b></tt>' (phi-psi data as an annotated list with
+      cis omegas), '<tt><b>ramachan</b></tt>' and '<tt><b>RDF</b></tt>' and '<tt><b>RamachandranDataFile</b></tt>'
+      (phi-psi data as columns of numbers for gnuplot), '<tt><b>RPP</b></tt>'
+      and '<tt><b>RamachandranPrinterPlot</b></tt>' (phi-psi data as a printer
+      plot).</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="scale">Scale</a></h3>
+      <pre>
+Syntax:  scale &lt;value&gt;
+</pre>
+      <p>The scale command changes the magnification of the currently displayed
+      image. The value determines the distance of the smallest size of the
+      window screen either in RU if it is an integer number or in angstrom if it
+      is a floating number. This command is an alternative to the '<tt><b>zoom</b></tt>'
+      command that is independent of the <a href="internal.htm#setworlddepth">worlddepth</a>
+      parameter.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="script">Script</h3>
+      </a>
+      <pre>
+Syntax:  script &lt;filename&gt;</pre>
+      <pre>&nbsp;</pre>
+      <p>The RasMol '<tt><b>script</b></tt>' command reads a set of RasMol
+      commands sequentially from a text file and executes them. This allows
+      sequences of commonly used commands to be stored and performed by single
+      command. A RasMol script file may contain a further script command up to a
+      maximum &quot;depth&quot; of 10, allowing complicated sequences of actions
+      to be executed. RasMol ignores all characters after the first '#'
+      character on each line allowing the scripts to be annotated. Script files
+      are often also annotated using the RasMol '<a href="#echo"><tt><b>echo</b></tt></a>'
+      command.</p>
+      <p>The most common way to generate a RasMol script file is to use the '<a href="#write"><tt><b>write
+      script</b></tt></a>' or '<a href="#write"><tt><b>write rasmol</b></tt></a>'
+      commands to output the sequence of commands that are needed to regenerate
+      the current view, representation and colouring of the currently displayed
+      molecule.</p>
+      <p>The RasMol command '<tt><b>source</b></tt>' is synonymous with the '<tt><b>script</b></tt>'
+      command.</p>
+      <p>Scripts may also be created with a text editor.</p>
+      <pre><i>RasTop Specific:</i></pre>
+      <pre>Syntax:  script default &lt;filename&gt;</pre>
+      <p>This command allows a script to run automatically after any molecular
+      files loaded, thus replacing the standard RasMol initial representation.
+      The file name is saved for future sessions.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="select">Select</h3>
+      </a>
+      <pre>
+Syntax:  select {&lt;expression&gt;}
+</pre>
+      <p>Define the currently selected region of the molecule. All subsequent
+      RasMol commands that manipulate a molecule or modify its colour or
+      representation only affect the currently selected region. The parameter of
+      a '<tt><b>select</b></tt>' command is a RasMol expression that is
+      evaluated for every atom of the current molecule. The currently selected
+      (active) region of the molecule are those atoms that cause the expression
+      to evaluate true. To select the whole molecule use the RasMol command '<tt><b>select
+      all</b></tt>'. The behaviour of the '<tt><b>select</b></tt>' command
+      without any parameters is determined by the RasMol '<a href="internal.htm#sethetero"><tt><b>hetero</b></tt></a>'
+      and '<a href="#set"><tt><b>hydrogen</b></tt></a>' parameters.</p>
+      <p>Type '<a href="#help"><tt><b>help expression</b></tt></a>' on the
+      command line for more information on RasMol atom expressions or consult
+      the document on <a href="atomexpression.htm">atom expressions</a> and the <a href="atomsets.htm">predefined
+      atom sets</a>.</p>
+      <p>&nbsp;</p>
+      <p><i>RasTop specific:</i></p>
+      <pre>Syntax:&nbsp; select previous</pre>
+      <p>Select the atoms that were selected before the last&nbsp; '<tt><b>select</b></tt>'
+      command.</p>
+      <pre>Syntax: select &lt;&lt;/&gt;&gt; x1{-x2},...,xi{-xi+1},...&lt;&lt;/&gt;&gt;</pre>
+      <p>This INTERNAL command is used to describe atom sets in <a href="fileformats.htm#rsmfiles">rsm</a>
+      scripts generated by RasTop. The character '<strong><tt>&lt;</tt></strong>'
+      or '<strong><tt>&gt;</tt></strong>' immediately following the '<tt><strong>select</strong></tt>'
+      keyword escapes the parser.&nbsp;Each block describes a subset of atoms
+      bearing consecutive numbers that is added to the current
+      selection.&nbsp;Wrong blocks are ignored as well undefined atom numbers.
+      The character '<strong><tt>&lt;</tt></strong>' starts a new selection at
+      the beginning of a line and continues the selection at the end; the
+      character '<strong><tt>&gt;</tt></strong>' continues the selection at the
+      beginning of the line and ends it at the end.&nbsp;</p>
+      <p><i>RasTop specific:</i></p>
+      <pre>Syntax:  select view</pre>
+      <p>This command selects all atoms present in the current view.&nbsp; This
+      is a scripting alternative to atom selection using the lasso.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="set">Set</h3>
+      </a>
+      <pre>
+Syntax:  set &lt;parameter&gt; {&lt;option&gt;}
+</pre>
+      <p>The RasMol '<tt><b>set</b></tt>' command allows the user to alter
+      various internal program parameters such as those controlling rendering
+      options. Each parameter has its own set or permissible parameter options.
+      Typically, omitting the parameter option resets that parameter to its
+      default value. A list of valid parameter names is given below.</p>
+      <div align="center">
+        <center>
+        <table border="1" cellpadding="2" width="560">
+          <tr>
+            <td width="57"><small><small><strong><a href="internal.htm#setambient">Ambient</a></strong></small></small></td>
+            <td width="42"><small><small><strong><a href="internal.htm#setaxes">Axes</a></strong></small></small></td>
+            <td width="71"><small><small><strong><a href="internal.htm#setbackground">Background</a></strong></small></small></td>
+            <td width="68"><small><small><strong><a href="internal.htm#setbackfade">BackFade</a></strong></small></small></td>
+            <td width="60"><small><small><strong><a href="internal.htm#setbondmode">BondMode</a></strong></small></small></td>
+            <td width="52"><small><small><strong><a href="internal.htm#setbonds">Bonds</a></strong></small></small></td>
+            <td width="73"><small><small><strong><a href="internal.htm#setboundbox">BoundBox</a></strong></small></small></td>
+            <td width="70"><small><small><strong><a href="internal.htm#setcartoon">Cartoon</a></strong></small></small></td>
+          </tr>
+          <tr>
+            <td width="57"><small><small><strong><a href="internal.htm#setcisangle">CisAngle</a></strong></small></small></td>
+            <td width="42"><strong><small><small><a href="internal.htm#setcoordinates">Coordinates</a></small></small></strong></td>
+            <td width="42"><small><small><strong><a href="internal.htm#setdisplay">Display</a></strong></small></small></td>
+            <td width="71"><small><small><strong><a href="internal.htm#setfontsize">FontSize</a></strong></small></small></td>
+            <td width="68"><small><small><strong><a href="internal.htm#setfontstroke">FontStroke</a></strong></small></small></td>
+            <td width="60"><small><small><strong><a href="internal.htm#sethbonds">HBonds</a></strong></small></small></td>
+            <td width="52"><small><small><strong><a href="internal.htm#sethetero">Hetero</a></strong></small></small></td>
+            <td width="73"><small><small><strong><a href="internal.htm#sethourglass">HourGlass</a></strong></small></small></td>
+          </tr>
+          <tr>
+            <td width="57"><small><small><strong><a href="internal.htm#sethydrogen">Hydrogen</a></strong></small></small></td>
+            <td width="57"><small><small><strong><a href="internal.htm#setkinemage">Kinemage</a></strong></small></small></td>
+            <td width="42"><strong><small><small><a href="internal.htm#setheadlight">Light</a></small></small></strong></td>
+            <td width="42"><small><small><strong><a href="internal.htm#setmenus">Menus</a></strong></small></small></td>
+            <td width="71"><small><small><strong><a href="internal.htm#setmonitor">Monitor</a></strong></small></small></td>
+            <td width="68"><small><small><strong><a href="internal.htm#setmouse">Mouse</a></strong></small></small></td>
+            <td width="60"><small><small><strong><a href="internal.htm#setpicking">Picking</a></strong></small></small></td>
+            <td width="52"><small><small><strong><a href="internal.htm#setradius">Radius</a></strong></small></small></td>
+          </tr>
+          <tr>
+            <td width="57"><a href="internal.htm#setshadepower"><small><small><strong>ShadePower</strong></small></small></a></td>
+            <td width="57"><a href="internal.htm#setshadow"><small><small><strong>Shadow</strong></small></small></a></td>
+            <td width="57"><a href="internal.htm#setslabmode"><small><small><strong>SlabMode</strong></small></small></a></td>
+            <td width="42"><a href="internal.htm#setsolvent"><small><small><strong>Solvent</strong></small></small></a></td>
+            <td width="71"><a href="internal.htm#setspecular"><small><small><strong>Specular</strong></small></small></a></td>
+            <td width="68"><a href="internal.htm#setspecpower"><small><small><strong>SpecPower</strong></small></small></a></td>
+            <td width="60"><a href="internal.htm#setstereo"><small><small><strong>Stereo</strong></small></small></a></td>
+            <td width="52"><a href="internal.htm#setssbonds"><small><small><strong>SSBonds</strong></small></small></a></td>
+          </tr>
+          <tr>
+            <td width="57"><a href="internal.htm#setstrands"><small><small><strong>Strands</strong></small></small></a></td>
+            <td width="57"><a href="internal.htm#settransparent"><small><small><strong>Transparent</strong></small></small></a></td>
+            <td width="57"><small><small><strong><a href="internal.htm#setunitcell">UnitCell</a></strong></small></small></td>
+            <td width="42"><a href="internal.htm#setvectps"><small><small><strong>VectPS</strong></small></small></a></td>
+            <td><a href="internal.htm#setworld"><small><small><strong>World</strong></small></small></a></td>
+            <td cellspan="6" width="71"><a href="internal.htm#setwrite"><small><small><strong>Write</strong></small></small></a></td>
+          </tr>
+        </table>
+        </center>
+      </div>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="show">Show</h3>
+      </a>
+      <pre>
+Syntax:  show information
+         show phipsi
+         show RamPrint
+         show selected { group | chain | atom }
+         show sequence
+         show symmetry
+
+<i>RasTop Specific:</i></pre>
+      <pre><i>	</i>show world
+	show worlddepth</pre>
+      <p>The RasMol '<tt><b>show</b></tt>' command display details of the status
+      of the currently loaded molecule. The command '<tt><b>show information</b></tt>'
+      lists the molecule's name, classification, PDB code and the number of
+      atoms, chains, groups it contains. If hydrogen bonding, disulphide bridges
+      or secondary structure have been determined, the number of hbonds, ssbonds,
+      helices, ladders and turns are also displayed, respectively. The command '<tt><b>show
+      phipsi</b></tt>' shows the phi and psi angles of the currently selected
+      residues and the omega angles of cis peptide bonds. The command '<tt><b>show
+      RamPrint</b></tt>' (or 'show RPP' or 'show RamachandranPrinterPlot') shows
+      a simple Ramachandran printer plot in the style of Frances Bernstein's
+      fisipl program. The command '<tt><b>show selected</b></tt>' (or 'show
+      selected group' or 'show selected chain' or 'show selected atom' ) shows
+      the groups (default), chains or atoms of the current selection. The
+      command '<tt><b>show sequence</b></tt>' lists the residues that comprise
+      each chain of the molecule. The command '<tt><b>show symmetry</b></tt>'
+      shows the space group and unit cell of the molecule.</p>
+      <p>The command '<tt><b>show world</b></tt>' lists information regarding
+      world center and world axes position and all loaded molecules with
+      position in world and absolute coordinates. The command '<tt><b>show
+      worlddepth</b></tt>' lists the actual and the default worlddepth.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="slab">Slab</h3>
+      </a>
+      <pre>
+Syntax:  slab {&lt;boolean&gt;}
+         slab &lt;value&gt;
+</pre>
+      <p>The RasMol '<tt><b>slab</b></tt>' command enables, disables or
+      positions the z-clipping plane of the molecule. The program only draws
+      those portions of the molecule that are further from the viewer than the
+      slabbing plane. Integer values range from zero at the very back of the
+      molecule to 100 which is completely in front of the molecule. Intermediate
+      values determine the percentage of the molecule to be drawn.</p>
+      <p>This command interacts with the '<tt><b><a href="#depth">depth</a></b></tt>'
+      command, which clips to the rear of a given z-clipping plane.</p>
+      <p><i>RasTop Specific:</i></p>
+      <pre>
+Syntax:  slab world origin
+         slab world &lt;value&gt;
+</pre>
+      <p>The '<tt><b>slab world origin</b></tt>' command sends the clipping
+      plane at the world origin. The '<tt><b>slab world &lt;value&gt;</b></tt>'
+      command moves the plane of value Angstroms (if value if a floating number)
+      or value RasMol units (if value is an integer) relatively to its current
+      position. Future versions of RasMol may not adopt this convention.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="spacefill">Spacefill</h3>
+      </a>
+      <pre>
+Syntax:  spacefill {&lt;boolean&gt;}
+         spacefill temperature
+         spacefill user
+         spacefill {-}&lt;value&gt;
+</pre>
+      <p>The RasMol '<tt><b>spacefill</b></tt>' command is used to represent all
+      of the currently selected atoms as solid spheres. This command is used to
+      produce both union-of-spheres and ball-and-stick models of a molecule. The
+      command, '<tt><b>spacefill true</b></tt>', the default, represents each
+      atom as a sphere of van der Waals radius. The command '<tt><b>spacefill
+      off</b></tt>' turns off the representation of the selected atom as
+      spheres. A sphere radius may be specified as an integer in RasMol units
+      (1/250th Ångstrom) or a value containing a decimal point. A value of 500
+      (2.0 Ångstroms) or greater results in a &quot;Parameter value too
+      large&quot; error. A negative value indicates a percentage of van des
+      Waals radius.</p>
+      <p>The '<tt><b>temperature</b></tt>' option sets the radius of each sphere
+      to the value stored in its temperature field. Zero or negative values have
+      no effect and values greater than 2.0 are truncated to 2.0. The '<tt><b>user</b></tt>'
+      option allows the radius of each sphere to be specified by additional
+      lines in the molecule's PDB file using Raster 3D's COLOUR record
+      extension.</p>
+      <p>The RasMol command '<tt><b>cpk</b></tt>' is synonymous with the '<tt><b>spacefill</b></tt>'
+      command.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="ssbonds">SSBonds</h3>
+      </a>
+      <pre>
+Syntax:  ssbonds {&lt;boolean&gt;}
+         ssbonds &lt;value&gt;
+</pre>
+      <p>The RasMol '<tt><b>ssbonds</b></tt>' command is used to represent the
+      disulphide bridges of the protein molecule as either dotted lines or
+      cylinders between the connected cysteines. The first time that the '<tt><b>ssbonds</b></tt>'
+      command is used, the program searches the structure of the protein to find
+      half-cysteine pairs (cysteines whose sulphurs are within 3 Ångstroms of
+      each other) and reports the number of bridges to the user. The command '<tt><b>ssbonds
+      on</b></tt>' displays the selected &quot;bonds&quot; as dotted lines, and
+      the command '<tt><b>ssbonds off</b></tt>' disables the display of ssbonds
+      in the currently selected area. Selection of disulphide bridges is
+      identical to normal bonds, and may be adjusted using the RasMol '<a href="internal.htm#setbondmode"><tt><b>set
+      bondmode</b></tt></a>' command. The colour of disulphide bonds may be
+      changed using the '<a href="#colour"><tt><b>colour ssbonds</b></tt></a>'
+      command. By default, each disulphide bond has the colours of its connected
+      atoms.</p>
+      <p>By default disulphide bonds are drawn between the sulphur atoms within
+      the cysteine groups. By using the '<a href="internal.htm#setssbonds"><tt><b>set
+      ssbonds</b></tt></a>' command the position of the cysteine's alpha carbons
+      may be used instead.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="star">Star</h3>
+      </a>
+      <pre>
+Syntax:  star {&lt;boolean&gt;}
+         star temperature
+         star user
+         star &lt;value&gt;
+</pre>
+      <p>The RasMol '<tt><b>star</b></tt>' command is used to represent all of
+      the currently selected atoms as stars (six strokes, one each in the x, -x,
+      y, -y, z and -z directions). The commands '<tt><b>select not bonded</b></tt>'
+      followed by '<tt><b>star 75</b></tt>' are useful to mark unbonded atoms in
+      a '<a href="#unbond"><tt><b>wireframe</b></tt></a>' display with less
+      overhead than provided by '<a href="#spacefill"><tt><b>spacefill 75</b></tt></a>'.
+      This can be done automatically for all subsequent wireframe displays with
+      the command '<a href="internal.htm#setbondmode"><tt><b>set bondmode not
+      bonded</b></tt></a>'.</p>
+      <p>The command '<tt><b>star true</b></tt>', the default, represents each
+      atom as a star with strokes length equal to van der Waals radius. The
+      command '<tt><b>star off</b></tt>' turns off the representation of the
+      selected atom as stars. A star stroke length may be specified as an
+      integer in RasMol units (1/250th Ångstrom) or a value containing a
+      decimal point. A value of 500 (2.0 Ångstroms) or greater results in a
+      &quot;Parameter value too large&quot; error.</p>
+      <p>The '<tt><b>temperature</b></tt>' option sets the stroke length of each
+      star to the value stored in its temperature field. Zero or negative values
+      have no effect and values greater than 2.0 are truncated to 2.0. The '<tt><b>user</b></tt>'
+      option allows the stroke length of each star to be specified by additional
+      lines in the molecule's PDB file using Raster 3D's COLOUR record
+      extension.</p>
+      <p>The RasMol '<a href="#spacefill"><tt><b>spacefill</b></tt></a>' command
+      can be used for more artistic rendering of atoms as spheres.</p>
+      <p><i>RasTop specific:</i><br>
+      Spheres and stars are mutually exclusive, i.e. only one of the two
+      representations is used at a time for a given atom.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="stereo">Stereo</h3>
+      </a>
+      <pre>
+Syntax:  stereo on
+         stereo [-]&lt;number&gt;
+         stereo off
+</pre>
+      <p>The RasMol '<tt><b>stereo</b></tt>' command provides side-by-side
+      stereo display of images. Stereo viewing of a molecule may be turned on
+      (and off) either by selecting '<tt><b>Stereo</b></tt>' from the '<tt><b>Options</b></tt>'
+      menu, or by typing the commands '<tt><b>stereo on</b></tt>' or '<tt><b>stereo
+      off</b></tt>'. The separation angle between the two views may be adjusted
+      with the '<a href="internal.htm#setstereo"><tt><b>set stereo [-]
+      &lt;number&gt;</b></tt></a>' command, where positive values result in
+      crossed eye viewing and negative values in relaxed (wall-eyed) viewing.
+      The inclusion of '<tt><b>[-] &lt;number&gt;</b></tt>' in the '<tt><b>stereo</b></tt>'
+      command, as for example in '<tt><b>stereo 3</b></tt>' or '<tt><b>stereo -5</b></tt>',
+      also controls angle and direction.</p>
+      <p>The stereo command is only partially implemented. When stereo is turned
+      on, the image is not properly recentred. (This can be done with a '<a href="#translate"><tt><b>translate
+      x -&lt;number&gt;</b></tt></a>' command.) It is not supported in vector
+      PostScript output files, is not saved by the '<tt><b>write script</b></tt>'
+      command, and in general is not yet properly interfaced with several other
+      features of the program.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="strands">Strands</h3>
+      </a>
+      <pre>
+Syntax:  strands {&lt;boolean&gt;}
+         strands &lt;value&gt;
+         strands dash
+</pre>
+      <p>The RasMol '<tt><b>strands</b></tt>' command displays the currently
+      loaded protein or nucleic acid as a smooth &quot;ribbon&quot; of
+      depth-cued curves passing along the backbone of the protein. The ribbon is
+      composed of a number of strands that run parallel to one another along the
+      peptide plane of each residue. The ribbon is drawn between each amino acid
+      whose alpha carbon is currently selected. The colour of the ribbon is
+      changed by the RasMol '<a href="#colour"><tt><b>colour ribbon</b></tt></a>'
+      command. If the current ribbon colour is '<tt><b>none</b></tt>' (the
+      default), the colour is taken from the alpha carbon at each position along
+      its length. The central and outermost strands may be coloured
+      independently using the '<a href="#colour"><tt><b>colour ribbon1</b></tt></a>'
+      and '<a href="#colour"><tt><b>colour ribbon2</b></tt></a>' commands,
+      respectively. The number of strands in the ribbon may be altered using the
+      RasMol '<a href="internal.htm#setstrands"><tt><b>set strands</b></tt></a>'
+      command.</p>
+      <p>The width of the ribbon at each position is determined by the optional
+      parameter in the usual RasMol units. By default the width of the ribbon is
+      taken from the secondary structure of the protein or a constant value of
+      720 for nucleic acids (which produces a ribbon 2.88 Ångstroms wide). The
+      default width of protein alpha helices and beta sheets is 380 (1.52
+      Ångstroms) and 100 (0.4 Ångstroms) for turns and random coil. The
+      secondary structure assignment is either from the PDB file or calculated
+      using the DSSP algorithm as used by the '<a href="#structure"><tt><b>structure</b></tt></a>'
+      command. This command is similar to the RasMol command '<a href="#ribbons"><tt><b>ribbons</b></tt></a>'
+      which renders the biomolecular ribbon as a smooth shaded surface.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="structure">Structure</h3>
+      </a>
+      <pre>
+Syntax:  structure
+</pre>
+      <p>The RasMol '<tt><b>structure</b></tt>' command calculates secondary
+      structure assignments for the currently loaded protein. If the original
+      PDB file contained structural assignment records (HELIX, SHEET and TURN)
+      these are discarded. Initially, the hydrogen bonds of the current molecule
+      are found, if this hasn't been done already. The secondary structure is
+      then determined using Kabsch and Sander's DSSP algorithm. Once finished
+      the program reports the number of helices, strands and turns found.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="trace">Trace</h3>
+      </a>
+      <pre>
+Syntax:  trace {&lt;boolean&gt;}
+         trace 
+         trace temperature
+         trace dots &lt;value&gt;
+</pre>
+      <p>The RasMol '<tt><b>trace</b></tt>' command displays a smooth spline
+      between consecutive alpha carbon positions. This spline does not pass
+      exactly through the alpha carbon position of each residue, but follows the
+      same path as '<a href="#ribbons"><tt><b>ribbons</b></tt></a>', '<a href="#strands"><tt><b>strands</b></tt></a>'
+      and '<a href="#bond"><tt><b>cartoons</b></tt></a>'. Note that residues may
+      be displayed as '<a href="#ribbons"><tt><b>ribbons</b></tt></a>', '<a href="#strands"><tt><b>strands</b></tt></a>',
+      '<a href="#bond"><tt><b>cartoons</b></tt></a>' or as a '<tt><b>trace</b></tt>'.
+      Enabling one of these representations disables the others. However, a
+      residue may be displayed simultaneously as backbone and as one of the
+      above representations. This may change in future versions of RasMol. Prior
+      to version 2.6, '<tt><b>trace</b></tt>' was synonymous with '<tt><b>backbone</b></tt>'.</p>
+      <p>'<tt><b>Trace temperature</b></tt>' displays the backbone as a wider
+      cylinder at high temperature factors and thinner at lower. This
+      representation is useful to X-ray crystallographers and NMR
+      spectroscopists.</p>
+      <p>'<tt><strong>Trace dots</strong></tt>' displays the backbone as a
+      series of dots.&nbsp; This commands is useful to link parts of the
+      molecule represented with a full cylinder.&nbsp; The subcommand '<tt><strong>&lt;value&gt;</strong></tt>'
+      is RasTop specific and fixe the radius of the dots.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="translate">Translate</h3>
+      </a>
+      <pre>
+Syntax:  translate &lt;axis&gt; {-} &lt;value&gt;
+</pre>
+      <p>The RasMol '<tt><b>translate</b></tt>' command moves the position of
+      the centre of the molecule on the screen. The axis parameter specifies
+      along which axis the molecule is to be moved and the integer parameter
+      specifies the absolute position of the molecule centre from the middle of
+      the screen. Permitted values for the axis parameter are &quot;<tt><b>x</b></tt>&quot;,
+      &quot;<tt><b>y</b></tt>&quot; and &quot;<tt><b>z</b></tt>&quot;.
+      Displacement values must be between -100 and 100 which correspond to
+      moving the current molecule just off the screen. A positive &quot;<tt><b>x</b></tt>&quot;
+      displacement moves the molecule to the right, and a positive &quot;<tt><b>y</b></tt>&quot;
+      displacement moves the molecule down the screen. The pair of commands '<tt><b>translate
+      x 0</b></tt>' and '<tt><b>translate y 0</b></tt>' centers the molecule on
+      the screen.</p>
+      <p><i>RasTop Specific:</i></p>
+      <p>The displacement values in the classical RasMol command are expressed
+      in percent of either the screen width or the screen height; displacement
+      values along the Z-axis are ineffective. In RasTop, the 3 axis are active.
+      Displacements values are expressed in percent of the smallest screen side,
+      either width or height. Translation displacements are limited in RasMol to
+      values between -100 and 100. In RasTop, displacement are unlimited. See
+      also the command '<tt><b><a href="#position">position</a></b></tt>' ,
+      which places molecules independently of the zoom value.</p>
+      <pre>Syntax:  translate world &lt;axis&gt; {-} &lt;value&gt;
+</pre>
+      <p>The&nbsp; '<tt><b>translate world</b></tt>' command translates the
+      origin of the world and all molecules along the X- and the Y-axis.
+      Displacement values along the Z-axis are made relatively to the world
+      plane.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="unbond">UnBond</a></h3>
+      <pre>
+Syntax: unbond &lt;number&gt; &lt;number&gt;
+</pre>
+      <p>The RasMol command 'unbond &lt;number&gt; &lt;number&gt;' removes the
+      designated bond from the drawing.<br>
+      <br>
+      The command 'unbond' without arguments removes a bond previously picked by
+      the 'bond &lt;number&gt; &lt;number&gt; pick' command.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="wireframe">Wireframe</h3>
+      </a>
+      <pre>
+Syntax:  wireframe {&lt;boolean&gt;}
+         wireframe &lt;value&gt;
+         wireframe dash
+</pre>
+      <p>The RasMol '<b>wireframe</b>' command represents each bond within the
+      selected region of the molecule as a cylinder, a line, a dashed line, or a
+      depth-cued vector. The display of bonds as depth-cued vectors (drawn
+      darker the further away from the viewer) is turned on by the command '<b>wireframe</b>'
+      or '<b>wireframe on</b>'. The selected bonds are displayed as cylinders by
+      specifying a radius either as an integer in RasMol units or containing a
+      decimal point as a value in Ångstroms. A parameter value of 500 (2.0
+      Ångstroms) or above results in an &quot;Parameter value too large&quot;
+      error. Bonds may be coloured using the '<a href="#colour"><b>colour bonds</b></a>'
+      command.</p>
+      <p>Non-bonded atoms, which could become invisible in an ordinary '<tt><b>wireframe</b></tt>'
+      display can be marked by a preceding '<a href="internal.htm#setbondmode"><tt><b>set
+      bondmode not bonded</b></tt></a>' command. If nearly co-linear bonds to
+      atoms cause them to be difficult to see in a wireframe display, the '<a href="internal.htm#setbondmode"><tt><b>set
+      bondmode all</b></tt></a>' command will add markers for '<tt><b>all</b></tt>'
+      atoms in subsequent '<tt><b>wireframe</b></tt>' command executions.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="write">Write
+      </a>
+</h3>
+      <p>The distinction between this command and the RasMol '<a href="#scale"><tt><b>save</b></tt></a>'
+      command has been dropped; See RasMol '<a href="#scale"><tt><b>save</b></tt></a>'
+      command.&nbsp;</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="zap">Zap</h3>
+      </a>
+      <pre>
+Syntax:  zap {all | world }
+	zap selected
+	zap molecule
+</pre>
+      <pre><i>RasTop Specific:</i></pre>
+      <p>Deletes the contents of all current databases and resets parameter
+      variables to their initial default state. The command&nbsp; '<tt><b>zap
+      selected</b></tt>' or '<tt><b>zap molecule</b></tt>' deletes only the
+      active molecule.&nbsp;</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="zoom">Zoom</h3>
+      </a>
+      <pre>
+Syntax:  zoom {&lt;boolean&gt;}
+         zoom &lt;value&gt;
+</pre>
+      <p>Change the magnification of the currently displayed image. Boolean
+      parameters either magnify or reset the scale of current molecule. An
+      integer parameter specifies the desired magnification as a percentage of
+      the default scale. The minimum parameter value is 10; the maximum
+      parameter value is dependent upon the size of the molecule being
+      displayed. For medium sized proteins this is about 500.</p>
+      <p><i>RasTop specific:</i></p>
+      <pre>
+Syntax:  zoom world &lt;value&gt;
+</pre>
+      <p>Change the magnification of the currently displayed image from the
+      center of the screen, independently of the actual center position, giving
+      a zoom-translation effect.</p>
+      <!--webbot bot="Include" u-include="signature.htm" tag="BODY" startspan -->
+<P><IMG SRC="images/dotnul.gif" NAME="Graphic1" ALIGN=BOTTOM WIDTH=2 HEIGHT=5 BORDER=0></P>
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0>
+	<TR>
+		<TD WIDTH=100% BGCOLOR="#c29654">
+			<P><IMG SRC="images/dotnul.gif" NAME="Graphic2" ALT="dotnul.gif (43 bytes)" ALIGN=BOTTOM WIDTH=2 HEIGHT=2 BORDER=0></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><FONT SIZE=1><STRONG>RasTop Help Site</STRONG> - <A HREF="index.htm">home</A>
+			| <A HREF="notice.htm">notice</A> | <A HREF="copyright.htm">copyright</A></P>
+		</TD>
+	</TR>
+</TABLE>
+<P><BR><BR>
+</P>
+<!--webbot bot="Include" endspan i-checksum="12835" -->
+
+</td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+
+</body>
+
+</html>

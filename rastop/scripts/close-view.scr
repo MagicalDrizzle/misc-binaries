@@ -1,0 +1,32 @@
+#RasTop 2.0
+#default template
+#Creator: Philippe Valadon
+
+
+select all
+wireframe on
+spacefill off
+
+select *.c???
+color green
+select *.o???
+color red
+select *.n???
+color blue
+
+select water | solvent
+color white
+spacefill on
+spacefill 25
+
+set ambient 20
+set specpower 25
+set specular on
+set worlddepth 3000
+
+select view
+center selection centre
+zoom 150
+set depthcue on
+
+select all

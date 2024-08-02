@@ -1,0 +1,776 @@
+<html>
+
+<head>
+<link rel="stylesheet" href="main.css" type="text/css">
+<title>File formats</title>
+<meta name="description" content="rastop is a molecular visualization software to view the 3-dimensional structure of macromolecules">
+<meta name="keywords" content="rastop, rasmol, macromolecule, structure, 3-dimensional, pdb, protein, dna, rna, model, crystal,molecule">
+</head>
+
+<body marginwidth="0" marginheight="0" leftmargin="0" bottommargin="0" topmargin="0" bgcolor="#FFFFFF" text="#000000">
+
+<!--webbot bot="Include" u-include="header.htm" tag="BODY" startspan -->
+
+<p><!----></p>
+<table border="0" cellpadding="2" width="100%">
+  <tr>
+    <td valign="top" bgcolor="#FFFFFF"><font color="#333333"><span class="ari8">RasTop
+      Manual</span></font></td>
+    <td valign="top" bgcolor="#FFFFFF" colspan="5" width="100%">
+      <p align="right"><span class="ari8"><a href="http://sourceforge.net/projects/rastop/">Home</a> | <a href="operations.htm">All
+      Commands</a> | <a href="notice.htm">Notice</a></span></td>
+  </tr>
+  <tr>
+    <td valign="top" bgcolor="#CCCCFF" align="center" background="images/doubleline.jpg"><a name="top"></a><img src="images/sigle.gif" alt="sigle.gif (4112 bytes)" width="71" height="65"></td>
+    <td colspan="5" bgcolor="#000000"><!----><img src="images/bannerrms2.gif" alt="bannerrms2.gif (19906 bytes)" align="left" border="0" width="543" height="65"></td>
+  </tr>
+  <tr>
+    <td valign="top" bgcolor="#336699">
+      <p align="center"><a href="index.htm" class="sitebar"><font color="#FFFFFF">Home</font></a></td>
+    <td valign="bottom" align="center" bgcolor="#336699"><a href="manual.htm" class="sitebar"><font color="#FFFFFF">About
+      help</font></a></td>
+    <td valign="bottom" align="center" bgcolor="#336699"><a href="copyright.htm" class="sitebar"><font color="#FFFFFF">Copyrights</font></a></td>
+    <td valign="bottom" align="center" bgcolor="#336699"><a href="notice.htm" class="sitebar"><font color="#FFFFFF">License</font></a></td>
+    <td valign="bottom" align="center" bgcolor="#336699"><a href="rastopop.htm" class="sitebar"><font color="#FFFFFF">Installing
+      &amp; using RasTop</font></a></td>
+    <td valign="bottom" align="center" bgcolor="#336699"><a href="library.htm" class="sitebar"><font color="#FFFFFF">Library</font></a></td>
+  </tr>
+  <tr>
+    <td valign="top" bgcolor="#FFFFFF"><img src="images/dotnul.gif" width="134" height="1" alt="dotnul.gif (807 bytes)" align="bottom"></td>
+    <td valign="top" bgcolor="#FFFFFF" colspan="5" width="100%"><img src="images/dotnul.gif" width="460" height="2" align="bottom" border="0"></td>
+  </tr>
+</table>
+
+<!--webbot bot="Include" endspan i-checksum="50747" -->
+
+<p align="center"><!----> </p>
+<table border="0" cellpadding="3" cellspacing="0" width="700">
+  <tr>
+    <td align="center"><!----><a href="library.htm"><img src="images/back.gif" alt="back.gif (141 bytes)" align="left" border="0" width="36" height="25"></a><span style="font-size: 14pt"><strong>File
+      Formats</strong></span>
+      <p align="left"><!----></p>
+      <div align="center">
+        <center>
+        <table border="1" cellpadding="5" width="95%">
+          <tr>
+            <!---->
+            <td width="34%" valign="top" bgcolor="#FFFFCC"><a href="#pdbfiles"><strong><small>PDB
+              files</small></strong></a><span style="font-size: smaller"><br>
+              </span><img src="images/arrow1.gif" alt="arrow1.gif (162 bytes)" width="10" height="8"><span style="font-size: smaller"><small><a href="#rasmolinterpretationofpdbfields">RasMol
+              and PDB</a></small><br>
+              </span><img src="images/arrow1.gif" alt="arrow1.gif (162 bytes)" width="10" height="8"><span style="font-size: smaller"><a href="#multiplenmrmodels">NMR
+              models</a><br>
+              </span><img src="images/arrow1.gif" alt="arrow1.gif (162 bytes)" width="10" height="8"><span style="font-size: smaller"><a href="#pdbcolourschemespecification">PDB
+              colours</a><br>
+              </span></td>
+            <td width="33%" valign="top" bgcolor="#FFCCFF"><strong><a href="#cifandmmcifformatfiles"><small>CIF
+              and mmCIF Files</small></a><br>
+              <br>
+              </strong></td>
+            <td width="33%" valign="top" bgcolor="#CCFFFF"><a href="#rasmolscripts"><strong>RasMol
+              Scripts</strong></a><span style="font-size: smaller"><small><br>
+              </small></span><img src="images/arrow1.gif" alt="arrow1.gif (162 bytes)" width="10" height="8"><span style="font-size: smaller"><small><a href="#inlinescript">Inline
+              scripts</a><br>
+              </small></span><img src="images/arrow1.gif" alt="arrow1.gif (162 bytes)" width="10" height="8"><span style="font-size: smaller"><small><a href="#rsmfiles">RSM
+              scripts</a><br>
+              </small></span><img src="images/arrow1.gif" alt="arrow1.gif (162 bytes)" width="10" height="8"><span style="font-size: smaller"><small><a href="#clipboardformat">Clipboard
+              formats</a></small><br>
+              </span></td>
+          </tr>
+        </table>
+        </center>
+      </div>
+      <p align="left">&nbsp;</td>
+  </tr>
+  <tr>
+    <td bgcolor="#8484C4" align="center">
+      <p align="center"><span style="font-size: 12pt"><strong><font color="#FFFFFF"><a name="pdbfiles">Protein
+      Data Bank Files</a></font></strong></span></td>
+  </tr>
+  <tr>
+    <td>&nbsp;
+      <p>If you do not have the PDB documentation, you may find the following
+      summary of the PDB file format useful. The Protein Data Bank is a
+      computer-based archival database for macromolecular structures. The
+      database was established in 1971 by Brookhaven National Laboratory, Upton,
+      New York, as a public domain repository for resolved crystallographic
+      structures. The Bank uses a uniform format to store atomic coordinates and
+      partial bond connectivities as derived from crystallographic studies. In
+      1999 the Protein Data Bank moved to the Research Collaboratory for
+      Structural Biology.</p>
+      <p>PDB file entries consist of records of 80 characters each. Using the
+      punched card analogy, columns 1 to 6 contain a record-type identifier, the
+      columns 7 to 70 contain data. In older entries, columns 71 to 80 are
+      normally blank, but may contain sequence information added by library
+      management programs. In new entries conforming to the 1996 PDB format,
+      there is other information in those columns. The first four characters of
+      the record identifier are sufficient to identify the type of record
+      uniquely, and the syntax of each record is independent of the order of
+      records within any entry for a particular macromolecule.</p>
+      <p>&nbsp;</p>
+      <p>The only record types that are of major interest to the RasMol program
+      are the ATOM and HETATM records which describe the position of each atom.
+      ATOM/HETATM records contain standard atom names and residue abbreviations,
+      along with sequence identifiers, coordinates in Ångstrom units,
+      occupancies and thermal motion factors. The exact details are given below
+      as a FORTRAN format statement. The &quot;fmt&quot; column indicates use of
+      the field in all PDB formats, in the 1992 and earlier formats or in the
+      1996 and later formats.</p>
+      <p align="center"><small>FORMAT(6A1,I5,1X,A4,A1,A3,1X,A1,I4,A1,3X,3F8.3,2F6.2,1X,I3,2X,A4,2A2)</small></p>
+      <div align="center">
+        <center>
+        <table border="1" cellpadding="2">
+          <tr>
+            <th><small>Column</small></th>
+            <th align="left"><small>Content</small></th>
+            <th><small>fmt</small></th>
+          </tr>
+          <tr>
+            <td><small>1-6</small></td>
+            <td><small>'ATOM' or 'HETATM'</small></td>
+            <td><small>all</small></td>
+          </tr>
+          <tr>
+            <td><small>7-11</small></td>
+            <td><small>Atom serial number (may have gaps)</small></td>
+            <td><small>all</small></td>
+          </tr>
+          <tr>
+            <td><small>13-16</small></td>
+            <td><small>Atom name, in IUPAC standard format</small></td>
+            <td><small>all</small></td>
+          </tr>
+          <tr>
+            <td><small>17</small></td>
+            <td><small>Alternate location indicator indicated by A, B or C</small></td>
+            <td><small>all</small></td>
+          </tr>
+          <tr>
+            <td><small>18-20</small></td>
+            <td><small>Residue name, in IUPAC standard format</small></td>
+            <td><small>all</small></td>
+          </tr>
+          <tr>
+            <td><small>23-26</small></td>
+            <td><small>Residue sequence number</small></td>
+            <td><small>all</small></td>
+          </tr>
+          <tr>
+            <td><small>27</small></td>
+            <td><small>Code for insertions of residues (i.e. 66A &amp; 66B)</small></td>
+            <td><small>all</small></td>
+          </tr>
+          <tr>
+            <td><small>31-38</small></td>
+            <td><small>X coordinate</small></td>
+            <td><small>all</small></td>
+          </tr>
+          <tr>
+            <td><small>39-46</small></td>
+            <td><small>Y coordinate</small></td>
+            <td><small>all</small></td>
+          </tr>
+          <tr>
+            <td><small>47-54</small></td>
+            <td><small>Z coordinate</small></td>
+            <td><small>all</small></td>
+          </tr>
+          <tr>
+            <td><small>55-60</small></td>
+            <td><small>Occupancy</small></td>
+            <td><small>all</small></td>
+          </tr>
+          <tr>
+            <td><small>61-66</small></td>
+            <td><small>Temperature factor</small></td>
+            <td><small>all</small></td>
+          </tr>
+          <tr>
+            <td><small>68-70</small></td>
+            <td><small>Footnote number</small></td>
+            <td><small>92</small></td>
+          </tr>
+          <tr>
+            <td><small>73-76</small></td>
+            <td><small>Segment Identifier (left-justified)</small></td>
+            <td><small>96</small></td>
+          </tr>
+          <tr>
+            <td><small>77-78</small></td>
+            <td><small>Element Symbol (right-justified)</small></td>
+            <td><small>96</small></td>
+          </tr>
+          <tr>
+            <td><small>79-80</small></td>
+            <td><small>Charge on the Atom</small></td>
+            <td><small>96</small></td>
+          </tr>
+        </table>
+        </center>
+      </div>
+      <!---->
+      <p>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;
+      <p>Residues occur in order starting from the N-terminal residue for
+      proteins and 5'-terminus for nucleic acids. If the residue sequence is
+      known, certain atom serial numbers may be omitted to allow for future
+      insertion of any missing atoms. Within each residue, atoms are ordered in
+      a standard manner, starting with the backbone (N-C-C-O for proteins) and
+      proceeding in increasing remoteness from the alpha carbon, along the side
+      chain.</p>
+      <p>HETATM records are used to define post-translational modifications and
+      cofactors associated with the main molecule. TER records are interpreted
+      as breaks in the main molecule's backbone.</p>
+      <p>If present, RasMol also inspects HEADER, COMPND, HELIX, SHEET, TURN,
+      CONECT, CRYST1, SCALE, MODEL, ENDMDL, EXPDTA and END records. Information
+      such as the name, database code, revision date and classification of the
+      molecule are extracted from HEADER and COMPND records, initial secondary
+      structure assignments are taken from HELIX, SHEET and TURN records, and
+      the end of the file may be indicated by an END record.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="rasmolinterpretationofpdbfields">RasMol
+      Interpretation of PDB fields</a></h3>
+      <p>Atoms located at 9999.000, 9999.000, 9999.000 are assumed to be Insight
+      pseudo atoms and are ignored by RasMol. Atom names beginning ' Q' are also
+      assumed to be pseudo atoms or position markers.</p>
+      <p>When a data file contains an NMR structure, multiple conformations may
+      be placed in a single PDB file delimited by pairs of MODEL and ENDMDL
+      records. RasMol displays all the NMR models contained in the file.</p>
+      <p>Residue names &quot;CSH&quot;, &quot;CYH&quot; and &quot;CSM&quot; are
+      considered pseudonyms for cysteine &quot;CYS&quot;. Residue names &quot;WAT&quot;,
+      &quot;H20&quot;, &quot;SOL&quot; and &quot;TIP&quot; are considered
+      pseudonyms for water &quot;HOH&quot;. The residue name &quot;D20&quot; is
+      consider heavy water &quot;DOD&quot;. The residue name &quot;SUL&quot; is
+      considered a sulphate ion &quot;SO4&quot;. The residue name
+      &quot;CPR&quot; is considered to be cis-proline and is translated as
+      &quot;PRO&quot;. The residue name &quot;TRY&quot; is considered a
+      pseudonym for tryptophan &quot;TRP&quot;.</p>
+      <p>RasMol uses the HETATM fields to define the sets hetero, water, solvent
+      and ligand. Any group with the name &quot;HOH&quot;, &quot;DOD&quot;,
+      &quot;SO4&quot; or &quot;PO4&quot; (or aliased to one of these names by
+      the preceding rules) is considered a solvent and is considered to be
+      defined by a HETATM field.</p>
+      <p>RasMol only respects CONECT connectivity records in PDB files
+      containing fewer than 256 atoms. This is explained in more detail in the
+      section on determining molecule connectivity. CONECT records that define a
+      bond more than once are interpreted as specifying the bond order of that
+      bond, <i>i.e.</i> a bond specified twice is a double bond and a bond
+      specified three (or more) times is a triple bond. This is not a standard
+      PDB feature.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="pdbcolourschemespecification">PDB
+      Colour Scheme Specification</h3>
+      </a>
+      <p>RasMol also accepts the supplementary COLO record type in the PDB
+      files. This record format was introduced by David Bacon's Raster3D program
+      for specifying the colour scheme to be used when rendering the molecule.
+      This extension is not currently supported by the PDB. The COLO record has
+      the same basic record type as the ATOM and HETATM records described above.</p>
+      <p>Colours are assigned to atoms using a matching process. The Mask field
+      is used in the matching process as follows. First RasMol reads in and
+      remembers all the ATOM, HETATM and COLO records in input order. When the
+      user-defined ('User') colour scheme is selected, RasMol goes through each
+      remembered ATOM/HETATM record in turn, and searches for a COLO record that
+      matches in all of columns 7 through 30. The first such COLO record to be
+      found determines the colour and radius of the atom.</p>
+      <div align="center">
+        <center>
+        <table border="1" cellpadding="2">
+          <tr>
+            <th>Column</th>
+            <th align="left">Content</th>
+          </tr>
+          <tr>
+            <td>1-6</td>
+            <td>'COLOR' or 'COLOUR'</td>
+          </tr>
+          <tr>
+            <td>7-30</td>
+            <td>Mask (described below)</td>
+          </tr>
+          <tr>
+            <td>31-38</td>
+            <td>Red component</td>
+          </tr>
+          <tr>
+            <td>39-46</td>
+            <td>Green component</td>
+          </tr>
+          <tr>
+            <td>47-54</td>
+            <td>Blue component</td>
+          </tr>
+          <tr>
+            <td>55-60</td>
+            <td>Sphere radius in Ångstroms</td>
+          </tr>
+          <tr>
+            <td>61-70</td>
+            <td>Comments</td>
+          </tr>
+        </table>
+        </center>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>&nbsp;
+      <p>Note that the Red, Green and Blue components are in the same positions
+      as the X, Y, and Z components of an ATOM or HETA record, and the van der
+      Waals radius goes in the place of the Occupancy. The Red, Green and Blue
+      components must all be in the range 0 to 1.</p>
+      <p>&nbsp;</p>
+      <p>In order that one COLO record can provide colour and radius
+      specifications for more than one atom (e.g. based on residue, atom type,
+      or any other criterion for which labels can be given somewhere in columns
+      7 through 30), a 'don't-care' character, the hash mark &quot;#&quot;
+      (number or sharp sign) is used. This character, when found in a COLO
+      record, matches any character in the corresponding column in a ATOM/HETATM
+      record. All other characters must match identically to count as a match.
+      As an extension to the specification, any atom that fails to match a COLO
+      record is displayed in white.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="multiplenmrmodels">Multiple
+      NMR Models</h3>
+      </a>
+      <p>RasMol loads all of the NMR models from a PDB file no matter which
+      command is used: '<a href="commandref.htm#load"><tt><b>load pdb
+      &lt;filename&gt;</b></tt></a>' or '<a href="commandref.htm#load"><tt><b>load
+      nmrpdb &lt;filename&gt;</b></tt></a>'</p>
+      <p>Once multiple NMR conformations have been loaded they may be
+      manipulated with the atom expression extensions described in '<a href="atomexpression.htm#primitiveexpressions"><tt><b>Primitive
+      Expressions</b></tt></a>'. In particular, the command '<a href="commandref.htm#restrict"><tt><b>restrict
+      */1</b></tt></a>' will restrict the display to the first model only.</p>
+      <p>&nbsp;</td>
+  </tr>
+  <tr>
+    <td bgcolor="#8484C4">
+      <p align="center"><strong><span style="font-size: 12pt"><font color="#FFFFFF"><a name="cifandmmcifformatfiles">CIF
+      and mmCIF Format Files</a></font></span></strong></td>
+  </tr>
+  <tr>
+    <td><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a>
+      <p>&nbsp;</p>
+      <p>CIF is the IUCr standard for presentation of small molecules and mmCIF
+      is intended as the replacement for the fixed-field PDB format for
+      presentation of macromolecular structures. RasMol can accept data sets in
+      either format.</p>
+      <p>There are many useful sites on the World Wide Web where information
+      tools and software related to CIF, mmCIF and the PDB can be found. The
+      following are good starting points for exploration:</p>
+      <p>The International Union of Crystallography (IUCr) provides access to
+      software, dictionaries, policy statements and documentation relating to
+      CIF and mmCIF at: IUCr, Chester, England (www.iucr.org/iucr-top/cif/) with
+      many mirror sites.</p>
+      <p>The Nucleic Acid Database Project provides access to its entries,
+      software and documentation, with an mmCIF page giving access to the
+      dictionary and mmCIF software tools at Rutgers University, New Jersey, USA
+      (http://ndbserver.rutgers.edu/NDB/mmcif) with many mirror sites.</p>
+      <p align="left">This version of RasMol restricts CIF or mmCIF tag values
+      to essentially the same conventions as are used for the fixed-field PDB
+      format. Thus chain identifiers and alternate conformation identifiers are
+      limited to a single character, atom names are limited to 4 characters,
+      etc. RasMol interprets the following CIF and mmCIF tags:</p>
+      <p align="left"><small>A search is made through multiple data blocks for
+      the desired tags, so a single dataset may be composed from multiple data
+      blocks, butmultiple data sets may not be stacked in the same file.</small></p>
+      <table border="1" cellpadding="5" cellspacing="0">
+        <tr>
+          <th align="left"><small>mmCIF tag</small></th>
+          <th align="LEFT" width="269" height="19"><small>CIF tag</small></th>
+          <th align="LEFT"><small>Used for</small></th>
+        </tr>
+        <tr>
+          <td><small><small>_struct_biol.details</small></small></td>
+          <td width="269" height="22"></td>
+          <td><small><small>Info.classification</small></small></td>
+        </tr>
+        <tr>
+          <td><small><small>_database_2.database_code</small></small></td>
+          <td width="269" height="22"></td>
+          <td><small><small>Info.identcode</small></small></td>
+        </tr>
+        <tr>
+          <td><small><small>_entry.id</small></small></td>
+          <td width="269" height="22"></td>
+          <td><small><small>&nbsp;</small></small></td>
+        </tr>
+        <tr>
+          <td><small><small>_struct_biol.id</small></small></td>
+          <td width="269" height="22"></td>
+          <td><small><small>&nbsp;</small></small></td>
+        </tr>
+        <tr>
+          <td><small><small>_struct.title</small></small></td>
+          <td width="269" height="15"><small><small>&nbsp;Info.moleculename</small></small></td>
+        </tr>
+        <tr>
+          <td><small><small>_chemical_name_common</small></small></td>
+          <td width="269" height="22"></td>
+          <td><small><small>&nbsp;</small></small></td>
+        </tr>
+        <tr>
+          <td><small><small>_chemical_name_systematic</small></small></td>
+          <td width="269" height="22"></td>
+          <td><small><small>&nbsp;</small></small></td>
+        </tr>
+        <tr>
+          <td><small><small>_chemical_name_mineral</small></small></td>
+          <td width="269" height="22"></td>
+          <td><small><small>&nbsp;</small></small></td>
+        </tr>
+        <tr>
+          <td><small><small>_symmetry.space_group_name_H-M</small></small></td>
+          <td width="269" height="15"><small><small>_symmetry_space_group_name_H-M</small></small></td>
+          <td><small><small>Info.spacegroup</small></small></td>
+        </tr>
+        <tr>
+          <td><small><small>_cell.length_a</small></small></td>
+          <td width="269" height="15"><small><small>_cell_length_a</small></small></td>
+          <td><small><small>Info.cell</small></small></td>
+        </tr>
+        <tr>
+          <td><small><small>_cell.length_b</small></small></td>
+          <td width="269" height="15"><small><small>_cell_length_b</small></small></td>
+          <td><small><small>&nbsp;</small></small></td>
+        </tr>
+        <tr>
+          <td><small><small>_cell.length_c</small></small></td>
+          <td width="269" height="15"><small><small>_cell_length_c</small></small></td>
+          <td><small><small>&nbsp;</small></small></td>
+        </tr>
+        <tr>
+          <td><small><small>_cell.angle_alpha</small></small></td>
+          <td width="269" height="15"><small><small>_cell_angle_alpha</small></small></td>
+          <td><small><small>&nbsp;</small></small></td>
+        </tr>
+        <tr>
+          <td><small><small>_cell.angle_alpha</small></small></td>
+          <td width="269" height="19"><small><small>_cell_angle_alpha</small></small></td>
+          <td><small>&nbsp;</small></td>
+        </tr>
+        <tr>
+          <td><small><small>_cell.angle_beta</small></small></td>
+          <td width="269" height="19"><small><small>_cell_angle_beta</small></small></td>
+          <td><small>&nbsp;</small></td>
+        </tr>
+        <tr>
+          <td><small><small>_cell.angle_gamma</small></small></td>
+          <td width="269" height="19"><small><small>_cell_angle_gamma</small></small></td>
+          <td><small>&nbsp;</small></td>
+        </tr>
+        <tr>
+          <td><small><small>_atom_sites.fract_transf_matrix[1][1]</small></small></td>
+          <td width="269" height="30"><small><small>_atom_sites_fract_tran_matrix_11</small></small></td>
+          <td><small><small>Used to compute orthogonal coords</small></small></td>
+        </tr>
+        <tr>
+          <td><small><small>...</small></small></td>
+          <td width="269" height="15"><small><small>...</small></small></td>
+          <td><small><small>&nbsp;</small></small></td>
+        </tr>
+        <tr>
+          <td><small><small>_atom_sites.fract_transf_vector[1]</small></small></td>
+          <td width="269" height="15"><small><small>_atom_sites_fract_tran_vector_1</small></small></td>
+          <td><small><small>&nbsp;</small></small></td>
+        </tr>
+        <tr>
+          <td><small><small>...</small></small></td>
+          <td width="269" height="15"><small><small>...</small></small></td>
+          <td><small><small>&nbsp;</small></small></td>
+        </tr>
+        <tr>
+          <td><small><small>_atom_sites.cartn_transf_matrix[1][1]</small></small></td>
+          <td width="269" height="30"><small><small>_atom_sites_cartn_tran_matrix_11</small></small></td>
+          <td><small><small>Alternative to compute orth. coords</small></small></td>
+        </tr>
+        <tr>
+          <td><small><small>...</small></small></td>
+          <td width="269" height="15"><small><small>...</small></small></td>
+          <td><small><small>&nbsp;</small></small></td>
+        </tr>
+        <tr>
+          <td><small><small>_atom_sites.cartn_transf_vector[1]</small></small></td>
+          <td width="269" height="15"><small><small>_atom_sites_cartn_tran_vector_1</small></small></td>
+          <td><small><small>&nbsp;</small></small></td>
+        </tr>
+        <tr>
+          <td><small><small>...</small></small></td>
+          <td width="269" height="15"><small><small>...</small></small></td>
+          <td><small><small>&nbsp;</small></small></td>
+        </tr>
+        <tr>
+          <td><small><small>_atom_site.cartn_x</small></small></td>
+          <td width="269" height="15"><small><small>_atom_site_cartn_x</small></small></td>
+          <td><small><small>atomic coordinates</small></small></td>
+        </tr>
+        <tr>
+          <td><small><small>...</small></small></td>
+          <td width="269" height="15"><small><small>...</small></small></td>
+          <td><small><small>&nbsp;</small></small></td>
+        </tr>
+        <tr>
+          <td><small><small>or</small></small></td>
+          <td width="269" height="22"></td>
+          <td><small><small>&nbsp;</small></small></td>
+        </tr>
+        <tr>
+          <td><small><small>_atom_site.fract_x</small></small></td>
+          <td width="269" height="15"><small><small>_atom_site_fract_x</small></small></td>
+          <td><small><small>&nbsp;</small></small></td>
+        </tr>
+        <tr>
+          <td><small>...</small></td>
+          <td width="269" height="19"><small>...</small></td>
+          <td><small>&nbsp;</small></td>
+        </tr>
+        <tr>
+          <td><small><small>_struct_conn.id</small></small></td>
+          <td width="269" height="22"></td>
+          <td><small><small>bonds</small></small></td>
+        </tr>
+        <tr>
+          <td><small><small>...</small></small></td>
+          <td width="269" height="22"></td>
+          <td><small><small>&nbsp;</small></small></td>
+        </tr>
+        <tr>
+          <td><small><small>_geom_bond.atom_site_id_1</small></small></td>
+          <td width="269" height="15"><small><small>_geom_bond_atom_site_label_1</small></small></td>
+          <td><small><small>&nbsp;</small></small></td>
+        </tr>
+        <tr>
+          <td><small><small>...</small></small></td>
+          <td width="269" height="15"><small><small>...</small></small></td>
+          <td><small><small>&nbsp;</small></small></td>
+        </tr>
+        <tr>
+          <td><small><small>_struct_conf.id</small></small></td>
+          <td width="269" height="22"></td>
+          <td><small><small>helices, sheets, turns</small></small></td>
+        </tr>
+        <tr>
+          <td><small><small>_struct_sheet_range.id</small></small></td>
+          <td width="269" height="21"></td>
+          <td><small><small><small>&nbsp;</small></small></small></td>
+        </tr>
+      </table>
+      <p align="left">&nbsp;</td>
+  </tr>
+  <tr>
+    <td bgcolor="#8484C4">
+      <p align="center"><strong><span style="font-size: 12pt"><a name="rasmolscripts"><font color="#FFFFFF">RasMol
+      Script Format</font></a></span></strong></td>
+  </tr>
+  <tr>
+    <td>&nbsp;
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><a name="scriptfiles">Script
+      Files</a></h3>
+      <p>A script is a text file containing a set of commands that are executed
+      sequentially by RasMol using the '<strong><a href="commandref.htm#script">script</a></strong>'
+      command.&nbsp;The RasMol command '<b>source</b>' is synonymous with the '<b>script</b>'
+      command.</p>
+      <p>All command are allowed in a script file; this includes the '<strong><tt><a href="commandref.htm#load">load</a></tt></strong>'
+      command to load a molecular coordinate file during this execution of the
+      script.&nbsp;Be sure in this case to write a '<strong><tt><a href="commandref.htm#zap">zap</a></tt></strong>'
+      command just before to erase any molecule already loaded.</p>
+      <p>Scripts may be written with a simple text editor or automatically
+      generated using the '<a href="commandref.htm#write"><tt><b>write script</b></tt></a>'
+      or '<a href="commandref.htm#write"><tt><b>write rasmol</b></tt></a>'
+      &nbsp;command to describe a current representation.</p>
+      <p>A RasMol script file may contain a further '<strong><tt><a href="commandref.htm#script">script</a></tt></strong>'
+      command up to a maximum &quot;depth&quot; of 10, allowing complicated
+      sequences of actions to be executed.&nbsp;This is particularly useful for
+      teaching purpose in combination with the '<tt><a href="commandref.htm#pause"><strong>pause</strong></a></tt>'
+      command to interrupt transiently the script execution.</p>
+      <p>The '<a href="commandref.htm#echo"><tt><b>echo</b></tt></a>' command
+      produces a text output on the command line allowing&nbsp;online
+      annotation. This command is particularly useful when preceding a 'pause'
+      command for example.</p>
+      <p>RasMol ignores all characters after the first '#' character on each
+      line allowing the script text files to be annotated.</p>
+      <p> The '<strong><tt><a href="commandref.htm#refresh">refresh</a></tt></strong>'
+      command refreshes the current drawing.&nbsp;&nbsp;</p>
+      <p>The '<strong><tt><a href="commandref.htm#exit">exit</a></tt></strong>'
+      command executed within a script terminates its current execution.&nbsp;The
+      command applies for the current 'script level' only and is useful for
+      mixing molecular coordinate files with script files (see below <a href="#inlinescript">inline
+      script</a>).</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="inlinescript">Inline
+      Script</a></h3>
+      <p>Inline script files combine scripting information with molecular
+      coordinates in a unique file.&nbsp;</p>
+      <p>The format is typically:</p>
+      <blockquote>
+        <pre><tt>#!rasmol -script <strong>(optional)</strong>
+zap
+load &lt;fileformat&gt; inline
+...
+exit
+&lt;molecular data&gt;
+</tt></pre>
+      </blockquote>
+      <p>Typically this is used in the command '<b>load pdb inline</b>'.&nbsp;The
+      '<b>exit</b>' command terminates execution of the current script and
+      returns control to the command line (or the calling script). This means
+      any lines following '<b>exit</b>' are never interpreted by RasMol. These
+      may be used to store atomic coordinates in PDB, CIF or mmCIF file format.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="rsmfiles">RSM
+      Scripts</a></h3>
+      <p>RSM scripts are RasTop specific.</p>
+      <p>RSM scripts are an attempt to link the scripting information with the
+      molecular coordinates in a unique file in a slightly different way from <a href="#inlinescript">inline
+      scripts</a>.&nbsp;The term RSM files with the&nbsp; &lt;*.rsm&gt;
+      extension is just a convenient way for RasTop to handle these files and
+      does not mean in any way that the molecular coordinates that they contain
+      are written in a specific molecular format. Indeed, the original
+      extension, for example &lt;*.cif&gt; or &lt;*.pdb&gt;, may be conserved.</p>
+      <p>When a file is opened, RasTop looks for the field <tt>'#!rasmol -rsm
+      file'</tt>. When found, RasTop looks for the field '<tt>load
+      &lt;format&gt; inline</tt>' on the next line. If it finds one, RasTop asks
+      RasMol to reopen the file and to load the molecule under the specified
+      format. Then RasTop comes back to the initial script line and executes the
+      remaining of the script. For compatibility between molecular files and RSM
+      files, it is judicious to stop the molecular file before the start of the
+      script. This is done in pdb files by the keyword END located at the
+      beginning of a new line. The script can make use of the keyword '<a href="commandref.htm#quit"><tt><strong>exit</strong></tt></a>'.
+      This causes the script to stop and allows the user to put other kind of
+      information at the end of the file. In RasTop 1.3.1 the '<a href="commandref.htm#quit"><tt><strong>exit</strong></tt></a>'
+      keyword is automatically entered at the end.</p>
+      <p>Format:</p>
+      <blockquote>
+        <pre><tt>&lt;molecular coordinate data in format&gt;
+#!rasmol -rsm file
+load &lt;format&gt; inline
+&lt;rasmol script to describe the molecule&gt;
+exit <strong>(optional)</strong>
+</tt></pre>
+      </blockquote>
+      <p>The tag '#!rasmol -rsm file' is a required field and marks the
+      beginning of the script.&nbsp; The &lt;format&gt; field indicates the
+      format of the molecular coordinates.&nbsp; The 'exit' command at the end
+      of the script is optional.</p>
+      <p><i>World Script:</i></p>
+      <p>Starting version 2.0, RasTop saves multiple molecules in a single
+      &lt;RSM&gt; script. The first molecule is saved in the main script &lt;filename.rsm&gt;,
+      molecules of higher index are saved with the same filename appended by the
+      suffix 'wn' where n is the molecule index (filenamew1, filenamew2, etc.).
+      Following is a typical main script annotated for better understanding:&nbsp;</p>
+      <pre><font face="Courier New">#!rasmol -rsm file	         #required</font></pre>
+      <pre><font face="Courier New">zap
+set connect on
+load &lt;format&gt; inline	#required
+set title &lt;title&gt;</font></pre>
+      <pre><font face="Courier New"># Colour details
+&lt;...&gt;</font></pre>
+      <pre><font face="Courier New"># Transformation</font><font SIZE="2">
+reset
+rotate molecule
+set picking ident        </font><font face="Courier New">#some commands are picking mode dependent!</font><font SIZE="2">
+set worlddepth 18984	 #set worlddepth to the largest molecule
+# zoom 203.21            </font><font face="Courier New">#define zoom before translation</font><font SIZE="2">
+scale 37.37              #but use scale indeed, see command description
+position x 0.000 y 0.000 z 0.000
+</font><font face="Courier New">&lt;...&gt;
+
+&lt;...&gt;
+
+# Molecules
+add &lt;title&gt;w2		#add multiple molecules
+add &lt;title&gt;w3
+add &lt;title&gt;w4
+&lt;...&gt;
+
+# World Transformation</font><font SIZE="2">
+rotate world           </font><font face="Courier New">#start world loading</font><font SIZE="2">
+centre origin          </font><font face="Courier New">#only way to make zooming and rotation coherent</font><font SIZE="2">
+set axes world off
+set worlddepth 18984
+rotate world x 160.64
+rotate world y 54.13
+rotate world z -158.34
+# translate world x -36.79
+# translate world y 1.34
+position world x -13.749 y 0.500
+reset slab
+slab off
+reset depth
+depth off
+molecule 2		</font><font face="Courier New">#select centre in different molecule in this case</font><font SIZE="2">
+centre molecule
+molecule 1</font><font face="Courier New">
+
+exit</font></pre>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a>&nbsp;<a name="clipboardformat">Clipboard
+      Formats</a></h3>
+      <p>Clipboard formats are RasTop specific.</p>
+      <p>RasTop allows on the command line the command '<strong><tt><a href="commandref.htm#clipboard">clipboard
+      image</a></tt></strong>', '<strong><tt><a href="commandref.htm#clipboard">clipboard
+      selected</a></tt></strong>', and '<strong><tt><a href="commandref.htm#clipboard">clipboard
+      position</a></tt></strong>' to copy the current image,&nbsp;current atom
+      selection, or current molecule position to the clipboard, respectively.&nbsp;The
+      two latter are in text format with the following starting tags:</p>
+      <p><em>Atom selection:</em></p>
+      <blockquote>
+        <pre><tt>#!rasmol -selection
+&lt;rasmol script to describe the current atom selection&gt;</tt>
+</pre>
+      </blockquote>
+      <p><em>Position<tt>:</tt></em></p>
+      <blockquote>
+        <pre><tt>#!rasmol -position
+&lt;rasmol script to describe the current molecule or world position&gt;
+</tt></pre>
+      </blockquote>
+      <tt>
+      <p>When the world is active, the world position is copied to the
+      clipboard. When the molecule is active, the molecule position is copied to
+      the clipboard.</tt></p>
+      <p>The command '<strong><tt><a href="commandref.htm#clipboard">clipboard
+      paste</a>'</tt></strong> is used to paste the clipboard content.&nbsp; A
+      different running instance of RasTop may paste the clipboard.</p>
+      <p>RasTop recognizes the three following tags:</p>
+      <blockquote>
+        <pre><tt>#!rasmol -script
+#!rasmol -position
+#!rasmol -selection
+</tt></pre>
+      </blockquote>
+      <p>Therefore, it is possible to copy a script from a text editor and to
+      paste it into RasTop, to the condition that it starts with the '#!rasmol
+      -script' tag.</td>
+  </tr>
+  <tr>
+    <td>&nbsp;<!--webbot bot="Include" u-include="signature.htm" tag="BODY" startspan -->
+<P><IMG SRC="images/dotnul.gif" NAME="Graphic1" ALIGN=BOTTOM WIDTH=2 HEIGHT=5 BORDER=0></P>
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0>
+	<TR>
+		<TD WIDTH=100% BGCOLOR="#c29654">
+			<P><IMG SRC="images/dotnul.gif" NAME="Graphic2" ALT="dotnul.gif (43 bytes)" ALIGN=BOTTOM WIDTH=2 HEIGHT=2 BORDER=0></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><FONT SIZE=1><STRONG>RasTop Help Site</STRONG> - <A HREF="index.htm">home</A>
+			| <A HREF="notice.htm">notice</A> | <A HREF="copyright.htm">copyright</A></P>
+		</TD>
+	</TR>
+</TABLE>
+<P><BR><BR>
+</P>
+<!--webbot bot="Include" endspan i-checksum="12835" -->
+    </td>
+  </tr>
+  <tr>
+    <td></td>
+  </tr>
+</table>
+
+</body>
+
+</html>

@@ -1,0 +1,194 @@
+<html>
+
+<head>
+<link rel="stylesheet" href="main.css" type="text/css">
+<title>Using RasTop</title>
+<meta name="description" content="rastop is a molecular visualization software to view the 3-dimensional structure of macromolecules">
+<meta name="keywords" content="rastop, rasmol, macromolecule, structure, 3-dimensional, pdb, protein, dna, rna, model, crystal,molecule">
+</head>
+
+<body marginwidth="0" marginheight="0" leftmargin="0" bottommargin="0" topmargin="0" bgcolor="#FFFFFF" text="#000000">
+
+<!--webbot bot="Include" u-include="header.htm" tag="BODY" startspan -->
+
+<p><!----></p>
+<table border="0" cellpadding="2" width="100%">
+  <tr>
+    <td valign="top" bgcolor="#FFFFFF"><font color="#333333"><span class="ari8">RasTop
+      Manual</span></font></td>
+    <td valign="top" bgcolor="#FFFFFF" colspan="5" width="100%">
+      <p align="right"><span class="ari8"><a href="http://sourceforge.net/projects/rastop/">Home</a> | <a href="operations.htm">All
+      Commands</a> | <a href="notice.htm">Notice</a></span></td>
+  </tr>
+  <tr>
+    <td valign="top" bgcolor="#CCCCFF" align="center" background="images/doubleline.jpg"><a name="top"></a><img src="images/sigle.gif" alt="sigle.gif (4112 bytes)" width="71" height="65"></td>
+    <td colspan="5" bgcolor="#000000"><!----><img src="images/bannerrms2.gif" alt="bannerrms2.gif (19906 bytes)" align="left" border="0" width="543" height="65"></td>
+  </tr>
+  <tr>
+    <td valign="top" bgcolor="#336699">
+      <p align="center"><a href="index.htm" class="sitebar"><font color="#FFFFFF">Home</font></a></td>
+    <td valign="bottom" align="center" bgcolor="#336699"><a href="manual.htm" class="sitebar"><font color="#FFFFFF">About
+      help</font></a></td>
+    <td valign="bottom" align="center" bgcolor="#336699"><a href="copyright.htm" class="sitebar"><font color="#FFFFFF">Copyrights</font></a></td>
+    <td valign="bottom" align="center" bgcolor="#336699"><a href="notice.htm" class="sitebar"><font color="#FFFFFF">License</font></a></td>
+    <td valign="bottom" align="center" bgcolor="#336699"><a href="rastopop.htm" class="sitebar"><font color="#FFFFFF">Installing
+      &amp; using RasTop</font></a></td>
+    <td valign="bottom" align="center" bgcolor="#336699"><a href="library.htm" class="sitebar"><font color="#FFFFFF">Library</font></a></td>
+  </tr>
+  <tr>
+    <td valign="top" bgcolor="#FFFFFF"><img src="images/dotnul.gif" width="134" height="1" alt="dotnul.gif (807 bytes)" align="bottom"></td>
+    <td valign="top" bgcolor="#FFFFFF" colspan="5" width="100%"><img src="images/dotnul.gif" width="460" height="2" align="bottom" border="0"></td>
+  </tr>
+</table>
+
+<!--webbot bot="Include" i-CheckSum="50747" endspan -->
+
+<!---->
+
+
+<table border="0" cellpadding="0" cellspacing="0" width="700">
+  <tr>
+    <td valign="top" bgcolor="#EEEEEE" width="140"><img src="images/dotnul.gif" width="140" height="10" align="bottom" border="0"></td>
+    <td valign="top" width="2"><img src="images/dotnul.gif" width="1" height="10" align="bottom" border="0"></td>
+    <td valign="top" width="10"><img src="images/dotnul.gif" width="10" height="10" align="bottom" border="0"></td>
+    <td width="100%"><img src="images/dotnul.gif" width="549" height="10" alt="dotnul.gif (43 bytes)" align="bottom" border="0"></td>
+  </tr>
+  <tr>
+    <td valign="top" bgcolor="#EEEEEE"><!----> 
+      <div align="center">
+        <center>
+        <table border="0" cellpadding="5" cellspacing="0" width="100%" height="283">
+          <tr>
+            <td width="10" bgcolor="#336699">&nbsp;</td>
+            <td width="100%" bgcolor="#CCCCFF"><span class="ari8"><strong>Commands:</strong></span></td>
+          </tr>
+          <tr>
+            <td width="100%" colspan="2"><img src="images/arrow1.gif" alt="arrow1.gif (162 bytes)" width="10" height="8"><span class="ari8"><a href="rastopop.htm">Using
+              RasTop</a><br>
+              <img src="images/arrow1.gif" alt="arrow1.gif (162 bytes)" width="10" height="8"><a href="menu.htm">Menu</a><br>
+              <img src="images/arrow1.gif" alt="arrow1.gif (162 bytes)" width="10" height="8"><a href="operations.htm">Summary</a><br>
+              <img src="images/arrow1.gif" alt="arrow1.gif (162 bytes)" width="10" height="8"><a href="commandref.htm">Reference</a><br>
+              <img src="images/arrow1.gif" alt="arrow1.gif (162 bytes)" width="10" height="8"><a href="internal.htm">Internal
+              Parameters</a><br>
+              <img src="images/arrow1.gif" alt="arrow1.gif (162 bytes)" width="10" height="8"><a href="atomexpression.htm">Atom
+              Expression</a><br>
+              <img src="images/arrow1.gif" alt="arrow1.gif (162 bytes)" width="10" height="8"><a href="colour.htm">Colour
+              Schemes</a><br>
+              <img src="images/arrow1.gif" alt="arrow1.gif (162 bytes)" width="10" height="8"><a href="atomsets.htm">Atom
+              Sets</a><br>
+              <img src="images/arrow1.gif" alt="arrow1.gif (162 bytes)" width="10" height="8"><i>RasTop
+              World</i></span></td>
+          </tr>
+          <tr>
+            <td width="100%" bgcolor="#CCCCFF" colspan="2"><strong><span class="ari8">Content:</span></strong></td>
+          </tr>
+          <tr>
+            <td width="100%" colspan="2"><span class="ari8"><a href="#Menu">Menu</a></span></td>
+          </tr>
+        </table>
+        </center>
+      </div>
+      <p>&nbsp;</td>
+    <td valign="top" width="2"><img src="images/dotnul.gif" width="1" height="10" align="bottom" border="0"></td>
+    <td valign="top"></td>
+    <td>
+      <p align="center"><strong><span style="font-size: 14pt">RasTop World</span></strong></p>
+      <p>This page gives a description of how RasTop &quot;world&quot; works and
+      summarizes some of the problems that were encountered during its
+      building.&nbsp;</p>
+      <h3>RasMol World</h3>
+      <p>In early RasMol versions, including all R. Sayle's versions, the
+      molecule is inscribed in a box, the bounding box, which is orthogonal to
+      the data file's original coordinate axes. The rotation center is located
+      at the center of gravity and during rotation, the center of rotation is
+      kept in a unique plane, the screen plane or canvas. Therefore the
+      sensation of depth is apparent and RasMol world is 2-dimensional.</p>
+      <p>Three parameters are required to describe a RasMol view: the
+      translation values, the rotation values, and the zoom value. Translation
+      and zoom are expressed in relative units.&nbsp; The translation values
+      along the X- and the Y-axis are expressed in percents of the canvas size
+      in their respective dimension taken from the center of the canvas to the
+      center of gravity. The zoom value depends on the size of the bounding box.
+      A default value of 100 renders the molecule slightly smaller than the size
+      of the canvas.</p>
+      <p>Since zooming occurs at the center of gravity, translation values are
+      independent from zoom values. Therefore, the three parameters are unique,
+      independent from each other. These are perfect conditions for scripting
+      that make RasMol so wonderful to use.</p>
+      <p><b>RasTop World</b></p>
+      <p>When multiple molecules are present, the parameters translation and
+      zoom are not independent anymore. First at all, positions in the space now
+      depend on the canvas size since x value are relative to the width of the
+      canvas and y values to its height. There are multiple centers of gravity
+      and, depending on which one is chosen for zooming, translation values will
+      vary. When a larger molecule is loaded, the maximum size of the bounding
+      box will increase and therefore the zoom value to keep previous molecules
+      at the same size will change.</p>
+      <p>RasTop code to display multiple molecules derives in large part from
+      the UCB mods by Gary Grossman and Marco Molinaro and its adaptation by
+      Herbert Bernstein in RasMol 2.7.2 and 2.7.2.1 versions. The term
+      &quot;RasTop world&quot; is used to described varied modifications and
+      options made to overcome some of the problems described above. In any
+      case, it is not a definitive solution but rather an experiment to explore some
+      possibilities for&nbsp; manipulating a world and scripting it.</p>
+      <p><i>Homogeneity</i><i> of translation values: </i>In RasTop world,
+      translation values in all axes, including Z-axis, are expressed in percent
+      of the smallest size of the canvas. Existing RasMol scripts should appear
+      almost identically on screen.</p>
+      <p><i>Freedom of translation: </i>In RasMol, translations are limited to a
+      maximum of 200% (-100 / +100) of the canvas size. In RasTop world,
+      translations are not limited. Internally, translations&nbsp; are counted
+      as the sum of the world translation and the molecule translation. If the
+      world origin is far away, or zooming is at high value, some translations
+      would be become impossible without apparent reasons.</p>
+      <p><i>World origin and world axes: </i>The use of a world origin and
+      associated axes permits to reset a molecular assembly to a given initial
+      position, which brings interesting scripting potentialities. Translation
+      values in a world reset to a default zoom value become unique. If we
+      choose the world origin as zooming and rotation center, we can zoom,
+      rotate, and translate the reset world in a unique way to its initial
+      position. Initial versions of RasTop 2.0 used this technique to save a
+      view.</p>
+      <p>Nevertheless, the variations of the bounding box maximum size along
+      with the loading of larger molecules makes difficult to save and restore
+      current views in&nbsp; a script. The parameter 'set worlddepth' allows to
+      set the value of an imaginary larger bounding box at start; thus resolving
+      the conflict.</p>
+      <p>With depth queuing, the worlddepth parameter is also the distance that
+      determine the depth of the current view. With this new capability, saving
+      and restoring of current views become virtually impossible. This is why
+      the commands 'position' and 'scale' were introduced. These commands
+      express translation and zooming in angstrom, thus resolving conflicts and ambiguities related to molecule location.</p>
+      <p>In the present version of RasTop, the world is 2-dimensional, i.e. the
+      world origin is always in the canvas plane (like the center of gravity in
+      early RasMol, see above), and molecules are moving around in the 3
+      dimensions. Values along the Z-axis are always given relatively to the
+      position of the world origin along this axis, this includes clipping
+      planes and coordinate systems.</p>
+      <!--webbot bot="Include" u-include="signature.htm" tag="BODY" startspan -->
+<P><IMG SRC="images/dotnul.gif" NAME="Graphic1" ALIGN=BOTTOM WIDTH=2 HEIGHT=5 BORDER=0></P>
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0>
+	<TR>
+		<TD WIDTH=100% BGCOLOR="#c29654">
+			<P><IMG SRC="images/dotnul.gif" NAME="Graphic2" ALT="dotnul.gif (43 bytes)" ALIGN=BOTTOM WIDTH=2 HEIGHT=2 BORDER=0></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><FONT SIZE=1><STRONG>RasTop Help Site</STRONG> - <A HREF="index.htm">home</A> 
+			| <A HREF="notice.htm">notice</A> | <A HREF="copyright.htm">copyright</A><BR>Last updated on <!--webbot bot="Timestamp" s-type="REGENERATED" 
+      s-format="%A, %B %d, %Y" startspan -->Tuesday, November 07, 2006<!--webbot bot="Timestamp" i-CheckSum="57640" endspan --></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P><BR><BR>
+</P>
+<!--webbot bot="Include" i-CheckSum="2752" endspan -->
+
+    </td>
+  </tr>
+</table>
+
+</body>
+
+</html>

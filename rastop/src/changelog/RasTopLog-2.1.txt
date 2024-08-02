@@ -1,0 +1,115 @@
+This log contains changes made to rastop from version 2.0 to 2.1
+
+[09/04] PV
+	- Reported by Katsuhiro NAGATOMO, some saved scripts (rsm) are too long to
+	  load. The root of this problem seems to hold in an excessive use of
+	  ForEachAtom to manipulate selected atoms. No simple implementation at this
+	  point to correct the problem.
+
+[05/04] PV
+	- multiple.c: Added SideLen and Offset to VarList.
+	- infile.c: UpdateFeature() Corrected bug responsible for incorrect drawing of
+	  ribbons in protein models. Thanks to Shuji Tomoda for reporting the bug.
+	- command.c, transfor.c: Added jmol command spacefill -<value> to specify
+	  radii in percentage of CPK values.
+	- transfor.c: Put 0.60 factor for LastSpecShade calculation.	  
+
+[04/04] PV
+	- infile.c:ProcessPDBBond() Hacked to allow multiple bonds through CONECT
+	  record to be drawn, but will work only for consecutive identical CONECT
+	  record. This facility disapeared in the rasmol 2.7 series, thanks
+	  to Malcolm Stephen for reporting the problem.
+	- outfile.c: added routine WriteBMP32File() to save bmp file in 32-bits on
+	  windows platform.
+	- command.c:ProcessFile(): Corrected bug with connectivity of xyz files
+	  (Info.bondcount < (MainAtomCount+HetaAtomCount)-Info.chaincount is wrongly
+	  calculated because chaincount equals MainAtomCount in this case. See
+	  correction. Thanks to Filipe Tiago de Oliveira for reporting the problem.
+	- Added menu option to disable automatic running of default Representation
+	  script file upon file loading.
+
+[03/04] PV
+	- see command.c: attempted to implement the new translate command. The 
+	  possible mixing of absolute and relative units makes it very confusing.
+	  We will not deprecate <position> this time!
+	- transfor.c,repres.c/.h: modified restrict command to include Monitors,
+	  dot surface, SS bonds, and H-bonds.
+    - Modified reset command: the world scenery is zoomed to fit exactly the
+	  screen with commands "reset world" or "reset" with world on; see ResetAxes()
+	  and getWorldRadius90;
+	- got stupid bug in ZapDatabase() that prevented ReRadius() on closing,
+	  sometimes resulting in molecules not opening at the correct size.
+
+[02/04] PV
+    - Modified zooming effect on scrolling bars from command panel;
+	- Added command <set language default>
+
+[01/04] PV
+	- Added loading of preferences file located in lib folder;
+	- Added Scripting bar;
+	- Modified Preferences to save all window states.
+
+
+[10/03] PV
+	- cmndline.c: Modifid MouseMapping MouseRasMol to allow zooming from center
+	  of screen (pseudo world Z-translation) while pressing the two mouse cliks
+	  in RasMol mapping.
+	- tranfor.c: corrected function Round(), thanks to Audric Schiltknecht.
+	- Change rounding to function Rint().
+	- Corrected bug in InitInstance, thanks to Joachim Strub.
+
+
+[01/03] PV
+
+	- infile.c: Changed coordinate saving in all formats;
+	- script.c: Fixed povray code.
+
+[10/02] PV
+
+	- command.c: rewrote save command;
+
+Currents changes for built RasTop 2.0.2
+
+[09/02] PV
+	- pixutil.c: [UpdateAcross] corrected bug.
+	- infile.c [SavePDBMolecule]: Changed saved coordinates to current coordinate
+	  system - mod suggested by Andrew Horsfield.
+	- multiple.c: Corrected bug (missing ElemDesc in VarList).
+	- prefer.c: Changed rasmolprefs localisation to C:\Document and Settings\userdir\
+	  \rasmolprefs.
+	- Changed internal value of Shapower.
+	- command.c: corected bug in rotate command.
+	- Removed all direct calls in rasmol core from rastop gui.
+
+
+
+Currents changes for built RasTop 2.0.1
+
+[06/02] PV
+	- render.c [TestAtomProximity]: Corrected bug on ptr - Thanks to Naoum Salem.
+
+[05/02] PV
+	- colorbar.cpp: changed order of background in ItemList. Suggested by
+	  Naoum Salem.
+	- selectbar.h: corrected carbon selection, error reported by Naoum Salem.
+	- molecule.h: corrected of structure _HBonds col from byte to short; thanks
+	  to Naoum Salem.
+	- commande.c: Corrected error on "save molecule" command and error on
+	  fclose, thanks to Naoum Salem.
+	- command.c [ExecuteTitleCommand]: Corrected bug, thanks to Naoum Salem.
+	- rasdoc.cpp [ManageOpening]: Changed opening script according to extension.
+	- rasdoc.cpp [openfromdoc]: Changed file filter.
+	- rasdoc.cpp [savedmodified]: terminated script case.
+
+[03/02] PV
+	- rasdoc.cpp, rasview.cpp, rasgraphics.cpp: improved handling of zoom
+	  factor for printing and copying to clipboard.
+	- selecbar.h/,c: Added current selection to selection toolbar, suggestion
+	  from Naoum Salame.
+	- rasgraphics.cpp: Added a refresh in paste selection routine.
+	  
+
+[01/02] PV
+	- repres.c: improved connolly surface drawing;
+	- transfor.c: improved potential surface rendering.
+

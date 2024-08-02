@@ -1,0 +1,1019 @@
+<html>
+
+<head>
+<link rel="stylesheet" href="main.css" type="text/css">
+<title>Colour Schemes</title>
+<meta name="description" content="rastop is a molecular visualization software to view the 3-dimensional structure of macromolecules">
+<meta name="keywords" content="rastop, rasmol, macromolecule, structure, 3-dimensional, pdb, protein, dna, rna, model, crystal,molecule">
+</head>
+
+<body marginwidth="0" marginheight="0" leftmargin="0" bottommargin="0" topmargin="0" bgcolor="#FFFFFF" text="#000000">
+
+<!--webbot bot="Include" u-include="header.htm" tag="BODY" startspan -->
+
+<p><!----></p>
+<table border="0" cellpadding="2" width="100%">
+  <tr>
+    <td valign="top" bgcolor="#FFFFFF"><font color="#333333"><span class="ari8">RasTop
+      Manual</span></font></td>
+    <td valign="top" bgcolor="#FFFFFF" colspan="5" width="100%">
+      <p align="right"><span class="ari8"><a href="http://sourceforge.net/projects/rastop/">Home</a> | <a href="operations.htm">All
+      Commands</a> | <a href="notice.htm">Notice</a></span></td>
+  </tr>
+  <tr>
+    <td valign="top" bgcolor="#CCCCFF" align="center" background="images/doubleline.jpg"><a name="top"></a><img src="images/sigle.gif" alt="sigle.gif (4112 bytes)" width="71" height="65"></td>
+    <td colspan="5" bgcolor="#000000"><!----><img src="images/bannerrms2.gif" alt="bannerrms2.gif (19906 bytes)" align="left" border="0" width="543" height="65"></td>
+  </tr>
+  <tr>
+    <td valign="top" bgcolor="#336699">
+      <p align="center"><a href="index.htm" class="sitebar"><font color="#FFFFFF">Home</font></a></td>
+    <td valign="bottom" align="center" bgcolor="#336699"><a href="manual.htm" class="sitebar"><font color="#FFFFFF">About
+      help</font></a></td>
+    <td valign="bottom" align="center" bgcolor="#336699"><a href="copyright.htm" class="sitebar"><font color="#FFFFFF">Copyrights</font></a></td>
+    <td valign="bottom" align="center" bgcolor="#336699"><a href="notice.htm" class="sitebar"><font color="#FFFFFF">License</font></a></td>
+    <td valign="bottom" align="center" bgcolor="#336699"><a href="rastopop.htm" class="sitebar"><font color="#FFFFFF">Installing
+      &amp; using RasTop</font></a></td>
+    <td valign="bottom" align="center" bgcolor="#336699"><a href="library.htm" class="sitebar"><font color="#FFFFFF">Library</font></a></td>
+  </tr>
+  <tr>
+    <td valign="top" bgcolor="#FFFFFF"><img src="images/dotnul.gif" width="134" height="1" alt="dotnul.gif (807 bytes)" align="bottom"></td>
+    <td valign="top" bgcolor="#FFFFFF" colspan="5" width="100%"><img src="images/dotnul.gif" width="460" height="2" align="bottom" border="0"></td>
+  </tr>
+</table>
+
+<!--webbot bot="Include" endspan i-checksum="50747" -->
+
+<!---->
+
+
+<table border="0" cellpadding="0" cellspacing="0" width="700">
+  <tr>
+    <td valign="top" bgcolor="#EEEEEE" width="140"><img src="images/dotnul.gif" width="140" height="10" align="bottom" border="0"></td>
+    <td valign="top" width="2"><img src="images/dotnul.gif" width="1" height="10" align="bottom" border="0"></td>
+    <td valign="top" width="10"><img src="images/dotnul.gif" width="10" height="10" align="bottom" border="0"></td>
+    <td width="100%"><img src="images/dotnul.gif" width="549" height="10" alt="dotnul.gif (43 bytes)" align="bottom" border="0"></td>
+  </tr>
+  <tr>
+    <td valign="top" bgcolor="#EEEEEE" width="140"><!----> 
+      <div align="center">
+        <center>
+        <table border="0" cellpadding="5" cellspacing="0" width="100%">
+          <tr>
+            <td width="10" bgcolor="#333399"><!----></td>
+            <td width="100%" bgcolor="#CCCCFF"><span class="ari8"><strong>Commands:</strong></span></td>
+          </tr>
+          <tr>
+            <td width="100%" colspan="2"><img src="images/arrow1.gif" alt="arrow1.gif (162 bytes)" width="10" height="8"><span class="ari8"><a href="rastopop.htm">Using
+              RasTop</a><br>
+              <img src="images/arrow1.gif" alt="arrow1.gif (162 bytes)" width="10" height="8"><a href="menu.htm">Menu</a><br>
+              <img src="images/arrow1.gif" alt="arrow1.gif (162 bytes)" width="10" height="8"><a href="operations.htm">Summary</a><br>
+              <img src="images/arrow1.gif" alt="arrow1.gif (162 bytes)" width="10" height="8"><a href="commandref.htm">Reference</a><br>
+              <img src="images/arrow1.gif" alt="arrow1.gif (162 bytes)" width="10" height="8"><a href="internal.htm">Internal
+              Parameters</a><br>
+              <img src="images/arrow1.gif" alt="arrow1.gif (162 bytes)" width="10" height="8"><a href="atomexpression.htm">Atom
+              Expression</a><br>
+              <img src="images/arrow1.gif" alt="arrow1.gif (162 bytes)" width="10" height="8"><em>Colour
+              Schemes</em><br>
+              <img src="images/arrow1.gif" alt="arrow1.gif (162 bytes)" width="10" height="8"><a href="atomsets.htm">Atom
+              Sets</a><br>
+              <img src="images/arrow1.gif" alt="arrow1.gif (162 bytes)" width="10" height="8"><a href="rastopworld.htm">RasTop
+              World</a></span></td>
+          </tr>
+          <tr>
+            <td width="100%" bgcolor="#CCCCFF" colspan="2"><span class="ari8"><strong>Content:</strong></span></td>
+          </tr>
+          <tr>
+            <td width="100%" colspan="2"><span class="ari8"><a href="#namecolours">Colour
+              names</a><br>
+              <a href="#altcolours">Alt</a><br>
+              <a href="#aminocolours">Amino</a><br>
+              <a href="#chaincolours">Chain</a><br>
+              <a href="#chargecolours">Charge</a><br>
+              <a href="#cpkcolours">CPK</a><br>
+              <a href="#groupcolours">Group</a><br>
+              <a href="#nmrmodelcolours">NMR model</a><br>
+              <a href="#shapelycolours">Shapely</a><br>
+              <a href="#structurecolours">Structure</a><br>
+              <a href="#temperaturecolours">Temperature</a><br>
+              <a href="#userscolours">Users</a><br>
+              <a href="#hbondtypecolours">HBond type</a><br>
+              <a href="#potentialcolours">Potential</a></span></td>
+          </tr>
+        </table>
+        </center>
+      </div>
+      <p>&nbsp;</p>
+      <p>&nbsp;</td>
+    <td valign="top" width="2"><img src="images/dotnul.gif" width="1" height="10" align="bottom" border="0"></td>
+    <td valign="top"></td>
+    <td>
+      <p align="center"><span style="font-size: 14pt"><strong>Colour Schemes</strong></span></p>
+      <p>The RasMol '<a href="commandref.htm#colour"><tt><b>colour</b></tt></a>'
+      command allows different objects (such as atoms, bonds and ribbon
+      segments) to be given a specified colour. Typically this colour is either
+      a RasMol predefined colour name or an RGB triple.</p>
+      <p>Additionally RasMol also supports '<a href="#altcolours"><tt><b>alt</b></tt></a>',
+      '<a href="#aminocolours"><tt><b>amino</b></tt></a>', '<a href="#chaincolours"><tt><b>chain</b></tt></a>',
+      '<a href="#chargecolours"><tt><b>charge</b></tt></a>', '<a href="#cpkcolours"><tt><b>cpk</b></tt></a>',
+      '<a href="#groupcolours"><tt><b>group</b></tt></a>', '<a href="#nmrmodelcolours"><tt><b>model</b></tt></a>',
+      '<a href="#shapelycolours"><tt><b>shapely</b></tt></a>', '<a href="#structurecolours"><tt><b>structure</b></tt></a>',
+      '<a href="#temperaturecolours"><tt><b>temperature</b></tt></a>' or '<a href="#usercolours"><tt><b>user</b></tt></a>'
+      colour schemes for atoms, and '<a href="#hbondtypecolours"><tt><b>hbond
+      type</b></tt></a>' colour scheme for hydrogen bonds and '<a href="#potentialcolours"><tt><b>electrostatic
+      potential</b></tt></a>' colour scheme for dot surfaces.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="namecolours">Color
+      Names</a></h3>
+      <p>The 24 currently predefined colour names are listed below with their
+      corresponding RGB triplet and hexadecimal value.</p>
+      <font color="#000000">
+      <div align="center">
+        <center>
+        <table border="1" cellpadding="3">
+          <tr>
+            <th height="20"><font color="#000000"><small>Predefined colour</small></font></th>
+            <th height="20"><font color="#000000"><small>Sample</small></font></th>
+            <th height="20"><font color="#000000"><small>RGB Values</small></font></th>
+            <th height="20" align="center"><font color="#000000"><small>Hexadecimal</small></font></th>
+          </tr>
+          <tr valign="MIDDLE" align="LEFT">
+            <td height="18" bgcolor="#FFFFFF"><font color="#000000"><small><tt><b>Black</b></tt></small></font></td>
+            <td height="18" bgcolor="#000000"><font color="#000000"><small>&nbsp;</small></font></td>
+            <td height="18"><font color="#000000"><tt><small>[ 0, 0, <font color="#000000">0]</font></small></tt></font></td>
+            <td height="18" align="center"><font color="#000000"><small><tt>000000</tt></small></font></td>
+          </tr>
+          <tr valign="MIDDLE" align="LEFT">
+            <td height="18" bgcolor="#FFFFFF"><small><tt><b><font color="#000000">Blue</font></b></tt></small></td>
+            <td height="18" bgcolor="#0000FF"><small>&nbsp;</small></td>
+            <td height="18"><small><tt>[ 0, 0,255]</tt></small></td>
+            <td height="18" align="center"><font color="#000000"><small><tt>0000FF</tt></small></font></td>
+          </tr>
+          <tr valign="MIDDLE" align="LEFT">
+            <td height="18" bgcolor="#FFFFFF"><small><tt><b><font color="#000000">BlueTint</font></b></tt></small></td>
+            <td height="18" bgcolor="#AFD7FF"><small>&nbsp;</small></td>
+            <td height="18"><small><tt>[175,214,255]</tt></small></td>
+            <td height="18" align="center"><font color="#000000"><small><tt>AFD7FF</tt></small></font></td>
+          </tr>
+          <tr valign="MIDDLE" align="LEFT">
+            <td height="18" bgcolor="#FFFFFF"><small><tt><b><font color="#000000">Brown</font></b></tt></small></td>
+            <td height="18" bgcolor="#AF7559"><small>&nbsp;</small></td>
+            <td height="18"><small><tt>[175,117, 89]</tt></small></td>
+            <td height="18" align="center"><font color="#000000"><small><tt>AF7559</tt></small></font></td>
+          </tr>
+          <tr valign="MIDDLE" align="LEFT">
+            <td height="18" bgcolor="#FFFFFF"><small><tt><b><font color="#000000">Cyan</font></b></tt></small></td>
+            <td height="18" bgcolor="#00FFFF"><small>&nbsp;</small></td>
+            <td height="18"><small><tt>[0,255,255]</tt></small></td>
+            <td height="18" align="center"><font color="#000000"><small><tt>00FFFF</tt></small></font></td>
+          </tr>
+          <tr valign="MIDDLE" align="LEFT">
+            <td height="18" bgcolor="#FFFFFF"><small><tt><b><font color="#000000">Gold</font></b></tt></small></td>
+            <td height="18" bgcolor="#FC9C00"><small>&nbsp;</small></td>
+            <td height="18"><small><tt>[255,156, 0]</tt></small></td>
+            <td height="18" align="center"><font color="#000000"><small><tt>FC9C00</tt></small></font></td>
+          </tr>
+          <tr valign="MIDDLE" align="LEFT">
+            <td height="18" bgcolor="#FFFFFF"><small><tt><b><font color="#000000">Grey</font></b></tt></small></td>
+            <td height="18" bgcolor="#7D7D7D"><small>&nbsp;</small></td>
+            <td height="18"><small><tt>[125,125,125]</tt></small></td>
+            <td height="18" align="center"><font color="#000000"><small><tt>7D7D7D</tt></small></font></td>
+          </tr>
+          <tr valign="MIDDLE" align="LEFT">
+            <td height="18" bgcolor="#FFFFFF"><small><tt><b><font color="#000000">Green</font></b></tt></small></td>
+            <td height="18" bgcolor="#00FF00"><small>&nbsp;</small></td>
+            <td height="18"><small><tt>[ 0,255, 0]</tt></small></td>
+            <td height="18" align="center"><font color="#000000"><small><tt>00FF00</tt></small></font></td>
+          </tr>
+          <tr valign="MIDDLE" align="LEFT">
+            <td height="18" bgcolor="#FFFFFF"><small><tt><b><font color="#000000">GreenBlue</font></b></tt></small></td>
+            <td height="18" bgcolor="#2E8B57"><small>&nbsp;</small></td>
+            <td height="18"><small><tt>[ 46,139,87]</tt></small></td>
+            <td height="18" align="center"><font color="#000000"><small><tt>2E8B57</tt></small></font></td>
+          </tr>
+          <tr valign="MIDDLE" align="LEFT">
+            <td height="18" bgcolor="#FFFFFF"><small><tt><b><font color="#000000">GreenTint</font></b></tt></small></td>
+            <td height="18" bgcolor="#98FFB3"><small>&nbsp;</small></td>
+            <td height="18"><small><tt>[152,255,179]</tt></small></td>
+            <td height="18" align="center"><font color="#000000"><small><tt>98FFB3</tt></small></font></td>
+          </tr>
+          <tr valign="MIDDLE" align="LEFT">
+            <td height="18" bgcolor="#FFFFFF"><small><tt><b><font color="#000000">HotPink</font></b></tt></small></td>
+            <td height="18" bgcolor="#FF0065"><small>&nbsp;</small></td>
+            <td height="18"><small><tt>[255, 0,101]</tt></small></td>
+            <td height="18" align="center"><font color="#000000"><small><tt>FF0065</tt></small></font></td>
+          </tr>
+          <tr valign="MIDDLE" align="LEFT">
+            <td height="18" bgcolor="#FFFFFF"><small><tt><b><font color="#000000">Magenta</font></b></tt></small></td>
+            <td height="18" bgcolor="#FF00FF"><small>&nbsp;</small></td>
+            <td height="18"><small><tt>[0,255,0]</tt></small></td>
+            <td height="18" align="center"><font color="#000000"><small><tt>FF00FF</tt></small></font></td>
+          </tr>
+          <tr valign="MIDDLE" align="LEFT">
+            <td height="18" bgcolor="#FFFFFF"><small><tt><b><font color="#000000">Orange</font></b></tt></small></td>
+            <td height="18" bgcolor="#FFA500"><small>&nbsp;</small></td>
+            <td height="18"><small><tt>[255,165, 0]</tt></small></td>
+            <td height="18" align="center"><font color="#000000"><small><tt>FFA500</tt></small></font></td>
+          </tr>
+          <tr valign="MIDDLE" align="LEFT">
+            <td height="18" bgcolor="#FFFFFF"><small><tt><b><font color="#000000">Pink</font></b></tt></small></td>
+            <td height="18" bgcolor="#FF6575"><small>&nbsp;</small></td>
+            <td height="18"><small><tt>[255,101,117]</tt></small></td>
+            <td height="18" align="center"><small><tt>FF6575</tt></small></td>
+          </tr>
+          <tr valign="MIDDLE" align="LEFT">
+            <td height="18" bgcolor="#FFFFFF"><small><tt><b><font color="#000000">PinkTint</font></b></tt></small></td>
+            <td height="18" bgcolor="#FFABBB"><small>&nbsp;</small></td>
+            <td height="18"><small><tt>[255,171,187]</tt></small></td>
+            <td height="18" align="center"><small><tt>FFABBB</tt></small></td>
+          </tr>
+          <tr valign="MIDDLE" align="LEFT">
+            <td height="18" bgcolor="#FFFFFF"><small><tt><b><font color="#000000">Purple</font></b></tt></small></td>
+            <td height="18" bgcolor="#A020F0"><small>&nbsp;</small></td>
+            <td height="18"><small><tt>[160, 32,240]</tt></small></td>
+            <td height="18" align="center"><small><tt>A020F0</tt></small></td>
+          </tr>
+          <tr valign="MIDDLE" align="LEFT">
+            <td height="18" bgcolor="#FFFFFF"><small><tt><b><font color="#000000">Red</font></b></tt></small></td>
+            <td height="18" bgcolor="#FF0000"><small>&nbsp;</small></td>
+            <td height="18"><small><tt>[255, 0, 0]</tt></small></td>
+            <td height="18" align="center"><small><tt>FF0000</tt></small></td>
+          </tr>
+          <tr valign="MIDDLE" align="LEFT">
+            <td height="18" bgcolor="#FFFFFF"><small><tt><b><font color="#000000">RedOrange</font></b></tt></small></td>
+            <td height="18" bgcolor="#FF4500"><small>&nbsp;</small></td>
+            <td height="18"><small><tt>[255, 69, 0]</tt></small></td>
+            <td height="18" align="center"><small><tt>FF4500</tt></small></td>
+          </tr>
+          <tr valign="MIDDLE" align="LEFT">
+            <td height="18" bgcolor="#FFFFFF"><small><tt><b><font color="#000000">SeaGreen</font></b></tt></small></td>
+            <td height="18" bgcolor="#00FA6D"><small>&nbsp;</small></td>
+            <td height="18"><small><tt>[ 0,250,109]</tt></small></td>
+            <td height="18" align="center"><small><tt>00FA6D</tt></small></td>
+          </tr>
+          <tr valign="MIDDLE" align="LEFT">
+            <td height="18" bgcolor="#FFFFFF"><small><tt><b><font color="#000000">SkyBlue</font></b></tt></small></td>
+            <td height="18" bgcolor="#3A90FF"><small>&nbsp;</small></td>
+            <td height="18"><small><tt>[ 58,144,255]</tt></small></td>
+            <td height="18" align="center"><small><tt>3A90FF</tt></small></td>
+          </tr>
+          <tr valign="MIDDLE" align="LEFT">
+            <td height="18" bgcolor="#FFFFFF"><small><tt><b><font color="#000000">Violet</font></b></tt></small></td>
+            <td height="18" bgcolor="#EE82EE"><small>&nbsp;</small></td>
+            <td height="18"><small><tt>[238,130,238]</tt></small></td>
+            <td height="18" align="center"><small><tt>EE82EE</tt></small></td>
+          </tr>
+          <tr valign="MIDDLE" align="LEFT">
+            <td height="18" bgcolor="#FFFFFF"><small><tt><b><font color="#000000">White</font></b></tt></small></td>
+            <td height="18" bgcolor="#FFFFFF"><small>&nbsp;</small></td>
+            <td height="18"><small><tt>[255,255,255]</tt></small></td>
+            <td height="18" align="center"><small><tt>FFFFFF</tt></small></td>
+          </tr>
+          <tr valign="MIDDLE" align="LEFT">
+            <td height="18" bgcolor="#FFFFFF"><small><tt><b><font color="#000000">Yellow</font></b></tt></small></td>
+            <td height="18" bgcolor="#FFFF00"><small>&nbsp;</small></td>
+            <td height="18"><small><tt>[255,255, 0]</tt></small></td>
+            <td height="18" align="center"><small><tt>FFFF00</tt></small></td>
+          </tr>
+          <tr valign="MIDDLE" align="LEFT">
+            <td height="18" bgcolor="#FFFFFF"><small><tt><b><font color="#000000">YellowTint</font></b></tt></small></td>
+            <td height="18" bgcolor="#F6F675"><small>&nbsp;</small></td>
+            <td height="18"><small><tt>[246,246,117]</tt></small></td>
+            <td height="18" align="center"><small><tt>F6F675</tt></small></font></td>
+        </tr>
+        </table>
+      </center>
+      </div>
+      <p>Note that the rendering of the hexadecimal-equivalent colors shown here
+      will depend on many factors. Thus, they only approximate how RasMol will
+      render the RGB colors on your computer.</p>
+      <p>If you frequently wish to use a colour not predefined, you can write a
+      one-line script. For example, if you make the file '<tt><b>grey.col</b></tt>'
+      containing the line, '<a href="commandref.htm#colour"><tt><b>colour
+      [180,180,180] #grey</b></tt></a>', then the command '<a href="commandref.htm#script"><tt><b>script
+      grey.col</b></tt></a>' colours the currently selected atom set grey.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="altcolours">Alt
+      Colours</a></h3>
+      <p>The RasMol '<tt><b>alt</b></tt>' (Alternate Conformer) colour scheme
+      codes the base structure with one colour and applies a limited number of
+      colours to each alternate conformer. In a RasMol built for 8-bit color
+      systems, 4 colours are allowed for alternate conformers. Otherwise, 8
+      colours are available.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="aminocolours">Amino
+      Colours</a></h3>
+      <p>The RasMol '<tt><b>amino</b></tt>' colour scheme colours amino acids
+      according to traditional amino acid properties. The purpose of colouring
+      is to identify amino acids in an unusual or surprising environment. The
+      outer parts of a protein that are polar are visible (bright) colours and
+      non-polar residues darker. Most colours are hallowed by tradition. This
+      colour scheme is similar to the '<a href="#shapelycolours"><tt><b>shapely</b></tt></a>'
+      scheme.</p>
+      <div align="center">
+        <center>
+        <table border="1" cellpadding="3" width="489">
+          <tr>
+            <th height="20" width="105"><font color="#000000"><small><small>Amino
+              Acids</small></small></font></th>
+            <th height="20" width="92"><font color="#000000"><small><small>colour
+              Name</small></small></font></th>
+            <th height="20" width="42"><font color="#000000"><small><small>Sample</small></small></font></th>
+            <th height="20" width="123"><font color="#000000"><small><small>RGB
+              Values</small></small></font></th>
+            <th height="20" width="87" align="center"><font color="#000000"><small><small>Hexadecimal</small></small></font></th>
+          </tr>
+          <tr valign="MIDDLE" align="LEFT">
+            <td height="20" bgcolor="#FFFFFF" width="105"><font color="#000000"><small><small><tt><b>ASP,
+              GLU</b></tt></small></small></font></td>
+            <td height="20" bgcolor="#FFFFFF" width="92"><font color="#000000"><small><small><tt><b>Bright
+              Red</b></tt></small></small></font></td>
+            <td height="20" bgcolor="#E60A0A" width="42"><font color="#000000"><small><small><tt>&nbsp;</tt></small></small></font></td>
+            <td height="20" width="123"><font color="#000000"><small><small><tt>[230,230,
+              10]</tt></small></small></font></td>
+            <td height="20" width="87" align="center"><font color="#000000"><small><small><tt>E60A0A</tt></small></small></font></td>
+          </tr>
+          <tr valign="MIDDLE" align="LEFT">
+            <td height="20" bgcolor="#FFFFFF" width="105"><font color="#000000"><small><small><tt><b>CYS,
+              MET</b></tt></small></small></font></td>
+            <td height="20" bgcolor="#FFFFFF" width="92"><font color="#000000"><small><small><tt><b>Yellow</b></tt></small></small></font></td>
+            <td height="20" bgcolor="#E6E600" width="42"><font color="#000000"><small><small><tt>&nbsp;</tt></small></small></font></td>
+            <td height="20" width="123"><font color="#000000"><small><small><tt>[230,230,&nbsp;
+              0]</tt></small></small></font></td>
+            <td height="20" width="87" align="center"><font color="#000000"><small><small><tt>E6E600</tt></small></small></font></td>
+          </tr>
+          <tr valign="MIDDLE" align="LEFT">
+            <td height="20" bgcolor="#FFFFFF" width="105"><font color="#000000"><small><small><tt><b>LYS,
+              ARG</b></tt></small></small></font></td>
+            <td height="20" bgcolor="#FFFFFF" width="92"><font color="#000000"><small><small><tt><b>Blue</b></tt></small></small></font></td>
+            <td height="20" bgcolor="#145AFF" width="42"><font color="#000000"><small><small><tt>&nbsp;</tt></small></small></font></td>
+            <td height="20" width="123"><font color="#000000"><small><small><tt>[
+              20, 90,255]</tt></small></small></font></td>
+            <td height="20" width="87" align="center"><font color="#000000"><small><small><tt>145AFF</tt></small></small></font></td>
+          </tr>
+          <tr valign="MIDDLE" align="LEFT">
+            <td height="20" bgcolor="#FFFFFF" width="105"><font color="#000000"><small><small><tt><b>SER,
+              THR</b></tt></small></small></font></td>
+            <td height="20" bgcolor="#FFFFFF" width="92"><font color="#000000"><small><small><tt><b>Orange</b></tt></small></small></font></td>
+            <td height="20" bgcolor="#FA9600" width="42"><font color="#000000"><small><small><tt>&nbsp;</tt></small></small></font></td>
+            <td height="20" width="123"><font color="#000000"><small><small><tt>[250,150,&nbsp;
+              0]</tt></small></small></font></td>
+            <td height="20" width="87" align="center"><font color="#000000"><small><small><tt>FA9600</tt></small></small></font></td>
+          </tr>
+          <tr valign="MIDDLE" align="LEFT">
+            <td height="20" bgcolor="#FFFFFF" width="105"><font color="#000000"><small><small><tt><b>PHE,
+              TYR</b></tt></small></small></font></td>
+            <td height="20" bgcolor="#FFFFFF" width="92"><font color="#000000"><small><small><tt><b>Mid
+              Blue</b></tt></small></small></font></td>
+            <td height="20" bgcolor="#3232AA" width="42"><font color="#000000"><small><small><tt>&nbsp;</tt></small></small></font></td>
+            <td height="20" width="123"><font color="#000000"><small><small><tt>[
+              50, 50,170]</tt></small></small></font></td>
+            <td height="20" width="87" align="center"><font color="#000000"><small><small><tt>3232AA</tt></small></small></font></td>
+          </tr>
+          <tr valign="MIDDLE" align="LEFT">
+            <td height="20" bgcolor="#FFFFFF" width="105"><font color="#000000"><small><small><tt><b>ASN,
+              GLN</b></tt></small></small></font></td>
+            <td height="20" bgcolor="#FFFFFF" width="92"><font color="#000000"><small><small><tt><b>Cyan</b></tt></small></small></font></td>
+            <td height="20" bgcolor="#00DCDC" width="42"><font color="#000000"><small><small><tt>&nbsp;</tt></small></small></font></td>
+            <td height="20" width="123"><font color="#000000"><small><small><tt>[&nbsp;
+              0,220,220]</tt></small></small></font></td>
+            <td height="20" width="87" align="center"><font color="#000000"><small><small><tt>00DCDC</tt></small></small></font></td>
+          </tr>
+          <tr valign="MIDDLE" align="LEFT">
+            <td height="20" bgcolor="#FFFFFF" width="105"><font color="#000000"><small><small><tt><b>GLY</b></tt></small></small></font></td>
+            <td height="20" bgcolor="#FFFFFF" width="92"><font color="#000000"><small><small><tt><b>Light
+              Grey</b></tt></small></small></font></td>
+            <td height="20" bgcolor="#EBEBEB" width="42"><font color="#000000"><small><small><tt>&nbsp;</tt></small></small></font></td>
+            <td height="20" width="123"><font color="#000000"><small><small><tt>[235,235,235]</tt></small></small></font></td>
+            <td height="20" width="87" align="center"><font color="#000000"><small><small><tt>EBEBEB</tt></small></small></font></td>
+          </tr>
+          <tr valign="MIDDLE" align="LEFT">
+            <td height="20" bgcolor="#FFFFFF" width="105"><font color="#000000"><small><small><b><tt>LEU,
+              VAL, ILE</tt></b></small></small></font></td>
+            <td height="20" bgcolor="#FFFFFF" width="92"><font color="#000000"><small><small><tt><b>Green</b></tt></small></small></font></td>
+            <td height="20" bgcolor="#0F820F" width="42"><font color="#000000"><small><small><tt>&nbsp;</tt></small></small></font></td>
+            <td height="20" width="123"><font color="#000000"><small><small><tt>[
+              15,130, 15]</tt></small></small></font></td>
+            <td height="20" width="87" align="center"><font color="#000000"><small><small><tt>0F820F</tt></small></small></font></td>
+          </tr>
+          <tr valign="MIDDLE" align="LEFT">
+            <td height="20" bgcolor="#FFFFFF" width="105"><font color="#000000"><small><small><tt><b>ALA</b></tt></small></small></font></td>
+            <td height="20" bgcolor="#FFFFFF" width="92"><font color="#000000"><small><small><tt><b>Dark
+              Grey</b></tt></small></small></font></td>
+            <td height="20" bgcolor="#C8C8C8" width="42"><font color="#000000"><small><small><tt>&nbsp;</tt></small></small></font></td>
+            <td height="20" width="123"><font color="#000000"><small><small><tt>[200,200,200]</tt></small></small></font></td>
+            <td height="20" width="87" align="center"><font color="#000000"><small><small><tt>C8C8C8</tt></small></small></font></td>
+          </tr>
+          <tr valign="MIDDLE" align="LEFT">
+            <td height="20" bgcolor="#FFFFFF" width="105"><font color="#000000"><small><small><tt><b>TRP</b></tt></small></small></font></td>
+            <td height="20" bgcolor="#FFFFFF" width="92"><font color="#000000"><small><small><tt><b>Purple</b></tt></small></small></font></td>
+            <td height="20" bgcolor="#B45AB4" width="42"><font color="#000000"><small><small><tt>&nbsp;</tt></small></small></font></td>
+            <td height="20" width="123"><font color="#000000"><small><small><tt>[180,
+              90,180]</tt></small></small></font></td>
+            <td height="20" width="87" align="center"><font color="#000000"><small><small><tt>B45AB4</tt></small></small></font></td>
+          </tr>
+          <tr valign="MIDDLE" align="LEFT">
+            <td height="20" bgcolor="#FFFFFF" width="105"><font color="#000000"><small><small><tt><b>HIS</b></tt></small></small></font></td>
+            <td height="20" bgcolor="#FFFFFF" width="92"><font color="#000000"><small><small><tt><b>Pale
+              Blue</b></tt></small></small></font></td>
+            <td height="20" bgcolor="#8282D2" width="42"><font color="#000000"><small><small><tt>&nbsp;</tt></small></small></font></td>
+            <td height="20" width="123"><font color="#000000"><small><small><tt>[130,130,210]</tt></small></small></font></td>
+            <td height="20" width="87" align="center"><font color="#000000"><small><small><tt>8282D2</tt></small></small></font></td>
+          </tr>
+          <tr valign="MIDDLE" align="LEFT">
+            <td height="20" bgcolor="#FFFFFF" width="105"><font color="#000000"><small><small><tt><b>PRO</b></tt></small></small></font></td>
+            <td height="20" bgcolor="#FFFFFF" width="92"><font color="#000000"><small><small><tt><b>Flesh</b></tt></small></small></font></td>
+            <td height="20" bgcolor="#DC9682" width="42"><font color="#000000"><small><small><tt>&nbsp;</tt></small></small></font></td>
+            <td height="20" width="123"><font color="#000000"><small><small><tt>[220,150,130]</tt></small></small></font></td>
+            <td height="20" width="87" align="center"><font color="#000000"><small><small><tt>DC9682</tt></small></small></font></td>
+          </tr>
+          <tr valign="MIDDLE" align="LEFT">
+            <tt>
+            <td height="20" bgcolor="#FFFFFF" width="105"><font color="#000000"><small><small><tt><b>Others</b></tt></small></small></font></tt></td>
+            <td height="20" bgcolor="#FFFFFF" width="92"><font color="#000000"><small><small><tt><b>Tan</b></tt></small></small></font></td>
+            <td height="20" bgcolor="#BEA06E" width="42"><font color="#000000"><small><small><tt>&nbsp;</tt></small></small></font></td>
+            <td height="20" width="123"><font color="#000000"><small><small><tt>[190,160,110]</tt></small></small></font></td>
+            <td height="20" width="87" align="center"><font color="#000000"><small><small><tt>BEA06E</tt></small></small></font></td>
+          </tr>
+        </table>
+        </center>
+      </div>
+      <font color="#000000">
+      <p>&nbsp;</p>
+      <hr>
+      <h3><font color="#000000"><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a></font><tt>&nbsp;</tt><a name="chaincolours">Chain
+      Colours</a></h3>
+      <p>The RasMol '<tt><b>chain</b></tt>' colour scheme assigns each
+      macromolecular chain a unique colour. This colour scheme is particularly
+      useful for distinguishing the parts of multimeric structure or the
+      individual 'strands' of a DNA chain. '<tt><b>Chain</b></tt>' can be
+      selected from the RasMol '<tt><b>Colours</b></tt>' menu.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="chargecolours">Charge
+      Colours</a></h3>
+      <p>The RasMol '<tt><b>charge</b></tt>' colour scheme colour codes each
+      atom according to the charge value stored in the input file (or beta
+      factor field of PDB files). High values are coloured in blue (positive)
+      and lower values coloured in red (negative). Rather than use a fixed scale
+      this scheme determines the maximum and minimum values of the
+      charge/temperature field and interpolates from red to blue appropriately.
+      Hence, green cannot be assumed to be 'no net charge' charge.</p>
+      <p>The difference between the '<a href="#chargecolours"><tt><b>charge</b></tt></a>'
+      and '<tt><b>temperature</b></tt>' colour schemes is that increasing
+      temperature values proceed from blue to red, whereas increasing charge
+      values go from red to blue.</p>
+      <p>If the charge/temperature field stores reasonable values it is possible
+      to use the RasMol '<a href="#potentialcolours"><tt><b>colour dots
+      potential</b></tt></a>' command to colour code a dot surface (generated by
+      the '<a href="commandref.htm#dots"><tt><b>dots</b></tt></a>' command) by
+      electrostatic potential.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="cpkcolours">CPK
+      Colours</a></h3>
+      <p>The RasMol '<tt><b>cpk</b></tt>' colour scheme is based upon the
+      colours of the popular plastic spacefilling models which were developed by
+      Corey, Pauling and later improved by Kultun. This colour scheme colours
+      'atom' objects by the atom (element) type. This is the scheme
+      conventionally used by chemists. The assignment of the most commonly used
+      element types to colours is given below.&nbsp; Follow the link for the
+      complete <a href="elementtable.htm">table of elements</a>.</p>
+      <div align="center">
+        <center>
+        <table border="1" cellpadding="3" width="460">
+          <tr>
+            <th height="20" width="97"><font color="#000000"><small><small>Element</small></small></font></th>
+            <th height="20" width="89"><font color="#000000"><small><small>Colour
+              Name</small></small></font></th>
+            <th height="20" width="42"><font color="#000000"><small><small>Sample</small></small></font></th>
+            <th height="20" width="104"><font color="#000000"><small><small>RGB
+              Values</small></small></font></th>
+            <th height="20" align="center" width="88"><font color="#000000"><tt><small><small>Hexadecimal</small></small></tt></font></th>
+          </tr>
+          <tr valign="MIDDLE" align="LEFT">
+            <td height="20" width="97"><font color="#000000"><small><small><b>Carbon</b></small></small></font></td>
+            <td height="20" width="89"><font color="#000000"><small><small><b>light
+              grey</b></small></small></font></td>
+            <td height="20" bgcolor="#C8C8C8" width="42"><font color="#000000"><small><small>&nbsp;</small></small></font></td>
+            <td height="20" width="104"><font color="#000000"><small><small><tt>[200,200,200]</tt></small></small></font></td>
+            <td height="20" align="center" width="88"><font color="#000000"><tt><small><small>C8C8C8</small></small></tt></font></td>
+          </tr>
+          <tr valign="MIDDLE" align="LEFT">
+            <td height="20" width="97"><font color="#000000"><small><small><b>Oxygen</b></small></small></font></td>
+            <td height="20" width="89"><font color="#000000"><small><small><b>red</b></small></small></font></td>
+            <td height="20" bgcolor="#F00000" width="42"><font color="#000000"><small><small>&nbsp;</small></small></font></td>
+            <td height="20" width="104"><font color="#000000"><small><small><tt>[240,0,0]</tt></small></small></font></td>
+            <td height="20" align="center" width="88"><font color="#000000"><tt><small><small>F00000</small></small></tt></font></td>
+          </tr>
+          <tr valign="MIDDLE" align="LEFT">
+            <td height="20" width="97"><font color="#000000"><small><small><b>Hydrogen</b></small></small></font></td>
+            <td height="20" width="89"><font color="#000000"><small><small><b><tt>white</tt></b></small></small></font></td>
+            <td height="20" bgcolor="#FFFFFF" width="42"><font color="#000000"><small><small>&nbsp;</small></small></font></td>
+            <td height="20" width="104"><font color="#000000"><small><small><tt>[255,255,255]</tt></small></small></font></td>
+            <td height="20" align="center" width="88"><font color="#000000"><tt><small><small>FFFFFF</small></small></tt></font></td>
+          </tr>
+          <tr valign="MIDDLE" align="LEFT">
+            <td height="20" width="97"><font color="#000000"><small><small><b>Nitrogen</b></small></small></font></td>
+            <td height="20" width="89"><font color="#000000"><small><small><b>sky
+              blue</b></small></small></font></td>
+            <td height="20" bgcolor="#8F8FFF" width="42"><font color="#000000"><small><small>&nbsp;</small></small></font></td>
+            <td height="20" width="104"><font color="#000000"><small><small><tt>[143,143,255]</tt></small></small></font></td>
+            <td height="20" align="center" width="88"><font color="#000000"><tt><small><small>8F8FFF</small></small></tt></font></td>
+          </tr>
+          <tr valign="MIDDLE" align="LEFT">
+            <td height="20" width="97"><font color="#000000"><small><small><b>Sulfur</b></small></small></font></td>
+            <td height="20" width="89"><font color="#000000"><small><small><b>yellow</b></small></small></font></td>
+            <td height="20" bgcolor="#FFFF00" width="42"><font color="#000000"><small><small>&nbsp;</small></small></font></td>
+            <td height="20" width="104"><font color="#000000"><small><small><tt>[255,200,50]</tt></small></small></font></td>
+            <td height="20" align="center" width="88"><font color="#000000"><tt><small><small>FFC832</small></small></tt></font></td>
+          </tr>
+          <tr valign="MIDDLE" align="LEFT">
+            <td height="20" width="97"><font color="#000000"><small><small><b>Phosphorus</b></small></small></font></td>
+            <td height="20" width="89"><font color="#000000"><small><small><b><tt>orange</tt></b></small></small></font></td>
+            <td height="20" bgcolor="#FFA500" width="42"><font color="#000000"><small><small>&nbsp;</small></small></font></td>
+            <td height="20" width="104"><font color="#000000"><small><small><tt>[255,165,0]</tt></small></small></font></td>
+            <td height="20" align="center" width="88"><font color="#000000"><tt><small><small>FFA500</small></small></tt></font></td>
+          </tr>
+          <tr valign="MIDDLE" align="LEFT">
+            <td height="20" width="97"><font color="#000000"><small><small><b>Chlorine</b></small></small></font></td>
+            <td height="20" width="89"><font color="#000000"><small><small><b><tt>green</tt></b></small></small></font></td>
+            <td height="20" bgcolor="#00FF00" width="42"><font color="#000000"><small><small>&nbsp;</small></small></font></td>
+            <td height="20" width="104"><font color="#000000"><small><small><tt>[0,255,0]</tt></small></small></font></td>
+            <td height="20" align="center" width="88"><font color="#000000"><tt><small><small>00FF00</small></small></tt></font></td>
+          </tr>
+          <tr valign="MIDDLE" align="LEFT">
+            <td height="20" width="97"><font color="#000000"><small><small><b>Bromine,
+              Zinc</b></small></small></font></td>
+            <td height="20" width="89"><font color="#000000"><small><small><b>brown</b></small></small></font></td>
+            <td height="20" bgcolor="#A52A2A" width="42"><font color="#000000"><small><small>&nbsp;</small></small></font></td>
+            <td height="20" width="104"><font color="#000000"><small><small><tt>[165,42,42]</tt></small></small></font></td>
+            <td height="20" align="center" width="88"><font color="#000000"><tt><small><small>A52A2A</small></small></tt></font></td>
+          </tr>
+          <tr valign="MIDDLE" align="LEFT">
+            <td height="20" width="97"><font color="#000000"><small><small><b>Sodium</b></small></small></font></td>
+            <td height="20" width="89"><font color="#000000"><small><small><b><tt>blue</tt></b></small></small></font></td>
+            <td height="20" bgcolor="#0000FF" width="42"><font color="#000000"><small><small>&nbsp;</small></small></font></td>
+            <td height="20" width="104"><font color="#000000"><small><small><tt>[0,0,255]</tt></small></small></font></td>
+            <td height="20" align="center" width="88"><font color="#000000"><tt><small><small>0000FF</small></small></tt></font></td>
+          </tr>
+          <tr valign="MIDDLE" align="LEFT">
+            <td height="20" width="97"><font color="#000000"><small><small><b>Iron</b></small></small></font></td>
+            <td height="20" width="89"><font color="#000000"><small><small><b><tt>orange</tt></b></small></small></font></td>
+            <td height="20" bgcolor="#FFA500" width="42"><font color="#000000"><small><small>&nbsp;</small></small></font></td>
+            <td height="20" width="104"><font color="#000000"><small><small><tt>[255,165,0]</tt></small></small></font></td>
+            <td height="20" align="center" width="88"><font color="#000000"><tt><small><small>FFA500</small></small></tt></font></td>
+          </tr>
+          <font color="#000000"><!-- 5/26/97 Changed Iron from purple to orange. WM -->
+          </font>
+          <tr valign="MIDDLE" align="LEFT">
+            <td height="20" width="97"><font color="#000000"><small><small><b>Magnesium</b></small></small></font></td>
+            <td height="20" width="89"><font color="#000000"><small><small><b>forest
+              green</b></small></small></font></td>
+            <td height="20" bgcolor="#228B22" width="42"><font color="#000000"><small><small>&nbsp;</small></small></font></td>
+            <td height="20" width="104"><font color="#000000"><small><small><tt>[34,139,34]</tt></small></small></font></td>
+            <td height="20" align="center" width="88"><font color="#000000"><tt><small><small>228B22</small></small></tt></font></td>
+          </tr>
+          <tr valign="MIDDLE" align="LEFT">
+            <td height="20" width="97"><font color="#000000"><small><small><b>Calcium</b></small></small></font></td>
+            <td height="20" width="89"><font color="#000000"><small><small><b>dark
+              grey</b></small></small></font></td>
+            <td height="20" bgcolor="#808090" width="42"><font color="#000000"><small><small>&nbsp;</small></small></font></td>
+            <td height="20" width="104"><font color="#000000"><small><small><tt>[128,128,144]</tt></small></small></font></td>
+            <td height="20" align="center" width="88"><font color="#000000"><tt><small><small>808090</small></small></tt></font></td>
+          </tr>
+          <tr valign="MIDDLE" align="LEFT">
+            <td height="20" width="97"><font color="#000000"><small><small><b>Unknown</b></small></small></font></td>
+            <td height="20" width="89"><font color="#000000"><small><small><b>deep
+              pink</b></small></small></font></td>
+            <td height="20" bgcolor="#FF1493" width="42"><font color="#000000"><small><small>&nbsp;</small></small></font></td>
+            <td height="20" width="104"><font color="#000000"><small><small><tt>[255,20,147]</tt></small></small></font></td>
+            <td height="20" align="center" width="88"><font color="#000000"><tt><small><small>FF1493</small></small></tt></font></td>
+          </tr>
+        </table>
+        </center>
+      </div>
+      <p>&nbsp;</p>
+      <p>Note that except for <tt><b>green</b></tt>, <tt><b>white</b></tt>, <tt><b>blue</b></tt>,
+      and <tt><b>orange</b></tt>, these colour names are not the ones specified
+      as &quot;<b>Predefined colours</b>&quot; in RasMol; thus, they can only be
+      specified on the command line as RGB triplets.</p>
+      <p>In the CPK colouring scheme, RasMol will attempt to assign a colour to
+      each element from the periodic table from a list of 16 colours (the colour
+      codes listed are to help in understanding the mapping and are not used by
+      RasMol)</p>
+      <p><!-- David Hackney (CMU) suggests: -->     For X-ray crystallographic
+      models of proteins and nucleic acids (<i>i.e.</i> without hydrogens) the
+      display can be 'brightened' by converting the O, C, and N atoms from the
+      RasMol default <tt><b>cpk</b></tt> colors to &quot;true red, white and
+      blue&quot; using RasMol's predefined color scheme. Use the following
+      sequence of commands to try it:</p>
+      <blockquote>
+        <pre><b>
+  </b><small>   select all
+     select oxygen
+     color red
+     select carbon
+     color white
+     select nitrogen
+     color blue
+     select all
+</small>
+</pre>
+      </blockquote>
+      <p>Extension of this idea to other atoms and color schemes is
+      straightforward.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="groupcolours">Group
+      Colours</a></h3>
+      <p>The RasMol '<tt><b>group</b></tt>' colour scheme colour codes residues
+      by their position in a macromolecular chain. Each chain is drawn as a
+      smooth spectrum from blue through green, yellow and orange to red. Hence
+      the N terminus of proteins and 5' terminus of nucleic acids are coloured
+      red and the C terminus of proteins and 3' terminus of nucleic acids are
+      drawn in blue. If a chain has a large number of heterogeneous molecules
+      associated with it, the macromolecule may not be drawn in the full 'range'
+      of the spectrum. '<tt><b>Group</b></tt>' can be selected from the RasMol '<tt><b>Colours</b></tt>'
+      menu.</p>
+      <p>If a chain has a large number of heterogeneous molecules associated
+      with it, the macromolecule may not be drawn in the full range of the
+      spectrum. When RasMol performs group coloring it decides the range of
+      colors it uses from the residue numbering given in the PDB file. Hence the
+      lowest residue number is displayed in blue and the highest residue number
+      is displayed as red. Unfortunately, if a PDB file contains a large number
+      of heteroatoms, such as water molecules, that occupy the high residue
+      numbers, the protein is displayed in the blue-green end of the spectrum
+      and the waters in the yellow-red end of the spectrum. This is aggravated
+      by there typically being many more water molecules than amino acid
+      residues. The solution to this problem is to use the command '<a href="internal.htm#sethetero"><tt><b>set
+      hetero off</b></tt></a>' before applying the group color scheme. This can
+      also be achieved by toggling '<tt><b>Hetero Atoms</b></tt>' on the '<tt><b>Options</b></tt>'
+      menu before selecting '<tt><b>Group</b></tt>' on the '<tt><b>Colour</b></tt>'
+      menu. This command instructs RasMol to only use non-hetero residues in the
+      group color scaling.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="nmrmodelcolours">NMR
+      Model Colours</a></h3>
+      <p>The RasMol '<tt><b>model</b></tt>' colour scheme codes each NMR model
+      with a distinct colour. The NMR model number is taken as a numeric value.
+      High values are coloured in blue and lower values coloured in red. Rather
+      than use a fixed scale this scheme determines the maximum value of the NMR
+      model number and interpolates from red to blue appropriately.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="shapelycolours">Shapely
+      Colours</a></h3>
+      <p>The RasMol '<tt><b>shapely</b></tt>' colour scheme colour codes
+      residues by amino acid property. This scheme is based upon Bob
+      Fletterick's &quot;Shapely Models&quot;. Each amino acid and nucleic acid
+      residue is given a unique colour. The '<tt><b>shapely</b></tt>' colour
+      scheme is used by David Bacon's Raster3D program. This colour scheme is
+      similar to the '<a href="#aminocolours"><tt><b>amino</b></tt></a>' colour
+      scheme.</p>
+      <div align="center">
+        <center>
+        <table border="1" cellpadding="3" width="519">
+          <tr>
+            <th height="20" width="80" align="center"><font color="#000000"><small><small>Residues</small></small></font></th>
+            <th height="20" width="134"><font color="#000000"><small><small>Color
+              Name</small></small></font></th>
+            <th height="20" width="42"><font color="#000000"><small><small>Sample</small></small></font></th>
+            <th height="20" width="104"><font color="#000000"><small><small>RGB
+              Values</small></small></font></th>
+            <th height="20" align="center" width="77"><font color="#000000"><small><small>Hexadecimal</small></small></font></th>
+          </tr>
+          <tr valign="MIDDLE" align="LEFT">
+            <td height="20" bgcolor="#FFFFFF" width="80" align="center"><font color="#000000"><small><small><tt><b>ALA</b></tt></small></small></font></td>
+            <td height="20" bgcolor="#FFFFFF" width="134"><font color="#000000"><small><small><tt><b>Medium
+              Green</b></tt></small></small></font></td>
+            <td height="20" bgcolor="8CFF8C" width="42"><font color="#000000"><small><small><tt>&nbsp;</tt></small></small></font></td>
+            <td height="20" width="104"><font color="#000000"><small><small><tt>[140,255,140]</tt></small></small></font></td>
+            <td height="20" align="center" width="77"><font color="#000000"><small><small><tt>8CFF8C</tt></small></small></font></td>
+          </tr>
+          <tr valign="MIDDLE" align="LEFT">
+            <td height="20" bgcolor="#FFFFFF" width="80" align="center"><font color="#000000"><small><small><tt><b>GLY</b></tt></small></small></font></td>
+            <td height="20" bgcolor="#FFFFFF" width="134"><font color="#000000"><small><small><tt><b>White</b></tt></small></small></font></td>
+            <td height="20" bgcolor="FFFFFF" width="42"><font color="#000000"><small><small><tt>&nbsp;</tt></small></small></font></td>
+            <td height="20" width="104"><font color="#000000"><small><small><tt>[255,255,255]</tt></small></small></font></td>
+            <td height="20" align="center" width="77"><font color="#000000"><small><small><tt>FFFFFF</tt></small></small></font></td>
+          </tr>
+          <tr valign="MIDDLE" align="LEFT">
+            <td height="20" bgcolor="#FFFFFF" width="80" align="center"><font color="#000000"><small><small><tt><b>LEU</b></tt></small></small></font></td>
+            <td height="20" bgcolor="#FFFFFF" width="134"><font color="#000000"><small><small><tt><b>Olive
+              Green</b></tt></small></small></font></td>
+            <td height="20" bgcolor="455E45" width="42"><font color="#000000"><small><small><tt>&nbsp;</tt></small></small></font></td>
+            <td height="20" width="104"><font color="#000000"><small><small><tt>[
+              69, 94, 69]</tt></small></small></font></td>
+            <td height="20" align="center" width="77"><font color="#000000"><small><small><tt>455E45</tt></small></small></font></td>
+          </tr>
+          <tr valign="MIDDLE" align="LEFT">
+            <td height="20" bgcolor="#FFFFFF" width="80" align="center"><font color="#000000"><small><small><tt><b>SER</b></tt></small></small></font></td>
+            <td height="20" bgcolor="#FFFFFF" width="134"><font color="#000000"><small><small><tt><b>Medium
+              Orange</b></tt></small></small></font></td>
+            <td height="20" bgcolor="FF7042" width="42"><font color="#000000"><small><small><tt>&nbsp;</tt></small></small></font></td>
+            <td height="20" width="104"><font color="#000000"><small><small><tt>[255,112,
+              66]</tt></small></small></font></td>
+            <td height="20" align="center" width="77"><font color="#000000"><small><small><tt>FF7042</tt></small></small></font></td>
+          </tr>
+          <tr valign="MIDDLE" align="LEFT">
+            <td height="20" bgcolor="#FFFFFF" width="80" align="center"><font color="#000000"><small><small><tt><b>VAL</b></tt></small></small></font></td>
+            <td height="20" bgcolor="#FFFFFF" width="134"><font color="#000000"><small><small><tt><b>Light
+              Purple</b></tt></small></small></font></td>
+            <td height="20" bgcolor="FF8CFF" width="42"><font color="#000000"><small><small><tt>&nbsp;</tt></small></small></font></td>
+            <td height="20" width="104"><font color="#000000"><small><small><tt>[255,140,255]</tt></small></small></font></td>
+            <td height="20" align="center" width="77"><font color="#000000"><small><small><tt>FF8CFF</tt></small></small></font></td>
+          </tr>
+          <tr valign="MIDDLE" align="LEFT">
+            <td height="20" bgcolor="#FFFFFF" width="80" align="center"><font color="#000000"><small><small><tt><b>THR</b></tt></small></small></font></td>
+            <td height="20" bgcolor="#FFFFFF" width="134"><font color="#000000"><small><small><tt><b>Dark
+              Orange</b></tt></small></small></font></td>
+            <td height="20" bgcolor="B84C00" width="42"><font color="#000000"><small><small><tt>&nbsp;</tt></small></small></font></td>
+            <td height="20" width="104"><font color="#000000"><small><small><tt>[184,
+              76, 0]</tt></small></small></font></td>
+            <td height="20" align="center" width="77"><font color="#000000"><small><small><tt>B84C00</tt></small></small></font></td>
+          </tr>
+          <tr valign="MIDDLE" align="LEFT">
+            <td height="20" bgcolor="#FFFFFF" width="80" align="center"><font color="#000000"><small><small><tt><b>LYS</b></tt></small></small></font></td>
+            <td height="20" bgcolor="#FFFFFF" width="134"><font color="#000000"><small><small><tt><b>Royal
+              Blue</b></tt></small></small></font></td>
+            <td height="20" bgcolor="4747B8" width="42"><font color="#000000"><small><small><tt>&nbsp;</tt></small></small></font></td>
+            <td height="20" width="104"><font color="#000000"><small><small><tt>[
+              71, 71,184]</tt></small></small></font></td>
+            <td height="20" align="center" width="77"><font color="#000000"><small><small><tt>4747B8</tt></small></small></font></td>
+          </tr>
+          <tr valign="MIDDLE" align="LEFT">
+            <td height="20" bgcolor="#FFFFFF" width="80" align="center"><font color="#000000"><small><small><tt><b>ASP</b></tt></small></small></font></td>
+            <td height="20" bgcolor="#FFFFFF" width="134"><font color="#000000"><small><small><tt><b>Dark
+              Rose</b></tt></small></small></font></td>
+            <td height="20" bgcolor="A00042" width="42"><font color="#000000"><small><small><tt>&nbsp;</tt></small></small></font></td>
+            <td height="20" width="104"><font color="#000000"><small><small><tt>[160,0,66]</tt></small></small></font></td>
+            <td height="20" align="center" width="77"><font color="#000000"><small><small><tt>A00042</tt></small></small></font></td>
+          </tr>
+          <tr valign="MIDDLE" align="LEFT">
+            <td height="20" bgcolor="#FFFFFF" width="80" align="center"><font color="#000000"><small><small><tt><b>ILE</b></tt></small></small></font></td>
+            <td height="20" bgcolor="#FFFFFF" width="134"><font color="#000000"><small><small><tt><b>Dark
+              Green</b></tt></small></small></font></td>
+            <td height="20" bgcolor="004C00" width="42"><font color="#000000"><small><small><tt>&nbsp;</tt></small></small></font></td>
+            <td height="20" width="104"><font color="#000000"><small><small><tt>[
+              0, 76, 0]</tt></small></small></font></td>
+            <td height="20" align="center" width="77"><font color="#000000"><small><small><tt>004C00</tt></small></small></font></td>
+          </tr>
+          <tr valign="MIDDLE" align="LEFT">
+            <td height="20" bgcolor="#FFFFFF" width="80" align="center"><font color="#000000"><small><small><tt><b>ASN</b></tt></small></small></font></td>
+            <td height="20" bgcolor="#FFFFFF" width="134"><font color="#000000"><small><small><tt><b>Light
+              Salmon</b></tt></small></small></font></td>
+            <td height="20" bgcolor="FF7C70" width="42"><font color="#000000"><small><small><tt>&nbsp;</tt></small></small></font></td>
+            <td height="20" width="104"><font color="#000000"><small><small><tt>[255,124,112]</tt></small></small></font></td>
+            <td height="20" align="center" width="77"><font color="#000000"><small><small><tt>FF7C70</tt></small></small></font></td>
+          </tr>
+          <tr valign="MIDDLE" align="LEFT">
+            <td height="20" bgcolor="#FFFFFF" width="80" align="center"><font color="#000000"><small><small><tt><b>GLU</b></tt></small></small></font></td>
+            <td height="20" bgcolor="#FFFFFF" width="134"><font color="#000000"><small><small><tt><b>Dark
+              Brown</b></tt></small></small></font></td>
+            <td height="20" bgcolor="660000" width="42"><font color="#000000"><small><small><tt>&nbsp;</tt></small></small></font></td>
+            <td height="20" width="104"><font color="#000000"><small><small><tt>[102,
+              0, 0]</tt></small></small></font></td>
+            <td height="20" align="center" width="77"><font color="#000000"><small><small><tt>660000</tt></small></small></font></td>
+          </tr>
+          <tr valign="MIDDLE" align="LEFT">
+            <td height="20" bgcolor="#FFFFFF" width="80" align="center"><font color="#000000"><small><small><tt><b>PRO</b></tt></small></small></font></td>
+            <td height="20" bgcolor="#FFFFFF" width="134"><font color="#000000"><small><small><tt><b>Dark
+              Grey</b></tt></small></small></font></td>
+            <td height="20" bgcolor="525252" width="42"><font color="#000000"><small><small><tt>&nbsp;</tt></small></small></font></td>
+            <td height="20" width="104"><font color="#000000"><small><small><tt>[
+              82, 82, 82]</tt></small></small></font></td>
+            <td height="20" align="center" width="77"><font color="#000000"><small><small><tt>525252</tt></small></small></font></td>
+          </tr>
+          <tr valign="MIDDLE" align="LEFT">
+            <td height="20" bgcolor="#FFFFFF" width="80" align="center"><font color="#000000"><small><small><tt><b>ARG</b></tt></small></small></font></td>
+            <td height="20" bgcolor="#FFFFFF" width="134"><font color="#000000"><small><small><tt><b>Dark
+              Blue</b></tt></small></small></font></td>
+            <td height="20" bgcolor="00007C" width="42"><font color="#000000"><small><small><tt>&nbsp;</tt></small></small></font></td>
+            <td height="20" width="104"><font color="#000000"><small><small><tt>[
+              0, 0,124]</tt></small></small></font></td>
+            <td height="20" align="center" width="77"><font color="#000000"><small><small><tt>00007C</tt></small></small></font></td>
+          </tr>
+          <tr valign="MIDDLE" align="LEFT">
+            <td height="20" bgcolor="#FFFFFF" width="80" align="center"><font color="#000000"><small><small><tt><b>PHE</b></tt></small></small></font></td>
+            <td height="20" bgcolor="#FFFFFF" width="134"><font color="#000000"><small><small><tt><b>Olive
+              Grey</b></tt></small></small></font></td>
+            <td height="20" bgcolor="534C42" width="42"><font color="#000000"><small><small><tt>&nbsp;</tt></small></small></font></td>
+            <td height="20" width="104"><font color="#000000"><small><small><tt>[
+              83, 76, 66]</tt></small></small></font></td>
+            <td height="20" align="center" width="77"><font color="#000000"><small><small><tt>534C42</tt></small></small></font></td>
+          </tr>
+          <tr valign="MIDDLE" align="LEFT">
+            <td height="20" bgcolor="#FFFFFF" width="80" align="center"><font color="#000000"><small><small><tt><b>GLN</b></tt></small></small></font></td>
+            <td height="20" bgcolor="#FFFFFF" width="134"><font color="#000000"><small><small><tt><b>Dark
+              Salmon</b></tt></small></small></font></td>
+            <td height="20" bgcolor="FF4C4C" width="42"><font color="#000000"><small><small><tt>&nbsp;</tt></small></small></font></td>
+            <td height="20" width="104"><font color="#000000"><small><small><tt>[255,
+              76, 76]</tt></small></small></font></td>
+            <td height="20" align="center" width="77"><font color="#000000"><small><small><tt>FF4C4C</tt></small></small></font></td>
+          </tr>
+          <tr valign="MIDDLE" align="LEFT">
+            <td height="20" bgcolor="#FFFFFF" width="80" align="center"><font color="#000000"><small><small><tt><b>TYR</b></tt></small></small></font></td>
+            <td height="20" bgcolor="#FFFFFF" width="134"><font color="#000000"><small><small><tt><b>Medium
+              Brown</b></tt></small></small></font></td>
+            <td height="20" bgcolor="8C704C" width="42"><font color="#000000"><small><small><tt>&nbsp;</tt></small></small></font></td>
+            <td height="20" width="104"><font color="#000000"><small><small><tt>[140,112,76]</tt></small></small></font></td>
+            <td height="20" align="center" width="77"><font color="#000000"><small><small><tt>8C704C</tt></small></small></font></td>
+          </tr>
+          <tr valign="MIDDLE" align="LEFT">
+            <td height="20" bgcolor="#FFFFFF" width="80" align="center"><font color="#000000"><small><small><tt><b>HIS</b></tt></small></small></font></td>
+            <td height="20" bgcolor="#FFFFFF" width="134"><font color="#000000"><small><small><tt><b>Medium
+              Blue</b></tt></small></small></font></td>
+            <td height="20" bgcolor="7070FF" width="42"><font color="#000000"><small><small><tt>&nbsp;</tt></small></small></font></td>
+            <td height="20" width="104"><font color="#000000"><small><small><tt>[112,112,255]</tt></small></small></font></td>
+            <td height="20" align="center" width="77"><font color="#000000"><small><small><tt>7070FF</tt></small></small></font></td>
+          </tr>
+          <tr valign="MIDDLE" align="LEFT">
+            <td height="20" bgcolor="#FFFFFF" width="80" align="center"><font color="#000000"><small><small><tt><b>CYS</b></tt></small></small></font></td>
+            <td height="20" bgcolor="#FFFFFF" width="134"><font color="#000000"><small><small><tt><b>Medium
+              Yellow</b></tt></small></small></font></td>
+            <td height="20" bgcolor="FFFF70" width="42"><font color="#000000"><small><small><tt>&nbsp;</tt></small></small></font></td>
+            <td height="20" width="104"><font color="#000000"><small><small><tt>[255,255,112]</tt></small></small></font></td>
+            <td height="20" align="center" width="77"><font color="#000000"><small><small><tt>FFFF70</tt></small></small></font></td>
+          </tr>
+          <tr valign="MIDDLE" align="LEFT">
+            <td height="20" bgcolor="#FFFFFF" width="80" align="center"><font color="#000000"><small><small><tt><b>MET</b></tt></small></small></font></td>
+            <td height="20" bgcolor="#FFFFFF" width="134"><font color="#000000"><small><small><tt><b>Light
+              Brown</b></tt></small></small></font></td>
+            <td height="20" bgcolor="B8A042" width="42"><font color="#000000"><small><small><tt>&nbsp;</tt></small></small></font></td>
+            <td height="20" width="104"><font color="#000000"><small><small><tt>[184,160,
+              66]</tt></small></small></font></td>
+            <td height="20" align="center" width="77"><font color="#000000"><small><small><tt>B8A042</tt></small></small></font></td>
+          </tr>
+          <tr valign="MIDDLE" align="LEFT">
+            <td height="20" bgcolor="#FFFFFF" width="80" align="center"><font color="#000000"><small><small><tt><b>TRP</b></tt></small></small></font></td>
+            <td height="20" bgcolor="#FFFFFF" width="134"><font color="#000000"><small><small><tt><b>Olive
+              Brown</b></tt></small></small></font></td>
+            <td height="20" bgcolor="4F4600" width="42"><font color="#000000"><small><small><tt>&nbsp;</tt></small></small></font></td>
+            <td height="20" width="104"><font color="#000000"><small><small><tt>[
+              79, 70, 0]</tt></small></small></font></td>
+            <td height="20" align="center" width="77"><font color="#000000"><small><small><tt>4F4600</tt></small></small></font></td>
+          </tr>
+          <tr valign="MIDDLE" align="LEFT">
+            <td height="20" bgcolor="#FFFFFF" width="80" align="center"><font color="#000000"><small><small><small><tt><b>ASX,GLX,PCA,HYP</b></tt></small></small></small></font></td>
+            <td height="20" bgcolor="#FFFFFF" width="134"><font color="#000000"><small><small><tt><b>Medium
+              Purple</b></tt></small></small></font></td>
+            <td height="20" bgcolor="FF00FF" width="42"><font color="#000000"><small><small><tt>&nbsp;</tt></small></small></font></td>
+            <td height="20" width="104"><font color="#000000"><small><small><tt>[255,
+              0,255]</tt></small></small></font></td>
+            <td height="20" align="center" width="77"><font color="#000000"><small><small><tt>FF00FF</tt></small></small></font></td>
+          </tr>
+          <tr valign="MIDDLE" align="LEFT">
+            <td height="20" bgcolor="#FFFFFF" width="80" align="center"><font color="#000000"><small><small><tt><b>A</b></tt></small></small></font></td>
+            <td height="20" bgcolor="#FFFFFF" width="134"><font color="#000000"><small><small><tt><b>Light
+              Blue</b></tt></small></small></font></td>
+            <td height="20" bgcolor="A0A0FF" width="42"><font color="#000000"><small><small><tt>&nbsp;</tt></small></small></font></td>
+            <td height="20" width="104"><font color="#000000"><small><small><tt>[160,160,255]</tt></small></small></font></td>
+            <td height="20" align="center" width="77"><font color="#000000"><small><small><tt>A0A0FF</tt></small></small></font></td>
+          </tr>
+          <tr valign="MIDDLE" align="LEFT">
+            <td height="20" bgcolor="#FFFFFF" width="80" align="center"><font color="#000000"><small><small><tt><b>C</b></tt></small></small></font></td>
+            <td height="20" bgcolor="#FFFFFF" width="134"><font color="#000000"><small><small><tt><b>Light
+              Orange</b></tt></small></small></font></td>
+            <td height="20" bgcolor="FF8C4B" width="42"><font color="#000000"><small><small><tt>&nbsp;</tt></small></small></font></td>
+            <td height="20" width="104"><font color="#000000"><small><small><tt>[255,140,75]</tt></small></small></font></td>
+            <td height="20" align="center" width="77"><font color="#000000"><small><small><tt>FF8C4B</tt></small></small></font></td>
+          </tr>
+          <tr valign="MIDDLE" align="LEFT">
+            <td height="20" bgcolor="#FFFFFF" width="80" align="center"><font color="#000000"><small><small><tt><b>G</b></tt></small></small></font></td>
+            <td height="20" bgcolor="#FFFFFF" width="134"><font color="#000000"><small><small><tt><b>Medium
+              Salmon</b></tt></small></small></font></td>
+            <td height="20" bgcolor="FF7070" width="42"><font color="#000000"><small><small><tt>&nbsp;</tt></small></small></font></td>
+            <td height="20" width="104"><font color="#000000"><small><small><tt>[255,112,112]</tt></small></small></font></td>
+            <td height="20" align="center" width="77"><font color="#000000"><small><small><tt>FF7070</tt></small></small></font></td>
+          </tr>
+          <tr valign="MIDDLE" align="LEFT">
+            <td height="20" bgcolor="#FFFFFF" width="80" align="center"><font color="#000000"><small><small><tt><b>T</b></tt></small></small></font></td>
+            <td height="20" bgcolor="#FFFFFF" width="134"><font color="#000000"><small><small><tt><b>Light
+              Green</b></tt></small></small></font></td>
+            <td height="20" bgcolor="A0FFA0" width="42"><font color="#000000"><small><small><tt>&nbsp;</tt></small></small></font></td>
+            <td height="20" width="104"><font color="#000000"><small><small><tt>[160,255,160]</tt></small></small></font></td>
+            <td height="20" align="center" width="77"><font color="#000000"><small><small><tt>A0FFA0</tt></small></small></font></td>
+          </tr>
+          <tr valign="MIDDLE" align="LEFT">
+            <td height="20" bgcolor="#FFFFFF" width="80" align="center"><font color="#000000"><small><small><tt><b>Backbone</b></tt></small></small></font></td>
+            <td height="20" bgcolor="#FFFFFF" width="134"><font color="#000000"><small><small><tt><b>Light
+              Grey</b></tt></small></small></font></td>
+            <td height="20" bgcolor="B8B8B8" width="42"><font color="#000000"><small><small><tt>&nbsp;</tt></small></small></font></td>
+            <td height="20" width="104"><font color="#000000"><small><small><tt>[184,184,184]</tt></small></small></font></td>
+            <td height="20" align="center" width="77"><font color="#000000"><small><small><tt>B8B8B8</tt></small></small></font></td>
+          </tr>
+          <tr valign="MIDDLE" align="LEFT">
+            <td height="20" bgcolor="#FFFFFF" width="80" align="center"><font color="#000000"><small><small><tt><b>Special</b></tt></small></small></font></td>
+            <td height="20" bgcolor="#FFFFFF" width="134"><font color="#000000"><small><small><tt><b>Dark
+              Purple</b></tt></small></small></font></td>
+            <td height="20" bgcolor="5E005E" width="42"><font color="#000000"><small><small><tt>&nbsp;</tt></small></small></font></td>
+            <td height="20" width="104"><font color="#000000"><small><small><tt>[
+              94, 0, 94]</tt></small></small></font></td>
+            <td height="20" align="center" width="77"><font color="#000000"><small><small><tt>5E005E</tt></small></small></font></td>
+          </tr>
+          <tr valign="MIDDLE" align="LEFT">
+            <td height="20" bgcolor="#FFFFFF" width="80" align="center"><font color="#000000"><small><small><tt><b>Default</b></tt></small></small></font></td>
+            <td height="20" bgcolor="#FFFFFF" width="134"><font color="#000000"><small><small><tt><b>Medium
+              Purple</b></tt></small></small></font></td>
+            <td height="20" bgcolor="FF00FF" width="42"><font color="#000000"><small><small><tt>&nbsp;</tt></small></small></font></td>
+            <td height="20" width="104"><font color="#000000"><small><small><tt>[255,
+              0,255]</tt></small></small></font></td>
+            <td height="20" align="center" width="77"><font color="#000000"><small><small><tt>FF00FF</tt></small></small></font></td>
+          </tr>
+        </table>
+        </center>
+      </div>
+      <font color="#000000">
+      <hr>
+      <h3><font color="#000000"><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a></font><tt>&nbsp;</tt><a name="structurecolours">Structure
+      Colours</a></h3>
+      <p>The RasMol '<tt><b>structure</b></tt>' colour scheme colours the
+      molecule by protein secondary structure. Alpha helices are coloured
+      magenta, [240,0,128], beta sheets are coloured yellow, [255,255,0], turns
+      are coloured pale blue, [96,128,255] and all other residues are coloured
+      white. The secondary structure is either read from the PDB file (HELIX,
+      SHEET and TURN records), if available, or determined using Kabsch and
+      Sander's DSSP algorithm. The RasMol '<a href="commandref.htm#structure"><tt><b>structure</b></tt></a>'
+      command may be used to force DSSP's structure assignment to be used.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="temperaturecolours">Temperature
+      Colours</a></h3>
+      <p>The RasMol '<tt><b>temperature</b></tt>' colour scheme colour codes
+      each atom according to the anisotropic temperature (beta) value stored in
+      the PDB file. Typically this gives a measure of the mobility/uncertainty
+      of a given atom's position. High values are coloured in warmer (red)
+      colours and lower values in colder (blue) colours. This feature is often
+      used to associate a &quot;scale&quot; value [such as amino acid
+      variability in viral mutants] with each atom in a PDB file, and colour the
+      molecule appropriately.</p>
+      <p>The difference between the '<tt><b>temperature</b></tt>' and '<a href="#chargecolours"><tt><b>charge</b></tt></a>'
+      colour schemes is that increasing temperature values proceed from blue to
+      red, whereas increasing charge values go from red to blue.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="userscolours">Users
+      Colours</a></h3>
+      <p>The RasMol '<tt><b>user</b></tt>' colour scheme allows RasMol to use
+      the colour scheme stored in the PDB file. The colours for each atom are
+      stored in COLO records placed in the PDB data file. This convention was
+      introduced by David Bacon's Raster3D program.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="hbondtypecolours">HBond
+      Type Colours</a></h3>
+      <p>The RasMol '<tt><b>type</b></tt>' colour scheme applies only to
+      hydrogen bonds, hence is used in the command '<tt><b>colour hbonds type</b></tt>'.
+      This scheme colour codes each hydrogen bond according to the distance
+      along a protein chain between hydrogen bond donor and acceptor. This
+      schematic representation was introduced by Belhadj-Mostefa and
+      Milner-White. This representation gives a good insight into protein
+      secondary structure (hbonds forming alpha helices appear red, those
+      forming sheets appear yellow and those forming turns appear magenta).</p>
+      <blockquote>
+        <blockquote>
+          <pre><small>
+      Offset    Colour    Triple
+        +2      white     [255,255,255]
+        +3      magenta   [255,0,255]
+        +4      red       [255,0,0]
+        +5      orange    [255,165,0]
+        -3      cyan      [0,255,255]
+        -4      green     [0,255,0]
+      default   yellow    [255,255,0]<small>
+</small></small></pre>
+        </blockquote>
+      </blockquote>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="potentialcolours">Potential
+      Colours</a></h3>
+      <p>The RasMol '<tt><b>potential</b></tt>' colour scheme applies only to
+      dot surfaces, hence is used in the command '<tt><b>colour dots potential</b></tt>'.
+      This scheme colours each currently displayed dot by the electrostatic
+      potential at that point in space. This potential is calculated using
+      Coulomb's law taking the temperature/charge field of the input file to be
+      the charge assocated with that atom. This is the same interpretation used
+      by the '<a href="#chargecolours"><tt><b>colour charge</b></tt></a>'
+      command. Like the '<a href="#chargecolours"><tt><b>charge</b></tt></a>'
+      colour scheme low values are blue/white and high values are red.</p>
+      <h3 align="left"><a name="noticev2.7"></a></h3>
+      </font></font><!--webbot bot="Include" u-include="signature.htm"
+      tag="BODY" startspan -->
+<P><IMG SRC="images/dotnul.gif" NAME="Graphic1" ALIGN=BOTTOM WIDTH=2 HEIGHT=5 BORDER=0></P>
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0>
+	<TR>
+		<TD WIDTH=100% BGCOLOR="#c29654">
+			<P><IMG SRC="images/dotnul.gif" NAME="Graphic2" ALT="dotnul.gif (43 bytes)" ALIGN=BOTTOM WIDTH=2 HEIGHT=2 BORDER=0></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><FONT SIZE=1><STRONG>RasTop Help Site</STRONG> - <A HREF="index.htm">home</A>
+			| <A HREF="notice.htm">notice</A> | <A HREF="copyright.htm">copyright</A></P>
+		</TD>
+	</TR>
+</TABLE>
+<P><BR><BR>
+</P>
+<!--webbot bot="Include" endspan i-checksum="12835" -->
+</td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+
+</body>
+
+</html>

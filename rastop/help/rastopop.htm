@@ -1,0 +1,727 @@
+<html>
+
+<head>
+<link rel="stylesheet" href="main.css" type="text/css">
+<title>Using RasTop</title>
+<meta name="description" content="rastop is a molecular visualization software to view the 3-dimensional structure of macromolecules">
+<meta name="keywords" content="rastop, rasmol, macromolecule, structure, 3-dimensional, pdb, protein, dna, rna, model, crystal,molecule">
+</head>
+
+	<!--webbot bot="Include" u-include="header.htm" tag="BODY" startspan -->
+
+<p><!----></p>
+<table border="0" cellpadding="2" width="100%">
+  <tr>
+    <td valign="top" bgcolor="#FFFFFF"><font color="#333333"><span class="ari8">RasTop
+      Manual</span></font></td>
+    <td valign="top" bgcolor="#FFFFFF" colspan="5" width="100%">
+      <p align="right"><span class="ari8"><a href="http://sourceforge.net/projects/rastop/">Home</a> | <a href="operations.htm">All
+      Commands</a> | <a href="notice.htm">Notice</a></span></td>
+  </tr>
+  <tr>
+    <td valign="top" bgcolor="#CCCCFF" align="center" background="images/doubleline.jpg"><a name="top"></a><img src="images/sigle.gif" alt="sigle.gif (4112 bytes)" width="71" height="65"></td>
+    <td colspan="5" bgcolor="#000000"><!----><img src="images/bannerrms2.gif" alt="bannerrms2.gif (19906 bytes)" align="left" border="0" width="543" height="65"></td>
+  </tr>
+  <tr>
+    <td valign="top" bgcolor="#336699">
+      <p align="center"><a href="index.htm" class="sitebar"><font color="#FFFFFF">Home</font></a></td>
+    <td valign="bottom" align="center" bgcolor="#336699"><a href="manual.htm" class="sitebar"><font color="#FFFFFF">About
+      help</font></a></td>
+    <td valign="bottom" align="center" bgcolor="#336699"><a href="copyright.htm" class="sitebar"><font color="#FFFFFF">Copyrights</font></a></td>
+    <td valign="bottom" align="center" bgcolor="#336699"><a href="notice.htm" class="sitebar"><font color="#FFFFFF">License</font></a></td>
+    <td valign="bottom" align="center" bgcolor="#336699"><a href="rastopop.htm" class="sitebar"><font color="#FFFFFF">Installing
+      &amp; using RasTop</font></a></td>
+    <td valign="bottom" align="center" bgcolor="#336699"><a href="library.htm" class="sitebar"><font color="#FFFFFF">Library</font></a></td>
+  </tr>
+  <tr>
+    <td valign="top" bgcolor="#FFFFFF"><img src="images/dotnul.gif" width="134" height="1" alt="dotnul.gif (807 bytes)" align="bottom"></td>
+    <td valign="top" bgcolor="#FFFFFF" colspan="5" width="100%"><img src="images/dotnul.gif" width="460" height="2" align="bottom" border="0"></td>
+  </tr>
+</table>
+
+<!--webbot bot="Include" endspan i-checksum="50747" -->
+
+
+<table border="0" cellpadding="0" cellspacing="0" width="700">
+  <tr>
+    <td valign="top" bgcolor="#EEEEEE" width="140"><img src="images/dotnul.gif" width="140" height="10" align="bottom" border="0"></td>
+    <td valign="top" width="2"><img src="dotnul.gif" width="1" height="10" align="bottom" border="0"></td>
+    <td valign="top" width="10"><img src="images/dotnul.gif" width="10" height="10" align="bottom" border="0"></td>
+    <td width="100%"><img src="images/dotnul.gif" width="549" height="10" alt="dotnul.gif (43 bytes)" align="bottom" border="0"></td>
+  </tr>
+  <tr>
+    <td valign="top" bgcolor="#EEEEEE"><!----> 
+      <div align="center">
+        <center>
+        <table border="0" cellpadding="5" cellspacing="0" width="100%" height="283">
+          <tr>
+            <td width="10" bgcolor="#336699">&nbsp;</td>
+            <td width="100%" bgcolor="#CCCCFF"><span class="ari8"><strong>Commands:</strong></span></td>
+          </tr>
+          <tr>
+            <td width="100%" colspan="2"><img src="images/arrow1.gif" alt="arrow1.gif (162 bytes)" width="10" height="8"><span class="ari8"><em>Using
+              RasTop</em><br>
+              <img src="images/arrow1.gif" alt="images/arrow1.gif (162 bytes)" width="10" height="8"><a href="menu.htm">Menu</a><br>
+              <img src="images/arrow1.gif" alt="images/arrow1.gif (162 bytes)" width="10" height="8"><a href="operations.htm">Summary</a><br>
+              <img src="images/arrow1.gif" alt="images/arrow1.gif (162 bytes)" width="10" height="8"><a href="commandref.htm">Reference</a><br>
+              <img src="images/arrow1.gif" alt="images/arrow1.gif (162 bytes)" width="10" height="8"><a href="internal.htm">Internal
+              Parameters</a><br>
+              <img src="images/arrow1.gif" alt="images/arrow1.gif (162 bytes)" width="10" height="8"><a href="atomexpression.htm">Atom
+              Expression</a><br>
+              <img src="images/arrow1.gif" alt="images/arrow1.gif (162 bytes)" width="10" height="8"><a href="help/colour.htm">Colour
+              Schemes</a><br>
+              <img src="images/arrow1.gif" alt="images/arrow1.gif (162 bytes)" width="10" height="8"><a href="atomsets.htm">Atom
+              Sets<br>
+              </a>
+              <img src="images/arrow1.gif" alt="arrow1.gif (162 bytes)" width="10" height="8"><a href="rastopworld.htm">RasTop
+              World</a></span></td>
+          </tr>
+          <tr>
+            <td width="100%" bgcolor="#CCCCFF" colspan="2"><strong><span class="ari8">Content:</span></strong></td>
+          </tr>
+          <tr>
+            <td width="100%" colspan="2"><span class="ari8">
+              <a href="#menushortcuts">Menu Shortcuts</a><br>
+              <a href="#mouse">Mouse</a><br>
+              <a href="#molecularfileediting">Molec. File Editing</a><br>
+              <a href="#maintoolbar">Main Toolbar</a><br>
+              <a href="#scripttoolbar">Selection Toolbar<br>
+              Script Toolbar</a><br>
+              <a href="#colorpalette">Color Palette</a><br>
+              <a href="#controlpanel">Control Panel</a><br>
+              <a href="#statusbar">Status Bar</a><br>
+              <a href="#Preferences">Preferences</a></span></td>
+          </tr>
+        </table>
+        </center>
+      </div>
+      <p>&nbsp;</td>
+    <td valign="top" width="2"><img src="dotnul.gif" width="1" height="10" align="bottom" border="0"></td>
+    <td valign="top"></td>
+    <td>
+      <p align="center"><span style="font-size: 14pt"><strong>Installing &amp;
+      Using RasTop</strong></span></p>
+      <h3>Getting Started</h3>
+      <p>RasTop is available on Windows and Linux platforms. Linux users should
+      install <a href="http://www.winehq.com/">Wine</a> prior to RasTop. Mac
+      users can use Virtual PC, but it is not free software.</p>
+<font color="#000000">
+</font>
+      <p><em>Standard Installation:</em></p>
+      <p>Extract the RasTop folder from the rastop.zip file. Install the folder
+      in the directory of your choice. Create a shorcut and place it in a
+      convenient location such as the Desktop.</p>
+      <p>To start RasTop, double click on the RasTop icon. When started for the
+      first time, the program displays a single main window with one empty
+      graphic window, the color window, and the command line window. Dispose the
+      color window and the command line window on your screen or turn them off.</p>
+      <p> <a href="#Preferences">Preferences</a>
+      are set by default and does not need to be changed at that time.</p>
+      <p>RasTop is a multi-document interface. Several graphic windows, each
+      displaying a single molecular file, can be opened at the same time.
+      Graphic windows are independent from each other, but can communicate using
+      the clipboard to transfer various information such as spatial position or
+      current atom selection. The same molecular file can be opened
+      simultaneously in different graphic windows or on the same one.</p>
+      <p>The main window contains the following elements:</p>
+      <blockquote>
+        <p>- one, or several <a href="#tutorial">graphic windows</a>.<br>
+        - a <a href="#Menu">menu</a>  (check menu commands <a href="menu.htm">here</a>),<br>
+        - a <a href="#maintoolbar">main toolbar</a>,<br>
+        - a <a href="#selectiontoolbar">selection toolbar</a>,<br>
+        - a <a href="#colorpalette">color palette</a>,<br>
+        - a <a href="#controlpanel">control panel</a>,<br>
+        - a <a href="#statusbar">status bar</a>,<br>
+        - a <a href="#commandline">command line</a>.<br>
+        </p>
+      </blockquote>
+      <p>Most of these elements are switched on and off by clicking in the
+      pull-down menu under 'windows' (<a href="menu.htm#menubars">Windows&gt;</a>).</p>
+      <p><i>Custom Installation:</i></p>
+      <p>If your monitor only supports 256 colors, download the rastop8bit.zip
+      file, unzip and replace the original, 32 bit, exe file - RasTop.exe
+      -&nbsp; by the new exe file. Change the name back to RasTop.exe if you
+      wish.</p>
+      <p>If you cannot get started and always receive the warning message
+      &quot;missing mfc42.dll&quot;, download and unzip the patch mfc42.zip;
+      install the file mfc42.dll in the folder containing the RasTop.exe file.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><a name="tutorial">Tutorial</a></h3>
+      <p>The chapter is still at its embryonic development stage.</p>
+      <p>The subfolder &quot;data&quot; in RasTop folder contains a few samples
+      of molecular files. To open your first molecule, click on the menu command
+      <a href="menu.htm#file">file&gt;open</a>.
+      Browse your directories up to the RasTop folder, open successively the
+      folders data and molecule, select a pdb file (a file ending by the
+      extension &quot;.pdb&quot;). A molecule will appear on your screen.</p>
+      <p>Play with the mouse on screen to move and rotate the molecule. With the
+      left and the right button and with or without the Shift key or the Ctrl
+      key depressed, many options are available.</p>
+      <p>The&nbsp; <a href="menu.htm#file">file&gt;open</a> 
+      menu command also opens <a href="fileformats.htm#rsmfiles">RSM
+      scripts</a>, i.e scripted files that contain both molecular and rendering
+      information. This command tolerates direct opening of pbd files and cif
+      files. Other molecular files should be opened using the command <a href="menu.htm#file">file&gt;load
+      molecular file</a>.</p>
+      <p>To open your first RSM file, click on the menu command <a href="menu.htm#file">file&gt;open</a>.
+      Browse your directories up to the RasTop folder, open successively the
+      folders data and rsm, select the file 2H1.rsm. The antibody 2H1 in complex
+      with the peptide PA1 will appear on screen.</p>
+      <p>To modulate the rendering, play with the submenu commands under the
+      menus atom, bonds, or ribbons.</p>
+      <p>Rendering command usually act on selected atoms only. To see the atoms
+      currently selected, click the toolbar button &quot;show selection&quot;: <img src="images/screen/selection_show.jpg" alt="selection_show.jpg (6726 bytes)" width="22" height="21">.
+      Selected atoms will appear in orange, non-selected atoms will be in dark
+      blue. At this stage all atoms should be selected.</p>
+      <p>Atom selection is a difficult aspects of molecular rendering. Use the <a href="#selectiontoolbar">selection toolbar</a> 
+      to proceed to varied atom selections. For example, select the word
+      &quot;aromatic&quot; is the pulldown of the <a href="#propertybox">property
+      box</a>  (located in the <a href="#selectiontoolbar">selection toolbar</a>)
+      and click on the button &quot;new selection&quot; in the toolbar. All the
+      amino acids of aromatic type are now selected, check by clicking the
+      button &quot;show selection&quot;. The amino acid classification used by
+      RasMol is depicted in the <a href="aatable.htm">amino acid table</a>.</p>
+      <p>In the original RasMol program written by Roger Sayle, all commands are
+      entered by hand on a command line. In RasTop, the process is the same
+      except that commands are now generated internally.&nbsp; In our example,
+      clicking the &quot;new selection&quot; button generated the command
+      &quot;select aromatic&quot;. RasMol script command may be entered manually
+      using the dialog box activated by the menu Edit&gt;Command or more
+      directly at the <a href="#commandline">command line</a>.</p>
+      <p>Scripting of atom selections is explained in the page <a href="atomexpression.htm">atom
+      expression</a>. Complex expressions not available in the menu have to be
+      entered manually after clicking the Edit&gt;Command menu.&nbsp; New users
+      and beginners will take advantage of reading the significance of the
+      commands in the <a href="commandref.htm">Command Reference</a> 
+      page. It is not unusual to enter atom selections by hand.</p>
+      <p>Starting version 2.0, RasTop can load multiple molecules in a unique
+      &quot;world&quot;. An RSM script is added to the current world by the
+      command <a href="menu.htm#fileadd">File&gt;Add</a>,
+      other molecular files are added by a simple File&gt;Load command. When the <a href="#controlpanel">world
+      cursor</a>  is on, all molecules are moved together and when the world
+      cursor if off, only the active molecule is moved. By active molecule, we
+      mean the molecule that is currently selected for rendering. To determine
+      which molecule is the active one, click the toolbar button &quot;show
+      selection&quot;: <img src="images/screen/selection_show.jpg" alt="selection_show.jpg (6726 bytes)" width="22" height="21">,
+      the non-active molecules are drawn in green whereas the active one is in
+      orange for the selected atoms or in blue for the non-selected atoms. To
+      toggle easily from one view to another, press on the TAB key.</p>
+      <p>When only one molecule is loaded, it is always better to have the <a href="#controlpanel">world
+      cursor</a>  activated (&quot;world on&quot;).</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><a name="graphicwindows">Graphic
+      Windows</a></h3>
+      <p>Graphic windows display a 32-bits output with a maximum of 1024
+      different colors per window. The high color resolution allows 64 shade
+      variations per color. The 8-bits version displays only 256 colors and is
+      adapted to 256 colors monitors.&nbsp;Click on the top right of the window menu bar to resize, iconize, or
+      maximize the window. Use the <a href="#mouse">mouse</a>  to move, rotate,
+      zoom, or slab the molecule. Left-clik the mouse to obtain information on a
+      particular atom or operate the <a href="#pickingmode">picking mode</a>.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><a name="Menu">Menu</a></h3>
+      <p>Click <a href="menu.htm">here</a>  to
+      see all menu commands.</p>
+      <p>All commands can be entered manually in the <a href="#commandline">command line</a>
+      window distinct from the graphic window. For example you type '<tt><b>spacefill
+      on</b></tt>' to generate a sphere rendering. RasTop does not require
+      manual entries, but the concept of script command is still in use,
+      just&nbsp; in a way that is transparent to the user. In fact most of the <a href="menu.htm">menu
+      commands</a>  generate their own script that is transferred to RasMol
+      internally. Some operations are more than simple commands. In general,
+      menu commands to manipulate atoms, bonds, and envelops are active, i.e.
+      they activate the rendering. For example coloring bonds in green generates
+      the script commands '<tt>bonds on' </tt>and<tt> 'color bonds green'</tt>.
+      Some commands also keep memory of the last action. For example, if you
+      draw spheres of radius 120, the next sphere command will draw spheres of
+      radius 120. This might be confusing when switching between graphic
+      windows, but overall it simplifies the rendering operations.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><a name="menushortcuts">Menu
+      </a>Shortcuts</h3>
+      <p>To activate a shortcut, press the corresponding letter while
+      maintaining the <em>Ctrl</em> key down.</p>
+      <blockquote>
+        <div align="center">
+          <center>
+          <table border="0" cellpadding="0" cellspacing="0" width="100%">
+            <tr>
+              <td align="left" width="80"><strong><img src="dotnul.gif" width="50" height="1" alt="dotnul.gif (43 bytes)"></strong></td>
+              <td width="100%"></td>
+            </tr>
+            <tr>
+              <td align="left" width="80"><em>Ctrl-</em><strong>A</strong></td>
+              <td width="100%">&nbsp;&nbsp;&nbsp;&nbsp; Select All</td>
+            </tr>
+            <tr>
+              <td align="left"><em>Ctrl-</em><strong>C</strong></td>
+              <td>&nbsp;&nbsp;&nbsp;&nbsp; Copy Selection</td>
+            </tr>
+            <tr>
+              <td align="left"><em>Ctrl-</em><strong>D</strong></td>
+              <td>&nbsp;&nbsp;&nbsp;&nbsp; Define</td>
+            </tr>
+            <tr>
+              <td align="left"><em>Ctrl-</em><strong>E</strong></td>
+              <td>&nbsp;&nbsp;&nbsp;&nbsp; Select Expression</td>
+            </tr>
+            <tr>
+              <td align="left"><em>Ctrl-</em><strong>F</strong></td>
+              <td>&nbsp;&nbsp;&nbsp;&nbsp; Full Screen</td>
+            </tr>
+            <tr>
+              <td align="left"><em>Ctrl-</em><strong>I</strong></td>
+              <td>&nbsp;&nbsp;&nbsp;&nbsp; Copy Image</td>
+            </tr>
+            <tr>
+              <td align="left"><em>Ctrl-</em><strong>L</strong></td>
+              <td>&nbsp;&nbsp;&nbsp;&nbsp; Load Molecular File</td>
+            </tr>
+            <tr>
+              <td align="left"><em>Ctrl-</em><strong>M</strong></td>
+              <td>&nbsp;&nbsp;&nbsp;&nbsp; Enter RasMol Command</td>
+            </tr>
+            <tr>
+              <td align="left"><em>Ctrl-</em><strong>N</strong></td>
+              <td>&nbsp;&nbsp;&nbsp;&nbsp; New graphic window</td>
+            </tr>
+            <tr>
+              <td align="left"><em>Ctrl-</em><strong>O</strong></td>
+              <td>&nbsp;&nbsp;&nbsp;&nbsp; Open an &lt;*.rsm&gt; script</td>
+            </tr>
+            <tr>
+              <td align="left"><em>Ctrl-</em><strong>P</strong></td>
+              <td>&nbsp;&nbsp;&nbsp;&nbsp; Print</td>
+            </tr>
+            <tr>
+              <td align="left"><em>Ctrl-</em><strong>Q</strong></td>
+              <td>&nbsp;&nbsp;&nbsp;&nbsp; Select Inverse</td>
+            </tr>
+            <tr>
+              <td align="left"><em>Ctrl-</em><strong>R</strong></td>
+              <td>&nbsp;&nbsp;&nbsp;&nbsp; Restrict</td>
+            </tr>
+            <tr>
+              <td align="left"><em>Ctrl-</em><strong>S</strong></td>
+              <td>&nbsp;&nbsp;&nbsp;&nbsp; Save</td>
+            </tr>
+            <tr>
+              <td align="left"><em>Ctrl-</em><strong>T</strong></td>
+              <td>&nbsp;&nbsp;&nbsp;&nbsp; Tile all graphic windows</td>
+            </tr>
+            <tr>
+              <td align="left"><em>Ctrl-</em><strong>V</strong></td>
+              <td>&nbsp;&nbsp;&nbsp;&nbsp; Paste</td>
+            </tr>
+            <tr>
+              <td align="left"><em>Ctrl-</em><strong>W</strong></td>
+              <td>&nbsp;&nbsp;&nbsp;&nbsp; Show Selection</td>
+            </tr>
+            <tr>
+              <td align="left"><em>Ctrl-</em><strong>X</strong></td>
+              <td>&nbsp;&nbsp;&nbsp;&nbsp; Copy Selection</td>
+            </tr>
+            <tr>
+              <td align="left"><em>Ctrl-</em><strong>Z</strong></td>
+              <td>&nbsp;&nbsp;&nbsp;&nbsp; Select Previous</td>
+            </tr>
+          </table>
+          </center>
+        </div>
+      </blockquote>
+      <p>Pressing the Space key activates or deactivates the Display mode and
+      shows the selected atoms. <a href="menu.htm#show">Edit&gt;Select&gt;Show</a>
+      menu shortcut.</p>
+      <p><!----></p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><a name="mouse">Mouse</a></h3>
+      <div align="center">
+        <center>
+        <table border="1" cellpadding="5">
+          <tr>
+            <th><tt>Action</tt></th>
+            <th><tt>Mouse Click</tt></th>
+          </tr>
+          <tr>
+            <td><tt>Rotate X,Y</tt></td>
+            <td><tt>Left</tt></td>
+          </tr>
+          <tr>
+            <td><tt>Translate X,Y</tt></td>
+            <td><tt>Right</tt></td>
+          </tr>
+          <tr>
+            <td><tt>Rotate Z</tt></td>
+            <td><tt><em>Shift</em> key + Right<br>
+              Wheel</tt></td>
+          </tr>
+          <tr>
+            <td><tt>Zoom</tt></td>
+            <td><tt><em>Shift</em> key + Left<br>
+              <em>Shift</em> or <i>Ctrl</i> key + Wheel</tt></td>
+          </tr>
+          <tr>
+            <td><tt><em>World Zoom<br>
+              (Z-translation)</em></tt></td>
+            <td><tt>Left + Right</tt></td>
+          </tr>
+          <tr>
+            <td><tt>Slab Plane</tt></td>
+            <td><tt><em>Ctrl</em> key + Left</tt></td>
+          </tr>
+          <tr>
+            <td><tt>Back Clipping</tt></td>
+            <td><tt><em>Ctrl</em> key + Right</tt></td>
+          </tr>
+        </table>
+        </center>
+      </div>
+      <p><!----></p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><a name="molecularfileediting">Molecular
+      File Editing</a></h3>
+      <p>RasTop supports limited molecular file editing. The molecular file
+      dialog box acts as a simple text editor. Drag the cursor with the mouse
+      left button down to select text areas; use the shortcuts <em>Ctrl</em>-X, <em>Ctrl</em>-C,
+      and <em>Ctrl</em>-V to cut, copy and paste, respectively.</p>
+      <p><strong>Name box: </strong>&nbsp; Change the title of the current file.</p>
+      <p><strong>Format box: </strong>&nbsp; Change the molecular file format.
+      The molecular file format must match the format to load successfully.</p>
+      <p><strong>Export option:</strong>&nbsp;&nbsp; Export the molecular file
+      as a text file.</p>
+      <p><strong>Process option:</strong>&nbsp;&nbsp; Save the changes to the
+      molecular file and reprocess it.&nbsp;The rendering information are
+      discarded. Not available starting version 2.0., indeed save the file and
+      reload it immediately.</p>
+      <p><strong>Save option:</strong>&nbsp;&nbsp; Save the molecular file, do
+      not process it, and keep the rendering information. To visualize the
+      changes on screen, proceed as following:</p>
+      <blockquote>
+        <pre><tt>1. Save the modified molecular file.</tt></pre>
+        <pre><tt>2. Save your work as an &lt;*.rsm&gt; script.</tt></pre>
+        <pre><tt>3. Reopen your saved file.</tt></pre>
+      </blockquote>
+      <p>If you save on your previous &lt;*.rsm&gt; file, it is irreversibly
+      modified. It is safer to make modifications of the molecular file on a
+      copy of your &lt;*.rsm&gt; script. To do so, save initially your script
+      under a different name, or reopen your script using the <a href="menu.htm#fileopen">File&gt;Open</a>
+      menu command.</p>
+      <p><strong>Close option:</strong>&nbsp;&nbsp; Exit the molecular file
+      editing box without saving.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><a name="maintoolbar">Main
+      Toolbar</a></h3>
+      <p><img src="images/screen/main_new.jpg" alt="images/screen/main_new.jpg (4226 bytes)" width="22" height="21">&nbsp;&nbsp;&nbsp;
+      Create a new untitled graphic window. <a href="menu.htm#filenew">File&gt;New</a>
+      menu shortcut.<br>
+      <img src="images/screen/main_open.jpg" alt="images/screen/main_open.jpg (5944 bytes)" width="22" height="21">&nbsp;&nbsp;
+      &nbsp;Open an &lt;*.rsm&gt; file. <a href="menu.htm#fileopen">File&gt;Open</a>
+      menu shortcut.<br>
+      <img src="images/screen/main_save.jpg" alt="images/screen/main_save.jpg (5475 bytes)" width="22" height="21">&nbsp;&nbsp;
+      &nbsp;Save the active graphic window. <a href="menu.htm#filesave">File&gt;Save</a>
+      menu shortcut.<br>
+      <img src="images/screen/main_print.jpg" alt="images/screen/main_print.jpg (5844 bytes)" width="22" height="21">&nbsp;&nbsp;&nbsp;
+      Print the active graphic window. <a href="menu.htm#fileprint">File&gt;Print</a>
+      menu shortcut.<br>
+      <img border="0" src="images/screen/main_help.jpg" width="22" height="21">&nbsp;&nbsp;&nbsp; Help<br>
+      <img src="images/screen/main_tile.jpg" alt="images/screen/main_tile.jpg (5929 bytes)" width="22" height="21">&nbsp;&nbsp;
+      &nbsp;Tile all graphic windows. <a href="menu.htm#tile">View&gt;Tile</a>
+      menu shortcut.<br>
+      <img src="images/screen/main_molec.jpg" alt="images/screen/main_molec.jpg (5616 bytes)" width="22" height="21">&nbsp;&nbsp;&nbsp;
+      Edit the <a href="#molecularfileediting">molecular file</a>.</p>
+      <p><img border="0" src="images/screen/render_sphere.jpg" width="22" height="21">&nbsp;&nbsp;&nbsp; Render
+      selection with CPK spheres.<br>
+      <img border="0" src="images/screen/render_star.jpg" width="22" height="21">&nbsp;&nbsp;&nbsp; Render selection
+      with stars<br>
+      <img border="0" src="images/screen/render_wireframe.jpg" width="22" height="21">&nbsp;&nbsp;&nbsp; Render
+      selection with wireframe<br>
+      <img border="0" src="images/screen/render_ballstick.jpg" width="22" height="21">&nbsp;&nbsp;&nbsp; Render
+      selection with balls &amp; sticks<br>
+      <img border="0" src="images/screen/render_null.jpg" width="22" height="21">&nbsp;&nbsp;&nbsp; Remove sphere,
+      star, cylinder, and ribbon rendering</p>
+      <p><img border="0" src="images/screen/render_ribbon.jpg" width="22" height="21">&nbsp;&nbsp;&nbsp;&nbsp; Render
+      selection with ribbon.<br>
+      <img border="0" src="images/screen/render_dots.jpg" width="22" height="21">&nbsp;&nbsp;&nbsp;&nbsp; Create dot
+      envelop.</p>
+      <p><strong><a name="pickingmode">Picking mode</a></strong></p>
+      <p>The picking mode is activated by clicking a picking icon once and
+      deactivated either by clicking the same icon again, or by clicking twice
+      in the window screen anywhere. Deactivating the picking mode updates the
+      previous selection set.</p>
+      <p>By default, clicking an atom displays its residue name, residue number,
+      atom name, atom serial number and chain in the information line, see
+      RasMol '<a href="internal.htm#setpicking"><tt><strong>picking
+      ident</strong></tt></a>' parameter. Pressing the <em>Ctrl</em>  key while
+      clicking switches the display to atom coordinates.</p>
+      <p><em>Picking Icons:</em></p>
+      <p><img src="images/screen/picking_atom.jpg" alt="images/screen/picking_atom.jpg (3945 bytes)" width="22" height="21">&nbsp;&nbsp;&nbsp;
+      Select an atom.&nbsp;Pressing the <em>Shift</em>  key together adds the
+      atom to the current selection, pressing the <em>Ctrl</em>  key removes
+      it.&nbsp;Dragging the mouse while maintaining the left mouse button down
+      will generates a squared lasso on screen.&nbsp;All atoms in the square
+      will be selected on mouse up.&nbsp;The<em> Shift</em>  key and the <em>Ctrl</em>
+      key control the lasso selection as well. The lasso effect is better
+      visible in the '<a href="menu.htm#show">show selection</a>'
+      view mode.</p>
+      <p><img src="images/screen/picking_group.jpg" alt="images/screen/picking_group.jpg (5723 bytes)" width="22" height="22">&nbsp;&nbsp;&nbsp;
+      Select a group (a residue). Use <em>Shift</em>  key and <em>Ctrl</em>  Key
+      to modulate the selection.</p>
+      <p><img src="images/screen/picking_chain.jpg" alt="images/screen/picking_chain.jpg (5250 bytes)" width="22" height="21">&nbsp;&nbsp;&nbsp;
+      Select a chain. Use <em>Shift</em>  key and <em>Ctrl</em>  Key to modulate
+      the selection.</p>
+      <p><img border="0" src="images/screen/picking_molecule.jpg" width="22" height="21">&nbsp;&nbsp;&nbsp; Select a
+      molecule as active. This option works only when multiple molecules are
+      loaded.</p>
+      <p><img src="images/screen/picking_center.jpg" alt="images/screen/picking_center.jpg (5291 bytes)" width="22" height="21">&nbsp;&nbsp;&nbsp;
+      Move the center to the clicked atom. If the <em>Ctrl</em>  key is pressed
+      together, the center is further moved to the center of the screen.</p>
+      <p><img border="0" src="images/screen/picking_bonds.jpg" width="22" height="21">&nbsp;&nbsp;&nbsp; Select or
+      modify bonds. Pressing the <i>Shift</i>  key together increase the bond
+      order (create a single bond, single to double bond, double bond to triple
+      bond); inversely pressing the <i>Ctrl </i>key decreases the bond order or
+      delete the bond. The bond created or modified is selected for bond
+      rotation.</p>
+      <p><img border="0" src="images/screen/picking_rotate.jpg" width="22" height="21">&nbsp;&nbsp;&nbsp; Rotate a
+      selected bond. The world must be in off mode (see World check box in <a href="http://www.inrp.fr/Acces/biotic/rastop/accueil.htm#controlpanel">control
+      panel</a>) otherwise all molecules rotates around the world origin instead
+      of the selected bond.</p>
+      <p><img src="images/screen/picking_monitor.jpg" alt="images/screen/picking_monitor.jpg (4022 bytes)" width="22" height="21">&nbsp;&nbsp;&nbsp;
+      Add monitors.&nbsp;See the RasMol parameter '<a href="internal.htm#setpicking"><tt><strong>picking</strong></tt></a>'.</p>
+      <p><img src="images/screen/picking_label.jpg" alt="images/screen/picking_label.jpg (4870 bytes)" width="22" height="21">&nbsp;&nbsp;&nbsp;
+      Add or remove labels.</p>
+      <p><img src="images/screen/picking_distance.jpg" alt="images/screen/picking_distance.jpg (4596 bytes)" width="22" height="21"><img src="images/screen/picking_angle.jpg" alt="picking_angle.jpg (4847 bytes)" width="22" height="21"><img src="images/screen/picking_torsion.jpg" alt="picking_torsion.jpg (4757 bytes)" width="22" height="21">&nbsp;&nbsp;&nbsp;
+      Measure distances, angles, or torsions, respectively; see the RasMol
+      parameter '<a href="internal.htm#setpicking"><tt><strong>picking</strong></tt></a>'.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="images/up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><a name="selectiontoolbar">Selection
+      Toolbar</a></h3>
+      <p>&nbsp;</p>
+      <p><img border="0" src="images/screen/selection_coordinate.jpg" width="22" height="21">&nbsp;&nbsp;&nbsp;
+      Change coordinate system from molecular to world and absolute coordinates
+      successively.<br>
+      <img border="0" src="images/screen/main_worlddaxe.jpg" width="22" height="21">&nbsp;&nbsp;&nbsp; Toggle world
+      axes on and off.<br>
+      <img src="images/screen/main_color.jpg" alt="images/screen/main_color.jpg (5126 bytes)" width="22" height="21">&nbsp;&nbsp;&nbsp;
+      Toggle <a href="#colorpalette">color palette</a>.<br>
+      <img src="images/screen/selection_show.jpg" alt="images/screen/selection_show.jpg (6726 bytes)" width="22" height="21">&nbsp;&nbsp;&nbsp;&nbsp;
+      Show the selected atoms. <a href="menu.htm#show">Edit&gt;Select&gt;Show</a>
+      menu shortcut.</p>
+      <p><img src="images/screen/selection_all.jpg" alt="images/screen/selection_all.jpg (4855 bytes)" width="22" height="21">&nbsp;&nbsp;&nbsp;&nbsp;
+      Select all atoms.&nbsp; <a href="menu.htm#selectall">Edit&gt;Select&gt;All</a>
+      menu shortcut.<br>
+      <img src="images/screen/selection_previous.jpg" alt="images/screen/selection_previous.jpg (6576 bytes)" width="22" height="21">&nbsp;&nbsp;&nbsp;&nbsp;
+      Go back to the previous selection. <a href="menu.htm#selectprevious">Edit&gt;Select&gt;Previous</a>
+      menu shortcut.<br>
+      <img src="images/screen/selection_inverse.jpg" alt="images/screen/selection_inverse.jpg (6436 bytes)" width="22" height="21">&nbsp;&nbsp;&nbsp;&nbsp;
+      Select the inverse selection. <a href="menu.htm#selectinverse">Edit&gt;Select&gt;Inverse</a>
+      menu shortcut.<br>
+      <img src="images/screen/selection_edit.jpg" alt="images/screen/selection_edit.jpg (6302 bytes)" width="22" height="21">&nbsp;&nbsp;&nbsp;&nbsp;
+      Select an <a href="atomexpression.htm">expression</a>. <a href="menu.htm#selectexpression">Edit&gt;Select&gt;Expression</a>
+      menu shortcut.<br>
+      </p>
+      <p><b>Selection boxes:</b></p>
+      <p><img src="images/screen/selection_box.jpg" alt="images/screen/selection_box.jpg (5794 bytes)" width="115" height="22"></p>
+      <p>There are three selection boxes: the <a name="elementbox">element box</a>,
+      the <a name="propertybox">property box</a>, and the <a name="usersetbox">user
+      set box</a>. The element box is dedicated to single elements such as
+      carbon or oxygen and predefined set of atoms such as rna or dna; the
+      property concerns atom or group property such as hydrophobic or aromatic
+      amino acids. The user set box contains user-defined atom sets that are
+      declared&nbsp;at run time using the RasMol command '<a href="#define"><tt><strong>define</strong></tt></a>'
+      (<a href="menu.htm#define">Edit&gt;Define</a> 
+      menu shortcut). New identifiers are added at the bottom of the drop-down
+      list as new sets are created.</p>
+      <p>The last element selected in one of the three boxes modifies the
+      current selection using 5 basic operation:</p>
+      <p><img src="images/screen/selection_new.jpg" alt="images/screen/selection_new.jpg (5624 bytes)" width="22" height="21">&nbsp;&nbsp;&nbsp;
+      Create new atom selection, discard current selection.<br>
+      <img src="images/screen/selection_add.jpg" alt="images/screen/selection_add.jpg (6359 bytes)" width="23" height="21">&nbsp;&nbsp;&nbsp;
+      Add atom set to current selection.<br>
+      <img src="images/screen/selection_remove.jpg" alt="images/screen/selection_remove.jpg (5696 bytes)" width="22" height="21">&nbsp;&nbsp;&nbsp;
+      Remove atoms in common with current selection.<br>
+      <img src="images/screen/selection_extract.jpg" alt="images/screen/selection_extract.jpg (5580 bytes)" width="22" height="21">&nbsp;&nbsp;&nbsp;
+      Select atoms in common with current selection.<br>
+      <img src="images/screen/selection_exclude.jpg" alt="images/screen/selection_exclude.jpg (5624 bytes)" width="22" height="21">&nbsp;&nbsp;&nbsp;
+      Exclude current selection from atom set.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="images/up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><a name="scripttoolbar">Scripting
+      Toolbar</a></h3>
+      <p><img border="0" src="images/screen/scripting1.gif" width="23" height="23">&nbsp;&nbsp;&nbsp;
+      Allow a default script to be run after a molecule is loaded; on by
+      default.&nbsp;<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The default script can be
+      changed in the <a href="#Preferences">Preferences</a>.<br>
+      <img border="0" src="images/screen/scripting2.gif" width="23" height="24">&nbsp;&nbsp;&nbsp; Toggle on and off the command line window<br>
+      <img border="0" src="images/screen/scripting3.gif" width="23" height="24">&nbsp;&nbsp;&nbsp; Echo
+      RasTop internal commands to the command line.&nbsp;<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Useful to learn how
+      RasTop functions and to learn scripting.</p>
+      <p><img border="0" src="images/screen/scripting4.gif" width="202" height="23">&nbsp;&nbsp;&nbsp;
+      Select to run the corresponding script. Scripts are located in the
+      rastop/script folder.&nbsp;Add your own scripts in that folder.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="images/up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><a name="commandline">Command
+      Line</a></h3>
+      <p>Type in or commands and execute online. The command line accepts common
+      copy and paste function. Change the text color and the background color in
+      the <a href="#Preferences">Preferences</a>.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="images/up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><a name="colorpalette">Color
+      Palette</a></h3>
+      <p><img src="images/screen/color_palette.GIF" alt="color_palette.GIF (2973 bytes)" align="left" hspace="34" width="90" height="124" border="0">The
+      drop-down menu lists the different RasMol elements. Click any color icon
+      to fill them with color. See details in the RasMol command '<a href="commandref.htm#colour"><tt><strong>colour</strong></tt></a>'.
+      The icon labeled with a &lt;+&gt; activates a Windows color picker; the
+      &lt;-&gt; label corresponds to the command '<a href="commandref.htm#colour"><tt><strong>color
+      none</strong></tt></a>', i.e. the elements take the color of the
+      supporting atoms. Note that not all elements support the none color.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><a name="controlpanel">Control
+      Panel</a></h3>
+      <p>From left to right:</p>
+      <p><b>World check box:&nbsp; </b>When checked (&quot; world on&quot;) all
+      loaded molecules rotate and move together. This is the default setting
+      even when only one molecule is loaded. Uncheck only when you want to
+      adjust a molecule position in a multiple molecule environment (see the
+      command '<a href="commandref.htm#rotate"><tt><strong>rotate all</strong></tt></a>'.</p>
+      <p><strong>Rotate check box:</strong>&nbsp;&nbsp; When checked, command
+      the three interactive scrollbars to rotate the molecule along the x, y, or
+      z axis, respectively.</p>
+      <p><strong>Translate check box:</strong>&nbsp;&nbsp; When checked, command
+      the three interactive scrollbars to translate the molecule in the x or y
+      plane, or to zoom the molecule. When the world is active, the zooming
+      effect is centered in the middle of the canvas, otherwise the rotation
+      center is used.</p>
+      <p><strong>Spin button:</strong>&nbsp;&nbsp; Rotate automatically the
+      molecule. Clicking in the left or the right cursor of the scrollbars
+      adjusts the rotation speed and axe.</p>
+      <p><strong>Reset button:</strong>&nbsp;&nbsp; Restore the original viewing
+      transformation and center of rotation. See the RasMol command '<a href="commandref.htm#reset"><tt><strong>reset</strong></tt></a>'.</p>
+      <p><strong>DepthCue button:</strong>&nbsp;&nbsp; Activate depth queuing
+      for spheres, cylinders, and ribbons. See the RasMol command '<a href="internal.htm#setdepthcue"><tt><strong>set
+      depthcue</strong></tt></a>'.</p>
+      <p><strong>Slab button:</strong>&nbsp;&nbsp; Switch on and off the slab.
+      See the RasMol command&nbsp; '<a href="commandref.htm#slab"><strong>slab</strong></a>'.</p>
+      <p><strong>Slab cursor:</strong>&nbsp;&nbsp; Adjust slab plane in slab
+      mode. See RasMol command '<a href="commandref.htm#slab"><strong>slab</strong></a>'.
+      The value indicated in the buddy window depends of the coordinate system
+      in use.</p>
+      <p><strong>Depth button:</strong>&nbsp;&nbsp; Switch on and off the
+      back-clipping plane. See the RasMol command '<a href="commandref.htm#depth"><tt><strong>depth</strong></tt></a>'.</p>
+      <p><strong>Depth cursor:</strong>&nbsp;&nbsp; Adjust back-clipping
+      plane.&nbsp;See RasMol command '<a href="commandref.htm#depth"><tt><strong>depth</strong></tt></a>'.</p>
+      <p><strong>Light cursor:</strong>&nbsp;&nbsp; Adjust ambient lighting. See
+      the RasMol parameter '<a href="internal.htm#setambient"><tt><strong>ambient</strong></tt></a>'.</p>
+      <p align="left"><strong>Specular cursor:</strong>&nbsp;&nbsp; Adjust
+      specpower. See RasMol parameters '<a href="internal.htm#setspecpower"><tt><strong>specpower</strong></tt></a>'
+      and '<a href="internal.htm#setspecular"><tt><strong>specular</strong></tt></a>'.</p>
+      <p><strong>Shade cursor:</strong>&nbsp;&nbsp; Adjust shadepower. See
+      RasTop parameter '<a href="internal.htm#setshadepower"><tt><strong>shadepower</strong></tt></a>'.
+      Note that the range has changed starting version 2.0, and RSM file made
+      with previous version may display a wrong setting.</p>
+      <p><strong>Information line:</strong>&nbsp; Display varied information,
+      comments, or warnings generated by RasMol or by RasTop.&nbsp; Right-click
+      the mouse to copy its content.</p>
+      <p><strong>Status light: </strong>&nbsp; Take different colors according
+      to RasTop status.</p>
+      <blockquote>
+        <p><em>Light Grey:</em>&nbsp;&nbsp; Standby or RasTop ongoing operation.</p>
+        <p><em>Dark blue:</em>&nbsp;&nbsp; Ongoing calculation by &quot;RasMol
+        molecular engine.&quot;</p>
+        <p><em>Yellow:</em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Same as light
+        grey, but a script is running.</p>
+        <p><em>Orange:</em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Pause in a script.
+        Press any key to continue the script or the <em>Esc</em> key to
+        interrupt the script.</p>
+        <p><em>Red:</em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        Lost focus. The script keeps paused even when pressing keys.&nbsp; Click
+        once in the graphic window to get the input focus; then press any key or
+        <em>Esc </em>to interrupt the script.</p>
+      </blockquote>
+      <p>Dark blue lighting replaces the waiting cursor in RasMol. If RasTop
+      does not respond, but the status light if dark, it means that the program
+      is probably engaged in a time-consuming operation such as file loading or
+      calculation of a molecular transformation.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><a name="statusbar">Status
+      bar</a></h3>
+      <p>Display information regarding the current atom pointed by the cursor.
+      Toggle off in <a href="menu.htm#menubars">View&gt;Status Bar</a> 
+      menu command. The active coordinate system is indicated in the right end
+      panel.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><a name="Preferences">Preferences</a></h3>
+      <p>Starting version 2.0, user preferences are stored in a script file named
+      'rasmolprefs' located in the folder &quot;C:/Documents
+      and settings/yourname&quot;. A second preference file is located in the
+      folder &quot;rastop/lib&quot; and is used to localize RasTop, e.g. to set the
+      default
+      langage.</p>
+      <div align="center">
+        <center>
+        <table border="0" cellpadding="3" cellspacing="0" width="100%">
+          <tr>
+            <td width="140" valign="top"><strong><img src="images/dotnul.gif" width="140" height="1" alt="dotnul.gif (807 bytes)" align="bottom" border="0"></strong></td>
+            <td width="100%"><img src="images/dotnul.gif" alt="dotnul.gif (807 bytes)" border="0" width="32" height="32"></td>
+          </tr>
+          <tr>
+            <td width="140" valign="top"><strong>Clipboard factor:</strong></td>
+            <td width="100%">The clipboard factor is an enlargement factor
+              applied to images copied to the clipboard. A value of 2 usually improves image resolution. Factors above 4 generate
+              large image files and must be used with <font color="#FF0000">caution</font>. Using a high image resolution may decrease the size
+              of some objects; adjust the dot size and draw bonds as cylinders
+              if necessary. Be aware that using a graphical output such as a
+              printer or a screen at a resolution lower than the resolution of
+              your graphic file may impair image quality.</td>
+          </tr>
+          <tr>
+            <td valign="top"><strong>Sequence output:</strong></td>
+            <td>One letter or three letters code output for the <a href="menu.htm#sequence">molecule&gt;sequence</a>
+              menu command.</td>
+          </tr>
+          <tr>
+            <td valign="top"><b>Coordinate System</b></td>
+            <td>Clip plane values and atom coordinates depend of the chosen
+              system.</td>
+          </tr>
+          <tr>
+            <td valign="top"><b>Default Representation</b></td>
+            <td>Indicate a script file that runs automatically after a molecular
+              file is loaded. The first time you start RasTop, the software use
+              a file named default.scr located in the &quot;rastop/script&quot;
+              folder..</td>
+          </tr>
+          <tr>
+            <td valign="top"><strong>Help source:</strong></td>
+            <td>Indicate where RasTop will find this web site when activating
+              the <a href="menu.htm#help">help&gt;help RasTop</a> 
+              menu command. The first time you start RasTop, the software look
+              into &quot;rastop/help&quot; folder for the file index.htm.</td>
+          </tr>
+        </table>
+        </center>
+      </div>
+      <!--webbot bot="Include" u-include="signature.htm" tag="BODY" startspan -->
+<P><IMG SRC="images/dotnul.gif" NAME="Graphic1" ALIGN=BOTTOM WIDTH=2 HEIGHT=5 BORDER=0></P>
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0>
+	<TR>
+		<TD WIDTH=100% BGCOLOR="#c29654">
+			<P><IMG SRC="images/dotnul.gif" NAME="Graphic2" ALT="dotnul.gif (43 bytes)" ALIGN=BOTTOM WIDTH=2 HEIGHT=2 BORDER=0></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><FONT SIZE=1><STRONG>RasTop Help Site</STRONG> - <A HREF="index.htm">home</A>
+			| <A HREF="notice.htm">notice</A> | <A HREF="copyright.htm">copyright</A></P>
+		</TD>
+	</TR>
+</TABLE>
+<P><BR><BR>
+</P>
+<!--webbot bot="Include" endspan i-checksum="12835" -->
+
+    </td>
+  </tr>
+</table>
+
+<p>&nbsp;</p>

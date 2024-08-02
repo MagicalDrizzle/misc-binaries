@@ -1,0 +1,523 @@
+<html>
+
+<head>
+<link rel="stylesheet" href="main.css" type="text/css">
+<title>Atom sets</title>
+<meta name="description" content="rastop is a molecular visualization software to view the 3-dimensional structure of macromolecules">
+<meta name="keywords" content="rastop, rasmol, macromolecule, structure, 3-dimensional, pdb, protein, dna, rna, model, crystal,molecule">
+</head>
+
+<body marginwidth="0" marginheight="0" leftmargin="0" bottommargin="0" topmargin="0" bgcolor="#FFFFFF" text="#000000">
+
+<!--webbot bot="Include" u-include="header.htm" tag="BODY" startspan -->
+
+<p><!----></p>
+<table border="0" cellpadding="2" width="100%">
+  <tr>
+    <td valign="top" bgcolor="#FFFFFF"><font color="#333333"><span class="ari8">RasTop
+      Manual</span></font></td>
+    <td valign="top" bgcolor="#FFFFFF" colspan="5" width="100%">
+      <p align="right"><span class="ari8"><a href="http://sourceforge.net/projects/rastop/">Home</a> | <a href="operations.htm">All
+      Commands</a> | <a href="notice.htm">Notice</a></span></td>
+  </tr>
+  <tr>
+    <td valign="top" bgcolor="#CCCCFF" align="center" background="images/doubleline.jpg"><a name="top"></a><img src="images/sigle.gif" alt="sigle.gif (4112 bytes)" width="71" height="65"></td>
+    <td colspan="5" bgcolor="#000000"><!----><img src="images/bannerrms2.gif" alt="bannerrms2.gif (19906 bytes)" align="left" border="0" width="543" height="65"></td>
+  </tr>
+  <tr>
+    <td valign="top" bgcolor="#336699">
+      <p align="center"><a href="index.htm" class="sitebar"><font color="#FFFFFF">Home</font></a></td>
+    <td valign="bottom" align="center" bgcolor="#336699"><a href="manual.htm" class="sitebar"><font color="#FFFFFF">About
+      help</font></a></td>
+    <td valign="bottom" align="center" bgcolor="#336699"><a href="copyright.htm" class="sitebar"><font color="#FFFFFF">Copyrights</font></a></td>
+    <td valign="bottom" align="center" bgcolor="#336699"><a href="notice.htm" class="sitebar"><font color="#FFFFFF">License</font></a></td>
+    <td valign="bottom" align="center" bgcolor="#336699"><a href="rastopop.htm" class="sitebar"><font color="#FFFFFF">Installing
+      &amp; using RasTop</font></a></td>
+    <td valign="bottom" align="center" bgcolor="#336699"><a href="library.htm" class="sitebar"><font color="#FFFFFF">Library</font></a></td>
+  </tr>
+  <tr>
+    <td valign="top" bgcolor="#FFFFFF"><img src="images/dotnul.gif" width="134" height="1" alt="dotnul.gif (807 bytes)" align="bottom"></td>
+    <td valign="top" bgcolor="#FFFFFF" colspan="5" width="100%"><img src="images/dotnul.gif" width="460" height="2" align="bottom" border="0"></td>
+  </tr>
+</table>
+
+<!--webbot bot="Include" endspan i-checksum="50747" -->
+
+<!---->
+
+
+<table border="0" cellpadding="0" cellspacing="0" width="700">
+  <tr>
+    <td valign="top" bgcolor="#EEEEEE" width="140"><img src="images/dotnul.gif" width="140" height="10" align="bottom" border="0"></td>
+    <td valign="top" width="2"><img src="images/dotnul.gif" width="1" height="10" align="bottom" border="0"></td>
+    <td valign="top" width="10"><img src="images/dotnul.gif" width="10" height="10" align="bottom" border="0"></td>
+    <td width="100%"><img src="images/dotnul.gif" width="549" height="10" alt="dotnul.gif (43 bytes)" align="bottom" border="0"></td>
+  </tr>
+  <tr>
+    <td valign="top" bgcolor="#EEEEEE" width="140"><!----> 
+      <div align="center">
+        <center>
+        <table border="0" cellpadding="5" cellspacing="0" width="100%">
+          <tr>
+            <td width="10" bgcolor="#333399"><!----></td>
+            <td width="100%" bgcolor="#CCCCFF"><span class="ari8"><strong>Commands:</strong></span></td>
+          </tr>
+          <tr>
+            <td width="100%" colspan="2"><img src="images/arrow1.gif" alt="arrow1.gif (162 bytes)" width="10" height="8"><span class="ari8"><a href="rastopop.htm">Using
+              RasTop</a><br>
+              <img src="images/arrow1.gif" alt="arrow1.gif (162 bytes)" width="10" height="8"><a href="menu.htm">Menu</a><br>
+              <img src="images/arrow1.gif" alt="arrow1.gif (162 bytes)" width="10" height="8"><a href="operations.htm">Summary</a><br>
+              <img src="images/arrow1.gif" alt="arrow1.gif (162 bytes)" width="10" height="8"><a href="commandref.htm">Reference</a><br>
+              <img src="images/arrow1.gif" alt="arrow1.gif (162 bytes)" width="10" height="8"><a href="internal.htm">Internal
+              Parameters</a><br>
+              <img src="images/arrow1.gif" alt="arrow1.gif (162 bytes)" width="10" height="8"><a href="atomexpression.htm">Atom
+              Expression</a><br>
+              <img src="images/arrow1.gif" alt="arrow1.gif (162 bytes)" width="10" height="8"><a href="colour.htm">Colour
+              Schemes</a><br>
+              <img src="images/arrow1.gif" alt="arrow1.gif (162 bytes)" width="10" height="8"><em>Atom
+              Sets</em><br>
+              <img src="images/arrow1.gif" alt="arrow1.gif (162 bytes)" width="10" height="8"><a href="rastopworld.htm">RasTop
+              World</a></span></td>
+          </tr>
+          <tr>
+            <td width="100%" colspan="2" bgcolor="#CCCCFF"><span class="ari8"><strong>Content:</strong></span></td>
+          </tr>
+          <tr>
+            <td width="100%" colspan="2"><span class="ari8"><a href="#atset">AT</a><br>
+              <a href="#acidicset">Acidic</a><br>
+              <a href="#acyclicset">Acyclic</a><br>
+              <a href="#aliphaticset">Aliphatic</a><br>
+              <a href="#alphaset">Alpha</a><br>
+              <a href="#aminoset">Amino</a><br>
+              <a href="#aromaticset">Aromatic</a><br>
+              <a href="#backboneset">Backbone</a><br>
+              <a href="#basicset">Basic</a><br>
+              <a href="#bondedset">Bonded</a><br>
+              <a href="#buriedset">Buried</a><br>
+              <a href="#cgset">CG</a><br>
+              <a href="#chargedset">Charged</a><br>
+              <a href="#cyclicset">Cyclic</a><br>
+              <a href="#cystineset">Cystine</a><br>
+              <a href="#helixset">Helix</a><br>
+              <a href="#heteroset">Hetero</a><br>
+              <a href="#hydrogenset">Hydrogen</a><br>
+              <a href="#hydrophobicset">Hydrophobic</a><br>
+              <a href="#ionsset">Ions</a><br>
+              <a href="#largeset">Large</a><br>
+              <a href="#ligandset">Ligand</a><br>
+              <a href="#mediumset">Medium</a><br>
+              <a href="#neutralset">Neutral</a><br>
+              <a href="#nucleicset">Nucleic</a><br>
+              <a href="#polarset">Polar</a><br>
+              <a href="#proteinset">Protein</a><br>
+              <a href="#purineset">Purine</a><br>
+              <a href="#pyrimidineset">Pyrimidine</a><br>
+              <a href="#selectedset">Selected</a><br>
+              <a href="#sheetset">Sheet</a><br>
+              <a href="#sidechainset">Sidechain</a><br>
+              <a href="#smallset">Small</a><br>
+              <a href="#solventset">Solvent</a><br>
+              <a href="#surfaceset">Surface</a><br>
+              <a href="#turnset">Turn</a><br>
+              <a href="#waterset">Water</a></span></td>
+          </tr>
+        </table>
+        </center>
+      </div>
+      <p>&nbsp;</p>
+      <p>&nbsp;</td>
+    <td valign="top" width="2"><img src="images/dotnul.gif" width="1" height="10" align="bottom" border="0"></td>
+    <td valign="top"></td>
+    <td>
+      <p align="center"><span style="font-size: 14pt"><strong>Atom Sets</strong></span></p>
+      <p>RasMol atom expressions may contain predefined sets. These sets are
+      single keywords that represent portions of a molecule of interest.
+      Predefined sets are often abbreviations of primitive atom expressions. In
+      some cases the use of predefined sets allows selection of areas of a
+      molecule that could not otherwise be distinguished. A list of the
+      currently predefined sets is given below. In addition to the sets listed
+      here, RasMol also treats element names (and their plurals) as predefined
+      sets containing all atoms of that element type, <i>i.e.</i> the command '<a href="commandref.htm#select"><tt><b>select
+      oxygen</b></tt></a>' is equivalent to the command '<a href="commandref.htm#select"><tt><b>select
+      elemno=8</b></tt></a>'.</p>
+      <p>The <a href="aatable.htm">Amino Acid Table</a> summarizes the list of
+      amino acids corresponding to each set.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="atset">AT
+      Set</h3>
+      </a>
+      <p>This set contains the atoms in the complementary nucleotides adenosine
+      and thymidine (A and T, respectively). All nucleotides are classified as
+      either the set '<tt><b>at</b></tt>' or the set '<a href="#cgset"><tt><b>cg</b></tt></a>'
+      This set is equivalent to the RasMol atom expressions &quot;<tt><b>a,t</b></tt>&quot;,
+      and &quot;<tt><b>nucleic and not cg</b></tt>&quot;.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="acidicset">Acidic
+      Set</h3>
+      </a>
+      <p>The set of acidic amino acids. These are the residue types Asp and Glu.
+      All amino acids are classified as either '<tt><b>acidic</b></tt>', '<a href="#basicset"><tt><b>basic</b></tt></a>'
+      '<tt><b>or</b></tt>' '<a href="#neutralset"><tt><b>neutral</b></tt></a>'.
+      This set is equivalent to the RasMol atom expressions &quot;<tt><b>asp,
+      glu</b></tt>&quot; and &quot;<tt><b>amino and not (basic or neutral)</b></tt>&quot;.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="acyclicset">Acyclic
+      Set</h3>
+      </a>
+      <p>The set of atoms in amino acids not containing a cycle or ring. All
+      amino acids are classified as either '<a href="#cyclicset"><tt><b>cyclic</b></tt></a>'
+      or '<tt><b>acyclic</b></tt>'. This set is equivalent to the RasMol atom
+      expression &quot;<tt><b>amino and not cyclic</b></tt>&quot;.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="aliphaticset">Aliphatic
+      Set</h3>
+      </a>
+      <p>This set contains the aliphatic amino acids. These are the amino acids
+      Ala, Gly, Ile, Leu and Val. This set is equivalent to the RasMol atom
+      expression &quot;<tt><b>ala, gly, ile, leu, val</b></tt>&quot;.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="alphaset">Alpha
+      Set</h3>
+      </a>
+      <p>The set of alpha carbons in the protein molecule. This set is
+      approximately equivalent to the RasMol atom expression &quot;<tt><b>*.CA</b></tt>&quot;.
+      This command should not be confused with the predefined set '<a href="#helixset"><tt><b>helix</b></tt></a>'
+      which contains the atoms in the amino acids of the protein's alpha
+      helices.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="aminoset">Amino
+      Set</h3>
+      </a>
+      <p>This set contains all the atoms contained in amino acid residues. This
+      is useful for distinguishing the protein from the nucleic acid and
+      heterogeneous atoms in the current molecule database.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="aromaticset">Aromatic
+      Set</h3>
+      </a>
+      <p>The set of atoms in amino acids containing aromatic rings. These are
+      the amino acids His, Phe, Trp and Tyr. Because they contain aromatic rings
+      all members of this set are member of the predefined set '<a href="#cyclicset"><tt><b>cyclic</b></tt></a>'.
+      This set is equivalent to the RasMol atom expressions &quot;<tt><b>his,
+      phe, trp, tyr</b></tt>&quot; and &quot;<tt><b>cyclic and not pro</b></tt>&quot;.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="backboneset">Backbone
+      Set</h3>
+      </a>
+      <p>This set contains the four atoms of each amino acid that form the
+      polypeptide N-C-C-O backbone of proteins, and the atoms of the sugar
+      phosphate backbone of nucleic acids. Use the RasMol predefined sets '<tt><b>protein</b></tt>'
+      and '<tt><b>nucleic</b></tt>' to distinguish between the two forms of
+      backbone. Atoms in nucleic acids and proteins are either '<tt><b>backbone</b></tt>'
+      or '<a href="#sidechainset"><tt><b>sidechain</b></tt></a>'. This set is
+      equivalent to the RasMol expression &quot;<tt><b>(protein or nucleic) and
+      not sidechain</b></tt>&quot;.</p>
+      <p>The predefined set '<tt><b>mainchain</b></tt>' is synonymous with the
+      set '<tt><b>backbone</b></tt>'.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="basicset">Basic
+      Set</h3>
+      </a>
+      <p>The set of basic amino acids. These are the residue types Arg, His and
+      Lys. All amino acids are classified as either '<a href="#acidicset"><tt><b>acidic</b></tt></a>',
+      '<tt><b>basic</b></tt>' or '<a href="#neutralset"><tt><b>neutral</b></tt></a>'.
+      This set is equivalent to the RasMol atom expressions &quot;<tt><b>arg,
+      his, lys</b></tt>&quot; and &quot;<tt><b>amino and not (acidic or neutral)</b></tt>&quot;.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="bondedset">Bonded
+      Set</h3>
+      </a>
+      <p>This set contain all the atoms in the current molecule database that
+      are bonded to at least one other atom.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="buriedset">Buried
+      Set</h3>
+      </a>
+      <p>This set contains the atoms in those amino acids that tend (prefer) to
+      be buried inside protein, away from contact with solvent molecules. This
+      set refers to the amino acids preference and not the actual solvent
+      accessibility for the current protein. All amino acids are classified as
+      either '<a href="#surfaceset"><tt><b>surface</b></tt></a>' or '<tt><b>buried</b></tt>'.
+      This set is equivalent to the RasMol atom expression &quot;<tt><b>amino
+      and not surface</b></tt>&quot;.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="cgset">CG
+      Set</h3>
+      </a>
+      <p>This set contains the atoms in the complementary nucleotides cytidine
+      and guanosine (C and G, respectively). All nucleotides are classified as
+      either the set '<a href="#atset"><tt><b>at</b></tt></a>' or the set '<tt><b>cg</b></tt>'
+      This set is equivalent to the RasMol atom expressions &quot;<tt><b>c,g</b></tt>&quot;
+      and &quot;<tt><b>nucleic and not at</b></tt>&quot;.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="chargedset">Charged
+      Set</h3>
+      </a>
+      <p>This set contains the charged amino acids. These are the amino acids
+      that are either '<a href="#acidicset"><tt><b>acidic</b></tt></a>' or '<a href="#basicset"><tt><b>basic</b></tt></a>'.
+      Amino acids are classified as being either '<tt><b>charged</b></tt>' or '<a href="#neutralset"><tt><b>neutral</b></tt></a>'.
+      This set is equivalent to the RasMol atom expressions &quot;<tt><b>acidic
+      or basic</b></tt>&quot; and &quot;<tt><b>amino and not neutral</b></tt>&quot;.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="cyclicset">Cyclic
+      Set</h3>
+      </a>
+      <p>The set of atoms in amino acids containing a cycle or rings. All amino
+      acids are classified as either '<tt><b>cyclic</b></tt>' or '<a href="#acyclicset"><tt><b>acyclic</b></tt></a>'.
+      This set consists of the amino acids His, Phe, Pro, Trp and Tyr. The
+      members of the predefined set '<a href="#aromaticset"><tt><b>aromatic</b></tt></a>'
+      are members of this set. The only cyclic but non-aromatic amino acid is
+      proline. This set is equivalent to the RasMol atom expressions &quot;<tt><b>his,
+      phe, pro, trp, tyr</b></tt>&quot; and &quot;<tt><b>aromatic or pro</b></tt>&quot;
+      and &quot;<tt><b>amino and not acyclic</b></tt>&quot;.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="cystineset">Cystine
+      Set</h3>
+      </a>
+      <p>This set contains the atoms of cysteine residues that form part of a
+      disulphide bridge, <i>i.e.</i> half cystines. RasMol automatically
+      determines disulphide bridges, if neither the predefined set '<tt><b>cystine</b></tt>'
+      nor the RasMol '<a href="commandref.htm#ssbonds"><tt><b>ssbonds</b></tt></a>'
+      command have been used since the molecule was loaded. The set of free
+      cysteines may be determined using the RasMol atom expression &quot;<tt><b>cys
+      and not cystine</b></tt>&quot;.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="helixset">Helix
+      Set</h3>
+      </a>
+      <p>This set contains all atoms that form part of a protein alpha helix as
+      determined by either the PDB file author or Kabsch and Sander's DSSP
+      algorithm. By default, RasMol uses the secondary structure determination
+      given in the PDB file if it exists. Otherwise, it uses the DSSP algorithm
+      as used by the RasMol '<a href="commandref.htm#structure"><tt><b>structure</b></tt></a>'
+      command.</p>
+      <p>This predefined set should not be confused with the predefined set '<a href="#alphaset"><tt><b>alpha</b></tt></a>'
+      which contains the alpha carbon atoms of a protein.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="heteroset">Hetero
+      Set</h3>
+      </a>
+      <p>This set contains all the heterogeneous atoms in the molecule. These
+      are the atoms described by HETATM entries in the PDB file. These typically
+      contain water, cofactors and other solvents and ligands. All '<tt><b>hetero</b></tt>'
+      atoms are classified as either '<a href="#ligandset"><tt><b>ligand</b></tt></a>'
+      or '<a href="#solventset"><tt><b>solvent</b></tt></a>' atoms. These
+      heterogeneous '<a href="#solventset"><tt><b>solvent</b></tt></a>' atoms
+      are further classified as either '<a href="#waterset"><tt><b>water</b></tt></a>'
+      or '<a href="#ionsset"><tt><b>ions</b></tt></a>'.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="hydrogenset">Hydrogen
+      Set</h3>
+      </a>
+      <p>This predefined set contains all the hydrogen, deuterium and tritium
+      atoms of the current molecule. This predefined set is equivalent to the
+      RasMol atom expression &quot;<tt><b>elemno=1</b></tt>&quot;.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="hydrophobicset">Hydrophobic
+      Set</h3>
+      </a>
+      <p>This set contains all the hydrophobic amino acids. These are the amino
+      acids Ala, Leu, Val, Ile, Pro, Phe, Met and Trp. All amino acids are
+      classified as either '<tt><b>hydrophobic</b></tt>' or '<a href="#polarset"><tt><b>polar</b></tt></a>'.
+      This set is equivalent to the RasMol atom expressions &quot;<tt><b>ala,
+      leu, val, ile, pro, phe, met, trp</b></tt>&quot; and &quot;<tt><b>amino
+      and not polar</b></tt>&quot;.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>
+      </tt><a name="ionsset">Ions Set</h3>
+      </a>
+      <p>This set contains all the heterogeneous phosphate and sulphate ions in
+      the current molecule data file. A large number of these ions are sometimes
+      associated with protein and nucleic acid structures determined by X-ray
+      crystallography. These atoms tend to clutter an image. All '<a href="#heteroset"><tt><b>hetero</b></tt></a>'
+      atoms are classified as either '<a href="#ligandset"><tt><b>ligand</b></tt></a>'
+      or '<a href="#solventset"><tt><b>solvent</b></tt></a>' atoms. All '<a href="#solventset"><tt><b>solvent</b></tt></a>'
+      atoms are classified as either '<a href="#waterset"><tt><b>water</b></tt></a>'
+      or '<tt><b>ions</b></tt>'.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="largeset">Large
+      Set</h3>
+      </a>
+      <p>All amino acids are classified as either '<a href="#smallset"><tt><b>small</b></tt></a>',
+      '<a href="#mediumset"><tt><b>medium</b></tt></a>' or '<tt><b>large</b></tt>'.
+      This set is equivalent to the RasMol atom expression &quot;<tt><b>amino
+      and not (small or medium)</b></tt>&quot;.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="ligandset">Ligand
+      Set</h3>
+      </a>
+      <p>This set contains all the heterogeneous cofactor and ligand moieties
+      that are contained in the current molecule data file. This set is defined
+      to be all '<a href="#heteroset"><tt><b>hetero</b></tt></a>' atoms that are
+      not '<a href="#solventset"><tt><b>solvent</b></tt></a>' atoms. Hence this
+      set is equivalent to the RasMol atom expression &quot;<tt><b>hetero and
+      not solvent</b></tt>&quot;.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="mediumset">Medium
+      Set</h3>
+      </a>
+      <p>All amino acids are classified as either '<a href="#smallset"><tt><b>small</b></tt></a>',
+      '<tt><b>medium</b></tt>' or '<a href="#largeset"><tt><b>large</b></tt></a>'.
+      This set is equivalent to the RasMol atom expression &quot;<tt><b>amino
+      and not (large or small)</b></tt>&quot;.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="neutralset">Neutral
+      Set</h3>
+      </a>
+      <p>The set of neutral amino acids. All amino acids are classified as
+      either '<a href="#acidicset"><tt><b>acidic</b></tt></a>', '<a href="#basicset"><tt><b>basic</b></tt></a>'
+      or '<tt><b>neutral</b></tt>'. This set is equivalent to the RasMol atom
+      expression &quot;<tt><b>amino and not (acidic or basic)</b></tt>&quot;.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="nucleicset">Nucleic
+      Set</h3>
+      </a>
+      <p>The set of all atoms in nucleic acids, which consists of the four
+      nucleotide bases adenosine, cytidine, guanosine and thymidine (A, C, G and
+      T, respectively). All neucleotides are classified as either '<a href="#purineset"><tt><b>purine</b></tt></a>'
+      or '<a href="#pyrimidineset"><tt><b>pyrimidine</b></tt></a>'. This set is
+      equivalent to the RasMol atom expressions &quot;<tt><b>a,c,g,t</b></tt>&quot;
+      and &quot;<tt><b>purine or pyrimidine</b></tt>&quot;. The symbols for RNA
+      nucleotides (U, +U, I, 1MA, 5MC, OMC, 1MG, 2MG, M2G, 7MG, OMG, YG, H2U,
+      5MU, and PSU) are also recognized as members of this set.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="polarset">Polar
+      Set</h3>
+      </a>
+      <p>This set contains the polar amino acids. All amino acids are classified
+      as either '<a href="#hydrophobicset"><tt><b>hydrophobic</b></tt></a>' or '<tt><b>polar</b></tt>'.
+      This set is equivalent to the RasMol atom expression &quot;<tt><b>amino
+      and not hydrophobic</b></tt>&quot;.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="proteinset">Protein
+      Set</h3>
+      </a>
+      <p>The set of all atoms in proteins. This consists of the RasMol
+      predefined set '<a href="#aminoset"><tt><b>amino</b></tt></a>' and common
+      post-translation modifications.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="purineset">Purine
+      Set</h3>
+      </a>
+      <p>The set of purine nucleotides. These are the bases adenosine and
+      guanosine (A and G, respectively). All nucleotides are either '<tt><b>purines</b></tt>'
+      or '<a href="#pyrimidineset"><tt><b>pyrimidines</b></tt></a>'. This set is
+      equivalent to the RasMol atom expressions &quot;<tt><b>a,g</b></tt>&quot;
+      and &quot;<tt><b>nucleic and not pyrimidine</b></tt>&quot;.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="pyrimidineset">Pyrimidine
+      Set</h3>
+      </a>
+      <p>The set of pyrimidine nucleotides. These are the bases cytidine and
+      thymidine (C and T, respectively). All nucleotides are either '<a href="#purineset"><tt><b>purines</b></tt></a>'
+      or '<tt><b>pyrimidines</b></tt>'. This set is equivalent to the RasMol
+      atom expressions &quot;<tt><b>c,t</b></tt>&quot; and &quot;<tt><b>nucleic
+      and not purine</b></tt>&quot;.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><a name="selectedset">Selected
+      Set</h3>
+      </a>
+      <p>This set contains the set of atoms in the currently selected region.
+      The currently selected region is defined by the preceding '<a href="commandref.htm#select"><tt><b>select</b></tt></a>'
+      or '<a href="commandref.htm#restrict"><tt><b>restrict</b></tt></a>'
+      command and not the atom expression containing the '<tt><b>selected</b></tt>'
+      keyword.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="sheetset">Sheet
+      Set</h3>
+      </a>
+      <p>This set contains all atoms that form part of a protein beta sheet as
+      determined by either the PDB file author or Kabsch and Sander's DSSP
+      algorithm. By default, RasMol uses the secondary structure determination
+      given in the PDB file if it exists. Otherwise, it uses the DSSP algorithm
+      as used by the RasMol '<a href="commandref.htm#structure"><tt><b>structure</b></tt></a>'
+      command.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="sidechainset">Sidechain
+      Set</h3>
+      </a>
+      <p>This set contains the functional sidechains of any amino acids and the
+      base of each nucleotide. These are the atoms not part of the polypeptide
+      N-C-C-O backbone of proteins or the sugar phosphate backbone of nucleic
+      acids. Use the RasMol predefined sets '<tt><b>protein</b></tt>' and '<tt><b>nucleic</b></tt>'
+      to distinguish between the two forms of sidechain. Atoms in nucleic acids
+      and proteins are either '<a href="#backboneset"><tt><b>backbone</b></tt></a>'
+      or '<tt><b>sidechain</b></tt>'. This set is equivalent to the RasMol
+      expression &quot;<tt><b>(protein or nucleic) and not backbone</b></tt>&quot;.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="smallset">Small
+      Set</h3>
+      </a>
+      <p>All amino acids are classified as either '<tt><b>small</b></tt>', '<a href="#mediumset"><tt><b>medium</b></tt></a>'
+      or '<a href="#largeset"><tt><b>large</b></tt></a>'. This set is equivalent
+      to the RasMol atom expression &quot;<tt><b>amino and not (medium or large)</b></tt>&quot;.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="solventset">Solvent
+      Set</h3>
+      </a>
+      <p>This set contains the solvent atoms in the molecule coordinate file.
+      These are the heterogeneous water molecules, phosphate and sulphate ions.
+      All '<a href="#heteroset"><tt><b>hetero</b></tt></a>' atoms are classified
+      as either '<a href="#ligandset"><tt><b>ligand</b></tt></a>' or '<tt><b>solvent</b></tt>'
+      atoms. All '<tt><b>solvent</b></tt>' atoms are classified as either '<a href="#waterset"><tt><b>water</b></tt></a>'
+      or '<a href="#ionsset"><tt><b>ions</b></tt></a>'. This set is equivalent
+      to the RasMol atom expressions &quot;<tt><b>hetero and not ligand</b></tt>&quot;
+      and &quot;<tt><b>water or ions</b></tt>&quot;.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="surfaceset">Surface
+      Set</h3>
+      </a>
+      <p>This set contains the atoms in those amino acids that tend (prefer) to
+      be on the surface of proteins, in contact with solvent molecules. This set
+      refers to the amino acids preference and not the actual solvent
+      accessibility for the current protein. All amino acids are classified as
+      either '<tt><b>surface</b></tt>' or '<a href="#buriedset"><tt><b>buried</b></tt></a>'.
+      This set is equivalent to the RasMol atom expression &quot;<tt><b>amino
+      and not buried</b></tt>&quot;.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="turnset">Turn
+      Set</h3>
+      </a>
+      <p>This set contains all atoms that form part of a protein turns as
+      determined by either the PDB file author or Kabsch and Sander's DSSP
+      algorithm. By default, RasMol uses the secondary structure determination
+      given in the PDB file if it exists. Otherwise, it uses the DSSP algorithm
+      as used by the RasMol '<a href="commandref.htm#structure"><tt><b>structure</b></tt></a>'
+      command.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><tt>&nbsp;</tt><a name="waterset">Water
+      Set</h3>
+      </a>
+      <p>This set contains all the heterogeneous water molecules in the current
+      database. A large number of water molecules are sometimes associated with
+      protein and nucleic acid structures determined by X-ray crystallography.
+      These atoms tend to clutter an image. All '<a href="#heteroset"><tt><b>hetero</b></tt></a>'
+      atoms are classified as either '<a href="#ligandset"><tt><b>ligand</b></tt></a>'
+      or '<a href="#solventset"><tt><b>solvent</b></tt></a>' atoms. The '<a href="#solventset"><tt><b>solvent</b></tt></a>'
+      atoms are further classified as either '<tt><b>water</b></tt>' or '<a href="#ionsset"><tt><b>ions</b></tt></a>'.</p>
+      <h3 align="left"><a name="noticev2.7"></a></h3>
+      <!--webbot bot="Include" u-include="signature.htm" tag="BODY" startspan -->
+<P><IMG SRC="images/dotnul.gif" NAME="Graphic1" ALIGN=BOTTOM WIDTH=2 HEIGHT=5 BORDER=0></P>
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0>
+	<TR>
+		<TD WIDTH=100% BGCOLOR="#c29654">
+			<P><IMG SRC="images/dotnul.gif" NAME="Graphic2" ALT="dotnul.gif (43 bytes)" ALIGN=BOTTOM WIDTH=2 HEIGHT=2 BORDER=0></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><FONT SIZE=1><STRONG>RasTop Help Site</STRONG> - <A HREF="index.htm">home</A>
+			| <A HREF="notice.htm">notice</A> | <A HREF="copyright.htm">copyright</A></P>
+		</TD>
+	</TR>
+</TABLE>
+<P><BR><BR>
+</P>
+<!--webbot bot="Include" endspan i-checksum="12835" -->
+</td>
+  </tr>
+</table>
+
+</body>
+
+</html>

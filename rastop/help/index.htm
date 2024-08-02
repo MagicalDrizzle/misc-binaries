@@ -1,0 +1,281 @@
+<html>
+
+<head>
+<link rel="stylesheet" href="main.css">
+<title>Home Page</title>
+<meta name="description" content="rastop is a molecular visualization software to view the 3-dimensional structure of macromolecules">
+<meta name="keywords" content="rastop, rasmol, macromolecule, structure, 3-dimensional, pdb, protein, dna, rna, model, crystal,molecule">
+</head>
+
+<body marginwidth="0" marginheight="0" leftmargin="0" bottommargin="0" topmargin="0" bgcolor="#FFFFFF" text="#000000">
+
+<!--webbot bot="Include" u-include="header.htm" tag="BODY" startspan -->
+
+<p><!----></p>
+<table border="0" cellpadding="2" width="100%">
+  <tr>
+    <td valign="top" bgcolor="#FFFFFF"><font color="#333333"><span class="ari8">RasTop
+      Manual</span></font></td>
+    <td valign="top" bgcolor="#FFFFFF" colspan="5" width="100%">
+      <p align="right"><span class="ari8"><a href="http://sourceforge.net/projects/rastop/">Home</a> | <a href="operations.htm">All
+      Commands</a> | <a href="notice.htm">Notice</a></span></td>
+  </tr>
+  <tr>
+    <td valign="top" bgcolor="#CCCCFF" align="center" background="images/doubleline.jpg"><a name="top"></a><img src="images/sigle.gif" alt="sigle.gif (4112 bytes)" width="71" height="65"></td>
+    <td colspan="5" bgcolor="#000000"><!----><img src="images/bannerrms2.gif" alt="bannerrms2.gif (19906 bytes)" align="left" border="0" width="543" height="65"></td>
+  </tr>
+  <tr>
+    <td valign="top" bgcolor="#336699">
+      <p align="center"><a href="index.htm" class="sitebar"><font color="#FFFFFF">Home</font></a></td>
+    <td valign="bottom" align="center" bgcolor="#336699"><a href="manual.htm" class="sitebar"><font color="#FFFFFF">About
+      help</font></a></td>
+    <td valign="bottom" align="center" bgcolor="#336699"><a href="copyright.htm" class="sitebar"><font color="#FFFFFF">Copyrights</font></a></td>
+    <td valign="bottom" align="center" bgcolor="#336699"><a href="notice.htm" class="sitebar"><font color="#FFFFFF">License</font></a></td>
+    <td valign="bottom" align="center" bgcolor="#336699"><a href="rastopop.htm" class="sitebar"><font color="#FFFFFF">Installing
+      &amp; using RasTop</font></a></td>
+    <td valign="bottom" align="center" bgcolor="#336699"><a href="library.htm" class="sitebar"><font color="#FFFFFF">Library</font></a></td>
+  </tr>
+  <tr>
+    <td valign="top" bgcolor="#FFFFFF"><img src="images/dotnul.gif" width="134" height="1" alt="dotnul.gif (807 bytes)" align="bottom"></td>
+    <td valign="top" bgcolor="#FFFFFF" colspan="5" width="100%"><img src="images/dotnul.gif" width="460" height="2" align="bottom" border="0"></td>
+  </tr>
+</table>
+
+<!--webbot bot="Include" i-CheckSum="40401" endspan -->
+
+<!---->
+
+
+<table border="0" cellpadding="0" cellspacing="0" width="700" align="left">
+  <tr>
+    <td valign="top" height="2" width="140"><img src="images/dotnul.gif" width="2" height="2" align="bottom" border="0"><img src="images/dotnul.gif" width="140" height="1" alt="dotnul.gif (807 bytes)"></td>
+    <td valign="top" width="10"><img src="images/dotnul.gif" width="10" height="2" alt="dotnul.gif (807 bytes)" border="0"></td>
+    <td valign="top" width="100%"><img src="images/dotnul.gif" width="2" height="2" align="bottom"></td>
+  </tr>
+  <tr>
+    <td width="140" bgcolor="#eeeeee" valign="top" height="10"><!----> 
+      <table border="0" cellspacing="0" cellpadding="5">
+        <tr>
+          <td width="100" valign="top" bgcolor="#336699"><span class="ari8"><strong><font color="#FFFFFF">Content</font></strong><font color="#FFFFFF">:</font></span></td>
+        </tr>
+        <tr>
+          <td width="100" valign="top"><span class="ari8"><a href="#rastopnotice">About
+            RasTop</a><br>
+            <a href="#history">What's new?<br>
+            </a><a href="#building">Building RasTop<br>
+            </a><a href="#translating">Translating RasTop</a><br>
+            <a href="#comment&amp;bugreport">Comments &amp;&nbsp;Bugs</a><br>
+            <a href="#thissite">About this site</a></span></td>
+        </tr>
+        <tr>
+          <td valign="top" bgcolor="#336699"><span class="ari8"><font color="#FFFFFF"><b>Authors</b></font></span></td>
+        </tr>
+        <tr>
+          <td valign="top" align="center"><b>Source:&nbsp;</b><br>
+            <br>
+            Herbert J. Bernstein,<br>
+            &nbsp;Christian Duque,&nbsp;<br>
+ Gary Grossman,&nbsp;<br>
+ Marco Molinaro,<br>
+            Arne Mueller,&nbsp;<br>
+ Naoum Salame,&nbsp;<br>
+ Roger Sayle,&nbsp;<br>
+            &nbsp;Philippe Valadon.</td>
+        </tr>
+        <tr>
+          <td valign="top" align="center"><b>Help and Translations:<br>
+            </b><br>
+            Frances C. Bernstein,<br>
+            &nbsp; Herbert J. Bernstein,<br>
+            &nbsp; William McClure,&nbsp;<br>
+            Eric Martz,&nbsp;<br>
+ Naoum&nbsp; Salame,&nbsp;<br>
+ Philippe Valadon,&nbsp;<br>
+            &nbsp; Margaret Wong.&nbsp;</td>
+        </tr>
+        <tr>
+          <td valign="top" align="center" bgcolor="#336699">&nbsp;</td>
+        </tr>
+        <tr>
+          <td valign="top" align="center">Open RasMol Site:<br>
+            <a href="http://www.openrasmol.org"><img border="0" src="images/defaul1.jpg" alt="Open Rasmol" vspace="5" width="88" height="35"></a></td>
+        </tr>
+      </table>
+      <p>&nbsp;</td>
+    <td width="10" valign="top"></td>
+    <td width="629" height="364" valign="top"><!---->
+      <h1 align="center"><strong>RasTop 2.2</strong></h1>
+      <h3 align="center"><strong>Molecular Graphics Visualization Tool<br>
+      </strong></h3>
+      <h3 align="center"><img border="0" src="images/sampleview.gif" align="middle" vspace="20" width="377" height="309"></h3>
+      <p align="left">Welcome
+      to RasTop molecular visualization software, Version 2.2. &nbsp;RasTop is a
+      graphical interface<a href="rastopop.htm"><img border="0" src="images/newusers.gif" align="right" hspace="10" width="65" height="65"></a>
+ to the program RasMol.
+      RasTop allows the viewing and the direct manipulation of macromolecules
+      and small molecules on screen. RasMol was developed initially by Roger
+      Sayle at the University of Edinburgh's Biocomputing Research Unit and the
+      BioMolecular Structure Department, Glaxo Research and Development,
+      Greenford, U.K.&nbsp; Many people since
+      contributed to its code. In 1999, Herbert J. Berstein released a
+      compilated version named Rasmol 2.7.1 of different source variants under a
+      GPL-like license (see&nbsp; <a href="notice.htm">NOTICE</a>). Many thanks
+      to these people for giving RasMol <font color="#000000">freely to the
+      community</font>. Many thanks also to Herbert Berstein, Frances Bernstein,
+      William McClure, Eric Marz, Margaret Wong, and Roger Sayle for their
+      contributions to the Help and giving the permission to re-use their work.
+      See the complete list of contributors to this version in the file <a href="copyright.htm">copyright</a>.</p>
+      <p>Please,&nbsp; visit the <a href="library.htm">library</a>
+      for more links on RasMol.</p>
+      <p>Everybody is welcome to use RasTop, but you must read and comply with
+      the <a href="notice.htm">NOTICE</a>, which contains important disclaimers
+      and information on using, distributing, and contributing to this project.&nbsp;</p>
+      <p>If you have any question, suggestions, corrections, or bug reports, please
+      contact us on <a href="http://sourceforge.net/projects/rastop/"> sourceforge</a>.</p>
+      <p><a name="rastop"></a>About
+      RasTop</p>
+      <p>Our understanding in biological sciences is progressing
+      rapidly.&nbsp;More and more proteins are discovered everyday, new ways on
+      how they associate in superstructures are elucidated. RasTop was developed
+      with the idea of giving to the scientist, &quot;at the bench&quot;, a mean
+      to visualize quickly the tri-dimensional shape of macromolecules.&nbsp;RasTop
+      is also particularly adapted for teaching purpose.</p>
+      <p>RasTop wraps a user-friendly graphical interface around &quot;RasMol
+      molecular engine&quot;.&nbsp;No more typing on the command line, each
+      command in the menu generates its own script that is transferred to
+      RasMol. RasTop has many extensions to handle atom selections: addition and
+      subtraction of atoms, groups, or chains, selection on screen with a lasso,
+      ability to go back to the previous selection,&nbsp;copying to and pasting
+      selections from the clipboard, set operations such as inverse, extraction,
+      summation, subtraction, and exclusion, and a full saving of a work session
+      under a script format called <a href="fileformats.htm#rsmfiles">RSM script</a>.&nbsp;</p>
+      <p>RasTop allows several molecules to be opened at the same time in the
+      same window and several windows to be opened at the same time.</p>
+      <p><strong>Recommanded Hardware</strong>: Pentium or equivalent processor,
+      16 MB of RAM, and a web browser to access this site, at best a version 4
+      or higher.</p>
+      <p><b>Operating system: </b>Windows or Linux platform. Linux users need <a href="http://www.winehq.com/">Wine</a>
+      installed.
+      <br>
+      </p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><a href="#translating" name="history"></a>What's
+      new in RasTop 2.2 ?</h3>
+      <p><b>RasTop 2.2</b> <i><br>
+      </i>Rastop is now distributed on sourceforge at <a href="http://sourceforge.net/projects/rastop/">http://sourceforge.net/projects/rastop/</a>
+      to allow the community to participate directly to the development of
+      RasTop at the source level.</p>
+      <p><b>RasTop 2.1</b> - <i>Released June 2004<br>
+      </i>Numerous bugs have been corrected, thanks for all of you who reported
+      them (see <a href="changelograstop.htm">changelog</a>). A command window similar to the one in the original
+      RasMol program has been added. This feature was requested by numerous
+      teachers and was initially developed by Christian Duque. RasTop is
+      now&nbsp; localizable to multiple languages, see <a href="#translating">translating
+      RasTop</a>. A
+      'scripting'&nbsp; toolbar has been added to improve the handling of
+      scripts. Scripts located in the &quot;rastop/scripts&quot; folder are
+      directly accessible on the new toolbar. Images can be saved as bmp files in 32-bit format.</p>
+      <p><b>RasTop 2.0.3 </b>- <i>Released January 2003<br>
+      </i>Many bugs from the initial 2.0 series have been corrected. Individual <font color="#000000">preferences
+      are now created for each user. Partial export in POVRay format is now
+      available.</font></p>
+      <p><b>RasTop 2.0 - </b><i>Released January 2002<br>
+      </i>This is a major update over previous versions. Next are listed the main
+      modifications:<br>
+      <i>Interface improvements: </i>New toolbar with direct selection of
+      atom properties and element sets; new buttons to facilitate rendering. The
+      mouse wheel is now active. Information on pointed atoms available in the
+      status bar. Hopefully the program is working without problem on Windows
+      2000 platforms.<br>
+      <i>Rendering improvements: </i>Higher color resolution and depth
+      queuing. New cylinder rendering, multidirectional headlight, better
+      cartoon and ribbon rendering, more comprehensive display mode, and
+      complete Richards - Connolly surfaces. Choice of the molecular rendering
+      at start from a default script and preference saving.<br>
+      <i>Multiple molecule capability: </i>Fully loaded world accepting
+      multiple molecules; saving and restoring of complete worlds with improved
+      world scripting.</p>
+      <p><b>RasTop 1.3.1</b>- <i>Released March 2001</i><br>
+      This is a minor update with modifications concerning mainly correction of
+      bugs reported for the 1.3 version.&nbsp; A release for 8-bit monitors is
+      also available. A few
+      systems are missing an updated version of the mfc42.dll file which is also
+      available, but requires separate installation.</p>
+      <p><b>RasTop 1.3</b> - <i>Released August 2000</i><br>
+      This is the first release of RasTop. Beside the interface, new rendering
+      capabilities were added to RasMol code: back clipping, 32-bit output under
+      Windows, centering command either on current selection or to the origin,
+      variation of depthcue in slab mode, and ShadePower coloring feature.</p>
+      <p>&nbsp;</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><a name="building"></a>Building
+      the source and contributing
+      to RasTop</h3>
+      <p>RasTop 2.1 was built with Visual Studio 6.0.&nbsp;To compile RasTop, just load RasTop workspace and built.
+      Starting version 2.1 the workspace is separated from the source; you'll
+      probably need to adjust VS for action such as search, etc. You can
+      find in the <a href="changelograstop.htm">changelog</a> all changes made
+      to RasMol source since RasMol version 2.1 by Roger Sayle. All modifications
+      in the RasMol core (the 'c' files) that
+      are RasTop specific are under the conditioner RASTOPWIN. To compile the
+      8-bits version, un-define THIRTYTWOBITS and define EIGHTBITS, see rasmol.h.</p>
+      <p>There is no TODO list attached to RasTop, but potential working
+      directions are numerous. If you are interested in adding to RasTop novel functionalities
+      and take advantage of RasMol license to diffuse your method, please *DO*.
+      If you want to make your own derivative of RasTop, you must read and
+      comply with the full <a href="notice.htm">NOTICE</a>.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><a name="translating"></a>Translating
+      RasTop</h3>
+      <p>Starting version 2.1, RasTop can be simply translated to others
+      languages.&nbsp;</p>
+      <p>To translate the command line add a new dictionary in the folder
+      &quot;rastop/lib&quot; named rastop_yourlang.lang. See the examples
+      rasmol.lang and rasmol_french.lang in the lib folder. To switch the
+      language to your language, type simple &quot;set language yourlang&quot;
+      on the command line. Add this command to the local preferences rasmolprefs
+      in the same folder if you&nbsp; intend to distribute a localized version
+      of RasTop.</p>
+      <p>To translate menus and dialogs, translate the string table. You need to
+      recompile RasTop. The string table is editable from inside Visual Studio
+      6.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><a name="comment&amp;bugreport"></a>Comments
+      and bug reports</h3>
+      <p>If you have any question, suggestion, correction, or bug report, contact
+      us on sourceforge at<a href="http://sourceforge.net/projects/rastop/">
+      </a>.</p>
+      <hr>
+      <h3><a href="#top"><img src="images/up.gif" alt="up.gif (892 bytes)" align="left" border="0" width="25" height="25"></a><a name="thissite"></a>About
+      this Site</h3>
+      <p>RasTop 2.2 package contains a folder named &quot;help.&quot; This
+      folder contains a series of html documents plus varied files that together
+      create a web-based document. To view the help site, open a web browser
+      offline, click 'open' in the file menu command, browse your directory, and
+      choose the file 'index.html'.&nbsp;You can also link RasTop directly to
+      this site in the <a href="rastopop.htm#Preferences">preferences</a>.</p>
+      <!--webbot bot="Include" u-include="signature.htm" tag="BODY" startspan -->
+<P><IMG SRC="images/dotnul.gif" NAME="Graphic1" ALIGN=BOTTOM WIDTH=2 HEIGHT=5 BORDER=0></P>
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0>
+	<TR>
+		<TD WIDTH=100% BGCOLOR="#c29654">
+			<P><IMG SRC="images/dotnul.gif" NAME="Graphic2" ALT="dotnul.gif (43 bytes)" ALIGN=BOTTOM WIDTH=2 HEIGHT=2 BORDER=0></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<P><FONT SIZE=1><STRONG>RasTop Help Site</STRONG> - <A HREF="index.htm">home</A> 
+			| <A HREF="notice.htm">notice</A> | <A HREF="copyright.htm">copyright</A><BR>Last updated on <!--webbot bot="Timestamp" s-type="REGENERATED" 
+      s-format="%A, %B %d, %Y" startspan -->Monday, June 11, 2007<!--webbot bot="Timestamp" i-CheckSum="27867" endspan --></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<!--webbot bot="Include" i-CheckSum="14207" endspan -->
+
+    </td>
+  </tr>
+</table>
+
+</body>
+
+</html>

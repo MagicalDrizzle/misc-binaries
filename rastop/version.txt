@@ -1,0 +1,55 @@
+RasTop 2.2 - June 11, 2006
+
+
+Based on:
+
+RasMol 2.6 by Roger Sayle
+Biomolecular Structures Group, Glaxo Wellcome Research & Development, 
+Stevenage, Hertfordshire, UK
+Version 2.6, August 1995, Version 2.6.4, December 1998
+Copyright © Roger Sayle 1992-1999
+
+RasTop, all versions up to 2.1
+Philippe Valadon valadon@ix.netcom.com
+Copyright © Philippe Valadon 2000-2004
+
+RasTop 2.0.2-VF June 2003 by Christian Duqué
+Copyright © Christian Duqué 2003
+
+RasTop 2.0.1-VF May 2002 by Naoum Salamé
+Copyright © Naoum Salamé 2001-2002
+
+Herbert J. Bernstein
+Bernstein + Sons, P.O. Box 177, Bellport, NY, USA,
+yaya@bernstein-plus-sons.com
+2.7.0 March 1999, 2.7.1 June 1999, 2.7.1.1 Jan 01, 2.7.2 Aug 00, 
+2.7.2.1 Apr 01, and 2.7.2.1.1 Jan 2004
+Copyright © Herbert J. Bernstein 1998-1999
+
+Arne Mueller
+Version 2.6x1, May 1998
+Copyright © Arne Mueller 1998
+
+Marco Molinaro
+RasMol 2.6-ucb Nov 96 Consortium 1995, 1996
+
+Gary Grossman
+RasMol 2.5-ucb Nov 95 (C) UC Regents/ModularCHEM
+
+The Ramachandran printer plot code was derived from fisipl created by Frances 
+C. Bernstein. See the Protein Data Bank program tape.
+
+The CIF modifications make use of a library based in part on CBFlib by Paul 
+J. Ellis and Herbert J. Bernstein.
+See: http://www.bernstein-plus-sons.com/software/CBF
+
+Parts of CBFlib is loosely based on the CIFPARSE software package from 
+the NDB at Rutgers university.
+See http://ndbserver.rutgers.edu/NDB/mmcif/software
+
+--------------------------------------------------------------------------------
+
+If you feel that your contributions has not been described properly, 
+please contact the authors
+
+

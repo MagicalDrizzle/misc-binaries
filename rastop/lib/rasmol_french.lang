@@ -1,0 +1,367 @@
+# RasMol Translation Template
+
+# Replace the sentence located on the right side of the equal sign
+# by your translation.
+# Lines starting by the # sign are not counted;
+# Spaces are allowed on the left side of the equal sign, but
+# do not modify the tags themselves;
+# No more than 100 characters per ligne; it will get truncated.
+# Respect spaces, punctuation, and encoded characters:
+#     \n means line return,
+#     \t means indentation,
+#     @  means data.
+# Tag order may be changed, but loading is faster when
+# the order is respected.
+# Tags no translated may be omitted;
+# Save your file as a text file in the lib folder with the extension lang;
+# Add a tag to the file name that best describes our langague.
+# For example rasmol_french.lang or rasmol_fr.lang are good solutions.
+# To switch langage use the command: "set language <tag>",
+# for example: "set language french" if french is the tag you used.
+
+#Command Errors
+ErrSyntax       =Syntaxe de commande incorrecte !\n
+ErrBigNum       =Valeur du paramètre trop grande !\n
+ErrBadOpt       =Valeur du paramètre incorrecte !\n
+ErrParam        =Nom du paramètre incorrect !\n
+ErrFilNam       =Un nom de fichier est attendu !\n
+ErrBadLoad      =Base de données de molécules chargée !\n
+ErrNotNum       =Une valeur entière est attendue !\n
+ErrNotSep       =Manque une virgule de séparation !\n
+ErrNotBrac      =Manque un crochet fermant ']' !\n
+ErrNoCol        =Aucune couleur n'a été spécifiée !\n
+ErrColour       =Couleur incorrecte ou inconnue !\n
+ErrBadArg       =Argument de commande invalide !\n
+ErrBadExpr      =Erreur de syntaxe dans l'expression !\n
+ErrParen        =Une parenthèse fermante ')' est attendue !\n
+ErrScript       =La pile de commande est trop profonde !\n
+ErrFunc         =Une parenthèse ouvrante '(' est attendue !\n
+ErrSetName      =Nom d'atome invalide ou erroné !\n
+ErrBadSet       =Mémoire insuffisante pour définir l'ensemble !\n
+ErrInScrpt      =Commande désactivée dans le fichier de script !\n
+ErrOutScrpt     =Commande invalide (le serait seulement dans un script) !\n
+ErrBadMolDB     =Base de données de molécules non chargée !\n
+ErrNoBond       =Liaison de rotation non choisie !\n
+ErrBlocSel      =bloc de selection invalide !\n
+
+#File IO
+StrLoadFile     =Chargement de la molécule 
+StrErrFile      =Erreur: Fichier '$' non trouvé !\n
+StrCFmt         =Erreur: Format de compression non reconnu !\n
+StrDcmp         =Erreur: Impossible de décompresser le fichier !\n
+StrErrNoFile    =Erreur: Impossible de créer le fichier !\n
+StrErrSave      =Erreur: Problème durant la sauvegarde des données moléculaires !\n
+StrSavWorld     =Erreur: Sauvegarde de l'univers interuptée !\n
+StrErrNoName    =Erreur: Nom du fichier manquant !\n
+StrNoMolSave    =Erreur: Données moléculaires non enregistrées !\n
+StrErrSavRSM    =Erreur: Impossible de sauver le script RSM !\n
+StrSavRSMOK     =Sauvegarde réussite !\n
+StrErrSav       =Erreur: Impossible de suaver le fichier !\n
+StrErrWorld     =Erreur: Failure in opening world\n
+StrFailLoad     =Failure in loading molecular file\n
+StrDFile        =Impossible d'ouvrir le fichier de points '$'\n
+
+#Script
+StrScrDone      =Script executed!\n
+StrSLong        =Ligne de command de script trop longue !\n
+StrTooManyErr   =Error: Too many unrecognized commands!\n
+StrScrStop      =Avertissement: Script interrupted!\n
+StrSFile        =Impossible d'ouvrir le fichier de script file '$'\n
+StrNoScrSave    =Unable to save script data!\n
+StrInterScr     =*** RasMol script interrupted! ***\n
+StrUnLight      =Headlight undefined; default lighting used!\n
+
+StrSMem         =Erreur de commande: Mémoire inuffisante !\n
+
+StrCTerm        =Chaîne de caractères non terminée !\n
+StrCLong        =Chaîne de caractères trop longue !\n
+StrFNum         =Nombre à virgule flottante invalide !\n
+StrCent         =Aucun atome à recentrer!\n
+StrCClip        =Impossible de copier sur le clipboard !\n
+StrPClip        =Impossible d'importer le clipboard !\n
+StrNoClip       =Pas d'opérations de clipboard en absence d'image !\n
+
+StrNPrint       =Avertissement: Aucune imprimante disponible !\n
+StrNoPrint      =Avertissement: Impossible d'imprimer en l'absence d'image !\n
+
+StrUnrec        =Commande non reconnue !\n
+StrIgnore       =Avertissement: Reste de la commande ignorée !\n
+StrRCLong       =Avertissement: Command à distance trop longue !\n
+StrILong        =Identificateur trop long !\n
+StrMolNam       =Nom de la molécule .... 
+StrClass        =Classification ........
+StrSecSt        =Structure Secondaire... 
+StrNoAsmt       =Non assigné\n
+StrPDBRec       =Registre PDB\n
+StrCalc         =Calculé\n
+StrDBCode       =Code de Base de Données 
+StrExpTec       =Technique expérim.  ... 
+StrNumChn       =Nombre de Chaînes ..... 
+StrNumGrp       =Nombre de Groupes ..... 
+StrNumAtm       =Nombre d'Atomes ....... 
+StrNumBnd       =Nombre de Liaisons .... 
+StrNumBrg       =Nombre de Ponts ....... 
+StrNumHbd       =Nombre de Liaisons-H .. 
+StrNumHel       =Nombre d'Hélices ...... 
+StrNumStrnd     =Nombre de Tresses ..... 
+StrNumTrn       =Nombre de Tours ....... 
+StrMalloc       =Allocation mémoire défaillante
+StrXSRes        =Nouveaux résidus trop nombreux
+StrXSAtyp       =Nouveaux type d'atomes trop nombreux
+
+#Object Description
+StrObjModel     =Model: $\n
+StrObjGroup     =\t($/$)\tatoms\n
+StrObjChain     =\t($/$)\tgroups\n
+StrNoGroupSel   =\tno group completely selected\n
+StrCurSel       =# Current selection\n
+StrDscbSeq      =# Sequence\n
+StrSeqModel     =Model: $  
+StrSeqChain     =Chain $:\n
+StrDesSym       =# Symmetry\n
+StrUCell        =Cellule Unité
+StrSGroup       =Groupe Spatial
+StrSymm         =Pas de données de symétrie du cristal !\n
+StrMolSel       =# Molecule currently selected: 
+
+StrWrdlWrdl     =# Univers\n
+StrWrdlDegr     =degrés \n
+StrWrdlPos      =Position: 
+StrWrldRot      =Rotation: 
+StrWrldZoom     =Zoom:     
+StrWrdlScal     =Échelle:  
+StrWrdlDDph     =worlddepth défault: 
+StrWrdlCDhp     =worlddepthn courante: 
+StrWrldSlb      =Slab:     
+StrWrldDpth     =Depth:    
+StrWrldMol      =Molécules:\n
+StrWrldInd      =Index     Nom\n
+StrWrldMol2     = molécules\n
+StrWrldAsbPar   =# Paramètre absolus\n
+StrWrldPos2     =Position  (Angstroms):\n
+StrWrldXYZ      =Index     x         y         z\n
+StrWrldRot2     =Rotation (degrés):\n
+StrWrldInd2     =Index\n
+StrWrldSPar     =# Paramètres d’écran\n
+StrWrldWPar     =# Paramètres d’univers\n
+
+StrShowMol      =# Molecule: 
+StrCenWOri      =centre at world origin\n
+StrCenMOri      =centre at molecule origin\n
+StrCenCen       =centre at 
+StrAbsVal       =Values in absolute coordinates:\n
+StrScreenVal    =Values in screen coordinates:\n
+StrRotateX      =rotate x $\n
+StrRotateY      =rotate y $\n
+StrRotateZ      =rotate z $\n
+StrRotBond      =rotate bond $\n
+StrTransX       =translate x $\n
+StrTransY       =translate y $\n
+StrTransZ       =translate z $\n
+StrZoom         =zoom $\n = },
+StrWDepthDef    =Default worlddepth: $ Angstroms or $ RU\n
+StrWDepthCur    =Current worlddepth: $ Angstroms or $ RU\n
+StrWrongShow....=Erreur d’arguments sur la commande show!\n" 
+
+StrPickLabel    =Picking mode: clik on atoms to add labels!\n
+
+#RasMol Fatal Exit
+RfeNoMem        =Error: Insufficient memory!
+RfeNoCurMol     =Error: No Current Molecule Defined
+RfeMemLang      =Error: Memory allocation failed in LangSel!
+RfeSavDoc       =Error: Failure in saving documents!\n
+RfeHROpn        =Command Error: Unable to reopen help file!\n
+RfeCmdMem       =Command Error: Insufficient memory!
+RfeDatabase     =Database Error: Memory allocation failed!
+RfeNewRes       =Database Error: Too many new residues!
+RfeNewAtoms     =Database Error: Too many new atom types!
+
+#brotate
+RotDupSer       =Error: Duplicate atom serial numbers!\n
+RotAtSer        =Error: Atom serial number $ not found!\n
+RotGraph        =Error: ConstructGraph failed\n
+RotNoRot        =Avertissement: Cannot rotate this bond!\n
+RotNoSel        =Error: There is no bond to select!\n
+RotSelOk        =Bond selected\n
+
+#infile
+FilInvCrys      =Error: Invalid CRYST1\n
+FilInvScal      =Error: Invalid SCALE ignored\n
+FilInvZmat      =Error: Invalid MOPAC z-matrix file!\n
+FilCIFa         =Error: Missing or Incomplete CIF Cell\n
+FilCIFb         =Error: Invalid CIF Cell\n
+FilCIFMat       =Error: Invalid CIF fractional transformation matrix\n
+FilCIFCart      =Error: Invalid CIF Cartesian transformation matrix\n
+FilStrCon       =Warning: Null bonds in STRUCT_CONN!\n
+FilGeoBon       =Warning: Null bonds in GEOM_BOND!\n
+FilNoFil        =Error: Unable to create file!\n
+
+#molecule
+MolMolNam       =Molecule name ....... 
+MolClass        =Classification ...... 
+MolSecStr       =Secondary Structure . 
+MolNoAss        =No Assignment\n
+MolPDB          =PDB Data Records\n
+MolCalcul       =Calculated\n
+MolDatCod       =Database Code ....... 
+MolExpTech      =Experiment Technique. 
+MolChainNb      =Number of Chains .... 
+MolGrpNb        =Number of Groups .... 
+MolAtomNb       =Number of Atoms ..... 
+MolBondNb       =Number of Bonds ..... 
+MolNumBr        =Number of Bridges ... 
+MolNumHB        =Number of H-Bonds ... 
+MolNumHel       =Number of Helices ... 
+MolNumStr       =Number of Strands ... 
+MolNumTurn      =Number of Turns ..... 
+MolNumBds       =Number of Bonds ..... 
+MolSerNb        =Error: Duplicate atom serial numbers!\n
+MolErrAtSer     =Error: Atom serial number $ not found!\n
+MolPrevRot      =Previous rotation bond selected.\n
+MolNextRot      =Next rotation bond selected.\n
+MolNoRotBnd     =No rotation bond selected.\n
+MolNoBndRem     =Error: There is no bond to remove!\n
+MolPlease       =Please wait... 
+
+#multiple
+MulDataNF       =Error: Molecular data not found!\n\n
+MulMisEnd       =Error: Missing end of script in inline data!\n
+MulSeeHelp      =       See help how to enter it manually.\n
+MulErrNoNam     =Error: There is no molecule with this name!\n
+MulErrNoInd     =Error: There is no molecule at this index!\n
+MulNoTrans      =Avertissement: Cannot translate molecule if world is on!\n
+
+#output
+OutNoFile       =Output Error: Unable to create file `
+Out8bitGIF      =Output Error: Only 8-bit GIF files supported!\n
+Out8bitBMP      =Output Error: Only 8-bit BMP files supported!\n
+OutPSObj        =Output Error: Too many PostScript objects!\n
+OutNoMemPS      =Not enough memory to create PostScript!\n
+OutNoMem        =Output Error: Unable to allocate memory!\n
+
+#prefer
+PrfNotFound     =Preferences not found!\n
+PrfResetDef     =Error; resetting default preferences!\n
+PrfLoaded       =Preferences loaded\n
+PrfCreate       =Creating Preference file.\n
+
+#render
+RenNoBdSel      =Warning: There is no bond selected!\n
+RenMol2         =Molecule: 
+RenAtom         =Atom: 
+RenHetero       =Hetero: 
+RenGroup        =Group: 
+RenChain        =  Chain: 
+RenModel        =  Model: 
+RenWorld        =World 
+RenMol          =Molecule 
+RenSel          = selected!\n
+RenScreen       =Screen 
+RenCoord        =Coordinates: 
+RenAbout        =about 
+RenRot          =Rotating about 
+RenRot2         =Rotating 
+RenWOri         =Rotating about World Origin\n
+RenNoCenter     =Warning: Cannot select this center in world mode!\n
+RenAtom2        =Atom #
+RenAtomDup      =Error: Duplicate atoms!\n
+RenDist         =Distance 
+RenAngle        =Angle 
+RenTorsion      =Torsion 
+
+#repress
+RepErrMem       =Erreur de rendu: Impossible d'alouer $!
+RepErrLab       =label
+RepErrMon       =monitor
+RepErrDSur      =surface de points
+RepErrConB      =surface de Connolly: BList
+RepErrConC      =surface de Connolly: CList
+RepErrConT      =surface de Connolly: tetrad
+RepErrTabl      =table des vector de point
+RepErrVect      =vectors de point
+RepErrPrb       =vectors de sonde
+
+RepDupAtom      =Erreur: Duplicate atom serial numbers!\n
+RepAtomSer      =Erreur: Atom serial number $ not found!\n
+RepAllDot       = dots read from file\n
+RepOneDot       =1 dot read from file\n
+RepNoDot        =No dots read from file!\n
+
+#script           
+ScrNoFile       =Script Error: Unable to create file `
+
+#transfor
+TrnNoAtSel      =No atoms selected!\n
+TrnOneAtSel     =1 atom selected!\n
+TrnManAtSel     = atom selected!\n
+TrnNoShade      =Warning: Unable to allocate shade!\n
+TrnNoPot        =Warning: No surface potential available!\n
+TrnNoCol        =Warning: No user supplied colour records!\n
+
+#Help
+HlpHFil         =Aide non disponible a la ligne de commande !\n
+HlpHTop         =Requête d'aide thématique ambigüe !\n
+HlpHNone        =Pas d'aide disponible sur le thème requis !\n
+HlpHTMLHelp     =Erreur: La localisation du fichier d'aide HTML est inconnue !\n
+
+
+#langsel
+LANNoLoc        =Erreur: La localization des dictionnaires est inconnue !\n
+LANNoFile       =Erreur: Dictionnaire non retrouvée !\n
+
+#
+#RasTopWin
+#
+
+#datadisplay
+RTPErrScrData   =Error with script data; script may not work!\n
+
+#dialog
+RTPErrChar      =Erreur: Use alphanumeric, '$', or '_' characters!\n
+RTPErrStrd      =Only 1, 2, 3, 4, 5, or 9 strands are allowed!\n
+RTPNoClip       =Avertissement: clipboard not available!\n
+RTPNoFile       =Erreur: Failure in creating file!\n
+RTPSaveData     =Erreur: Failure in saving data!\n
+RTPErrDialog    =Avertissement: Failure in dialog!\n
+RTPErrMem       =Avertissement: Memory failure!\n
+RTPErrPath      =Avertissement: The specified path is too long!\n
+
+#mainframe
+RTPWCoor        =Coordinate system switched to world coordinates!\n
+RTPSCoor        =Coordinate system switched to screen coordinates!\n
+RTPACoor        =Coordinate system switched to absolute coordinates!\n
+RTPMCoor        =Coordinate system switched to molecule coordinates!\n
+RTPStopScr      =Type any key to continue the script or <Esc> to terminate\n
+
+#rasgraphics
+RTPZeroAt       =Zero selected atom copied to clipboard!\n
+RTPOneAt        =1 selected atom copied to clipboard!\n
+RTPManyAt       = selected atoms copied to clipboard!\n
+RTPPosClip      =Position copied to clipboard!\n
+RTPNoMemSel     =Avertissement: Insuffisant memory to copy selection!\n
+RTPNoDataClip   =Avertissement: the clipboard does not contain any data!\n
+RTPNoComdClip   =Avertissement: no valid commands in clipboard!\n
+RTPUnkCmd       =Avertissement: unknown commands in clipboard!\n
+RTPNoSelClip    =No selection to paste from clipboard!\n
+RTPOneSelClip   =1 selected atom pasted from clipboard!\n
+RTPManSelClip   = selected atoms pasted from clipboard!\n
+RTPPastePos     =Position pasted from clipboard!\n
+RTPScrPaste     =Script pasted from clipboard!\n
+RTPSelBig       =Avertissement: Selection too large, cannot copy to clipboard!\n
+
+#rasdoc - rasview
+RTPImgBig       =Erreur: Image too big!\n
+RTPNoWind       =Erreur: Cannot create new window!\n
+RTPErrDat       =Avertissement: Failure in loading data!\n
+RTPNoSave       =No modification to save!\n
+RTPMolLoad      =Loading molecular file...\n
+RTPScrLoad      =Loading script file...\n
+RTPScrBox       =Select RasMol Script File
+RTPScrInter     =Loading script interrupted!\n
+RTPScrDone      =Script executed!\n
+RTPErrImg       =Erreur durant le traitement des images !\n
+RTPZoomFac      =Avertissement: Image too big, smaller zoom factor is used!\n
+RTPScrLong      =Avertissement:	Script command line too long!\n
+RTPSelMol       =Select Molecular Coordinate File
+RTPSelDir       =Select Directory and Filename
+

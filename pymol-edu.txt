@@ -1,0 +1,3 @@
+DOWNLOAD URL: https://pymol.org/ep
+USERNAME: jun2021
+PASSWORD: betabarrel

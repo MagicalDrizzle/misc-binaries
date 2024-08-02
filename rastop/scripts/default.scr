@@ -1,0 +1,62 @@
+#RasTop 2.0
+#default template
+
+
+set bonds on
+set axes off
+set boundingbox off
+set unitcell off
+
+select all
+
+ssbonds off
+hbonds off
+wireframe off
+ribbons off
+dots off
+backbone off
+labels off
+monitors off
+
+colour bonds none
+colour ribbons none
+colour backbone none
+colour hbonds none
+colour ssbonds none
+colour cpk
+
+select protein
+wireframe on
+cartoon on
+select protein and helix
+color ribbons red
+select protein and sheet
+color ribbons yellow
+select protein and turn
+color ribbons SkyBlue
+
+select dna | rna
+wireframe on
+ribbons on
+
+select protein | dna | rna | water | solvent
+select not selected
+spacefill on
+
+
+select *.c???
+color green
+select *.o???
+color red
+select *.n???
+color blue
+
+select water | solvent
+color white
+star on
+
+
+set specpower 30
+set specular on
+
+select all
