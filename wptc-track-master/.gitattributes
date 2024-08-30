@@ -1,2 +1,0 @@
-# Force lf for Cygwin users with a local .gitconfig
-*.sh eol=lf
